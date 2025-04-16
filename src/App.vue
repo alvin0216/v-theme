@@ -6,6 +6,7 @@
       <checkbox-example />
       <card-example />
       <dropdown-example />
+      <link-example />
       <!-- <alert-example />
       <autocomplete-example />
       <avatar-example />

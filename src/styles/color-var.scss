@@ -1,6 +1,7 @@
 :root {
   --color-primary: #409eff;
   --color-white: #ffffff;
+  --color-black: #000000;
   --color-success: #67c23a;
   --color-warning: #e6a23c;
   --color-danger: #f56c6c;
@@ -9,6 +10,8 @@
 
 $--color-primary: var(--color-primary) !default;
 $--color-white: var(--color-white) !default;
+$--color-black: var(--color-black) !default;
+
 $--color-success: var(--color-success) !default;
 $--color-warning: var(--color-warning) !default;
 $--color-danger: var(--color-danger) !default;
@@ -32,3 +35,9 @@ $--color-warning-lighter: color-mix(in srgb, var(--color-white) 90%, var(--color
 $--color-danger-lighter: color-mix(in srgb, var(--color-white) 90%, var(--color-danger)) !default;
 $--color-info-lighter: color-mix(in srgb, var(--color-white) 90%, var(--color-info)) !default;
 $--slider-button-hover-color: color-mix(in srgb, var(--color-primary) 97%, black) !default;
+
+$--button-hover-tint-percent: 20% !default;
+$--button-active-shade-percent: 10% !default;
+
+$-color-active: color-mix(in srgb, var(--color-black) $--button-active-shade-percent, $--color-primary);
+$-color-focus: color-mix(in srgb, var(--color-white) $--button-hover-tint-percent, $--color-primary);

@@ -2,7 +2,8 @@
   <div class="app">
     <div class="content">
       <button-example />
-      <alert-example />
+      <input-example />
+      <!-- <alert-example />
       <autocomplete-example />
       <avatar-example />
       <backtop-example />
@@ -56,7 +57,7 @@
       <tooltip-example />
       <transfer-example />
       <tree-example />
-      <upload-example />
+      <upload-example /> -->
     </div>
   </div>
 </template>

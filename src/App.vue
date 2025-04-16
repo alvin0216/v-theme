@@ -1,13 +1,14 @@
 <template>
   <div class="app">
     <div class="content">
+      <button-example />
       <alert-example />
       <autocomplete-example />
       <avatar-example />
       <backtop-example />
       <badge-example />
       <breadcrumb-example />
-      <button-example />
+
       <calendar-example />
       <card-example />
       <carousel-example />

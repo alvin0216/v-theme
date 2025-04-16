@@ -73,7 +73,7 @@ $--fill-base: $--color-white !default;
 
 /* Typography
 -------------------------- */
-$--font-path: 'fonts' !default;
+$--font-path: '@/styles/theme/fonts' !default;
 $--font-display: 'auto' !default;
 /// fontSize|1|Font Size|0
 $--font-size-extra-large: 20px !default;

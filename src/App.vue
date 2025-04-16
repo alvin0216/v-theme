@@ -3,6 +3,9 @@
     <div class="content">
       <button-example />
       <input-example />
+      <checkbox-example />
+      <card-example />
+      <dropdown-example />
       <!-- <alert-example />
       <autocomplete-example />
       <avatar-example />

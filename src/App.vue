@@ -1,6 +1,7 @@
 <template>
   <div class="app">
     <div class="content">
+      <el-button @click="toggle">切换主题</el-button>
       <button-example />
       <input-example />
       <checkbox-example />
@@ -182,136 +183,11 @@ export default {
     TreeExample,
     UploadExample,
   },
+  methods: {
+    toggle() {
+      // html
+      document.body.classList.toggle('dark');
+    },
+  },
 };
 </script>
-
-<style scoped>
-.navbar {
-  height: 55px;
-  position: sticky;
-  left: 0;
-  right: 0;
-  top: 0;
-  padding: 0 32px;
-  color: #303133;
-  border-bottom: 1px solid #dcdfe6;
-  background-image: radial-gradient(transparent 1px, #ffffff 1px);
-  background-size: 4px 4px;
-  backdrop-filter: saturate(50%) blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 12;
-}
-
-html.dark .navbar {
-  color: #e5eaf3;
-  border-bottom: 1px solid #4c4d4f;
-  background-image: radial-gradient(transparent 1px, #141414 1px);
-}
-
-.navbar > a {
-  text-decoration: none;
-}
-
-.navbar h1 {
-  margin: 0;
-  color: #409eff;
-  font-size: 24px;
-}
-
-.navbar > div {
-  display: flex;
-  align-items: center;
-}
-
-.navbar .fuse-search {
-  margin: 0 12px;
-}
-
-.navbar .theme-toggle {
-  margin: 0 12px;
-}
-
-.navbar div a {
-  display: inline-block;
-  height: 100%;
-  margin: 0 12px;
-  font-size: 15px;
-  font-weight: bold;
-  color: currentColor;
-  text-decoration: none;
-}
-
-.content {
-  width: 800px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 24px;
-  box-sizing: border-box;
-}
-
-.content >>> h2 {
-  margin: 0;
-  padding: 70px 0 15px;
-  color: #606266;
-}
-
-html.dark .content >>> h2 {
-  color: #cfd3dc;
-}
-</style>
-
-<style scoped>
-/* 
-  xxs <439
-  xs ≥439
-  sm ≥459
-  md ≥580
-  lg ≥673
-  xl ≥693
-  xxl ≥814
-*/
-
-@media (max-width: 438px) {
-  .hidden-xxs {
-    display: none !important;
-  }
-}
-
-@media (min-width: 439px) and (max-width: 458px) {
-  .hidden-xs {
-    display: none !important;
-  }
-}
-
-@media (min-width: 459px) and (max-width: 579px) {
-  .hidden-sm {
-    display: none !important;
-  }
-}
-
-@media (min-width: 580px) and (max-width: 672px) {
-  .hidden-md {
-    display: none !important;
-  }
-}
-
-@media (min-width: 673px) and (max-width: 692px) {
-  .hidden-lg {
-    display: none !important;
-  }
-}
-
-@media (min-width: 693px) and (max-width: 813px) {
-  .hidden-xl {
-    display: none !important;
-  }
-}
-
-@media (min-width: 814px) {
-  .hidden-xxl {
-    display: none !important;
-  }
-}
-</style>

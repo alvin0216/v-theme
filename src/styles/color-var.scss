@@ -1,43 +1,39 @@
 :root {
+  /* 基础颜色 */
   --color-primary: #409eff;
   --color-white: #ffffff;
+  --color-dark: #141414;
   --color-black: #000000;
   --color-success: #67c23a;
   --color-warning: #e6a23c;
   --color-danger: #f56c6c;
   --color-info: #909399;
+
+  /* 文本颜色 */
+  --color-text-primary: #e5eaf3;
+  --color-text-regular: #cfd3dc;
+  --color-text-secondary: #a3a6ad;
+  --color-text-placeholder: #8d9095;
+  --color-text-disabled: #6c6e72;
+
+  /* 主色衍生（使用color-mix） */
+  --color-primary-light-1: color-mix(in srgb, var(--color-dark) 10%, var(--color-primary));
+  --color-primary-light-2: color-mix(in srgb, var(--color-dark) 20%, var(--color-primary));
+  --color-primary-light-3: color-mix(in srgb, var(--color-dark) 30%, var(--color-primary));
+  --color-primary-light-4: color-mix(in srgb, var(--color-dark) 40%, var(--color-primary));
+  --color-primary-light-5: color-mix(in srgb, var(--color-dark) 50%, var(--color-primary));
+  --color-primary-light-6: color-mix(in srgb, var(--color-dark) 60%, var(--color-primary));
+  --color-primary-light-7: color-mix(in srgb, var(--color-dark) 70%, var(--color-primary));
+  --color-primary-light-8: color-mix(in srgb, var(--color-dark) 80%, var(--color-primary));
+  --color-primary-light-9: color-mix(in srgb, var(--color-dark) 90%, var(--color-primary));
+  --color-primary-dark-2: color-mix(in srgb, var(--color-white) 20%, var(--color-primary));
 }
 
 $--color-primary: var(--color-primary) !default;
 $--color-white: var(--color-white) !default;
+$--color-dark: var(--color-dark) !default;
 $--color-black: var(--color-black) !default;
-
 $--color-success: var(--color-success) !default;
 $--color-warning: var(--color-warning) !default;
 $--color-danger: var(--color-danger) !default;
 $--color-info: var(--color-info) !default;
-
-$--color-primary-light-1: color-mix(in srgb, var(--color-white) 10%, var(--color-primary)) !default; /* 53a8ff */
-$--color-primary-light-2: color-mix(in srgb, var(--color-white) 20%, var(--color-primary)) !default; /* 66b1ff */
-$--color-primary-light-3: color-mix(in srgb, var(--color-white) 30%, var(--color-primary)) !default; /* 79bbff */
-$--color-primary-light-4: color-mix(in srgb, var(--color-white) 40%, var(--color-primary)) !default; /* 8cc5ff */
-$--color-primary-light-5: color-mix(in srgb, var(--color-white) 50%, var(--color-primary)) !default; /* a0cfff */
-$--color-primary-light-6: color-mix(in srgb, var(--color-white) 60%, var(--color-primary)) !default; /* b3d8ff */
-$--color-primary-light-7: color-mix(in srgb, var(--color-white) 70%, var(--color-primary)) !default; /* c6e2ff */
-$--color-primary-light-8: color-mix(in srgb, var(--color-white) 80%, var(--color-primary)) !default; /* d9ecff */
-$--color-primary-light-9: color-mix(in srgb, var(--color-white) 90%, var(--color-primary)) !default; /* ecf5ff */
-$--color-success-light: color-mix(in srgb, var(--color-white) 80%, var(--color-success)) !default;
-$--color-warning-light: color-mix(in srgb, var(--color-white) 80%, var(--color-warning)) !default;
-$--color-danger-light: color-mix(in srgb, var(--color-white) 80%, var(--color-danger)) !default;
-$--color-info-light: color-mix(in srgb, var(--color-white) 80%, var(--color-info)) !default;
-$--color-success-lighter: color-mix(in srgb, var(--color-white) 90%, var(--color-success)) !default;
-$--color-warning-lighter: color-mix(in srgb, var(--color-white) 90%, var(--color-warning)) !default;
-$--color-danger-lighter: color-mix(in srgb, var(--color-white) 90%, var(--color-danger)) !default;
-$--color-info-lighter: color-mix(in srgb, var(--color-white) 90%, var(--color-info)) !default;
-$--slider-button-hover-color: color-mix(in srgb, var(--color-primary) 97%, black) !default;
-
-$--button-hover-tint-percent: 20% !default;
-$--button-active-shade-percent: 10% !default;
-
-$-color-active: color-mix(in srgb, var(--color-black) $--button-active-shade-percent, $--color-primary);
-$-color-focus: color-mix(in srgb, var(--color-white) $--button-hover-tint-percent, $--color-primary);

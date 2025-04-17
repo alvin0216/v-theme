@@ -1,7 +1,8 @@
 @import 'common/var';
 
 body {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
+    sans-serif;
   font-weight: 400;
   font-size: $--font-size-base;
   color: $--color-text-primary;
@@ -14,11 +15,11 @@ a {
 
   &:hover,
   &:focus {
-    color: mix($--color-dark, $--color-primary, $--button-hover-tint-percent);
+    color: var(--color-link-hover);
   }
 
   &:active {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: var(--color-link-active);
   }
 }
 

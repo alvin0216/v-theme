@@ -1,0 +1,62 @@
+@import './dark.scss';
+@import './light.scss';
+
+/* Color Variables
+-------------------------- */
+$--color-primary: var(--color-primary) !default;
+$--color-white: var(--color-white) !default;
+$--color-dark: var(--color-dark) !default;
+$--color-black: var(--color-black) !default;
+
+$--color-success: var(--color-success) !default;
+$--color-warning: var(--color-warning) !default;
+$--color-danger: var(--color-danger) !default;
+$--color-info: var(--color-info) !default;
+
+$--color-text-primary: var(--color-text-primary) !default;
+$--color-text-regular: var(--color-text-regular) !default;
+$--color-text-secondary: var(--color-text-secondary) !default;
+$--color-text-placeholder: var(--color-text-placeholder) !default;
+$--color-text-disabled: var(--color-text-disabled) !default;
+
+$--border-color-base: var(--border-color-base) !default;
+$--border-color-light: var(--border-color-light) !default;
+$--border-color-lighter: var(--border-color-lighter) !default;
+$--border-color-darker: var(--border-color-darker) !default;
+$--border-color-extra-light: var(--border-color-extra-light) !default;
+
+// Box-shadow
+$--box-shadow-base: var(--box-shadow-base) !default;
+$--box-shadow-light: var(--box-shadow-light) !default;
+$--box-shadow-dark: var(--box-shadow-dark) !default;
+$--box-shadow-base: var(--box-shadow-base) !default;
+$--box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.72) !default;
+
+// Background
+$--background-color: var(--color-dark) !default;
+$--background-color-base: var(--background-color-base) !default;
+$--background-color-overlay: var(--background-color-overlay) !default;
+
+$--color-primary-light-1: var(--color-primary-light-1) !default;
+$--color-primary-light-2: var(--color-primary-light-2) !default;
+$--color-primary-light-3: var(--color-primary-light-3) !default;
+$--color-primary-light-4: var(--color-primary-light-4) !default;
+$--color-primary-light-5: var(--color-primary-light-5) !default;
+$--color-primary-light-6: var(--color-primary-light-6) !default;
+$--color-primary-light-7: var(--color-primary-light-7) !default;
+$--color-primary-light-8: var(--color-primary-light-8) !default;
+$--color-primary-light-9: var(--color-primary-light-9) !default;
+$--color-primary-dark-2: var(--color-primary-dark-2) !default;
+
+$--color-success-light: var(--color-success-light) !default;
+$--color-warning-light: var(--color-warning-light) !default;
+$--color-danger-light: var(--color-danger-light) !default;
+$--color-info-light: var(--color-info-light) !default;
+
+$--color-success-lighter: var(--color-success-lighter) !default;
+$--color-warning-lighter: var(--color-warning-lighter) !default;
+$--color-danger-lighter: var(--color-danger-lighter) !default;
+$--color-info-lighter: var(--color-info-lighter) !default;
+
+// Overlay
+$--overlay-color-lighter: var(--overlay-color-lighter) !default;

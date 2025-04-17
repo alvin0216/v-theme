@@ -8,7 +8,7 @@
       <card-example />
       <dropdown-example />
       <link-example />
-      <!-- <alert-example />
+      <alert-example />
       <autocomplete-example />
       <avatar-example />
       <backtop-example />
@@ -62,7 +62,7 @@
       <tooltip-example />
       <transfer-example />
       <tree-example />
-      <upload-example /> -->
+      <upload-example />
     </div>
   </div>
 </template>

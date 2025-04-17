@@ -31,6 +31,27 @@
   --background-color-overlay: #ffffff;
   --overlay-color-lighter: rgba(0, 0, 0, 0.5);
 
+  --color-primary-light-1: color-mix(in srgb, var(--color-dark) 10%, var(--color-primary) 90%);
+  --color-primary-light-2: color-mix(in srgb, var(--color-dark) 20%, var(--color-primary) 80%);
+  --color-primary-light-3: color-mix(in srgb, var(--color-dark) 30%, var(--color-primary) 70%);
+  --color-primary-light-4: color-mix(in srgb, var(--color-dark) 40%, var(--color-primary) 60%);
+  --color-primary-light-5: color-mix(in srgb, var(--color-dark) 50%, var(--color-primary) 50%);
+  --color-primary-light-6: color-mix(in srgb, var(--color-dark) 60%, var(--color-primary) 40%);
+  --color-primary-light-7: color-mix(in srgb, var(--color-dark) 70%, var(--color-primary) 30%);
+  --color-primary-light-8: color-mix(in srgb, var(--color-dark) 80%, var(--color-primary) 20%);
+  --color-primary-light-9: color-mix(in srgb, var(--color-dark) 90%, var(--color-primary) 10%);
+  --color-primary-dark-2: color-mix(in srgb, var(--color-white) 20%, var(--color-primary) 80%);
+
+  --color-success-light: color-mix(in srgb, var(--color-dark) 80%, var(--color-success) 20%);
+  --color-warning-light: color-mix(in srgb, var(--color-dark) 80%, var(--color-warning) 20%);
+  --color-danger-light: color-mix(in srgb, var(--color-dark) 80%, var(--color-danger) 20%);
+  --color-info-light: color-mix(in srgb, var(--color-dark) 80%, var(--color-info) 20%);
+
+  --color-success-lighter: color-mix(in srgb, var(--color-dark) 90%, var(--color-success) 10%);
+  --color-warning-lighter: color-mix(in srgb, var(--color-dark) 90%, var(--color-warning) 10%);
+  --color-danger-lighter: color-mix(in srgb, var(--color-dark) 90%, var(--color-danger) 10%);
+  --color-info-lighter: color-mix(in srgb, var(--color-dark) 90%, var(--color-info) 10%);
+
   color: var(--color-text-regular);
 }
 
@@ -106,26 +127,26 @@ $--background-color: var(--color-dark) !default;
 $--background-color-base: var(--background-color-base) !default;
 $--background-color-overlay: var(--background-color-overlay) !default;
 
-$--color-primary-light-1: color-mix(in srgb, var(--color-dark) 10%, var(--color-primary) 90%) !default;
-$--color-primary-light-2: color-mix(in srgb, var(--color-dark) 20%, var(--color-primary) 80%) !default;
-$--color-primary-light-3: color-mix(in srgb, var(--color-dark) 30%, var(--color-primary) 70%) !default;
-$--color-primary-light-4: color-mix(in srgb, var(--color-dark) 40%, var(--color-primary) 60%) !default;
-$--color-primary-light-5: color-mix(in srgb, var(--color-dark) 50%, var(--color-primary) 50%) !default;
-$--color-primary-light-6: color-mix(in srgb, var(--color-dark) 60%, var(--color-primary) 40%) !default;
-$--color-primary-light-7: color-mix(in srgb, var(--color-dark) 70%, var(--color-primary) 30%) !default;
-$--color-primary-light-8: color-mix(in srgb, var(--color-dark) 80%, var(--color-primary) 20%) !default;
-$--color-primary-light-9: color-mix(in srgb, var(--color-dark) 90%, var(--color-primary) 10%) !default;
-$--color-primary-dark-2: color-mix(in srgb, var(--color-white) 20%, var(--color-primary) 80%) !default;
+$--color-primary-light-1: var(--color-primary-light-1) !default;
+$--color-primary-light-2: var(--color-primary-light-2) !default;
+$--color-primary-light-3: var(--color-primary-light-3) !default;
+$--color-primary-light-4: var(--color-primary-light-4) !default;
+$--color-primary-light-5: var(--color-primary-light-5) !default;
+$--color-primary-light-6: var(--color-primary-light-6) !default;
+$--color-primary-light-7: var(--color-primary-light-7) !default;
+$--color-primary-light-8: var(--color-primary-light-8) !default;
+$--color-primary-light-9: var(--color-primary-light-9) !default;
+$--color-primary-dark-2: var(--color-primary-dark-2) !default;
 
-$--color-success-light: color-mix(in srgb, var(--color-dark) 80%, var(--color-success) 20%) !default;
-$--color-warning-light: color-mix(in srgb, var(--color-dark) 80%, var(--color-warning) 20%) !default;
-$--color-danger-light: color-mix(in srgb, var(--color-dark) 80%, var(--color-danger) 20%) !default;
-$--color-info-light: color-mix(in srgb, var(--color-dark) 80%, var(--color-info) 20%) !default;
+$--color-success-light: var(--color-success-light) !default;
+$--color-warning-light: var(--color-warning-light) !default;
+$--color-danger-light: var(--color-danger-light) !default;
+$--color-info-light: var(--color-info-light) !default;
 
-$--color-success-lighter: color-mix(in srgb, var(--color-dark) 90%, var(--color-success) 10%) !default;
-$--color-warning-lighter: color-mix(in srgb, var(--color-dark) 90%, var(--color-warning) 10%) !default;
-$--color-danger-lighter: color-mix(in srgb, var(--color-dark) 90%, var(--color-danger) 10%) !default;
-$--color-info-lighter: color-mix(in srgb, var(--color-dark) 90%, var(--color-info) 10%) !default;
+$--color-success-lighter: var(--color-success-lighter) !default;
+$--color-warning-lighter: var(--color-warning-lighter) !default;
+$--color-danger-lighter: var(--color-danger-lighter) !default;
+$--color-info-lighter: var(--color-info-lighter) !default;
 
 // Overlay
 $--overlay-color-lighter: var(--overlay-color-lighter) !default;

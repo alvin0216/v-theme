@@ -1,11 +1,8 @@
-@use 'sass:math';
 @import '../../color-var.scss';
-/* Element Chalk Variables */
 
-// Special comment for theme configurator
+/* Element Chalk Variables */ // Special comment for theme configurator
 // type|skipAutoTranslation|Category|Order
 // skipAutoTranslation 1
-
 /* Transition
 -------------------------- */
 $--all-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
@@ -14,30 +11,6 @@ $--fade-linear-transition: opacity 200ms linear !default;
 $--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 $--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
-
-/* Color
--------------------------- */
-
-/// color|1|Font Color|2
-$--color-text-primary: #303133 !default;
-/// color|1|Font Color|2
-$--color-text-regular: #606266 !default;
-/// color|1|Font Color|2
-$--color-text-secondary: #909399 !default;
-/// color|1|Font Color|2
-$--color-text-placeholder: #c0c4cc !default;
-/// color|1|Border Color|3
-$--border-color-base: #dcdfe6 !default;
-/// color|1|Border Color|3
-$--border-color-light: #e4e7ed !default;
-/// color|1|Border Color|3
-$--border-color-lighter: #ebeef5 !default;
-/// color|1|Border Color|3
-$--border-color-extra-light: #f2f6fc !default;
-
-// Background
-/// color|1|Background Color|4
-$--background-color-base: #f5f7fa !default;
 
 /* Link
 -------------------------- */
@@ -48,7 +21,7 @@ $--link-hover-color: $--color-primary !default;
 -------------------------- */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
-$--border-color-hover: $--color-text-placeholder !default;
+$--border-color-hover: $--color-text-disabled !default;
 $--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
 /// borderRadius|1|Radius|0
 $--border-radius-base: 4px !default;
@@ -59,21 +32,20 @@ $--border-radius-circle: 100% !default;
 /// borderRadius|1|Radius|0
 $--border-radius-zero: 0 !default;
 
-// Box-shadow
-/// boxShadow|1|Shadow|1
-$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04) !default;
-// boxShadow|1|Shadow|1
-$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12) !default;
-/// boxShadow|1|Shadow|1
-$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
-
 /* Fill
 -------------------------- */
 $--fill-base: $--color-white !default;
+$--fill-color: #303030 !default;
+$--fill-color-lighter: #1d1d1d !default;
+$--fill-color-darker: #424243 !default;
+
+/* Mask
+-------------------------- */
+$--mask-color: rgba(0, 0, 0, 0.8) !default;
 
 /* Typography
 -------------------------- */
-$--font-path: '@/styles/theme/fonts' !default;
+$--font-path: '@/styles/element/fonts' !default;
 $--font-display: 'auto' !default;
 /// fontSize|1|Font Size|0
 $--font-size-extra-large: 20px !default;
@@ -95,7 +67,7 @@ $--font-weight-secondary: 100 !default;
 $--font-line-height-primary: 24px !default;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-secondary: 16px !default;
-$--font-color-disabled-base: #bbb !default;
+$--font-color-disabled-base: $--color-text-disabled !default;
 /* Size
 -------------------------- */
 $--size-base: 14px !default;
@@ -130,12 +102,12 @@ $--checkbox-input-width: 14px !default;
 /// borderRadius||Border|2
 $--checkbox-border-radius: $--border-radius-small !default;
 /// color||Color|0
-$--checkbox-background-color: $--color-white !default;
+$--checkbox-background-color: transparent !default;
 $--checkbox-input-border: $--border-base !default;
 
 /// color||Color|0
 $--checkbox-disabled-border-color: $--border-color-base !default;
-$--checkbox-disabled-input-fill: #edf2fc !default;
+$--checkbox-disabled-input-fill: $--background-color-base !default;
 $--checkbox-disabled-icon-color: $--color-text-placeholder !default;
 
 $--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
@@ -193,7 +165,7 @@ $--radio-input-width: 14px !default;
 /// borderRadius||Border|2
 $--radio-input-border-radius: $--border-radius-circle !default;
 /// color||Color|0
-$--radio-input-background-color: $--color-white !default;
+$--radio-input-background-color: transparent !default;
 $--radio-input-border: $--border-base !default;
 /// color||Color|0
 $--radio-input-border-color: $--border-color-base !default;
@@ -253,7 +225,7 @@ $--select-font-size: $--font-size-base !default;
 $--select-close-hover-color: $--color-text-secondary !default;
 
 $--select-input-color: $--color-text-placeholder !default;
-$--select-multiple-input-color: #666 !default;
+$--select-multiple-input-color: $--color-text-regular !default;
 /// color||Color|0
 $--select-input-focus-border-color: $--color-primary !default;
 /// fontSize||Font|1
@@ -273,7 +245,7 @@ $--select-group-color: $--color-info !default;
 $--select-group-height: 30px !default;
 $--select-group-font-size: 12px !default;
 
-$--select-dropdown-background: $--color-white !default;
+$--select-dropdown-background: $--background-color-overlay !default;
 $--select-dropdown-shadow: $--box-shadow-light !default;
 $--select-dropdown-empty-color: #999 !default;
 /// height||Other|4
@@ -332,9 +304,9 @@ $--messagebox-danger-color: $--color-danger !default;
 
 /* Message
 -------------------------- */
-$--message-shadow: $--box-shadow-base !default;
+$--message-shadow: $--box-shadow-light !default;
 $--message-min-width: 380px !default;
-$--message-background-color: #edf2fc !default;
+$--message-background-color: $--color-info-lighter !default;
 $--message-padding: 15px 15px 15px 20px !default;
 /// color||Color|0
 $--message-close-icon-color: $--color-text-placeholder !default;
@@ -394,8 +366,6 @@ $--input-font-size: $--font-size-base !default;
 /// color||Color|0
 $--input-font-color: $--color-text-regular !default;
 /// height||Other|4
-$--input-width: 140px !default;
-/// height||Other|4
 $--input-height: 40px !default;
 $--input-border: $--border-base !default;
 $--input-border-color: $--border-color-base !default;
@@ -403,7 +373,7 @@ $--input-border-color: $--border-color-base !default;
 $--input-border-radius: $--border-radius-base !default;
 $--input-border-color-hover: $--border-color-hover !default;
 /// color||Color|0
-$--input-background-color: $--color-white !default;
+$--input-background-color: transparent !default;
 $--input-fill-disabled: $--disabled-fill-base !default;
 $--input-color-disabled: $--font-color-disabled-base !default;
 /// color||Color|0
@@ -442,7 +412,7 @@ $--input-mini-height: 28px !default;
 $--cascader-menu-font-color: $--color-text-regular !default;
 /// color||Color|0
 $--cascader-menu-selected-font-color: $--color-primary !default;
-$--cascader-menu-fill: $--fill-base !default;
+$--cascader-menu-fill: $--background-color-overlay !default;
 $--cascader-menu-font-size: $--font-size-base !default;
 $--cascader-menu-radius: $--border-radius-base !default;
 $--cascader-menu-border: solid 1px $--border-color-light !default;
@@ -450,11 +420,11 @@ $--cascader-menu-shadow: $--box-shadow-light !default;
 $--cascader-node-background-hover: $--background-color-base !default;
 $--cascader-node-color-disabled: $--color-text-placeholder !default;
 $--cascader-color-empty: $--color-text-placeholder !default;
-$--cascader-tag-background: #f0f2f5;
+$--cascader-tag-background: $--fill-color !default;
 
 /* Group
 -------------------------- */
-$--group-option-flex: 0 0 math.div(1, 5) * 100% !default;
+$--group-option-flex: 0 0 (1/5) * 100% !default;
 $--group-option-offset-bottom: 12px !default;
 $--group-option-fill-hover: rgba($--color-black, 0.06) !default;
 $--group-title-color: $--color-black !default;
@@ -514,16 +484,16 @@ $--button-mini-padding-horizontal: 15px !default;
 /// color||Color|0
 $--button-default-font-color: $--color-text-regular !default;
 /// color||Color|0
-$--button-default-background-color: $--color-white !default;
+$--button-default-background-color: transparent !default;
 /// color||Color|0
 $--button-default-border-color: $--border-color-base !default;
 
 /// color||Color|0
-$--button-disabled-font-color: $--color-text-placeholder !default;
+$--button-disabled-font-color: rgba(255, 255, 255, 0.5) !default;
 /// color||Color|0
-$--button-disabled-background-color: $--color-white !default;
+$--button-disabled-background-color: transparent !default;
 /// color||Color|0
-$--button-disabled-border-color: $--border-color-lighter !default;
+$--button-disabled-border-color: $--border-color-light !default;
 
 /// color||Color|0
 $--button-primary-border-color: $--color-primary !default;
@@ -556,8 +526,8 @@ $--button-info-font-color: $--color-white !default;
 /// color||Color|0
 $--button-info-background-color: $--color-info !default;
 
-$--button-hover-tint-percent: 20% !default;
-$--button-active-shade-percent: 10% !default;
+$--button-hover-tint-percent: 30% !default;
+$--button-active-shade-percent: 20% !default;
 
 /* cascader
 -------------------------- */
@@ -581,8 +551,8 @@ $--switch-button-size: 16px !default;
 
 /* Dialog
 -------------------------- */
-$--dialog-background-color: $--color-white !default;
-$--dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
+$--dialog-background-color: $--background-color !default;
+$--dialog-box-shadow: $--box-shadow-base !default;
 /// fontSize||Font|1
 $--dialog-title-font-size: $--font-size-large !default;
 /// fontSize||Font|1
@@ -605,15 +575,15 @@ $--table-header-font-color: $--color-text-secondary !default;
 $--table-row-hover-background-color: $--background-color-base !default;
 $--table-current-row-background-color: $--color-primary-light-9 !default;
 /// color||Color|0
-$--table-header-background-color: $--color-white !default;
-$--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12) !default;
+$--table-header-background-color: $--background-color !default;
+$--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !default;
 
 /* Pagination
 -------------------------- */
 /// fontSize||Font|1
 $--pagination-font-size: 13px !default;
 /// color||Color|0
-$--pagination-background-color: $--color-white !default;
+$--pagination-background-color: transparent !default;
 /// color||Color|0
 $--pagination-font-color: $--color-text-primary !default;
 $--pagination-border-radius: 3px !default;
@@ -626,7 +596,7 @@ $--pagination-button-height: 28px !default;
 /// color||Color|0
 $--pagination-button-disabled-color: $--color-text-placeholder !default;
 /// color||Color|0
-$--pagination-button-disabled-background-color: $--color-white !default;
+$--pagination-button-disabled-background-color: transparent !default;
 /// color||Color|0
 $--pagination-hover-color: $--color-primary !default;
 
@@ -640,11 +610,11 @@ $--popup-modal-opacity: 0.5 !default;
 /* Popover
 -------------------------- */
 /// color||Color|0
-$--popover-background-color: $--color-white !default;
+$--popover-background-color: $--background-color-overlay !default;
 /// fontSize||Font|1
 $--popover-font-size: $--font-size-base !default;
 /// color||Color|0
-$--popover-border-color: $--border-color-lighter !default;
+$--popover-border-color: $--border-color-light !default;
 $--popover-arrow-size: 6px !default;
 /// padding||Spacing|3
 $--popover-padding: 12px !default;
@@ -659,7 +629,7 @@ $--popover-title-font-color: $--color-text-primary !default;
 /// color|1|Color|0
 $--tooltip-fill: $--color-text-primary !default;
 /// color|1|Color|0
-$--tooltip-color: $--color-white !default;
+$--tooltip-color: $--background-color !default;
 /// fontSize||Font|1
 $--tooltip-font-size: 12px !default;
 /// color||Color|0
@@ -698,7 +668,7 @@ $--tree-expand-icon-color: $--color-text-placeholder !default;
 -------------------------- */
 $--dropdown-menu-box-shadow: $--box-shadow-light !default;
 $--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
-$--dropdown-menuItem-hover-color: $--link-color !default;
+$--dropdown-menuItem-hover-color: $--color-primary !default;
 
 /* Badge
 -------------------------- */
@@ -715,7 +685,7 @@ $--badge-size: 18px !default;
 /* Card
 --------------------------*/
 /// color||Color|0
-$--card-border-color: $--border-color-lighter !default;
+$--card-border-color: $--border-color-light !default;
 $--card-border-radius: 4px !default;
 /// padding||Spacing|3
 $--card-padding: 20px !default;
@@ -726,6 +696,7 @@ $--card-padding: 20px !default;
 $--slider-main-background-color: $--color-primary !default;
 /// color||Color|0
 $--slider-runway-background-color: $--border-color-light !default;
+$--slider-button-hover-color: color-mix(in srgb, $--color-primary, black 97%) !default;
 $--slider-stop-background-color: $--color-white !default;
 $--slider-disable-color: $--color-text-placeholder !default;
 $--slider-margin: 16px 0 !default;
@@ -750,7 +721,7 @@ $--menu-item-font-size: $--font-size-base !default;
 /// color||Color|0
 $--menu-item-font-color: $--color-text-primary !default;
 /// color||Color|0
-$--menu-background-color: $--color-white !default;
+$--menu-background-color: transparent !default;
 $--menu-item-hover-fill: $--color-primary-light-9 !default;
 
 /* Rate
@@ -762,7 +733,7 @@ $--rate-font-size: $--font-size-base !default;
 $--rate-icon-size: 18px !default;
 /// margin||Spacing|2
 $--rate-icon-margin: 6px !default;
-$--rate-icon-color: $--color-text-placeholder !default;
+$--rate-icon-color: $--border-color-darker !default;
 
 /* DatePicker
 --------------------------*/
@@ -773,7 +744,7 @@ $--datepicker-off-font-color: $--color-text-placeholder !default;
 $--datepicker-header-font-color: $--color-text-regular !default;
 $--datepicker-icon-color: $--color-text-primary !default;
 $--datepicker-border-color: $--disabled-border-base !default;
-$--datepicker-inner-border-color: #e4e4e4 !default;
+$--datepicker-inner-border-color: $--border-color-light !default;
 /// color||Color|0
 $--datepicker-inrange-background-color: $--border-color-extra-light !default;
 /// color||Color|0
@@ -818,13 +789,13 @@ $--collapse-border-color: $--border-color-lighter !default;
 /// height||Other|4
 $--collapse-header-height: 48px !default;
 /// color||Color|0
-$--collapse-header-background-color: $--color-white !default;
+$--collapse-header-background-color: transparent !default;
 /// color||Color|0
 $--collapse-header-font-color: $--color-text-primary !default;
 /// fontSize||Font|1
 $--collapse-header-font-size: 13px !default;
 /// color||Color|0
-$--collapse-content-background-color: $--color-white !default;
+$--collapse-content-background-color: transparent !default;
 /// fontSize||Font|1
 $--collapse-content-font-size: 13px !default;
 /// color||Color|0
@@ -870,7 +841,7 @@ $--timeline-node-color: $--border-color-light !default;
 /* Backtop
 --------------------------*/
 /// color||Color|0
-$--backtop-background-color: $--color-white !default;
+$--backtop-background-color: $--background-color-overlay !default;
 /// color||Color|0
 $--backtop-font-color: $--color-primary !default;
 /// color||Color|0
@@ -903,7 +874,7 @@ $--link-info-font-color: $--color-info !default;
 /// border||Other|4
 $--calendar-border: $--table-border !default;
 /// color||Other|4
-$--calendar-selected-background-color: #f2f8fe !default;
+$--calendar-selected-background-color: $--color-primary-light-9 !default;
 $--calendar-cell-width: 85px !default;
 
 /* Form
@@ -916,7 +887,7 @@ $--form-label-font-size: $--font-size-base !default;
 /// color||Color|0
 $--avatar-font-color: #fff !default;
 /// color||Color|0
-$--avatar-background-color: #c0c4cc !default;
+$--avatar-background-color: $--color-text-disabled !default;
 /// fontSize||Font Size|1
 $--avatar-text-font-size: 14px !default;
 /// fontSize||Font Size|1
@@ -936,22 +907,31 @@ $--empty-padding: 40px 0 !default;
 $--empty-image-width: 160px !default;
 $--empty-description-margin-top: 20px !default;
 $--empty-bottom-margin-top: 20px !default;
+$--empty-fill-color-1: #4b4b52 !default;
+$--empty-fill-color-2: #36383d !default;
+$--empty-fill-color-3: #1e1e20 !default;
+$--empty-fill-color-4: #262629 !default;
+$--empty-fill-color-5: #202124 !default;
+$--empty-fill-color-6: #212224 !default;
+$--empty-fill-color-7: #1b1c1f !default;
+$--empty-fill-color-8: #1c1d1f !default;
+$--empty-fill-color-9: #18181a !default;
 
 /* Descriptions
 -------------------------- */
 $--descriptions-header-margin-bottom: 20px !default;
 $--descriptions-title-font-size: 16px !default;
 $--descriptions-table-border: 1px solid $--border-color-lighter !default;
-$--descriptions-item-bordered-label-background: #fafafa !default;
+$--descriptions-item-bordered-label-background: $--background-color-base !default;
 
 /* Skeleton 
 --------------------------*/
-$--skeleton-color: #f2f2f2 !default;
-$--skeleton-to-color: #e6e6e6 !default;
+$--skeleton-color: $--fill-color !default;
+$--skeleton-to-color: $--border-color-light !default;
 
 /* Svg
 --------------- */
-$--svg-monochrome-grey: #dcdde0 !default;
+$--svg-monochrome-grey: $--border-color-base !default;
 
 /* Result
 -------------------------- */
@@ -974,49 +954,23 @@ $--lg: 1200px !default;
 $--xl: 1920px !default;
 
 $--breakpoints: (
-  'xs': (
-    max-width: $--sm - 1,
-  ),
-  'sm': (
-    min-width: $--sm,
-  ),
-  'md': (
-    min-width: $--md,
-  ),
-  'lg': (
-    min-width: $--lg,
-  ),
-  'xl': (
-    min-width: $--xl,
-  ),
+  'xs': '(max-width: #{$--sm - 1})',
+  'sm': '(min-width: #{$--sm})',
+  'md': '(min-width: #{$--md})',
+  'lg': '(min-width: #{$--lg})',
+  'xl': '(min-width: #{$--xl})',
 );
 
 $--breakpoints-spec: (
-  'xs-only': (
-    max-width: $--sm - 1,
-  ),
-  'sm-and-up': (
-    min-width: $--sm,
-  ),
+  'xs-only': '(max-width: #{$--sm - 1})',
+  'sm-and-up': '(min-width: #{$--sm})',
   'sm-only': '(min-width: #{$--sm}) and (max-width: #{$--md - 1})',
-  'sm-and-down': (
-    max-width: $--md - 1,
-  ),
-  'md-and-up': (
-    min-width: $--md,
-  ),
+  'sm-and-down': '(max-width: #{$--md - 1})',
+  'md-and-up': '(min-width: #{$--md})',
   'md-only': '(min-width: #{$--md}) and (max-width: #{$--lg - 1})',
-  'md-and-down': (
-    max-width: $--lg - 1,
-  ),
-  'lg-and-up': (
-    min-width: $--lg,
-  ),
+  'md-and-down': '(max-width: #{$--lg - 1})',
+  'lg-and-up': '(min-width: #{$--lg})',
   'lg-only': '(min-width: #{$--lg}) and (max-width: #{$--xl - 1})',
-  'lg-and-down': (
-    max-width: $--xl - 1,
-  ),
-  'xl-only': (
-    min-width: $--xl,
-  ),
+  'lg-and-down': '(max-width: #{$--xl - 1})',
+  'xl-only': '(min-width: #{$--xl})',
 );

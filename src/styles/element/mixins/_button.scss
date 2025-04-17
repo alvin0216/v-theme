@@ -1,21 +1,20 @@
 @import '../common/var';
 
-@mixin button-plain($color) {
-  color: $color;
-  background: color-mix(in srgb, $--color-dark 90%, $color);
-  border-color: color-mix(in srgb, $--color-dark 60%, $color);
+@mixin button-variant($base-bg, $hover-bg, $active-bg, $disabled-bg, $plain-bg, $plain-border) {
+  color: #ffffff;
+  background-color: $base-bg;
+  border-color: $base-bg;
 
   &:hover,
   &:focus {
-    background: $color;
-    border-color: $color;
-    color: $--color-white;
+    background: $hover-bg;
+    border-color: $hover-bg;
+    color: #ffffff;
   }
-
   &:active {
-    background: color-mix(in srgb, $--color-white $--button-active-shade-percent, $color);
-    border-color: color-mix(in srgb, $--color-white $--button-active-shade-percent, $color);
-    color: $--color-white;
+    background: $active-bg;
+    border-color: $active-bg;
+    color: #ffffff;
     outline: none;
   }
 
@@ -24,51 +23,30 @@
     &:hover,
     &:focus,
     &:active {
-      color: color-mix(in srgb, $--color-dark 50%, $color);
-      background-color: color-mix(in srgb, $--color-dark 90%, $color);
-      border-color: color-mix(in srgb, $--color-dark 80%, $color);
-    }
-  }
-}
-
-@mixin button-variant($color, $background-color, $border-color) {
-  color: $color;
-  background-color: $background-color;
-  border-color: $border-color;
-
-  &:hover,
-  &:focus {
-    background: color-mix(in srgb, $--color-dark $--button-hover-tint-percent, $background-color);
-    border-color: color-mix(in srgb, $--color-dark $--button-hover-tint-percent, $border-color);
-    color: $color;
-  }
-
-  &:active {
-    background: color-mix(in srgb, $--color-white $--button-active-shade-percent, $background-color);
-    border-color: color-mix(in srgb, $--color-white $--button-active-shade-percent, $border-color);
-    color: $color;
-    outline: none;
-  }
-
-  &.is-active {
-    background: color-mix(in srgb, $--color-white $--button-active-shade-percent, $background-color);
-    border-color: color-mix(in srgb, $--color-white $--button-active-shade-percent, $border-color);
-    color: $color;
-  }
-
-  &.is-disabled {
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      color: $--button-disabled-font-color;
-      background-color: color-mix(in srgb, $--color-dark 50%, $background-color);
-      border-color: color-mix(in srgb, $--color-dark 50%, $border-color);
+      color: #ffffff;
+      background-color: $disabled-bg;
+      border-color: $disabled-bg;
     }
   }
 
   &.is-plain {
-    @include button-plain($background-color);
+    color: $base-bg;
+    background: $plain-bg;
+    border-color: $plain-border;
+
+    &:hover,
+    &:focus {
+      background: $base-bg;
+      border-color: $base-bg;
+      color: #ffffff;
+    }
+
+    &:active {
+      background: $active-bg;
+      border-color: $active-bg;
+      color: #ffffff;
+      outline: none;
+    }
   }
 }
 

@@ -1,0 +1,113 @@
+:root {
+  // Common colors
+  --color-border: #4c4d4f;
+  --color-text: #cfd3dc;
+  --color-disabled-text: rgba(255, 255, 255, 0.5);
+  --color-disabled-border: #414243;
+  --color-disabled-bg: transparent;
+
+  // Light theme colors
+  --color-light-hover: #294e95;
+  --color-light-active: #213e77;
+  --color-light-bg-hover: #eaedf4;
+  --color-light-border-hover: #bfcadf;
+
+  // Dark theme colors
+  --color-dark-hover: #409eff;
+  --color-dark-active: #66b1ff;
+  --color-dark-bg-hover: #18222c;
+  --color-dark-border-hover: #213d5b;
+
+  // Primary button colors
+  --color-primary-light: #294e95;
+  --color-primary-dark: #409eff;
+
+  // Success button colors
+  --color-success-light: #67c23a;
+  --color-success-dark: #67c23a;
+
+  // Warning button colors
+  --color-warning-light: #e6a23c;
+  --color-warning-dark: #e6a23c;
+
+  // Danger button colors
+  --color-danger-light: #f56c6c;
+  --color-danger-dark: #f56c6c;
+
+  // Info button colors
+  --color-info-light: #909399;
+  --color-info-dark: #909399;
+}
+
+.el-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: 0 0;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+
+  &.is-disabled {
+    color: var(--color-disabled-text);
+    cursor: not-allowed;
+    background-color: var(--color-disabled-bg);
+    border-color: var(--color-disabled-border);
+  }
+
+  &:hover {
+    color: var(--color-light-hover);
+    border-color: var(--color-light-border-hover);
+    background-color: var(--color-light-bg-hover);
+  }
+
+  &:active {
+    color: var(--color-light-active);
+    border-color: var(--color-light-active);
+  }
+
+  &--primary {
+    color: #fff;
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+
+    &:hover {
+      background-color: var(--color-primary-light);
+      border-color: var(--color-primary-light);
+    }
+
+    &:active {
+      background-color: var(--color-primary-light);
+      border-color: var(--color-primary-light);
+    }
+  }
+
+  &--success {
+    color: #fff;
+    background-color: var(--color-success-light);
+    border-color: var(--color-success-light);
+
+    &:hover {
+      background-color: var(--color-success-light);
+      border-color: var(--color-success-light);
+    }
+
+    &:active {
+      background-color: var(--color-success-light);
+      border-color: var(--color-success-light);
+    }
+  }
+
+  // Add similar blocks for warning, danger, and info buttons
+}

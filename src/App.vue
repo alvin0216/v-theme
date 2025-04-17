@@ -3,7 +3,7 @@
     <div class="content">
       <el-button @click="toggle">切换主题</el-button>
       <button-example />
-      <input-example />
+      <!-- <input-example />
       <checkbox-example />
       <card-example />
       <dropdown-example />
@@ -62,7 +62,7 @@
       <tooltip-example />
       <transfer-example />
       <tree-example />
-      <upload-example />
+      <upload-example /> -->
     </div>
   </div>
 </template>

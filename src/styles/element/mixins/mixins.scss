@@ -1,18 +1,15 @@
-@import "function";
-@import "../common/var";
+@import 'function';
+@import '../common/var';
 
 /* Break-points
  -------------------------- */
 @mixin res($key, $map: $--breakpoints) {
-
   // 循环断点Map，如果存在则返回
   @if map-has-key($map, $key) {
     @media only screen and #{unquote(map-get($map, $key))} {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @warn "Undefeined points: `#{$map}`";
   }
 }
@@ -56,22 +53,22 @@
  -------------------------- */
 @mixin placeholder {
   &::-webkit-input-placeholder {
-    @content
+    @content;
   }
 
   &::-moz-placeholder {
-    @content
+    @content;
   }
 
   &:-ms-input-placeholder {
-    @content
+    @content;
   }
 }
 
 /* BEM
  -------------------------- */
 @mixin b($block) {
-  $B: $namespace+'-' +$block !global;
+  $B: $namespace + '-' + $block !global;
 
   .#{$B} {
     @content;
@@ -81,10 +78,10 @@
 @mixin e($element) {
   $E: $element !global;
   $selector: &;
-  $currentSelector: "";
+  $currentSelector: '';
 
   @each $unit in $element {
-    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+    $currentSelector: #{$currentSelector + '.' + $B + $element-separator + $unit + ','};
   }
 
   @if hitAllSpecialNestRule($selector) {
@@ -95,9 +92,7 @@
         }
       }
     }
-  }
-
-  @else {
+  } @else {
     @at-root {
       #{$currentSelector} {
         @content;
@@ -108,10 +103,10 @@
 
 @mixin m($modifier) {
   $selector: &;
-  $currentSelector: "";
+  $currentSelector: '';
 
   @each $unit in $modifier {
-    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ','};
   }
 
   @at-root {
@@ -126,12 +121,12 @@
   $interpolation: '';
 
   @if $E-flag {
-    $interpolation: $element-separator +$E-flag;
+    $interpolation: $element-separator + $E-flag;
   }
 
   @at-root {
     #{$selector} {
-      .#{$B+$interpolation+$modifier-separator+$modifier} {
+      .#{$B + $interpolation + $modifier-separator + $modifier} {
         @content;
       }
     }
@@ -142,12 +137,12 @@
   $modifierCombo: '';
 
   @if $modifier {
-    $modifierCombo: $modifier-separator +$modifier;
+    $modifierCombo: $modifier-separator + $modifier;
   }
 
   @at-root {
-    #{&}#{$specSelector}.#{$block+$element-separator+$element+$modifierCombo} {
-      @content
+    #{&}#{$specSelector}.#{$block + $element-separator + $element + $modifierCombo} {
+      @content;
     }
   }
 }
@@ -157,13 +152,13 @@
   $modifierCombo: '';
 
   @if $modifier {
-    $modifierCombo: $modifier-separator +$modifier;
+    $modifierCombo: $modifier-separator + $modifier;
   }
 
   @at-root {
     #{$selector} {
-      .#{$block+$element-separator+$element+$modifierCombo} {
-        @content
+      .#{$block + $element-separator + $element + $modifierCombo} {
+        @content;
       }
     }
   }
@@ -178,19 +173,19 @@
 }
 
 @mixin extend-rule($name) {
-  @extend #{'%shared-'+$name};
+  @extend #{'%shared-'+($name)}; // 添加括号明确优先级
 }
 
 @mixin share-rule($name) {
-  $rule-name: '%shared-' +$name;
+  $rule-name: '%shared-' + ($name); // 添加括号明确优先级
 
   @at-root #{$rule-name} {
-    @content
+    @content;
   }
 }
 
 @mixin pseudo($pseudo) {
   @at-root #{&}#{':#{$pseudo}'} {
-@content
-}
+    @content;
+  }
 }

@@ -1,8 +1,9 @@
 @import '../common/var';
+
 @mixin button-plain($color) {
   color: $color;
-  background: color-mix(in srgb, $--color-white 90%, $color 10%);
-  border-color: color-mix(in srgb, $--color-white 60%, $color 40%);
+  background: color-mix(in srgb, $--color-dark 90%, $color);
+  border-color: color-mix(in srgb, $--color-dark 60%, $color);
 
   &:hover,
   &:focus {
@@ -12,8 +13,8 @@
   }
 
   &:active {
-    background: color-mix(in srgb, $--color-black $--button-active-shade-percent, $color);
-    border-color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $color);
+    background: color-mix(in srgb, $--color-white $--button-active-shade-percent, $color);
+    border-color: color-mix(in srgb, $--color-white $--button-active-shade-percent, $color);
     color: $--color-white;
     outline: none;
   }
@@ -23,9 +24,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: color-mix(in srgb, $--color-white 40%, $color);
-      background-color: color-mix(in srgb, $--color-white 90%, $color 10%);
-      border-color: color-mix(in srgb, $--color-white 80%, $color 20%);
+      color: color-mix(in srgb, $--color-dark 50%, $color);
+      background-color: color-mix(in srgb, $--color-dark 90%, $color);
+      border-color: color-mix(in srgb, $--color-dark 80%, $color);
     }
   }
 }
@@ -37,21 +38,21 @@
 
   &:hover,
   &:focus {
-    background: color-mix(in srgb, $--color-white $--button-hover-tint-percent, $background-color);
-    border-color: color-mix(in srgb, $--color-white $--button-hover-tint-percent, $border-color);
+    background: color-mix(in srgb, $--color-dark $--button-hover-tint-percent, $background-color);
+    border-color: color-mix(in srgb, $--color-dark $--button-hover-tint-percent, $border-color);
     color: $color;
   }
 
   &:active {
-    background: color-mix(in srgb, $--color-black $--button-active-shade-percent, $background-color);
-    border-color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $border-color);
+    background: color-mix(in srgb, $--color-white $--button-active-shade-percent, $background-color);
+    border-color: color-mix(in srgb, $--color-white $--button-active-shade-percent, $border-color);
     color: $color;
     outline: none;
   }
 
   &.is-active {
-    background: color-mix(in srgb, $--color-black $--button-active-shade-percent, $background-color);
-    border-color: color-mix(in srgb, $--color-black $--button-active-shade-percent, $border-color);
+    background: color-mix(in srgb, $--color-white $--button-active-shade-percent, $background-color);
+    border-color: color-mix(in srgb, $--color-white $--button-active-shade-percent, $border-color);
     color: $color;
   }
 
@@ -60,9 +61,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: $--color-white;
-      background-color: color-mix(in srgb, $background-color 50%, $--color-white 50%);
-      border-color: color-mix(in srgb, $border-color 50%, $--color-white 50%);
+      color: $--button-disabled-font-color;
+      background-color: color-mix(in srgb, $--color-dark 50%, $background-color);
+      border-color: color-mix(in srgb, $--color-dark 50%, $border-color);
     }
   }
 
@@ -75,6 +76,7 @@
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   border-radius: $border-radius;
+
   &.is-round {
     padding: $padding-vertical $padding-horizontal;
   }

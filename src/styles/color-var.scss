@@ -21,9 +21,17 @@
   --border-color-darker: #636466;
   --border-color-extra-light: #f2f6fc;
 
+  // Box-shadow
+  --box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  --box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
+  --box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+  // Background
   --background-color-base: #f5f7fa;
-  --background-color-overlay: #1d1e1f;
+  --background-color-overlay: #ffffff;
   --overlay-color-lighter: rgba(0, 0, 0, 0.5);
+
+  color: var(--color-text-regular);
 }
 
 body.dark {
@@ -49,9 +57,17 @@ body.dark {
   --border-color-darker: #636466;
   --border-color-extra-light: #2b2b2c;
 
+  // Box-shadow
+  --box-shadow-base: 0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72);
+  --box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.72), 0px 12px 32px #000000, 0px 8px 16px -8px #000000;
+  --box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.72);
+
+  // Background
   --background-color-base: #262627;
   --background-color-overlay: #1d1e1f;
   --overlay-color-lighter: rgba(0, 0, 0, 0.5);
+
+  color: var(--color-text-regular);
 }
 
 body {
@@ -81,6 +97,13 @@ $--border-color-light: var(--border-color-light) !default;
 $--border-color-lighter: var(--border-color-lighter) !default;
 $--border-color-darker: var(--border-color-darker) !default;
 $--border-color-extra-light: var(--border-color-extra-light) !default;
+
+// Box-shadow
+$--box-shadow-base: var(--box-shadow-base) !default;
+$--box-shadow-light: var(--box-shadow-light) !default;
+$--box-shadow-dark: var(--box-shadow-dark) !default;
+$--box-shadow-base: var(--box-shadow-base) !default;
+$--box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.72) !default;
 
 // Background
 $--background-color: var(--color-dark) !default;

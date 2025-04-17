@@ -32,16 +32,6 @@ $--border-radius-circle: 100% !default;
 /// borderRadius|1|Radius|0
 $--border-radius-zero: 0 !default;
 
-// Box-shadow
-/// boxShadow|1|Shadow|1
-$--box-shadow-base: 0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72) !default;
-/// boxShadow|1|Shadow|1
-$--box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.72), 0px 12px 32px #000000, 0px 8px 16px -8px #000000 !default;
-/// boxShadow|1|Shadow|1
-$--box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.72) !default;
-/// boxShadow|1|Shadow|1
-$--box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.72) !default;
-
 /* Fill
 -------------------------- */
 $--fill-base: $--color-white !default;

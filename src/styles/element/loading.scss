@@ -27,7 +27,7 @@
     position: fixed;
 
     .el-loading-spinner {
-      margin-top: #{- $--loading-fullscreen-spinner-size / 2};
+      margin-top: #{- $--loading-fullscreen-spinner-size * 0.5};
 
       .circular {
         height: $--loading-fullscreen-spinner-size;

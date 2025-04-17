@@ -12,17 +12,22 @@
 // @import './theme/divider.scss';
 // @import './theme/loading.scss';
 
-@import './element/base.scss';
-@import './element/button.scss';
-@import './element/input.scss';
-@import './element/checkbox.scss';
-@import './element/card.scss';
-@import './element/row.scss';
-@import './element/col.scss';
-@import './element/dropdown.scss';
-@import './element/dropdown-item.scss';
-@import './element/link.scss';
-@import './element/dialog.scss';
-@import './element/divider.scss';
-@import './element/loading.scss';
-// @import './element/index.scss';
+// @import './element/base.scss';
+// @import './element/button.scss';
+// @import './element/input.scss';
+// @import './element/checkbox.scss';
+// @import './element/card.scss';
+// @import './element/row.scss';
+// @import './element/col.scss';
+// @import './element/dropdown.scss';
+// @import './element/dropdown-item.scss';
+// @import './element/link.scss';
+// @import './element/dialog.scss';
+// @import './element/divider.scss';
+// @import './element/loading.scss';
+
+@import './element/index.scss';
+
+body.dark {
+  background-color: #141414;
+}

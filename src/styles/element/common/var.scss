@@ -491,7 +491,7 @@ $--button-default-background-color: transparent !default;
 $--button-default-border-color: $--border-color-base !default;
 
 /// color||Color|0
-$--button-disabled-font-color: rgba(255, 255, 255, 0.5) !default;
+$--button-disabled-font-color: $--color-text-placeholder !default;
 /// color||Color|0
 $--button-disabled-background-color: transparent !default;
 /// color||Color|0

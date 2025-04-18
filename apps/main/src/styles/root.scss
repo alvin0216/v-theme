@@ -1,0 +1,33 @@
+@import './element/common/var.scss';
+
+$types: primary, success, warning, danger, info;
+
+// light
+$button-bgs: (
+  primary: $--color-primary,
+  success: $--color-success,
+  warning: $--color-warning,
+  danger: $--color-danger,
+  info: $--color-info,
+);
+
+// $--color-white
+
+:root {
+  @each $type in $types {
+    // 获取当前类型的背景色和边框色
+    $bg-color: map-get($button-bgs, $type);
+    $border-color: map-get($button-bgs, $type);
+
+    // 生成混合颜色变量
+    --button-#{$type}-hover-bg: #{mix($--color-white, $bg-color, $--button-hover-tint-percent)};
+    --button-#{$type}-hover-border: #{mix($--color-white, $border-color, $--button-hover-tint-percent)};
+    --button-#{$type}-active-bg: #{mix($--color-white, $bg-color, $--button-active-shade-percent)};
+    --button-#{$type}-active-border: #{mix($--color-white, $border-color, $--button-active-shade-percent)};
+    --button-#{$type}-5: #{mix($--color-white, $bg-color, 50%)};
+    --button-#{$type}-9: #{mix($--color-white, $bg-color, 90%)};
+    --button-#{$type}-border-5: #{mix($--color-white, $border-color, 50%)};
+    --button-#{$type}-plain-border-6: #{mix($--color-white, $bg-color, 60%)};
+    --button-#{$type}-plain-disabled-border-8: #{mix($--color-white, $bg-color, 80%)};
+  }
+}

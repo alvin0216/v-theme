@@ -5,6 +5,9 @@
 @import 'mixins/utils';
 
 @include b(button) {
+  --button-active: #{mix($--color-black, $--color-primary, $--button-active-shade-percent)};
+  --button-hover: #{mix($--color-white, $--color-primary, $--button-hover-tint-percent)};
+
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -40,8 +43,8 @@
   }
 
   &:active {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: var(--button-active);
+    border-color: var(--button-active);
     outline: none;
   }
 
@@ -65,15 +68,15 @@
 
     &:active {
       background: $--color-white;
-      border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      border-color: var(--button-active);
+      color: var(--button-active);
       outline: none;
     }
   }
 
   @include when(active) {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
-    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: var(--button-active);
+    border-color: var(--button-active);
   }
 
   @include when(disabled) {
@@ -127,6 +130,8 @@
     padding: $--button-padding-vertical;
   }
   @include m(primary) {
+    // ...
+
     @include button-variant(
       $--button-primary-font-color,
       $--button-primary-background-color,
@@ -199,12 +204,12 @@
 
     &:hover,
     &:focus {
-      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+      color: var(--button-hover);
       border-color: transparent;
       background-color: transparent;
     }
     &:active {
-      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      color: var(--button-active);
       border-color: transparent;
       background-color: transparent;
     }

@@ -1,0 +1,56 @@
+{
+  "name": "element-theme-darkplus",
+  "version": "2.1.4",
+  "description": "Element component dark theme base on the latest version 2.15.14.",
+  "main": "lib/index.css",
+  "style": "lib/index.css",
+  "files": [
+    "lib",
+    "utils",
+    "EXAMPLE.md"
+  ],
+  "scripts": {
+    "dev": "live-server docs",
+    "build:css": "gulp build",
+    "build:scripts": "rollup -c scripts/rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongwei1125/theme-dark.git"
+  },
+  "keywords": [
+    "element",
+    "theme",
+    "dark"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dongwei1125/theme-dark/issues"
+  },
+  "homepage": "https://github.com/dongwei1125/theme-dark#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "babel": "^6.23.0",
+    "css-wrap": "^0.1.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.15.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-util": "^3.0.8",
+    "live-server": "^1.2.2",
+    "prettier": "^2.8.8",
+    "rollup": "^4.18.0",
+    "sass": "1.32.13",
+    "through2": "^4.0.2"
+  },
+  "dependencies": {}
+}

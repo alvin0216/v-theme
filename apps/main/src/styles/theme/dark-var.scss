@@ -1,0 +1,112 @@
+$--color-primary: #409eff !default;
+$--color-dark: #141414 !default; // ! new
+
+$--color-success-light: mix($--color-dark, $--color-success, 80%) !default;
+$--color-warning-light: mix($--color-dark, $--color-warning, 80%) !default;
+$--color-danger-light: mix($--color-dark, $--color-danger, 80%) !default;
+$--color-info-light: mix($--color-dark, $--color-info, 80%) !default;
+$--color-success-lighter: mix($--color-dark, $--color-success, 90%) !default;
+$--color-warning-lighter: mix($--color-dark, $--color-warning, 90%) !default;
+$--color-danger-lighter: mix($--color-dark, $--color-danger, 90%) !default;
+$--color-info-lighter: mix($--color-dark, $--color-info, 90%) !default;
+$--color-primary-dark-2: mix($--color-white, $--color-primary, 20%) !default; // !new
+
+$--color-text-primary: #e5eaf3 !default;
+$--color-text-regular: #cfd3dc !default;
+$--color-text-secondary: #a3a6ad !default;
+$--color-text-placeholder: #8d9095 !default;
+$--color-text-disabled: #6c6e72 !default; // !new
+
+/* ==========================
+   Border 边框色变量
+   ========================== */
+$--border-color-base: #4c4d4f !default;
+$--border-color-light: #414243 !default;
+$--border-color-lighter: #363637 !default;
+$--border-color-darker: #636466 !default;
+$--border-color-extra-light: #2b2b2c !default;
+
+/* ==========================
+   Background 背景色变量
+   ========================== */
+$--background-color: $--color-dark !default;
+$--background-color-base: #262627 !default;
+$--background-color-overlay: #1d1e1f !default;
+$--overlay-color-lighter: rgba(0, 0, 0, 0.5) !default; // !new
+
+$--border-color-hover: $--color-text-disabled !default; // ! update
+
+// Box-shadow
+$--box-shadow-base: 0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72) !default;
+$--box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.72), 0px 12px 32px #000000, 0px 8px 16px -8px #000000 !default;
+$--box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.72) !default;
+$--box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.72) !default;
+
+$--fill-color: #303030 !default; // !new
+$--fill-color-lighter: #1d1d1d !default; // !new
+$--fill-color-darker: #424243 !default; // !new
+$--mask-color: rgba(0, 0, 0, 0.8) !default; // !new
+
+$--font-color-disabled-base: $--color-text-disabled !default; // !update
+
+$--checkbox-background-color: transparent !default; // !update
+$--checkbox-disabled-input-fill: $--background-color-base !default; // !update
+$--radio-input-background-color: transparent !default; // !update
+$--select-multiple-input-color: $--color-text-regular !default; // !update
+$--select-dropdown-background: $--background-color-overlay !default; // !update
+
+$--message-shadow: $--box-shadow-light !default; // !update
+$--message-background-color: $--color-info-lighter !default; // !update
+$--input-background-color: transparent !default; // !update
+$--cascader-menu-fill: $--background-color-overlay !default; // !update
+$--cascader-tag-background: $--fill-color !default; // !update
+$--button-default-background-color: transparent !default; // !update
+$--button-disabled-font-color: rgba(255, 255, 255, 0.5) !default;
+$--button-disabled-background-color: transparent !default;
+$--button-disabled-border-color: $--border-color-light !default;
+
+$--button-hover-tint-percent: 30% !default;
+$--button-active-shade-percent: 20% !default;
+
+$--dialog-background-color: $--background-color !default;
+$--dialog-box-shadow: $--box-shadow-base !default;
+
+$--table-header-background-color: $--background-color !default;
+$--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !default;
+
+$--pagination-background-color: transparent !default;
+$--pagination-button-disabled-background-color: transparent !default;
+
+$--popover-background-color: $--background-color-overlay !default;
+$--popover-border-color: $--border-color-light !default;
+$--tooltip-color: $--background-color !default;
+$--dropdown-menuItem-hover-color: $--color-primary !default;
+
+$--card-border-color: $--border-color-light !default;
+$--menu-background-color: transparent !default;
+$--rate-icon-color: $--border-color-darker !default;
+
+$--datepicker-inner-border-color: $--border-color-light !default;
+$--collapse-header-background-color: transparent !default;
+$--collapse-content-background-color: transparent !default;
+$--backtop-background-color: $--background-color-overlay !default;
+$--calendar-selected-background-color: $--color-primary-light-9 !default;
+
+$--avatar-background-color: $--color-text-disabled !default;
+
+// !new
+$--empty-fill-color-1: #4b4b52 !default;
+$--empty-fill-color-2: #36383d !default;
+$--empty-fill-color-3: #1e1e20 !default;
+$--empty-fill-color-4: #262629 !default;
+$--empty-fill-color-5: #202124 !default;
+$--empty-fill-color-6: #212224 !default;
+$--empty-fill-color-7: #1b1c1f !default;
+$--empty-fill-color-8: #1c1d1f !default;
+$--empty-fill-color-9: #18181a !default;
+
+$--descriptions-item-bordered-label-background: $--background-color-base !default;
+
+$--skeleton-color: $--fill-color !default;
+$--skeleton-to-color: $--border-color-light !default;
+$--svg-monochrome-grey: $--border-color-base !default;

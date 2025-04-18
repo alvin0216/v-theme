@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Hello, Vue 2 + Vite!</h1>
-    <el-button>click</el-button>
+    <el-button type="primary" @click="toggle">Toggle</el-button>
 
     <el-row>
       <el-button>默认</el-button>
@@ -70,5 +70,10 @@
 <script>
 export default {
   name: 'App',
+  methods: {
+    toggle() {
+      document.querySelector('html').classList.toggle('dark');
+    },
+  },
 };
 </script>

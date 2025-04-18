@@ -129,9 +129,15 @@
     border-radius: 50%;
     padding: $--button-padding-vertical;
   }
-  @include m(primary) {
-    // ...
 
+  // $types: primary, success, warning, danger, info;
+  // @each $type in $types {
+  //   &.el-button--#{$type} {
+  //     color: #{$--button-#{$type}-font-color};
+  //   }
+  // }
+
+  @include m(primary) {
     @include button-variant(
       $--button-primary-font-color,
       $--button-primary-background-color,

@@ -30,26 +30,38 @@ $button-styles: (
   ),
 );
 
-:root {
-  @each $type, $styles in $button-styles {
-    $bg-color: map-get($styles, background);
-    $border-color: map-get($styles, border);
-    $font-color: map-get($styles, font);
+// :root {
+//   @each $type, $styles in $button-styles {
+//     $bg-color: map-get($styles, background);
+//     $border-color: map-get($styles, border);
+//     $font-color: map-get($styles, font);
 
-    --button-#{$type}-hover-bg: #{mix($--color-white, $bg-color, $--button-hover-tint-percent)};
-    --button-#{$type}-hover-border: #{mix($--color-white, $border-color, $--button-hover-tint-percent)};
-    --button-#{$type}-active-bg: #{mix($--color-black, $bg-color, $--button-active-shade-percent)};
-    --button-#{$type}-active-border: #{mix($--color-black, $border-color, $--button-active-shade-percent)};
-    --button-#{$type}-disabled-bg: #{mix($bg-color, $--color-white)};
-    --button-#{$type}-disabled-border: #{mix($border-color, $--color-white)};
-    --button-#{$type}-plain-bg: #{mix($--color-white, $bg-color, 90%)};
-    --button-#{$type}-plain-border: #{mix($--color-white, $bg-color, 60%)};
-    --button-#{$type}-plain-disabled-color: #{mix($--color-white, $bg-color, 40%)};
-    --button-#{$type}-plain-disabled-bg: #{mix($--color-white, $bg-color, 90%)};
-    --button-#{$type}-plain-disabled-border: #{mix($--color-white, $bg-color, 80%)};
+//     --button-#{$type}-hover-bg: #{mix($--color-white, $bg-color, $--button-hover-tint-percent)};
+//     --button-#{$type}-hover-border: #{mix($--color-white, $border-color, $--button-hover-tint-percent)};
+//     --button-#{$type}-active-bg: #{mix($--color-black, $bg-color, $--button-active-shade-percent)};
+//     --button-#{$type}-active-border: #{mix($--color-black, $border-color, $--button-active-shade-percent)};
+//     --button-#{$type}-disabled-bg: #{mix($bg-color, $--color-white)};
+//     --button-#{$type}-disabled-border: #{mix($border-color, $--color-white)};
+//     --button-#{$type}-plain-bg: #{mix($--color-white, $bg-color, 90%)};
+//     --button-#{$type}-plain-border: #{mix($--color-white, $bg-color, 60%)};
+//     --button-#{$type}-plain-disabled-color: #{mix($--color-white, $bg-color, 40%)};
+//     --button-#{$type}-plain-disabled-bg: #{mix($--color-white, $bg-color, 90%)};
+//     --button-#{$type}-plain-disabled-border: #{mix($--color-white, $bg-color, 80%)};
+//   }
+// }
+
+$themes: (
+  light: (
+    color-primary: red,
+  ),
+  dark: (
+    color-primary: #409eff,
+  ),
+);
+
+@each $theme, $colors in $themes {
+  $selector: if($theme == light, ':root', 'html.dark');
+  #{$selector} {
+    --color-primary: #{map-get($colors, color-primary)};
   }
-}
-
-html.dark {
-  // ...
 }

@@ -30,7 +30,7 @@ $--border-color-extra-light: #2b2b2c !default;
    Background 背景色变量
    ========================== */
 $--background-color: $--color-dark !default;
-var(--background-color-base): #262627 !default;
+$--background-color-base: #262627 !default;
 $--background-color-overlay: #1d1e1f !default;
 $--overlay-color-lighter: rgba(0, 0, 0, 0.5) !default; // !new
 

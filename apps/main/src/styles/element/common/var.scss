@@ -23,15 +23,6 @@ $--color-danger: #f56c6c !default;
 $--color-info: #909399 !default;
 
 /* ==========================
-      Border 边框色变量
-      ========================== */
-
-/* ==========================
-      Background 背景色变量
-      ========================== */
-$--background-color-base: #f5f7fa !default;
-
-/* ==========================
       Link 链接变量
       ========================== */
 $--link-color: var(--color-primary-light-2); // 链接的默认颜色
@@ -84,7 +75,7 @@ $--index-popper: 2000 !default;
 
 /* Disable base
    -------------------------- */
-$--disabled-fill-base: $--background-color-base !default; // 禁用状态下的基础填充颜色，使用背景基础色
+$--disabled-fill-base: var(--background-color-base) !default; // 禁用状态下的基础填充颜色，使用背景基础色
 $--disabled-color-base: var(--color-text-placeholder) !default; // 禁用状态下的基础文本颜色，使用占位符文本颜色
 $--disabled-border-base: var(--border-color-light) !default; // 禁用状态下的基础边框颜色，使用浅色边框颜色
 
@@ -204,9 +195,9 @@ $--select-option-color: var(--color-text-regular) !default;
 $--select-option-disabled-color: var(--color-text-placeholder) !default;
 $--select-option-disabled-background: $--color-white !default;
 $--select-option-height: 34px !default;
-$--select-option-hover-background: $--background-color-base !default;
+$--select-option-hover-background: var(--background-color-base) !default;
 $--select-option-selected-font-color: $--color-primary !default;
-$--select-option-selected-hover: $--background-color-base !default;
+$--select-option-selected-hover: var(--background-color-base) !default;
 
 $--select-group-color: $--color-info !default;
 $--select-group-height: 30px !default;
@@ -335,7 +326,7 @@ $--cascader-menu-font-size: $--font-size-base !default;
 $--cascader-menu-radius: $--border-radius-base !default;
 $--cascader-menu-border: solid 1px var(--border-color-light) !default;
 $--cascader-menu-shadow: $--box-shadow-light !default;
-$--cascader-node-background-hover: $--background-color-base !default;
+$--cascader-node-background-hover: var(--background-color-base) !default;
 $--cascader-node-color-disabled: var(--color-text-placeholder) !default;
 $--cascader-color-empty: var(--color-text-placeholder) !default;
 $--cascader-tag-background: #f0f2f5;
@@ -440,7 +431,7 @@ $--table-border-color: var(--border-color-lighter) !default;
 $--table-border: 1px solid $--table-border-color !default;
 $--table-font-color: var(--color-text-regular) !default;
 $--table-header-font-color: var(--color-text-secondary) !default;
-$--table-row-hover-background-color: $--background-color-base !default;
+$--table-row-hover-background-color: var(--background-color-base) !default;
 $--table-current-row-background-color: var(--color-primary-light-9) !default;
 $--table-header-background-color: $--color-white !default;
 $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12) !default;
@@ -496,7 +487,7 @@ $--tag-padding: 0 10px !default;
 
 /* Tree
    -------------------------- */
-$--tree-node-hover-background-color: $--background-color-base !default;
+$--tree-node-hover-background-color: var(--background-color-base) !default;
 $--tree-font-color: var(--color-text-regular) !default;
 $--tree-expand-icon-color: var(--color-text-placeholder) !default;
 
@@ -608,7 +599,7 @@ $--transfer-border-color: var(--border-color-lighter) !default;
 $--transfer-border-radius: $--border-radius-base !default;
 $--transfer-panel-width: 200px !default;
 $--transfer-panel-header-height: 40px !default;
-$--transfer-panel-header-background-color: $--background-color-base !default;
+$--transfer-panel-header-background-color: var(--background-color-base) !default;
 $--transfer-panel-footer-height: 40px !default;
 $--transfer-panel-body-height: 246px !default;
 $--transfer-item-height: 30px !default;

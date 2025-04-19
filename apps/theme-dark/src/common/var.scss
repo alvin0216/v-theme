@@ -87,7 +87,7 @@ $--border-color-extra-light: #2b2b2c !default;
 /// color|1|Background Color|4
 $--background-color: $--color-dark !default;
 /// color|1|Background Color|4
-$--background-color-base: #262627 !default;
+var(--background-color-base): #262627 !default;
 /// color|1|Background Color|4
 $--background-color-overlay: #1d1e1f !default;
 
@@ -173,7 +173,7 @@ $--index-popper: 2000 !default;
 
 /* Disable base
 -------------------------- */
-$--disabled-fill-base: $--background-color-base !default;
+$--disabled-fill-base: var(--background-color-base) !default;
 $--disabled-color-base: $--color-text-placeholder !default;
 $--disabled-border-base: $--border-color-light !default;
 
@@ -200,7 +200,7 @@ $--checkbox-input-border: $--border-base !default;
 
 /// color||Color|0
 $--checkbox-disabled-border-color: $--border-color-base !default;
-$--checkbox-disabled-input-fill: $--background-color-base !default;
+$--checkbox-disabled-input-fill: var(--background-color-base) !default;
 $--checkbox-disabled-icon-color: $--color-text-placeholder !default;
 
 $--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
@@ -329,10 +329,10 @@ $--select-option-disabled-color: $--color-text-placeholder !default;
 $--select-option-disabled-background: $--color-white !default;
 /// height||Other|4
 $--select-option-height: 34px !default;
-$--select-option-hover-background: $--background-color-base !default;
+$--select-option-hover-background: var(--background-color-base) !default;
 /// color||Color|0
 $--select-option-selected-font-color: $--color-primary !default;
-$--select-option-selected-hover: $--background-color-base !default;
+$--select-option-selected-hover: var(--background-color-base) !default;
 
 $--select-group-color: $--color-info !default;
 $--select-group-height: 30px !default;
@@ -510,7 +510,7 @@ $--cascader-menu-font-size: $--font-size-base !default;
 $--cascader-menu-radius: $--border-radius-base !default;
 $--cascader-menu-border: solid 1px $--border-color-light !default;
 $--cascader-menu-shadow: $--box-shadow-light !default;
-$--cascader-node-background-hover: $--background-color-base !default;
+$--cascader-node-background-hover: var(--background-color-base) !default;
 $--cascader-node-color-disabled: $--color-text-placeholder !default;
 $--cascader-color-empty: $--color-text-placeholder !default;
 $--cascader-tag-background: $--fill-color !default;
@@ -665,7 +665,7 @@ $--table-font-color: $--color-text-regular !default;
 /// color||Color|0
 $--table-header-font-color: $--color-text-secondary !default;
 /// color||Color|0
-$--table-row-hover-background-color: $--background-color-base !default;
+$--table-row-hover-background-color: var(--background-color-base) !default;
 $--table-current-row-background-color: $--color-primary-light-9 !default;
 /// color||Color|0
 $--table-header-background-color: $--background-color !default;
@@ -751,7 +751,7 @@ $--tag-padding: 0 10px !default;
 /* Tree
 -------------------------- */
 /// color||Color|0
-$--tree-node-hover-background-color: $--background-color-base !default;
+$--tree-node-hover-background-color: var(--background-color-base) !default;
 /// color||Color|0
 $--tree-font-color: $--color-text-regular !default;
 /// color||Color|0
@@ -903,7 +903,7 @@ $--transfer-panel-width: 200px !default;
 /// height||Other|4
 $--transfer-panel-header-height: 40px !default;
 /// color||Color|0
-$--transfer-panel-header-background-color: $--background-color-base !default;
+$--transfer-panel-header-background-color: var(--background-color-base) !default;
 /// height||Other|4
 $--transfer-panel-footer-height: 40px !default;
 /// height||Other|4
@@ -1015,7 +1015,7 @@ $--empty-fill-color-9: #18181a !default;
 $--descriptions-header-margin-bottom: 20px !default;
 $--descriptions-title-font-size: 16px !default;
 $--descriptions-table-border: 1px solid $--border-color-lighter !default;
-$--descriptions-item-bordered-label-background: $--background-color-base !default;
+$--descriptions-item-bordered-label-background: var(--background-color-base) !default;
 
 /* Skeleton 
 --------------------------*/

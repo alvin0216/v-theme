@@ -112,7 +112,7 @@
 
     &.is-group {
       th.el-table__cell {
-        background: $--background-color-base;
+        background: var(--background-color-base);
       }
     }
   }

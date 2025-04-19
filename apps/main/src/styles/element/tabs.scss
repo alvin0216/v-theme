@@ -216,7 +216,7 @@
       padding: 15px;
     }
     > .el-tabs__header {
-      background-color: $--background-color-base;
+      background-color: var(--background-color-base);
       border-bottom: 1px solid var(--border-color-light);
       margin: 0;
     }

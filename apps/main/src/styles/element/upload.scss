@@ -176,7 +176,7 @@
     }
 
     &:hover {
-      background-color: $--background-color-base;
+      background-color: var(--background-color-base);
 
       .el-icon-close {
         display: inline-block;

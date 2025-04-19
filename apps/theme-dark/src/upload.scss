@@ -1,6 +1,6 @@
-@import "mixins/mixins";
-@import "progress";
-@import "common/var";
+@import 'mixins/mixins';
+@import 'progress';
+@import 'common/var';
 
 @include b(upload) {
   display: inline-block;
@@ -79,11 +79,11 @@
     line-height: 50px;
   }
 
-  +.el-upload__tip {
+  + .el-upload__tip {
     text-align: center;
   }
 
-  ~.el-upload__files {
+  ~ .el-upload__files {
     border-top: $--border-base;
     margin-top: 7px;
     padding-top: 5px;
@@ -116,7 +116,7 @@
   list-style: none;
 
   @include e(item) {
-    transition: all .5s cubic-bezier(.55, 0, .1, 1);
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
     font-size: 14px;
     color: $--color-text-regular;
     line-height: 1.8;
@@ -157,7 +157,7 @@
       top: 5px;
       right: 5px;
       cursor: pointer;
-      opacity: .75;
+      opacity: 0.75;
       color: $--color-text-regular;
       //transform: scale(.7);
 
@@ -178,7 +178,7 @@
     }
 
     &:hover {
-      background-color: $--background-color-base;
+      background-color: var(--background-color-base);
 
       .el-icon-close {
         display: inline-block;
@@ -201,7 +201,6 @@
       }
 
       &:focus:not(:hover) {
-
         /* 键盘focus */
         .el-icon-close-tip {
           display: inline-block;
@@ -240,10 +239,10 @@
     overflow: hidden;
     padding-left: 4px;
     text-overflow: ellipsis;
-    transition: color .3s;
+    transition: color 0.3s;
     white-space: nowrap;
 
-    [class^="el-icon"] {
+    [class^='el-icon'] {
       height: 100%;
       margin-right: 7px;
       color: $--color-text-secondary;
@@ -346,14 +345,14 @@
       color: #fff;
       opacity: 0;
       font-size: 20px;
-      background-color: rgba(0, 0, 0, .5);
-      transition: opacity .3s;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: opacity 0.3s;
 
       &::after {
         display: inline-block;
-        content: "";
+        content: '';
         height: 100%;
-        vertical-align: middle
+        vertical-align: middle;
       }
 
       span {
@@ -361,7 +360,7 @@
         cursor: pointer;
       }
 
-      span+span {
+      span + span {
         margin-left: 15px;
       }
 
@@ -445,7 +444,7 @@
       position: relative;
       z-index: 1;
       margin-left: -80px;
-      background-color: $--color-white
+      background-color: $--color-white;
     }
 
     .el-upload-list__item-name {
@@ -528,7 +527,7 @@
     position: static;
     width: 243px;
 
-    +.el-upload__inner {
+    + .el-upload__inner {
       opacity: 0;
     }
   }
@@ -547,7 +546,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(#000, .7);
+    background-color: rgba(#000, 0.7);
     text-align: center;
 
     .btn {
@@ -565,7 +564,7 @@
 
       span {
         opacity: 0;
-        transition: opacity .15s linear;
+        transition: opacity 0.15s linear;
       }
 
       &:not(:first-child) {
@@ -609,7 +608,7 @@
     color: $--color-text-primary;
   }
 
-  +.el-upload__inner {
+  + .el-upload__inner {
     opacity: 0;
     position: relative;
     z-index: 1;

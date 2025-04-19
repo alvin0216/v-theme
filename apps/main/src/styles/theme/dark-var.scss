@@ -30,7 +30,7 @@ $--border-color-extra-light: #2b2b2c !default;
    Background 背景色变量
    ========================== */
 $--background-color: $--color-dark !default;
-$--background-color-base: #262627 !default;
+var(--background-color-base): #262627 !default;
 $--background-color-overlay: #1d1e1f !default;
 $--overlay-color-lighter: rgba(0, 0, 0, 0.5) !default; // !new
 
@@ -50,7 +50,7 @@ $--mask-color: rgba(0, 0, 0, 0.8) !default; // !new
 $--font-color-disabled-base: $--color-text-disabled !default; // !update
 
 $--checkbox-background-color: transparent !default; // !update
-$--checkbox-disabled-input-fill: $--background-color-base !default; // !update
+$--checkbox-disabled-input-fill: var(--background-color-base) !default; // !update
 $--radio-input-background-color: transparent !default; // !update
 $--select-multiple-input-color: $--color-text-regular !default; // !update
 $--select-dropdown-background: $--background-color-overlay !default; // !update
@@ -105,7 +105,7 @@ $--empty-fill-color-7: #1b1c1f !default;
 $--empty-fill-color-8: #1c1d1f !default;
 $--empty-fill-color-9: #18181a !default;
 
-$--descriptions-item-bordered-label-background: $--background-color-base !default;
+$--descriptions-item-bordered-label-background: var(--background-color-base) !default;
 
 $--skeleton-color: $--fill-color !default;
 $--skeleton-to-color: $--border-color-light !default;

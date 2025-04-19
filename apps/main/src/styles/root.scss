@@ -83,10 +83,10 @@ $themes: (
 
 @mixin set-color-primary-level($primary-color) {
   /* 设置主色调明度递增 --color-primary-light-1 ... --color-primary-light-9*/
-  @for $i from 1 through 9 {
-    $percent: $i * 10%;
-    --color-primary-light-#{$i}: #{mix($--color-white, $primary-color, $percent)};
-  }
+  --color-primary-light-2: #{mix($--color-white, $primary-color, 20%)};
+  --color-primary-light-4: #{mix($--color-white, $primary-color, 40%)};
+  --color-primary-light-7: #{mix($--color-white, $primary-color, 70%)};
+  --color-primary-light-9: #{mix($--color-white, $primary-color, 90%)};
 }
 
 @mixin set-color-mix-level($mix-color) {
@@ -114,11 +114,5 @@ $themes: (
     @include set-color-primary-level($primary-color);
 
     @include set-color-mix-level($mix-color);
-
-    .el-button {
-      @each $type in $types {
-        --color-#{$type}: red;
-      }
-    }
   }
 }

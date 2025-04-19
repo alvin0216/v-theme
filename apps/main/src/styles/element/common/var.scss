@@ -32,16 +32,16 @@ $--link-hover-color: $--color-primary !default; // 链接悬停时的颜色，�
    -------------------------- */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
-$--border-color-hover: var(--color-text-placeholder) !default;
+$--border-color-hover: var(--border-color-hover) !default;
 $--border-base: $--border-width-base $--border-style-base var(--border-color-base) !default;
 $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
 $--border-radius-zero: 0 !default;
 
-$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04) !default; // 基础的盒子阴影
-$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12) !default; // 深色的盒子阴影
-$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+$--box-shadow-base: var(--box-shadow-base);
+$--box-shadow-dark: var(--box-shadow-dark);
+$--box-shadow-light: var(--box-shadow-light);
 
 /* Fill
    -------------------------- */
@@ -61,7 +61,7 @@ $--font-weight-primary: 500 !default;
 $--font-weight-secondary: 100 !default;
 $--font-line-height-primary: 24px !default;
 $--font-line-height-secondary: 16px !default;
-$--font-color-disabled-base: #bbb !default;
+$--font-color-disabled-base: var(--font-color-disabled-base) !default;
 
 /* Size
    -------------------------- */
@@ -92,11 +92,12 @@ $--checkbox-font-color: var(--color-text-regular) !default;
 $--checkbox-input-height: 14px !default;
 $--checkbox-input-width: 14px !default;
 $--checkbox-border-radius: $--border-radius-small !default;
-$--checkbox-background-color: $--color-white !default;
+$--checkbox-background-color: var(--checkbox-background-color);
+
 $--checkbox-input-border: $--border-base !default;
 
-$--checkbox-disabled-border-color: var(--border-color-base) !default;
-$--checkbox-disabled-input-fill: #edf2fc !default;
+$--checkbox-disabled-border-color: var(--border-color-base);
+$--checkbox-disabled-input-fill: var(--checkbox-disabled-input-fill);
 $--checkbox-disabled-icon-color: var(--color-text-placeholder) !default;
 
 $--checkbox-disabled-checked-input-fill: var(--border-color-extra-light) !default;
@@ -138,7 +139,7 @@ $--radio-font-color: var(--color-text-regular) !default;
 $--radio-input-height: 14px !default;
 $--radio-input-width: 14px !default;
 $--radio-input-border-radius: $--border-radius-circle !default;
-$--radio-input-background-color: $--color-white !default;
+$--radio-input-background-color: var(--radio-input-background-color);
 $--radio-input-border: $--border-base !default;
 $--radio-input-border-color: var(--border-color-base) !default;
 $--radio-icon-color: $--color-white !default;
@@ -187,7 +188,7 @@ $--select-font-size: $--font-size-base !default;
 $--select-close-hover-color: var(--color-text-secondary) !default;
 
 $--select-input-color: var(--color-text-placeholder) !default;
-$--select-multiple-input-color: #666 !default;
+$--select-multiple-input-color: var(--select-multiple-input-color);
 $--select-input-focus-border-color: $--color-primary !default;
 $--select-input-font-size: 14px !default;
 
@@ -203,7 +204,7 @@ $--select-group-color: $--color-info !default;
 $--select-group-height: 30px !default;
 $--select-group-font-size: 12px !default;
 
-$--select-dropdown-background: $--color-white !default;
+$--select-dropdown-background: var(--select-dropdown-background);
 $--select-dropdown-shadow: $--box-shadow-light !default;
 $--select-dropdown-empty-color: #999 !default;
 $--select-dropdown-max-height: 274px !default;
@@ -245,7 +246,7 @@ $--messagebox-danger-color: $--color-danger !default;
 
 /* Message
    -------------------------- */
-$--message-shadow: $--box-shadow-base !default;
+$--message-shadow: var(--message-shadow) !default;
 $--message-min-width: 380px !default;
 $--message-background-color: #edf2fc !default;
 $--message-padding: 15px 15px 15px 20px !default;

@@ -30,7 +30,7 @@
     // set empty text line height up to contrainer min-height as workaround.
     line-height: 60px;
     width: 50%;
-    color: var(--color-text-secondary);
+    color: $--color-text-secondary;
   }
 
   // 展开行
@@ -318,7 +318,7 @@
       bottom: 0;
       width: 100%;
       height: 1px;
-      background-color: var(--border-color-light) er;
+      background-color: $--border-color-lighter;
       z-index: 4;
     }
   }
@@ -455,12 +455,12 @@
     left: 7px;
 
     &.ascending {
-      border-bottom-color: var(--color-text-placeholder);
+      border-bottom-color: $--color-text-placeholder;
       top: 5px;
     }
 
     &.descending {
-      border-top-color: var(--color-text-placeholder);
+      border-top-color: $--color-text-placeholder;
       bottom: 7px;
     }
   }

@@ -1,12 +1,12 @@
-@import 'mixins/mixins';
-@import 'common/var';
-@import 'button';
-@import './popper';
+@import "mixins/mixins";
+@import "common/var";
+@import "button";
+@import "./popper";
 
 @include b(dropdown) {
   display: inline-block;
   position: relative;
-  color: var(--color-text-regular);
+  color: $--color-text-regular;
   font-size: $--font-size-base;
 
   .el-button-group {
@@ -36,7 +36,7 @@
     }
 
     &.el-button--default::before {
-      background: var(--border-base-5);
+      background: mix($--button-default-border-color, transparent, 50%);
     }
 
     &:hover {
@@ -55,10 +55,8 @@
     margin: 0 3px;
   }
 
-  .el-dropdown-selfdefine {
-    // 自定义
-    &:focus:active,
-    &:focus:not(.focusing) {
+  .el-dropdown-selfdefine { // 自定义
+    &:focus:active, &:focus:not(.focusing) {
       outline-width: 0;
     }
   }
@@ -77,7 +75,7 @@
   padding: 10px 0;
   margin: 5px 0;
   background-color: $--color-white;
-  border: 1px solid var(--border-color-light) er;
+  border: 1px solid $--border-color-lighter;
   border-radius: $--border-radius-base;
   box-shadow: $--dropdown-menu-box-shadow;
 
@@ -87,11 +85,10 @@
     padding: 0 20px;
     margin: 0;
     font-size: $--font-size-base;
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     cursor: pointer;
     outline: none;
-    &:not(.is-disabled):hover,
-    &:focus {
+    &:not(.is-disabled):hover, &:focus {
       background-color: $--dropdown-menuItem-hover-fill;
       color: $--dropdown-menuItem-hover-color;
     }
@@ -105,7 +102,7 @@
 
       position: relative;
       margin-top: $divided-offset;
-      border-top: 1px solid var(--border-color-light) er;
+      border-top: 1px solid $--border-color-lighter;
 
       &:before {
         content: '';

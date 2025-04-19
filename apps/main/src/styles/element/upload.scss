@@ -13,7 +13,7 @@
 
   @include e(tip) {
     font-size: 12px;
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     margin-top: 7px;
   }
 
@@ -72,7 +72,7 @@
 
   .el-icon-upload {
     font-size: 67px;
-    color: var(--color-text-placeholder);
+    color: $--color-text-placeholder;
     margin: 40px 0 16px;
     line-height: 50px;
   }
@@ -88,7 +88,7 @@
   }
 
   .el-upload__text {
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     font-size: 14px;
     text-align: center;
 
@@ -116,7 +116,7 @@
   @include e(item) {
     transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
     font-size: 14px;
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     line-height: 1.8;
     margin-top: 5px;
     position: relative;
@@ -156,7 +156,7 @@
       right: 5px;
       cursor: pointer;
       opacity: 0.75;
-      color: var(--color-text-regular);
+      color: $--color-text-regular;
       //transform: scale(.7);
 
       &:hover {
@@ -230,7 +230,7 @@
   }
 
   @include e(item-name) {
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     display: block;
     margin-right: 40px;
     overflow: hidden;
@@ -242,7 +242,7 @@
     [class^='el-icon'] {
       height: 100%;
       margin-right: 7px;
-      color: var(--color-text-secondary);
+      color: $--color-text-secondary;
       line-height: inherit;
     }
   }
@@ -260,7 +260,7 @@
     right: 10px;
     top: 0;
     font-size: 12px;
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     display: none;
 
     &:hover {
@@ -597,7 +597,7 @@
     margin: 0;
     line-height: 36px;
     font-size: 14px;
-    color: var(--color-text-primary);
+    color: $--color-text-primary;
   }
 
   + .el-upload__inner {

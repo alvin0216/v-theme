@@ -23,7 +23,7 @@
     p {
       margin: 0;
       font-size: $--result-title-font-size;
-      color: var(--color-text-primary);
+      color: $--color-text-primary;
       line-height: 1.3;
     }
   }
@@ -34,7 +34,7 @@
     p {
       margin: 0;
       font-size: $--font-size-base;
-      color: var(--color-text-regular);
+      color: $--color-text-regular;
       line-height: 1.3;
     }
   }

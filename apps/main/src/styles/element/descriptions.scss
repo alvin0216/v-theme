@@ -5,7 +5,7 @@
 @include b(descriptions) {
   box-sizing: border-box;
   font-size: $--font-size-base;
-  color: var(--color-text-primary);
+  color: $--color-text-primary;
 
   @include e(header) {
     display: flex;
@@ -20,7 +20,7 @@
   }
 
   @include e(body) {
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     background-color: $--color-white;
 
     .el-descriptions__table {

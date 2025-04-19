@@ -1,7 +1,7 @@
-@import 'mixins/mixins';
-@import 'mixins/utils';
-@import 'common/var';
-@import 'common/popup';
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
+@import "common/popup";
 
 @include b(dialog) {
   position: relative;
@@ -50,8 +50,7 @@
       color: $--color-info;
     }
 
-    &:focus,
-    &:hover {
+    &:focus, &:hover {
       .el-dialog__close {
         color: $--color-primary;
       }
@@ -61,12 +60,12 @@
   @include e(title) {
     line-height: $--dialog-font-line-height;
     font-size: $--dialog-title-font-size;
-    color: var(--color-text-primary);
+    color: $--color-text-primary;
   }
 
   @include e(body) {
     padding: ($--dialog-padding-primary + 10px) $--dialog-padding-primary;
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     font-size: $--dialog-content-font-size;
     word-break: break-all;
   }
@@ -94,11 +93,11 @@
 }
 
 .dialog-fade-enter-active {
-  animation: dialog-fade-in 0.3s;
+  animation: dialog-fade-in .3s;
 }
 
 .dialog-fade-leave-active {
-  animation: dialog-fade-out 0.3s;
+  animation: dialog-fade-out .3s;
 }
 
 @keyframes dialog-fade-in {

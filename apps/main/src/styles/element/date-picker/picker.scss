@@ -1,6 +1,6 @@
-@import '../mixins/mixins';
-@import '../common/var';
-@import '../common/transition';
+@import "../mixins/mixins";
+@import "../common/var";
+@import "../common/transition";
 
 @include b(date-editor) {
   position: relative;
@@ -47,7 +47,7 @@
   .el-range__icon {
     font-size: 14px;
     margin-left: -5px;
-    color: var(--color-text-placeholder);
+    color: $--color-text-placeholder;
     float: left;
     line-height: 32px;
   }
@@ -63,10 +63,10 @@
     width: 39%;
     text-align: center;
     font-size: $--font-size-base;
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
 
     &::placeholder {
-      color: var(--color-text-placeholder);
+      color: $--color-text-placeholder;
     }
   }
 
@@ -79,12 +79,12 @@
     line-height: 32px;
     font-size: 14px;
     width: 5%;
-    color: var(--color-text-primary);
+    color: $--color-text-primary;
   }
 
   .el-range__close-icon {
     font-size: 14px;
-    color: var(--color-text-placeholder);
+    color: $--color-text-placeholder;
     width: 25px;
     display: inline-block;
     float: right;
@@ -177,8 +177,7 @@
     color: $--input-disabled-color;
     cursor: not-allowed;
 
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
       border-color: $--input-disabled-border;
     }
 

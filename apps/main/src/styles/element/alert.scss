@@ -1,5 +1,5 @@
-@import 'mixins/mixins';
-@import 'common/var';
+@import "mixins/mixins";
+@import "common/var";
 
 @include b(alert) {
   width: 100%;
@@ -13,11 +13,11 @@
   opacity: 1;
   display: flex;
   align-items: center;
-  transition: opacity 0.2s;
+  transition: opacity .2s;
 
   @include when(light) {
     .el-alert__closebtn {
-      color: var(--color-text-placeholder);
+      color: $--color-text-placeholder;
     }
   }
 

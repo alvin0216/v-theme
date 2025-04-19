@@ -1,6 +1,6 @@
-@import 'mixins/mixins';
-@import 'mixins/utils';
-@import 'common/var';
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
 
 @include b(breadcrumb) {
   font-size: 14px;
@@ -10,9 +10,9 @@
   @include e(separator) {
     margin: 0 9px;
     font-weight: bold;
-    color: var(--color-text-placeholder);
+    color: $--color-text-placeholder;
 
-    &[class*='icon'] {
+    &[class*=icon] {
       margin: 0 6px;
       font-weight: normal;
     }
@@ -22,14 +22,13 @@
     float: left;
 
     @include e(inner) {
-      color: var(--color-text-regular);
+      color: $--color-text-regular;
 
-      &.is-link,
-      & a {
+      &.is-link, & a {
         font-weight: bold;
         text-decoration: none;
         transition: $--color-transition-base;
-        color: var(--color-text-primary);
+        color: $--color-text-primary;
 
         &:hover {
           color: $--color-primary;
@@ -41,10 +40,9 @@
     &:last-child {
       .el-breadcrumb__inner,
       .el-breadcrumb__inner a {
-        &,
-        &:hover {
+        &, &:hover {
           font-weight: normal;
-          color: var(--color-text-regular);
+          color: $--color-text-regular;
           cursor: text;
         }
       }

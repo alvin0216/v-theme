@@ -1,6 +1,6 @@
-@import 'mixins/mixins';
-@import 'mixins/utils';
-@import 'common/var';
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
 
 @include b(form) {
   @include m(label-left) {
@@ -97,7 +97,7 @@
     vertical-align: middle;
     float: left;
     font-size: $--form-label-font-size;
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     line-height: 40px;
     padding: 0 12px 0 0;
     box-sizing: border-box;
@@ -144,8 +144,7 @@
   @include when(error) {
     & .el-input__inner,
     & .el-textarea__inner {
-      &,
-      &:focus {
+      &, &:focus {
         border-color: $--color-danger;
       }
     }

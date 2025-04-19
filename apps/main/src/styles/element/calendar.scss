@@ -1,10 +1,10 @@
-@import 'mixins/mixins';
-@import 'common/var';
-@import 'button';
-@import 'button-group';
+@import "mixins/mixins";
+@import "common/var";
+@import "button";
+@import "button-group";
 
 @include b(calendar) {
-  background-color: #fff;
+  background-color:#fff;
 
   @include e(header) {
     display: flex;
@@ -29,14 +29,14 @@
 
   thead th {
     padding: 12px 0;
-    color: var(--color-text-regular);
+    color: $--color-text-regular;
     font-weight: normal;
   }
 
   &:not(.is-range) {
     td.prev,
     td.next {
-      color: var(--color-text-placeholder);
+      color: $--color-text-placeholder;
     }
   }
 

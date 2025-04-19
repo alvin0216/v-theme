@@ -25,7 +25,7 @@ $--color-info: #909399 !default;
 /* ==========================
       Text 文本色变量
       ========================== */
-$--color-text-regular: #606266 !default; // 常规的文本颜色
+
 $--color-text-secondary: #909399 !default; // 次要的文本颜色
 $--color-text-placeholder: #c0c4cc !default; // 占位符文本颜色
 
@@ -108,7 +108,7 @@ $--icon-color-base: $--color-info !default;
    -------------------------- */
 $--checkbox-font-size: 14px !default;
 $--checkbox-font-weight: $--font-weight-primary !default;
-$--checkbox-font-color: $--color-text-regular !default;
+$--checkbox-font-color: var(--color-text-regular) !default;
 $--checkbox-input-height: 14px !default;
 $--checkbox-input-width: 14px !default;
 $--checkbox-border-radius: $--border-radius-small !default;
@@ -154,7 +154,7 @@ $--checkbox-button-checked-border-color: $--color-primary !default;
    -------------------------- */
 $--radio-font-size: $--font-size-base !default;
 $--radio-font-weight: $--font-weight-primary !default;
-$--radio-font-color: $--color-text-regular !default;
+$--radio-font-color: var(--color-text-regular) !default;
 $--radio-input-height: 14px !default;
 $--radio-input-width: 14px !default;
 $--radio-input-border-radius: $--border-radius-circle !default;
@@ -211,7 +211,7 @@ $--select-multiple-input-color: #666 !default;
 $--select-input-focus-border-color: $--color-primary !default;
 $--select-input-font-size: 14px !default;
 
-$--select-option-color: $--color-text-regular !default;
+$--select-option-color: var(--color-text-regular) !default;
 $--select-option-disabled-color: $--color-text-placeholder !default;
 $--select-option-disabled-background: $--color-white !default;
 $--select-option-height: 34px !default;
@@ -255,7 +255,7 @@ $--msgbox-width: 420px !default;
 $--msgbox-border-radius: 4px !default;
 $--messagebox-font-size: $--font-size-large !default;
 $--messagebox-content-font-size: $--font-size-base !default;
-$--messagebox-content-color: $--color-text-regular !default;
+$--messagebox-content-color: var(--color-text-regular) !default;
 $--messagebox-error-font-size: 12px !default;
 $--msgbox-padding-primary: 15px !default;
 $--messagebox-success-color: $--color-success !default;
@@ -290,12 +290,12 @@ $--notification-close-font-size: $--message-close-size !default;
 $--notification-group-margin-left: 13px !default;
 $--notification-group-margin-right: 8px !default;
 $--notification-content-font-size: $--font-size-base !default;
-$--notification-content-color: $--color-text-regular !default;
+$--notification-content-color: var(--color-text-regular) !default;
 $--notification-title-font-size: 16px !default;
 $--notification-title-color: var(--color-text-primary);
 
 $--notification-close-color: $--color-text-secondary !default;
-$--notification-close-hover-color: $--color-text-regular !default;
+$--notification-close-hover-color: var(--color-text-regular) !default;
 
 $--notification-success-icon-color: $--color-success !default;
 $--notification-info-icon-color: $--color-info !default;
@@ -305,7 +305,7 @@ $--notification-danger-icon-color: $--color-danger !default;
 /* Input
    -------------------------- */
 $--input-font-size: $--font-size-base !default;
-$--input-font-color: $--color-text-regular !default;
+$--input-font-color: var(--color-text-regular) !default;
 $--input-width: 140px !default;
 $--input-height: 40px !default;
 $--input-border: $--border-base !default;
@@ -339,7 +339,7 @@ $--input-mini-height: 28px !default;
 
 /* Cascader
    -------------------------- */
-$--cascader-menu-font-color: $--color-text-regular !default;
+$--cascader-menu-font-color: var(--color-text-regular) !default;
 $--cascader-menu-selected-font-color: $--color-primary !default;
 $--cascader-menu-fill: $--fill-base !default;
 $--cascader-menu-font-size: $--font-size-base !default;
@@ -365,8 +365,8 @@ $--group-title-width: 66px !default;
 $--tab-font-size: $--font-size-base !default;
 $--tab-border-line: 1px solid #e4e4e4 !default;
 $--tab-header-color-active: $--color-text-secondary !default;
-$--tab-header-color-hover: $--color-text-regular !default;
-$--tab-header-color: $--color-text-regular !default;
+$--tab-header-color-hover: var(--color-text-regular) !default;
+$--tab-header-color: var(--color-text-regular) !default;
 $--tab-header-fill-active: rgba($--color-black, 0.06) !default;
 $--tab-header-fill-hover: rgba($--color-black, 0.06) !default;
 $--tab-vertical-header-width: 90px !default;
@@ -395,7 +395,7 @@ $--button-mini-border-radius: #{$--border-radius-base - 1} !default;
 $--button-mini-padding-vertical: 7px !default;
 $--button-mini-padding-horizontal: 15px !default;
 
-$--button-default-font-color: $--color-text-regular !default;
+$--button-default-font-color: var(--color-text-regular) !default;
 $--button-default-background-color: $--color-white !default;
 $--button-default-border-color: $--border-color-base !default;
 
@@ -449,7 +449,7 @@ $--dialog-padding-primary: 20px !default;
    -------------------------- */
 $--table-border-color: $--border-color-lighter !default;
 $--table-border: 1px solid $--table-border-color !default;
-$--table-font-color: $--color-text-regular !default;
+$--table-font-color: var(--color-text-regular) !default;
 $--table-header-font-color: $--color-text-secondary !default;
 $--table-row-hover-background-color: $--background-color-base !default;
 $--table-current-row-background-color: var(--color-primary-light-9) !default;
@@ -508,7 +508,7 @@ $--tag-padding: 0 10px !default;
 /* Tree
    -------------------------- */
 $--tree-node-hover-background-color: $--background-color-base !default;
-$--tree-font-color: $--color-text-regular !default;
+$--tree-font-color: var(--color-text-regular) !default;
 $--tree-expand-icon-color: $--color-text-placeholder !default;
 
 /* Dropdown
@@ -568,9 +568,9 @@ $--rate-icon-color: $--color-text-placeholder !default;
 
 /* DatePicker
    --------------------------*/
-$--datepicker-font-color: $--color-text-regular !default;
+$--datepicker-font-color: var(--color-text-regular) !default;
 $--datepicker-off-font-color: $--color-text-placeholder !default;
-$--datepicker-header-font-color: $--color-text-regular !default;
+$--datepicker-header-font-color: var(--color-text-regular) !default;
 $--datepicker-icon-color: var(--color-text-primary);
 $--datepicker-border-color: $--disabled-border-base !default;
 $--datepicker-inner-border-color: #e4e4e4 !default;
@@ -653,7 +653,7 @@ $--backtop-hover-background-color: $--border-color-extra-light !default;
    --------------------------*/
 $--link-font-size: $--font-size-base !default;
 $--link-font-weight: $--font-weight-primary !default;
-$--link-default-font-color: $--color-text-regular !default;
+$--link-default-font-color: var(--color-text-regular) !default;
 $--link-default-active-color: $--color-primary !default;
 $--link-disabled-font-color: $--color-text-placeholder !default;
 $--link-primary-font-color: $--color-primary !default;

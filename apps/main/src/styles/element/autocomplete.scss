@@ -1,9 +1,9 @@
-@import "mixins/mixins";
-@import "mixins/utils";
-@import "common/var";
-@import "./input.scss";
-@import "./scrollbar.scss";
-@import "./popper";
+@import 'mixins/mixins';
+@import 'mixins/utils';
+@import 'common/var';
+@import './input.scss';
+@import './scrollbar.scss';
+@import './popper';
 
 @include b(autocomplete) {
   position: relative;
@@ -34,7 +34,7 @@
     margin: 0;
     line-height: 34px;
     cursor: pointer;
-    color: $--color-text-regular;
+    color: var(--color-text-regular);
     font-size: $--font-size-base;
     list-style: none;
     white-space: nowrap;

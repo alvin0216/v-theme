@@ -1,7 +1,7 @@
-@import "../common/var";
+@import '../common/var';
 
 @include b(picker-panel) {
-  color: $--color-text-regular;
+  color: var(--color-text-regular);
   border: 1px solid $--datepicker-border-color;
   box-shadow: $--box-shadow-light;
   background: $--color-white;
@@ -11,7 +11,7 @@
 
   @include e((body, body-wrapper)) {
     &::after {
-      content: "";
+      content: '';
       display: table;
       clear: both;
     }
@@ -98,7 +98,7 @@
   }
 }
 
-.el-picker-panel *[slot=sidebar],
+.el-picker-panel *[slot='sidebar'],
 .el-picker-panel__sidebar {
   position: absolute;
   top: 0;
@@ -111,7 +111,7 @@
   overflow: auto;
 }
 
-.el-picker-panel *[slot=sidebar] + .el-picker-panel__body,
+.el-picker-panel *[slot='sidebar'] + .el-picker-panel__body,
 .el-picker-panel__sidebar + .el-picker-panel__body {
   margin-left: 110px;
 }

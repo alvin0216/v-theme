@@ -22,7 +22,22 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  margin: 0;
+}
+header {
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+}
 header .el-button {
   width: 100%;
+}
+
+h2 {
+  color: var(--color-text-regular);
+}
+html.dark {
+  background-color: #141414;
 }
 </style>

@@ -76,10 +76,6 @@
   @include when(active) {
     color: var(--button-active-color);
     border-color: var(--button-active-color);
-    @include dark() {
-      background-color: var(--color-primary-light-9);
-      color: red !important;
-    }
   }
 
   @include when(disabled) {

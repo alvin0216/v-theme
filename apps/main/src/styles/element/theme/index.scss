@@ -2,4 +2,4 @@
 @import './color.scss';
 @import './component.scss';
 
-@include inject-themes($colors, $texts);
+@include inject-themes($colors, $texts, $borders);

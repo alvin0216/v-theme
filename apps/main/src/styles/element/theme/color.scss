@@ -32,3 +32,14 @@ $texts: (
     color-text-secondary: #a3a6ad,
   ),
 );
+
+$borders: (
+  light: (
+    border-color-base: #dcdfe6,
+    border-base: 1px solid #dcdfe6,
+  ),
+  dark: (
+    border-color-base: #4c4d4f,
+    border-base: 1px solid #4c4d4f,
+  ),
+);

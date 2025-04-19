@@ -1,55 +1,5 @@
 @import './element/common/var.scss';
 
-$button-styles: (
-  primary: (
-    background: $--button-primary-background-color,
-    border: $--button-primary-border-color,
-    font: $--button-primary-font-color,
-  ),
-  success: (
-    background: $--button-success-background-color,
-    border: $--button-success-border-color,
-    font: $--button-success-font-color,
-  ),
-  warning: (
-    background: $--button-warning-background-color,
-    border: $--button-warning-border-color,
-    font: $--button-warning-font-color,
-  ),
-  danger: (
-    background: $--button-danger-background-color,
-    border: $--button-danger-border-color,
-    font: $--button-danger-font-color,
-  ),
-  info: (
-    background: $--button-info-background-color,
-    border: $--button-info-border-color,
-    font: $--button-info-font-color,
-  ),
-);
-
-:root {
-  .el-button {
-    @each $type, $styles in $button-styles {
-      $bg-color: map-get($styles, background);
-      $border-color: map-get($styles, border);
-      $font-color: map-get($styles, font);
-
-      --button-#{$type}-hover-bg: #{mix($--color-white, $bg-color, $--button-hover-tint-percent)};
-      --button-#{$type}-hover-border: #{mix($--color-white, $border-color, $--button-hover-tint-percent)};
-      --button-#{$type}-active-bg: #{mix($--color-black, $bg-color, $--button-active-shade-percent)};
-      --button-#{$type}-active-border: #{mix($--color-black, $border-color, $--button-active-shade-percent)};
-      --button-#{$type}-disabled-bg: #{mix($bg-color, $--color-white)};
-      --button-#{$type}-disabled-border: #{mix($border-color, $--color-white)};
-      --button-#{$type}-plain-bg: #{mix($--color-white, $bg-color, 90%)};
-      --button-#{$type}-plain-border: #{mix($--color-white, $bg-color, 60%)};
-      --button-#{$type}-plain-disabled-color: #{mix($--color-white, $bg-color, 40%)};
-      --button-#{$type}-plain-disabled-bg: #{mix($--color-white, $bg-color, 90%)};
-      --button-#{$type}-plain-disabled-border: #{mix($--color-white, $bg-color, 80%)};
-    }
-  }
-}
-
 // use for dark theme
 $--color-dark: #141414 !default;
 $--color-primary-dark-2: mix($--color-white, $--color-primary, 20%) !default;
@@ -158,7 +108,7 @@ $themes: (
     button-disabled-background-color: transparent,
     button-disabled-border-color: var(--border-color-light),
     dialog-background-color: $--color-dark,
-    dialog-box-shadow: var(----box-shadow-base),
+    dialog-box-shadow: var(--box-shadow-base),
     table-header-background-color: $--color-dark,
     table-fixed-box-shadow: #{0 0 10px rgba(0, 0, 0, 0.15)},
     pagination-background-color: transparent,
@@ -207,10 +157,21 @@ $themes: (
   --color-info-lighter: #{mix($mix-color, $--color-info, 90%)};
 }
 
+$variants: (
+  primary: $--color-primary,
+  success: $--color-success,
+  warning: $--color-warning,
+  danger: $--color-danger,
+  info: $--color-info,
+);
+
 @each $theme, $colors in $themes {
   $selector: if($theme == light, ':root', 'html.dark');
-  $primary-color: map-get($colors, color-primary);
   $mix-color: if($theme == light, $--color-white, $--color-dark);
+  $mix-active-color: if($theme == light, $--color-black, $--color-white);
+  $tint-percent: if($theme == light, 20%, 30%);
+  $shade-percent: if($theme == light, 10%, 20%);
+  $primary-color: map-get($colors, color-primary);
 
   #{$selector} {
     @each $k, $v in $colors {
@@ -220,5 +181,24 @@ $themes: (
     @include set-color-primary-level($primary-color);
 
     @include set-color-mix-level($mix-color);
+
+    .el-button {
+      @each $type, $color in $variants {
+        $disabled-bg: if($theme == light, mix($color, $--color-white), mix($--color-dark, $color, 50%));
+        $disabled-color: if($theme == light, mix($--color-white, $color, 40%), mix($--color-dark, $color, 50%));
+
+        --button-#{$type}-hover-bg: #{mix($mix-color, $color, $tint-percent)};
+        --button-#{$type}-active-bg: #{mix($mix-active-color, $color, $shade-percent)};
+        --button-#{$type}-disabled-bg: if(
+          $theme == light,
+          mix($color, $--color-white),
+          mix($--color-dark, $color, 50%)
+        );
+        --button-#{$type}-plain-bg: #{mix($mix-color, $color, 90%)};
+        --button-#{$type}-plain-border: #{mix($mix-color, $color, 60%)};
+        --button-#{$type}-plain-disabled-color: $disabled-color;
+        --button-#{$type}-plain-disabled-border: #{mix($mix-color, $color, 80%)};
+      }
+    }
   }
 }

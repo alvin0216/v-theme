@@ -28,6 +28,10 @@
     margin-left: 10px;
   }
 
+  @include m(primary) {
+    @include button-variant(primary, $--color-primary);
+  }
+
   @include button-size(
     $--button-padding-vertical,
     $--button-padding-horizontal,
@@ -130,44 +134,6 @@
     padding: $--button-padding-vertical;
   }
 
-  // $types: primary, success, warning, danger, info;
-  // @each $type in $types {
-  //   &.el-button--#{$type} {
-  //     color: #{$--button-#{$type}-font-color};
-  //   }
-  // }
-
-  @include m(primary) {
-    @include button-variant(
-      $--button-primary-font-color,
-      $--button-primary-background-color,
-      $--button-primary-border-color
-    );
-  }
-  @include m(success) {
-    @include button-variant(
-      $--button-success-font-color,
-      $--button-success-background-color,
-      $--button-success-border-color
-    );
-  }
-  @include m(warning) {
-    @include button-variant(
-      $--button-warning-font-color,
-      $--button-warning-background-color,
-      $--button-warning-border-color
-    );
-  }
-  @include m(danger) {
-    @include button-variant(
-      $--button-danger-font-color,
-      $--button-danger-background-color,
-      $--button-danger-border-color
-    );
-  }
-  @include m(info) {
-    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
-  }
   @include m(medium) {
     @include button-size(
       $--button-medium-padding-vertical,

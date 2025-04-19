@@ -1,16 +1,26 @@
 @import './mixins/var';
 @import './color.scss';
 
-$active-color: mix($--color-black, $--color-primary, 10%);
+$active-color: mix($--color-black, $color-primary, 10%);
 
 $buttons: (
   light: (
     active-color: $active-color,
     plain-active-color: $active-color,
+    disabled-font-color: #c0c4cc,
+    disabled-border-color: #ebeef5,
+    loading-icon-bg: rgba(255, 255, 255, 0.35),
+    text-hover-color: mix($--color-white, $color-primary, 20%),
+    text-active-color: $active-color,
   ),
   dark: (
     active-color: $dark-color-primary,
     plain-active-color: var(--color-primary-light-9),
+    disabled-font-color: rgba(255, 255, 255, 0.5),
+    disabled-border-color: #414243,
+    loading-icon-bg: rgba(255, 255, 255, 0.3),
+    text-hover-color: mix($--color-dark, $dark-color-primary, 50%),
+    text-active-color: mix($--color-white, $dark-color-primary, 20%),
   ),
 );
 

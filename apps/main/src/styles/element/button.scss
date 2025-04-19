@@ -82,11 +82,11 @@
     &,
     &:hover,
     &:focus {
-      color: $--button-disabled-font-color;
+      color: var(--button-disabled-font-color);
       cursor: not-allowed;
       background-image: none;
-      background-color: $--button-disabled-background-color;
-      border-color: $--button-disabled-border-color;
+      background-color: var(--fill-color-blank);
+      border-color: var(--button-disabled-border-color);
     }
 
     &.el-button--text {
@@ -97,9 +97,9 @@
       &,
       &:hover,
       &:focus {
-        background-color: $--color-white;
-        border-color: $--button-disabled-border-color;
-        color: $--button-disabled-font-color;
+        background-color: var(--fill-color-blank);
+        border-color: var(--button-disabled-border-color);
+        color: var(--button-disabled-font-color);
       }
     }
   }
@@ -117,7 +117,7 @@
       right: -1px;
       bottom: -1px;
       border-radius: inherit;
-      background-color: rgba(255, 255, 255, 0.35);
+      background-color: var(--button-loading-icon-bg);
     }
   }
   @include when(round) {
@@ -201,12 +201,12 @@
 
     &:hover,
     &:focus {
-      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+      color: var(--button-text-hover-color);
       border-color: transparent;
       background-color: transparent;
     }
     &:active {
-      color: var(--button-active-color);
+      color: var(--button-text-active-color);
       border-color: transparent;
       background-color: transparent;
     }

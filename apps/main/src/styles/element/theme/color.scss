@@ -2,18 +2,18 @@ $--color-white: #ffffff;
 $--color-black: #000000;
 $--color-dark: #141414;
 
-$--color-primary: #294e95;
+$color-primary: #294e95;
 $dark-color-primary: #409eff;
 
 $colors: (
   light: (
-    color-primary: #294e95,
-    color-primary-light-7: mix($--color-white, $--color-primary, 70%),
-    color-primary-light-9: mix($--color-white, $--color-primary, 90%),
+    color-primary: $color-primary,
+    color-primary-light-7: mix($--color-white, $color-primary, 70%),
+    color-primary-light-9: mix($--color-white, $color-primary, 90%),
     fill-color-blank: #ffffff,
   ),
   dark: (
-    color-primary: #409eff,
+    color-primary: $dark-color-primary,
     color-primary-light-7: mix($--color-dark, $dark-color-primary, 70%),
     color-primary-light-9: mix($--color-dark, $dark-color-primary, 90%),
     fill-color-blank: transparent,

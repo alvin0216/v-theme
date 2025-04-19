@@ -14,7 +14,7 @@
   margin: 5px 0;
   box-shadow: $--box-shadow-light;
   border-radius: $--border-radius-base;
-  border: 1px solid $--border-color-light;
+  border: 1px solid var(--border-color-light);
   box-sizing: border-box;
   background-color: $--color-white;
 

@@ -77,7 +77,7 @@
   padding: 10px 0;
   margin: 5px 0;
   background-color: $--color-white;
-  border: 1px solid $--border-color-lighter;
+  border: 1px solid var(--border-color-light) er;
   border-radius: $--border-radius-base;
   box-shadow: $--dropdown-menu-box-shadow;
 
@@ -105,7 +105,7 @@
 
       position: relative;
       margin-top: $divided-offset;
-      border-top: 1px solid $--border-color-lighter;
+      border-top: 1px solid var(--border-color-light) er;
 
       &:before {
         content: '';

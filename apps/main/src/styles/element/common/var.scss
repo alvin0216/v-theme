@@ -26,9 +26,6 @@ $--color-info: #909399 !default;
       Border 边框色变量
       ========================== */
 $--border-color-base: #dcdfe6 !default;
-$--border-color-light: #e4e7ed !default;
-$--border-color-lighter: #ebeef5 !default;
-$--border-color-extra-light: #f2f6fc !default; // 极浅色的边框颜色
 
 /* ==========================
       Background 背景色变量
@@ -90,7 +87,7 @@ $--index-popper: 2000 !default;
    -------------------------- */
 $--disabled-fill-base: $--background-color-base !default; // 禁用状态下的基础填充颜色，使用背景基础色
 $--disabled-color-base: var(--color-text-placeholder) !default; // 禁用状态下的基础文本颜色，使用占位符文本颜色
-$--disabled-border-base: $--border-color-light !default; // 禁用状态下的基础边框颜色，使用浅色边框颜色
+$--disabled-border-base: var(--border-color-light) !default; // 禁用状态下的基础边框颜色，使用浅色边框颜色
 
 /* Icon
    -------------------------- */
@@ -112,7 +109,7 @@ $--checkbox-disabled-border-color: $--border-color-base !default;
 $--checkbox-disabled-input-fill: #edf2fc !default;
 $--checkbox-disabled-icon-color: var(--color-text-placeholder) !default;
 
-$--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
+$--checkbox-disabled-checked-input-fill: var(--border-color-extra-light) !default;
 $--checkbox-disabled-checked-input-border-color: $--border-color-base !default;
 $--checkbox-disabled-checked-icon-color: var(--color-text-placeholder) !default;
 
@@ -190,7 +187,7 @@ $--radio-button-font-size: $--font-size-base !default;
 $--radio-button-checked-background-color: $--color-primary !default;
 $--radio-button-checked-font-color: $--color-white !default;
 $--radio-button-checked-border-color: $--color-primary !default;
-$--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
+$--radio-button-disabled-checked-fill: var(--border-color-extra-light) !default;
 
 /* Select
    -------------------------- */
@@ -222,7 +219,7 @@ $--select-dropdown-empty-color: #999 !default;
 $--select-dropdown-max-height: 274px !default;
 $--select-dropdown-padding: 6px 0 !default;
 $--select-dropdown-empty-padding: 10px 0 !default;
-$--select-dropdown-border: solid 1px $--border-color-light !default;
+$--select-dropdown-border: solid 1px var(--border-color-light) !default;
 
 /* Alert
    -------------------------- */
@@ -277,7 +274,7 @@ $--notification-width: 330px !default;
 $--notification-padding: 14px 26px 14px 13px !default;
 $--notification-radius: 8px !default;
 $--notification-shadow: $--box-shadow-light !default;
-$--notification-border-color: $--border-color-lighter !default;
+$--notification-border-color: var(--border-color-lighter) !default;
 $--notification-icon-size: 24px !default;
 $--notification-close-font-size: $--message-close-size !default;
 $--notification-group-margin-left: 13px !default;
@@ -337,7 +334,7 @@ $--cascader-menu-selected-font-color: $--color-primary !default;
 $--cascader-menu-fill: $--fill-base !default;
 $--cascader-menu-font-size: $--font-size-base !default;
 $--cascader-menu-radius: $--border-radius-base !default;
-$--cascader-menu-border: solid 1px $--border-color-light !default;
+$--cascader-menu-border: solid 1px var(--border-color-light) !default;
 $--cascader-menu-shadow: $--box-shadow-light !default;
 $--cascader-node-background-hover: $--background-color-base !default;
 $--cascader-node-color-disabled: var(--color-text-placeholder) !default;
@@ -394,7 +391,7 @@ $--button-default-border-color: $--border-color-base !default;
 
 $--button-disabled-font-color: var(--color-text-placeholder) !default;
 $--button-disabled-background-color: $--color-white !default;
-$--button-disabled-border-color: $--border-color-lighter !default;
+$--button-disabled-border-color: var(--border-color-lighter) !default;
 
 $--button-primary-border-color: $--color-primary !default;
 $--button-primary-font-color: $--color-white !default;
@@ -440,7 +437,7 @@ $--dialog-padding-primary: 20px !default;
 
 /* Table
    -------------------------- */
-$--table-border-color: $--border-color-lighter !default;
+$--table-border-color: var(--border-color-lighter) !default;
 $--table-border: 1px solid $--table-border-color !default;
 $--table-font-color: var(--color-text-regular) !default;
 $--table-header-font-color: var(--color-text-secondary) !default;
@@ -471,7 +468,7 @@ $--popup-modal-opacity: 0.5 !default;
    -------------------------- */
 $--popover-background-color: $--color-white !default;
 $--popover-font-size: $--font-size-base !default;
-$--popover-border-color: $--border-color-lighter !default;
+$--popover-border-color: var(--border-color-lighter) !default;
 $--popover-arrow-size: 6px !default;
 $--popover-padding: 12px !default;
 $--popover-padding-large: 18px 20px !default;
@@ -520,14 +517,14 @@ $--badge-size: 18px !default;
 
 /* Card
    --------------------------*/
-$--card-border-color: $--border-color-lighter !default;
+$--card-border-color: var(--border-color-lighter) !default;
 $--card-border-radius: 4px !default;
 $--card-padding: 20px !default;
 
 /* Slider
    --------------------------*/
 $--slider-main-background-color: $--color-primary !default;
-$--slider-runway-background-color: $--border-color-light !default;
+$--slider-runway-background-color: var(--border-color-light) !default;
 $--slider-button-hover-color: mix($--color-primary, black, 97%) !default;
 $--slider-stop-background-color: $--color-white !default;
 $--slider-disable-color: var(--color-text-placeholder) !default;
@@ -567,8 +564,8 @@ $--datepicker-header-font-color: var(--color-text-regular) !default;
 $--datepicker-icon-color: var(--color-text-primary);
 $--datepicker-border-color: $--disabled-border-base !default;
 $--datepicker-inner-border-color: #e4e4e4 !default;
-$--datepicker-inrange-background-color: $--border-color-extra-light !default;
-$--datepicker-inrange-hover-background-color: $--border-color-extra-light !default;
+$--datepicker-inrange-background-color: var(--border-color-extra-light) !default;
+$--datepicker-inrange-hover-background-color: var(--border-color-extra-light) !default;
 $--datepicker-active-color: $--color-primary !default;
 $--datepicker-hover-font-color: $--color-primary !default;
 $--datepicker-cell-hover-color: #fff !default;
@@ -597,7 +594,7 @@ $--carousel-indicator-out-color: $--border-color-hover !default;
 
 /* Collapse
    --------------------------*/
-$--collapse-border-color: $--border-color-lighter !default;
+$--collapse-border-color: var(--border-color-lighter) !default;
 $--collapse-header-height: 48px !default;
 $--collapse-header-background-color: $--color-white !default;
 $--collapse-header-font-color: var(--color-text-primary);
@@ -608,7 +605,7 @@ $--collapse-content-font-color: var(--color-text-primary);
 
 /* Transfer
    --------------------------*/
-$--transfer-border-color: $--border-color-lighter !default;
+$--transfer-border-color: var(--border-color-lighter) !default;
 $--transfer-border-radius: $--border-radius-base !default;
 $--transfer-panel-width: 200px !default;
 $--transfer-panel-header-height: 40px !default;
@@ -634,13 +631,13 @@ $--main-padding: 20px !default;
    --------------------------*/
 $--timeline-node-size-normal: 12px !default;
 $--timeline-node-size-large: 14px !default;
-$--timeline-node-color: $--border-color-light !default;
+$--timeline-node-color: var(--border-color-light) !default;
 
 /* Backtop
    --------------------------*/
 $--backtop-background-color: $--color-white !default;
 $--backtop-font-color: $--color-primary !default;
-$--backtop-hover-background-color: $--border-color-extra-light !default;
+$--backtop-hover-background-color: var(--border-color-extra-light) !default;
 
 /* Link
    --------------------------*/
@@ -686,7 +683,7 @@ $--empty-bottom-margin-top: 20px !default;
    -------------------------- */
 $--descriptions-header-margin-bottom: 20px !default;
 $--descriptions-title-font-size: 16px !default;
-$--descriptions-table-border: 1px solid $--border-color-lighter !default;
+$--descriptions-table-border: 1px solid var(--border-color-lighter) !default;
 $--descriptions-item-bordered-label-background: #fafafa !default;
 
 /* Skeleton 

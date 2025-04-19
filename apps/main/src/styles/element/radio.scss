@@ -29,7 +29,7 @@
 
     &.is-disabled {
       cursor: not-allowed;
-      border-color: $--border-color-lighter;
+      border-color: var(--border-color-light) er;
     }
 
     & + .el-radio.is-bordered {

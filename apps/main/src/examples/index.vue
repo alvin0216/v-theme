@@ -190,5 +190,8 @@ export default {
   padding: 24px;
   border: 1px solid var(--border-color-base);
   border-radius: 4px;
+  & > div {
+    margin-bottom: 24px;
+  }
 }
 </style>

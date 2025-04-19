@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <header>
-      <div class="aaa">aaa</div>
       <el-button type="primary" @click="toggle">Toggle</el-button>
     </header>
     <Example />
@@ -40,8 +39,5 @@ h2 {
 }
 html.dark {
   background-color: #141414;
-}
-.aaa {
-  color: var(--aaa);
 }
 </style>

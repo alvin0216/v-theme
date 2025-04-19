@@ -28,25 +28,27 @@ $button-styles: (
   ),
 );
 
-// :root {
-//   @each $type, $styles in $button-styles {
-//     $bg-color: map-get($styles, background);
-//     $border-color: map-get($styles, border);
-//     $font-color: map-get($styles, font);
+:root {
+  .el-button {
+    @each $type, $styles in $button-styles {
+      $bg-color: map-get($styles, background);
+      $border-color: map-get($styles, border);
+      $font-color: map-get($styles, font);
 
-//     --button-#{$type}-hover-bg: #{mix($--color-white, $bg-color, $--button-hover-tint-percent)};
-//     --button-#{$type}-hover-border: #{mix($--color-white, $border-color, $--button-hover-tint-percent)};
-//     --button-#{$type}-active-bg: #{mix($--color-black, $bg-color, $--button-active-shade-percent)};
-//     --button-#{$type}-active-border: #{mix($--color-black, $border-color, $--button-active-shade-percent)};
-//     --button-#{$type}-disabled-bg: #{mix($bg-color, $--color-white)};
-//     --button-#{$type}-disabled-border: #{mix($border-color, $--color-white)};
-//     --button-#{$type}-plain-bg: #{mix($--color-white, $bg-color, 90%)};
-//     --button-#{$type}-plain-border: #{mix($--color-white, $bg-color, 60%)};
-//     --button-#{$type}-plain-disabled-color: #{mix($--color-white, $bg-color, 40%)};
-//     --button-#{$type}-plain-disabled-bg: #{mix($--color-white, $bg-color, 90%)};
-//     --button-#{$type}-plain-disabled-border: #{mix($--color-white, $bg-color, 80%)};
-//   }
-// }
+      --button-#{$type}-hover-bg: #{mix($--color-white, $bg-color, $--button-hover-tint-percent)};
+      --button-#{$type}-hover-border: #{mix($--color-white, $border-color, $--button-hover-tint-percent)};
+      --button-#{$type}-active-bg: #{mix($--color-black, $bg-color, $--button-active-shade-percent)};
+      --button-#{$type}-active-border: #{mix($--color-black, $border-color, $--button-active-shade-percent)};
+      --button-#{$type}-disabled-bg: #{mix($bg-color, $--color-white)};
+      --button-#{$type}-disabled-border: #{mix($border-color, $--color-white)};
+      --button-#{$type}-plain-bg: #{mix($--color-white, $bg-color, 90%)};
+      --button-#{$type}-plain-border: #{mix($--color-white, $bg-color, 60%)};
+      --button-#{$type}-plain-disabled-color: #{mix($--color-white, $bg-color, 40%)};
+      --button-#{$type}-plain-disabled-bg: #{mix($--color-white, $bg-color, 90%)};
+      --button-#{$type}-plain-disabled-border: #{mix($--color-white, $bg-color, 80%)};
+    }
+  }
+}
 
 // use for dark theme
 $--color-dark: #141414 !default;
@@ -88,6 +90,38 @@ $themes: (
     select-multiple-input-color: #666,
     select-dropdown-background: $--color-white,
     message-shadow: var(--box-shadow-base),
+    message-background-color: #edf2fc,
+    input-background-color: $--color-white,
+    cascader-menu-fill: $--color-white,
+    cascader-tag-background: #f0f2f5,
+    button-default-background-color: $--color-white,
+    button-disabled-font-color: var(--color-text-placeholder),
+    button-disabled-background-color: $--color-white,
+    button-disabled-border-color: var(--border-color-lighter),
+    dialog-background-color: $--color-white,
+    dialog-box-shadow: #{0 1px 3px rgba(0, 0, 0, 0.3)},
+    table-header-background-color: $--color-white,
+    table-fixed-box-shadow: #{0 0 10px rgba(0, 0, 0, 0.12)},
+    pagination-background-color: $--color-white,
+    pagination-button-disabled-background-color: $--color-white,
+    popover-background-color: $--color-white,
+    popover-border-color: var(--border-color-lighter),
+    tooltip-color: $--color-white,
+    dropdown-menuItem-hover-color: var(--color-primary-light-2),
+    card-border-color: var(--border-color-lighter),
+    menu-background-color: $--color-white,
+    rate-icon-color: var(--color-text-placeholder),
+    datepicker-inner-border-color: #e4e4e4,
+    collapse-header-background-color: $--color-white,
+    collapse-content-background-color: $--color-white,
+    backtop-background-color: $--color-white,
+    calendar-selected-background-color: #f2f8fe,
+    avatar-background-color: #c0c4cc,
+    descriptions-item-bordered-label-background: #fafafa,
+
+    skeleton-color: #f2f2f2,
+    skeleton-to-color: #e6e6e6,
+    svg-monochrome-grey: #dcdde0,
   ),
   dark: (
     color-primary: #409eff,
@@ -109,21 +143,47 @@ $themes: (
     0px 8px 16px -8px #000000},
     box-shadow-light: #{0px 0px 12px rgba(0, 0, 0, 0.72)},
     font-color-disabled-base: $--color-text-disabled,
-
     checkbox-background-color: transparent,
     checkbox-disabled-input-fill: var(--background-color-base),
     radio-input-background-color: transparent,
     select-multiple-input-color: var(--color-text-regular),
-    select-dropdown-background: var(--background-color-overlay),
+    select-dropdown-background: $--background-color-overlay,
     message-shadow: var(--box-shadow-light),
     message-background-color: var(--color-info-lighter),
     input-background-color: transparent,
-    cascader-menu-fill: var(--background-color-overlay),
+    cascader-menu-fill: $--background-color-overlay,
     cascader-tag-background: var($--fill-color),
     button-default-background-color: transparent,
     button-disabled-font-color: rgba(255, 255, 255, 0.5),
     button-disabled-background-color: transparent,
     button-disabled-border-color: var(--border-color-light),
+    dialog-background-color: $--color-dark,
+    dialog-box-shadow: var(----box-shadow-base),
+    table-header-background-color: $--color-dark,
+    table-fixed-box-shadow: #{0 0 10px rgba(0, 0, 0, 0.15)},
+    pagination-background-color: transparent,
+    pagination-button-disabled-background-color: transparent,
+    popover-background-color: $--background-color-overlay,
+    popover-border-color: var(--border-color-light),
+    tooltip-color: $--color-dark,
+    dropdown-menuItem-hover-color: var(--color-primary),
+    card-border-color: var(--border-color-light),
+    menu-background-color: transparent,
+    rate-icon-color: #636466,
+    datepicker-inner-border-color: var(--border-color-light),
+    collapse-header-background-color: transparent,
+    collapse-content-background-color: transparent,
+    backtop-background-color: $--background-color-overlay,
+    calendar-selected-background-color: var
+      (
+        --color-primary-light-9,
+      ),
+    avatar-background-color: $--color-text-disabled,
+
+    descriptions-item-bordered-label-background: var(--background-color-base),
+    skeleton-color: $--fill-color,
+    skeleton-to-color: var(----border-color-light),
+    svg-monochrome-grey: var(----border-color-base),
   ),
 );
 

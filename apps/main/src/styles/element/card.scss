@@ -1,12 +1,12 @@
-@import "mixins/mixins";
-@import "common/var";
+@import 'mixins/mixins';
+@import 'common/var';
 
 @include b(card) {
   border-radius: $--card-border-radius;
   border: 1px solid $--card-border-color;
   background-color: $--color-white;
   overflow: hidden;
-  color: $--color-text-primary;
+  color: var(--color-text-primary);
   transition: 0.3s;
 
   @include when(always-shadow) {

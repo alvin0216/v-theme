@@ -170,7 +170,7 @@
 
       .el-checkbox__label {
         font-size: 16px;
-        color: $--color-text-primary;
+        color: var(--color-text-primary);
         font-weight: normal;
 
         span {

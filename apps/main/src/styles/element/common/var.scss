@@ -36,7 +36,6 @@ $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 /* ==========================
       Text 文本色变量
       ========================== */
-$--color-text-primary: #303133 !default; // 主要的文本颜色
 $--color-text-regular: #606266 !default; // 常规的文本颜色
 $--color-text-secondary: #909399 !default; // 次要的文本颜色
 $--color-text-placeholder: #c0c4cc !default; // 占位符文本颜色
@@ -262,7 +261,7 @@ $--alert-icon-large-size: 28px !default;
 
 /* MessageBox
    -------------------------- */
-$--messagebox-title-color: $--color-text-primary !default;
+$--messagebox-title-color: var(--color-text-primary);
 $--msgbox-width: 420px !default;
 $--msgbox-border-radius: 4px !default;
 $--messagebox-font-size: $--font-size-large !default;
@@ -304,7 +303,7 @@ $--notification-group-margin-right: 8px !default;
 $--notification-content-font-size: $--font-size-base !default;
 $--notification-content-color: $--color-text-regular !default;
 $--notification-title-font-size: 16px !default;
-$--notification-title-color: $--color-text-primary !default;
+$--notification-title-color: var(--color-text-primary);
 
 $--notification-close-color: $--color-text-secondary !default;
 $--notification-close-hover-color: $--color-text-regular !default;
@@ -472,9 +471,9 @@ $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12) !default;
    -------------------------- */
 $--pagination-font-size: 13px !default;
 $--pagination-background-color: $--color-white !default;
-$--pagination-font-color: $--color-text-primary !default;
+$--pagination-font-color: var(--color-text-primary);
 $--pagination-border-radius: 3px !default;
-$--pagination-button-color: $--color-text-primary !default;
+$--pagination-button-color: var(--color-text-primary);
 $--pagination-button-width: 35.5px !default;
 $--pagination-button-height: 28px !default;
 $--pagination-button-disabled-color: $--color-text-placeholder !default;
@@ -495,14 +494,14 @@ $--popover-arrow-size: 6px !default;
 $--popover-padding: 12px !default;
 $--popover-padding-large: 18px 20px !default;
 $--popover-title-font-size: 16px !default;
-$--popover-title-font-color: $--color-text-primary !default;
+$--popover-title-font-color: var(--color-text-primary);
 
 /* Tooltip
    -------------------------- */
-$--tooltip-fill: $--color-text-primary !default;
+$--tooltip-fill: var(--color-text-primary);
 $--tooltip-color: $--color-white !default;
 $--tooltip-font-size: 12px !default;
-$--tooltip-border-color: $--color-text-primary !default;
+$--tooltip-border-color: var(--color-text-primary);
 $--tooltip-arrow-size: 6px !default;
 $--tooltip-padding: 10px !default;
 
@@ -566,7 +565,7 @@ $--steps-padding: 20px !default;
 /* Menu
    --------------------------*/
 $--menu-item-font-size: $--font-size-base !default;
-$--menu-item-font-color: $--color-text-primary !default;
+$--menu-item-font-color: var(--color-text-primary);
 $--menu-background-color: $--color-white !default;
 $--menu-item-hover-fill: var(--color-primary-light-9) !default;
 
@@ -583,7 +582,7 @@ $--rate-icon-color: $--color-text-placeholder !default;
 $--datepicker-font-color: $--color-text-regular !default;
 $--datepicker-off-font-color: $--color-text-placeholder !default;
 $--datepicker-header-font-color: $--color-text-regular !default;
-$--datepicker-icon-color: $--color-text-primary !default;
+$--datepicker-icon-color: var(--color-text-primary);
 $--datepicker-border-color: $--disabled-border-base !default;
 $--datepicker-inner-border-color: #e4e4e4 !default;
 $--datepicker-inrange-background-color: $--border-color-extra-light !default;
@@ -619,11 +618,11 @@ $--carousel-indicator-out-color: $--border-color-hover !default;
 $--collapse-border-color: $--border-color-lighter !default;
 $--collapse-header-height: 48px !default;
 $--collapse-header-background-color: $--color-white !default;
-$--collapse-header-font-color: $--color-text-primary !default;
+$--collapse-header-font-color: var(--color-text-primary);
 $--collapse-header-font-size: 13px !default;
 $--collapse-content-background-color: $--color-white !default;
 $--collapse-content-font-size: 13px !default;
-$--collapse-content-font-color: $--color-text-primary !default;
+$--collapse-content-font-color: var(--color-text-primary);
 
 /* Transfer
    --------------------------*/

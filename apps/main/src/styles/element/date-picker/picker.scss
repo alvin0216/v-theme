@@ -1,6 +1,6 @@
-@import "../mixins/mixins";
-@import "../common/var";
-@import "../common/transition";
+@import '../mixins/mixins';
+@import '../common/var';
+@import '../common/transition';
 
 @include b(date-editor) {
   position: relative;
@@ -79,7 +79,7 @@
     line-height: 32px;
     font-size: 14px;
     width: 5%;
-    color: $--color-text-primary;
+    color: var(--color-text-primary);
   }
 
   .el-range__close-icon {
@@ -177,7 +177,8 @@
     color: $--input-disabled-color;
     cursor: not-allowed;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: $--input-disabled-border;
     }
 

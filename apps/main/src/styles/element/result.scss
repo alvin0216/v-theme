@@ -23,7 +23,7 @@
     p {
       margin: 0;
       font-size: $--result-title-font-size;
-      color: $--color-text-primary;
+      color: var(--color-text-primary);
       line-height: 1.3;
     }
   }

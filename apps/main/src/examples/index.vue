@@ -188,10 +188,7 @@ export default {
 
 .example {
   padding: 24px;
-  border: 1px solid #dcdfe6;
+  border: 1px solid var(--border-color-base);
   border-radius: 4px;
-}
-html.dark .example {
-  border: 1px solid #4c4d4f;
 }
 </style>

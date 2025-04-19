@@ -25,7 +25,6 @@ $--color-info: #909399 !default;
 /* ==========================
       Border 边框色变量
       ========================== */
-$--border-color-base: #dcdfe6 !default;
 
 /* ==========================
       Background 背景色变量
@@ -43,7 +42,7 @@ $--link-hover-color: $--color-primary !default; // 链接悬停时的颜色，�
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
 $--border-color-hover: var(--color-text-placeholder) !default;
-$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-base: $--border-width-base $--border-style-base var(--border-color-base) !default;
 $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
@@ -105,12 +104,12 @@ $--checkbox-border-radius: $--border-radius-small !default;
 $--checkbox-background-color: $--color-white !default;
 $--checkbox-input-border: $--border-base !default;
 
-$--checkbox-disabled-border-color: $--border-color-base !default;
+$--checkbox-disabled-border-color: var(--border-color-base) !default;
 $--checkbox-disabled-input-fill: #edf2fc !default;
 $--checkbox-disabled-icon-color: var(--color-text-placeholder) !default;
 
 $--checkbox-disabled-checked-input-fill: var(--border-color-extra-light) !default;
-$--checkbox-disabled-checked-input-border-color: $--border-color-base !default;
+$--checkbox-disabled-checked-input-border-color: var(--border-color-base) !default;
 $--checkbox-disabled-checked-icon-color: var(--color-text-placeholder) !default;
 
 //
@@ -150,7 +149,7 @@ $--radio-input-width: 14px !default;
 $--radio-input-border-radius: $--border-radius-circle !default;
 $--radio-input-background-color: $--color-white !default;
 $--radio-input-border: $--border-base !default;
-$--radio-input-border-color: $--border-color-base !default;
+$--radio-input-border-color: var(--border-color-base) !default;
 $--radio-icon-color: $--color-white !default;
 
 $--radio-disabled-input-border-color: $--disabled-border-base !default;
@@ -299,7 +298,7 @@ $--input-font-color: var(--color-text-regular) !default;
 $--input-width: 140px !default;
 $--input-height: 40px !default;
 $--input-border: $--border-base !default;
-$--input-border-color: $--border-color-base !default;
+$--input-border-color: var(--border-color-base) !default;
 $--input-border-radius: $--border-radius-base !default;
 $--input-border-color-hover: $--border-color-hover !default;
 $--input-background-color: $--color-white !default;
@@ -387,7 +386,7 @@ $--button-mini-padding-horizontal: 15px !default;
 
 $--button-default-font-color: var(--color-text-regular) !default;
 $--button-default-background-color: $--color-white !default;
-$--button-default-border-color: $--border-color-base !default;
+$--button-default-border-color: var(--border-color-base) !default;
 
 $--button-disabled-font-color: var(--color-text-placeholder) !default;
 $--button-disabled-background-color: $--color-white !default;
@@ -419,7 +418,7 @@ $--cascader-height: 200px !default;
 /* Switch
    -------------------------- */
 $--switch-on-color: $--color-primary !default;
-$--switch-off-color: $--border-color-base !default;
+$--switch-off-color: var(--border-color-base) !default;
 $--switch-font-size: $--font-size-base !default;
 $--switch-core-border-radius: 10px !default;
 $--switch-width: 40px !default;

@@ -1,0 +1,23 @@
+$--color-white: #ffffff;
+$--color-dark: #141414;
+
+$colors: (
+  light: (),
+  dark: (),
+);
+
+$texts: (
+  light: (
+    color-text-primary: #303133,
+    color-text-regular: #606266,
+    color-text-secondary: #909399,
+  ),
+  dark: (
+    color-text-primary: #e5eaf3,
+    color-text-regular: #cfd3dc,
+    color-text-secondary: #a3a6ad,
+  ),
+);
+
+$borders: ();
+$backgrounds: ();

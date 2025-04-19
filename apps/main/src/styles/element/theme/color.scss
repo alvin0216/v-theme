@@ -1,0 +1,34 @@
+$--color-white: #ffffff;
+$--color-black: #000000;
+$--color-dark: #141414;
+
+$--color-primary: #294e95;
+$dark-color-primary: #409eff;
+
+$colors: (
+  light: (
+    color-primary: #294e95,
+    color-primary-light-7: mix($--color-white, $--color-primary, 70%),
+    color-primary-light-9: mix($--color-white, $--color-primary, 90%),
+    fill-color-blank: #ffffff,
+  ),
+  dark: (
+    color-primary: #409eff,
+    color-primary-light-7: mix($--color-dark, $dark-color-primary, 70%),
+    color-primary-light-9: mix($--color-dark, $dark-color-primary, 90%),
+    fill-color-blank: transparent,
+  ),
+);
+
+$texts: (
+  light: (
+    color-text-primary: #303133,
+    color-text-regular: #606266,
+    color-text-secondary: #909399,
+  ),
+  dark: (
+    color-text-primary: #e5eaf3,
+    color-text-regular: #cfd3dc,
+    color-text-secondary: #a3a6ad,
+  ),
+);

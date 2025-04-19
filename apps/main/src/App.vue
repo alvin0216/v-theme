@@ -3,7 +3,9 @@
     <header>
       <el-button type="primary" @click="toggle">Toggle</el-button>
     </header>
-    <Example />
+    <div class="container">
+      <Example />
+    </div>
   </div>
 </template>
 
@@ -11,7 +13,7 @@
 export default {
   name: 'App',
   components: {
-    Example: () => import('./examples/index.vue'),
+    Example: () => import('./examples/Button.vue'),
   },
   methods: {
     toggle() {
@@ -29,15 +31,17 @@ header {
   width: 100vw;
   position: fixed;
   z-index: 10;
-}
-header .el-button {
-  width: 100%;
+  .el-button {
+    width: 100%;
+  }
 }
 
 h2 {
   color: var(--color-text-regular);
 }
-html.dark {
-  background-color: #141414;
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 </style>

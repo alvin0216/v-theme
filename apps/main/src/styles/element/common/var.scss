@@ -22,18 +22,6 @@ $--color-warning: #e6a23c !default;
 $--color-danger: #f56c6c !default;
 $--color-info: #909399 !default;
 
-/* 语义色浅色 */
-$--color-success-light: var(--color-success-light) !default;
-$--color-warning-light: var(--color-warning-light) !default;
-$--color-danger-light: var(--color-danger-light) !default;
-$--color-info-light: var(--color-info-light) !default;
-
-/* 语义更浅色 */
-$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
-$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
-$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
-$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
-
 /* ==========================
       Text 文本色变量
       ========================== */
@@ -252,10 +240,10 @@ $--alert-description-font-size: 12px !default;
 $--alert-close-font-size: 12px !default;
 $--alert-close-customed-font-size: 13px !default;
 
-$--alert-success-color: $--color-success-lighter !default;
-$--alert-info-color: $--color-info-lighter !default;
-$--alert-warning-color: $--color-warning-lighter !default;
-$--alert-danger-color: $--color-danger-lighter !default;
+$--alert-success-color: var(--color-success-lighter) !default;
+$--alert-info-color: var(--color-info-lighter) !default;
+$--alert-warning-color: var(--color-warning-lighter) !default;
+$--alert-danger-color: var(--color-danger-lighter) !default;
 
 $--alert-icon-size: 16px !default;
 $--alert-icon-large-size: 28px !default;

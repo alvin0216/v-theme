@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <el-button type="primary" @click="toggle">Toggle</el-button>
+    <header>
+      <el-button type="primary" @click="toggle">Toggle</el-button>
+    </header>
     <Example />
   </div>
 </template>
@@ -18,3 +20,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+header .el-button {
+  width: 100%;
+}
+</style>

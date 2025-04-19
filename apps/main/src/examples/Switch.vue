@@ -26,11 +26,10 @@
 
 <script>
 export default {
-  name: 'Switch',
   data() {
     return {
       value: true,
-    }
+    };
   },
-}
+};
 </script>

@@ -176,3 +176,22 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.content {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.example {
+  padding: 24px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+}
+html.dark .example {
+  border: 1px solid #4c4d4f;
+}
+</style>

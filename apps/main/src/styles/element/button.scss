@@ -42,8 +42,8 @@
   }
 
   &:active {
-    color: var(--button-active-color);
-    border-color: var(--button-active-color);
+    color: var(--button-primary-active-color);
+    border-color: var(--button-primary-active-color);
     outline: none;
   }
 
@@ -67,15 +67,15 @@
 
     &:active {
       background: var(--fill-color-blank);
-      border-color: var(--button-active-color);
-      color: var(--plain-active-color);
+      border-color: var(--button-primary-active-color);
+      color: var(--button-plain-active-color);
       outline: none;
     }
   }
 
   @include when(active) {
-    color: var(--button-active-color);
-    border-color: var(--button-active-color);
+    color: var(--button-primary-active-color);
+    border-color: var(--button-primary-active-color);
   }
 
   @include when(disabled) {
@@ -129,35 +129,19 @@
     padding: $--button-padding-vertical;
   }
   @include m(primary) {
-    @include button-variant(
-      $--button-primary-font-color,
-      $--button-primary-background-color,
-      $--button-primary-border-color
-    );
+    @include button-variant(primary, var(--color-primary));
   }
   @include m(success) {
-    @include button-variant(
-      $--button-success-font-color,
-      $--button-success-background-color,
-      $--button-success-border-color
-    );
+    @include button-variant(success, $--color-success);
   }
   @include m(warning) {
-    @include button-variant(
-      $--button-warning-font-color,
-      $--button-warning-background-color,
-      $--button-warning-border-color
-    );
+    @include button-variant(warning, $--color-warning);
   }
   @include m(danger) {
-    @include button-variant(
-      $--button-danger-font-color,
-      $--button-danger-background-color,
-      $--button-danger-border-color
-    );
+    @include button-variant(danger, $--color-danger);
   }
   @include m(info) {
-    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+    @include button-variant(info, $--color-info);
   }
   @include m(medium) {
     @include button-size(

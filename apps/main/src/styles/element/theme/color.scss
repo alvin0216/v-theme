@@ -5,6 +5,13 @@ $--color-dark: #141414;
 $color-primary: #294e95;
 $dark-color-primary: #409eff;
 
+$variants: (
+  success: #67c23a,
+  warning: #e6a23c,
+  danger: #f56c6c,
+  info: #909399,
+);
+
 $colors: (
   light: (
     color-primary: $color-primary,

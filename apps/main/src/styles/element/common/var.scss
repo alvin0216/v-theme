@@ -22,16 +22,14 @@ $--color-danger: #f56c6c !default;
 $--color-info: #909399 !default;
 
 /* 主色调明度递增 */
-$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default;
-$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
-$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
-$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
+$--color-primary-light-4: var(--color-primary-light-4) !default;
+$--color-primary-light-7: var(--color-primary-light-7) !default;
 
 /* 语义色浅色 */
-$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
-$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
-$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
-$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+$--color-success-light: var(--color-success-light) !default;
+$--color-warning-light: var(--color-warning-light) !default;
+$--color-danger-light: var(--color-danger-light) !default;
+$--color-info-light: var(--color-info-light) !default;
 
 /* 语义更浅色 */
 $--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
@@ -63,7 +61,7 @@ $--background-color-base: #f5f7fa !default;
 /* ==========================
       Link 链接变量
       ========================== */
-$--link-color: $--color-primary-light-2 !default; // 链接的默认颜色
+$--link-color: var(--color-primary-light-2); // 链接的默认颜色
 $--link-hover-color: $--color-primary !default; // 链接悬停时的颜色，使用主色调
 
 /* Border
@@ -470,7 +468,7 @@ $--table-border: 1px solid $--table-border-color !default;
 $--table-font-color: $--color-text-regular !default;
 $--table-header-font-color: $--color-text-secondary !default;
 $--table-row-hover-background-color: $--background-color-base !default;
-$--table-current-row-background-color: $--color-primary-light-9 !default;
+$--table-current-row-background-color: var(--color-primary-light-9) !default;
 $--table-header-background-color: $--color-white !default;
 $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12) !default;
 
@@ -532,7 +530,7 @@ $--tree-expand-icon-color: $--color-text-placeholder !default;
 /* Dropdown
    -------------------------- */
 $--dropdown-menu-box-shadow: $--box-shadow-light !default;
-$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
+$--dropdown-menuItem-hover-fill: var(--color-primary-light-9) !default;
 $--dropdown-menuItem-hover-color: $--link-color !default;
 
 /* Badge
@@ -574,7 +572,7 @@ $--steps-padding: 20px !default;
 $--menu-item-font-size: $--font-size-base !default;
 $--menu-item-font-color: $--color-text-primary !default;
 $--menu-background-color: $--color-white !default;
-$--menu-item-hover-fill: $--color-primary-light-9 !default;
+$--menu-item-hover-fill: var(--color-primary-light-9) !default;
 
 /* Rate
    --------------------------*/

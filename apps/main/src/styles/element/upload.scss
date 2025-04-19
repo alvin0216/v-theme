@@ -72,7 +72,7 @@
 
   .el-icon-upload {
     font-size: 67px;
-    color: $--color-text-placeholder;
+    color: var(--color-text-placeholder);
     margin: 40px 0 16px;
     line-height: 50px;
   }
@@ -242,7 +242,7 @@
     [class^='el-icon'] {
       height: 100%;
       margin-right: 7px;
-      color: $--color-text-secondary;
+      color: var(--color-text-secondary);
       line-height: inherit;
     }
   }

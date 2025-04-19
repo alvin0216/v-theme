@@ -23,13 +23,6 @@ $--color-danger: #f56c6c !default;
 $--color-info: #909399 !default;
 
 /* ==========================
-      Text 文本色变量
-      ========================== */
-
-$--color-text-secondary: #909399 !default; // 次要的文本颜色
-$--color-text-placeholder: #c0c4cc !default; // 占位符文本颜色
-
-/* ==========================
       Border 边框色变量
       ========================== */
 $--border-color-base: #dcdfe6 !default;
@@ -52,7 +45,7 @@ $--link-hover-color: $--color-primary !default; // 链接悬停时的颜色，�
    -------------------------- */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
-$--border-color-hover: $--color-text-placeholder !default;
+$--border-color-hover: var(--color-text-placeholder) !default;
 $--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
 $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
@@ -96,7 +89,7 @@ $--index-popper: 2000 !default;
 /* Disable base
    -------------------------- */
 $--disabled-fill-base: $--background-color-base !default; // 禁用状态下的基础填充颜色，使用背景基础色
-$--disabled-color-base: $--color-text-placeholder !default; // 禁用状态下的基础文本颜色，使用占位符文本颜色
+$--disabled-color-base: var(--color-text-placeholder) !default; // 禁用状态下的基础文本颜色，使用占位符文本颜色
 $--disabled-border-base: $--border-color-light !default; // 禁用状态下的基础边框颜色，使用浅色边框颜色
 
 /* Icon
@@ -117,11 +110,11 @@ $--checkbox-input-border: $--border-base !default;
 
 $--checkbox-disabled-border-color: $--border-color-base !default;
 $--checkbox-disabled-input-fill: #edf2fc !default;
-$--checkbox-disabled-icon-color: $--color-text-placeholder !default;
+$--checkbox-disabled-icon-color: var(--color-text-placeholder) !default;
 
 $--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
 $--checkbox-disabled-checked-input-border-color: $--border-color-base !default;
-$--checkbox-disabled-checked-icon-color: $--color-text-placeholder !default;
+$--checkbox-disabled-checked-icon-color: var(--color-text-placeholder) !default;
 
 //
 
@@ -169,7 +162,7 @@ $--radio-disabled-icon-color: $--disabled-fill-base !default;
 
 $--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
 $--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-checked-icon-color: $--color-text-placeholder !default;
+$--radio-disabled-checked-icon-color: var(--color-text-placeholder) !default;
 
 $--radio-checked-font-color: $--color-primary !default;
 $--radio-checked-input-border-color: $--color-primary !default;
@@ -204,15 +197,15 @@ $--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
 $--select-border-color-hover: $--border-color-hover !default;
 $--select-disabled-border: $--disabled-border-base !default;
 $--select-font-size: $--font-size-base !default;
-$--select-close-hover-color: $--color-text-secondary !default;
+$--select-close-hover-color: var(--color-text-secondary) !default;
 
-$--select-input-color: $--color-text-placeholder !default;
+$--select-input-color: var(--color-text-placeholder) !default;
 $--select-multiple-input-color: #666 !default;
 $--select-input-focus-border-color: $--color-primary !default;
 $--select-input-font-size: 14px !default;
 
 $--select-option-color: var(--color-text-regular) !default;
-$--select-option-disabled-color: $--color-text-placeholder !default;
+$--select-option-disabled-color: var(--color-text-placeholder) !default;
 $--select-option-disabled-background: $--color-white !default;
 $--select-option-height: 34px !default;
 $--select-option-hover-background: $--background-color-base !default;
@@ -269,9 +262,9 @@ $--message-shadow: $--box-shadow-base !default;
 $--message-min-width: 380px !default;
 $--message-background-color: #edf2fc !default;
 $--message-padding: 15px 15px 15px 20px !default;
-$--message-close-icon-color: $--color-text-placeholder !default;
+$--message-close-icon-color: var(--color-text-placeholder) !default;
 $--message-close-size: 16px !default;
-$--message-close-hover-color: $--color-text-secondary !default;
+$--message-close-hover-color: var(--color-text-secondary) !default;
 
 $--message-success-font-color: $--color-success !default;
 $--message-info-font-color: $--color-info !default;
@@ -294,7 +287,7 @@ $--notification-content-color: var(--color-text-regular) !default;
 $--notification-title-font-size: 16px !default;
 $--notification-title-color: var(--color-text-primary);
 
-$--notification-close-color: $--color-text-secondary !default;
+$--notification-close-color: var(--color-text-secondary) !default;
 $--notification-close-hover-color: var(--color-text-regular) !default;
 
 $--notification-success-icon-color: $--color-success !default;
@@ -315,12 +308,12 @@ $--input-border-color-hover: $--border-color-hover !default;
 $--input-background-color: $--color-white !default;
 $--input-fill-disabled: $--disabled-fill-base !default;
 $--input-color-disabled: $--font-color-disabled-base !default;
-$--input-icon-color: $--color-text-placeholder !default;
-$--input-placeholder-color: $--color-text-placeholder !default;
+$--input-icon-color: var(--color-text-placeholder) !default;
+$--input-placeholder-color: var(--color-text-placeholder) !default;
 $--input-max-width: 314px !default;
 
 $--input-hover-border: $--border-color-hover !default;
-$--input-clear-hover-color: $--color-text-secondary !default;
+$--input-clear-hover-color: var(--color-text-secondary) !default;
 
 $--input-focus-border: $--color-primary !default;
 $--input-focus-fill: $--color-white !default;
@@ -328,7 +321,7 @@ $--input-focus-fill: $--color-white !default;
 $--input-disabled-fill: $--disabled-fill-base !default;
 $--input-disabled-border: $--disabled-border-base !default;
 $--input-disabled-color: $--disabled-color-base !default;
-$--input-disabled-placeholder-color: $--color-text-placeholder !default;
+$--input-disabled-placeholder-color: var(--color-text-placeholder) !default;
 
 $--input-medium-font-size: 14px !default;
 $--input-medium-height: 36px !default;
@@ -347,8 +340,8 @@ $--cascader-menu-radius: $--border-radius-base !default;
 $--cascader-menu-border: solid 1px $--border-color-light !default;
 $--cascader-menu-shadow: $--box-shadow-light !default;
 $--cascader-node-background-hover: $--background-color-base !default;
-$--cascader-node-color-disabled: $--color-text-placeholder !default;
-$--cascader-color-empty: $--color-text-placeholder !default;
+$--cascader-node-color-disabled: var(--color-text-placeholder) !default;
+$--cascader-color-empty: var(--color-text-placeholder) !default;
 $--cascader-tag-background: #f0f2f5;
 
 /* Group
@@ -364,14 +357,14 @@ $--group-title-width: 66px !default;
    -------------------------- */
 $--tab-font-size: $--font-size-base !default;
 $--tab-border-line: 1px solid #e4e4e4 !default;
-$--tab-header-color-active: $--color-text-secondary !default;
+$--tab-header-color-active: var(--color-text-secondary) !default;
 $--tab-header-color-hover: var(--color-text-regular) !default;
 $--tab-header-color: var(--color-text-regular) !default;
 $--tab-header-fill-active: rgba($--color-black, 0.06) !default;
 $--tab-header-fill-hover: rgba($--color-black, 0.06) !default;
 $--tab-vertical-header-width: 90px !default;
 $--tab-vertical-header-count-color: $--color-white !default;
-$--tab-vertical-header-count-fill: $--color-text-secondary !default;
+$--tab-vertical-header-count-fill: var(--color-text-secondary) !default;
 
 /* Button
    -------------------------- */
@@ -399,7 +392,7 @@ $--button-default-font-color: var(--color-text-regular) !default;
 $--button-default-background-color: $--color-white !default;
 $--button-default-border-color: $--border-color-base !default;
 
-$--button-disabled-font-color: $--color-text-placeholder !default;
+$--button-disabled-font-color: var(--color-text-placeholder) !default;
 $--button-disabled-background-color: $--color-white !default;
 $--button-disabled-border-color: $--border-color-lighter !default;
 
@@ -450,7 +443,7 @@ $--dialog-padding-primary: 20px !default;
 $--table-border-color: $--border-color-lighter !default;
 $--table-border: 1px solid $--table-border-color !default;
 $--table-font-color: var(--color-text-regular) !default;
-$--table-header-font-color: $--color-text-secondary !default;
+$--table-header-font-color: var(--color-text-secondary) !default;
 $--table-row-hover-background-color: $--background-color-base !default;
 $--table-current-row-background-color: var(--color-primary-light-9) !default;
 $--table-header-background-color: $--color-white !default;
@@ -465,7 +458,7 @@ $--pagination-border-radius: 3px !default;
 $--pagination-button-color: var(--color-text-primary);
 $--pagination-button-width: 35.5px !default;
 $--pagination-button-height: 28px !default;
-$--pagination-button-disabled-color: $--color-text-placeholder !default;
+$--pagination-button-disabled-color: var(--color-text-placeholder) !default;
 $--pagination-button-disabled-background-color: $--color-white !default;
 $--pagination-hover-color: $--color-primary !default;
 
@@ -509,7 +502,7 @@ $--tag-padding: 0 10px !default;
    -------------------------- */
 $--tree-node-hover-background-color: $--background-color-base !default;
 $--tree-font-color: var(--color-text-regular) !default;
-$--tree-expand-icon-color: $--color-text-placeholder !default;
+$--tree-expand-icon-color: var(--color-text-placeholder) !default;
 
 /* Dropdown
    -------------------------- */
@@ -537,7 +530,7 @@ $--slider-main-background-color: $--color-primary !default;
 $--slider-runway-background-color: $--border-color-light !default;
 $--slider-button-hover-color: mix($--color-primary, black, 97%) !default;
 $--slider-stop-background-color: $--color-white !default;
-$--slider-disable-color: $--color-text-placeholder !default;
+$--slider-disable-color: var(--color-text-placeholder) !default;
 $--slider-margin: 16px 0 !default;
 $--slider-border-radius: 3px !default;
 $--slider-height: 6px !default;
@@ -564,12 +557,12 @@ $--rate-height: 20px !default;
 $--rate-font-size: $--font-size-base !default;
 $--rate-icon-size: 18px !default;
 $--rate-icon-margin: 6px !default;
-$--rate-icon-color: $--color-text-placeholder !default;
+$--rate-icon-color: var(--color-text-placeholder) !default;
 
 /* DatePicker
    --------------------------*/
 $--datepicker-font-color: var(--color-text-regular) !default;
-$--datepicker-off-font-color: $--color-text-placeholder !default;
+$--datepicker-off-font-color: var(--color-text-placeholder) !default;
 $--datepicker-header-font-color: var(--color-text-regular) !default;
 $--datepicker-icon-color: var(--color-text-primary);
 $--datepicker-border-color: $--disabled-border-base !default;
@@ -587,8 +580,8 @@ $--loading-fullscreen-spinner-size: 50px !default;
 
 /* Scrollbar
    --------------------------*/
-$--scrollbar-background-color: rgba($--color-text-secondary, 0.3) !default;
-$--scrollbar-hover-background-color: rgba($--color-text-secondary, 0.5) !default;
+$--scrollbar-background-color: rgba(var(--color-text-secondary), 0.3) !default;
+$--scrollbar-hover-background-color: rgba(var(--color-text-secondary), 0.5) !default;
 
 /* Carousel
    --------------------------*/
@@ -655,7 +648,7 @@ $--link-font-size: $--font-size-base !default;
 $--link-font-weight: $--font-weight-primary !default;
 $--link-default-font-color: var(--color-text-regular) !default;
 $--link-default-active-color: $--color-primary !default;
-$--link-disabled-font-color: $--color-text-placeholder !default;
+$--link-disabled-font-color: var(--color-text-placeholder) !default;
 $--link-primary-font-color: $--color-primary !default;
 $--link-success-font-color: $--color-success !default;
 $--link-warning-font-color: $--color-warning !default;

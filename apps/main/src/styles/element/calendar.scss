@@ -36,7 +36,7 @@
   &:not(.is-range) {
     td.prev,
     td.next {
-      color: $--color-text-placeholder;
+      color: var(--color-text-placeholder);
     }
   }
 

@@ -37,7 +37,7 @@
 
   @include e(arrow) {
     font-size: 12px;
-    color: $--color-text-secondary;
+    color: var(--color-text-secondary);
     position: absolute;
     left: 0;
     width: 100%;
@@ -103,7 +103,7 @@
     }
 
     &.disabled {
-      color: $--color-text-placeholder;
+      color: var(--color-text-placeholder);
       cursor: not-allowed;
     }
   }

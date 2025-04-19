@@ -47,7 +47,7 @@
   .el-range__icon {
     font-size: 14px;
     margin-left: -5px;
-    color: $--color-text-placeholder;
+    color: var(--color-text-placeholder);
     float: left;
     line-height: 32px;
   }
@@ -66,7 +66,7 @@
     color: var(--color-text-regular);
 
     &::placeholder {
-      color: $--color-text-placeholder;
+      color: var(--color-text-placeholder);
     }
   }
 
@@ -84,7 +84,7 @@
 
   .el-range__close-icon {
     font-size: 14px;
-    color: $--color-text-placeholder;
+    color: var(--color-text-placeholder);
     width: 25px;
     display: inline-block;
     float: right;

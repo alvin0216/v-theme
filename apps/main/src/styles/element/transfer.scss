@@ -32,12 +32,12 @@
     @include when(disabled) {
       border: $--border-base;
       background-color: $--background-color-base;
-      color: $--color-text-placeholder;
+      color: var(--color-text-placeholder);
 
       &:hover {
         border: $--border-base;
         background-color: $--background-color-base;
-        color: $--color-text-placeholder;
+        color: var(--color-text-placeholder);
       }
     }
 
@@ -176,7 +176,7 @@
         span {
           position: absolute;
           right: 15px;
-          color: $--color-text-secondary;
+          color: var(--color-text-secondary);
           font-size: 12px;
           font-weight: normal;
         }
@@ -208,7 +208,7 @@
     height: $--transfer-item-height;
     line-height: $--transfer-item-height;
     padding: 6px 15px 0;
-    color: $--color-text-secondary;
+    color: var(--color-text-secondary);
     text-align: center;
   }
 

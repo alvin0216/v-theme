@@ -88,7 +88,7 @@
   }
 
   .el-pager li.disabled {
-    color: $--color-text-placeholder;
+    color: var(--color-text-placeholder);
     cursor: not-allowed;
   }
 
@@ -200,7 +200,7 @@
       border-radius: 2px;
 
       &.disabled {
-        color: $--color-text-placeholder;
+        color: var(--color-text-placeholder);
       }
     }
 
@@ -209,7 +209,7 @@
       padding: 0;
 
       &:disabled {
-        color: $--color-text-placeholder;
+        color: var(--color-text-placeholder);
       }
     }
 
@@ -268,7 +268,7 @@
       color: $--pagination-button-color;
 
       &.disabled {
-        color: $--color-text-placeholder;
+        color: var(--color-text-placeholder);
       }
     }
 

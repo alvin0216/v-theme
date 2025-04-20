@@ -30,7 +30,7 @@
     // set empty text line height up to contrainer min-height as workaround.
     line-height: 60px;
     width: 50%;
-    color: $--color-text-secondary;
+    color: var(--text-secondary);
   }
 
   // 展开行
@@ -455,12 +455,12 @@
     left: 7px;
 
     &.ascending {
-      border-bottom-color: $--color-text-placeholder;
+      border-bottom-color: var(--text-placeholder);
       top: 5px;
     }
 
     &.descending {
-      border-top-color: $--color-text-placeholder;
+      border-top-color: var(--text-placeholder);
       bottom: 7px;
     }
   }

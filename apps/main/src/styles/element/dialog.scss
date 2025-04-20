@@ -13,7 +13,7 @@
   box-sizing: border-box;
   width: 50%;
 
-  @include dark() {
+  @include when-dark() {
     box-shadow: var(--box-shadow-base);
   }
 

@@ -4,6 +4,7 @@
 @import './color/checkbox.scss';
 @import './color/card.scss';
 @import './color/message.scss';
+@import './color/select.scss';
 
 // inject to root
 @include inject-themes($colors, $texts, $borders, $background, $box-shadow);

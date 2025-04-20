@@ -10,7 +10,7 @@
   @include e(separator) {
     margin: 0 9px;
     font-weight: bold;
-    color: $--color-text-placeholder;
+    color: var(--text-placeholder);
 
     &[class*='icon'] {
       margin: 0 6px;

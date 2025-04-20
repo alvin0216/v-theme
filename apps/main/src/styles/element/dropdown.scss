@@ -34,7 +34,7 @@
       bottom: $gap;
       left: 0;
       background: mix(white, transparent, 50%);
-      @include dark() {
+      @include when-dark() {
         opacity: 0.5;
         background: var(--border-color-base) !important;
       }
@@ -42,7 +42,7 @@
 
     &.el-button--default::before {
       background: mix(#dcdfe6, transparent, 50%);
-      @include dark() {
+      @include when-dark() {
         background: var(--border-color-base) !important;
       }
     }
@@ -89,7 +89,7 @@
   border-radius: $--border-radius-base;
   box-shadow: var(--box-shadow-light);
 
-  @include dark() {
+  @include when-dark() {
     border: 1px solid var(--border-color-light);
   }
 
@@ -107,7 +107,7 @@
       background-color: var(--color-primary-light-9);
       color: var(--color-primary-light-2);
 
-      @include dark() {
+      @include when-dark() {
         color: var(--color-primary);
       }
     }

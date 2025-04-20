@@ -117,7 +117,7 @@
       background-color: var(--background-color-base);
       opacity: 1;
       cursor: not-allowed;
-      color: $--color-text-placeholder;
+      color: var(--text-placeholder);
     }
 
     &.selected div {

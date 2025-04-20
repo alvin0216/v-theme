@@ -58,8 +58,19 @@
   }
 }
 
-@mixin dark() {
+// 只在 dark 下生效
+@mixin when-dark() {
   html.dark & {
     @content;
+  }
+}
+
+// 快速对主题做配置
+@mixin theme-vars($name, $light-value, $dark-value) {
+  & {
+    --#{$name}: #{$light-value};
+  }
+  @include when-dark {
+    --#{$name}: #{$dark-value};
   }
 }

@@ -50,7 +50,7 @@
         } @else if $type == info {
           background-color: $--color-info;
         } @else {
-          background-color: $--color-danger;
+          background-color: var(--color-danger);
         }
       }
     }

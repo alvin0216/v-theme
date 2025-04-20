@@ -1,5 +1,5 @@
-@import "mixins/mixins";
-@import "common/var";
+@import 'mixins/mixins';
+@import 'common/var';
 
 @include b(alert) {
   width: 100%;
@@ -13,7 +13,7 @@
   opacity: 1;
   display: flex;
   align-items: center;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 
   @include when(light) {
     .el-alert__closebtn {
@@ -85,15 +85,15 @@
   @include m(error) {
     &.is-light {
       background-color: $--alert-danger-color;
-      color: $--color-danger;
+      color: var(--color-danger);
 
       .el-alert__description {
-        color: $--color-danger;
+        color: var(--color-danger);
       }
     }
 
     &.is-dark {
-      background-color: $--color-danger;
+      background-color: var(--color-danger);
       color: $--color-white;
     }
   }

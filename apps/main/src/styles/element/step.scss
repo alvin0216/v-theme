@@ -42,8 +42,8 @@
     }
 
     @include when(error) {
-      color: $--color-danger;
-      border-color: $--color-danger;
+      color: var(--color-danger);
+      border-color: var(--color-danger);
     }
 
     @include when(finish) {
@@ -135,7 +135,7 @@
     }
 
     @include when(error) {
-      color: $--color-danger;
+      color: var(--color-danger);
     }
 
     @include when(finish) {
@@ -163,7 +163,7 @@
     }
 
     @include when(error) {
-      color: $--color-danger;
+      color: var(--color-danger);
     }
 
     @include when(finish) {

@@ -174,7 +174,7 @@
   @include when(disabled) {
     background-color: $--input-disabled-fill;
     border-color: $--input-disabled-border;
-    color: $--input-disabled-color;
+    color: var(--text-placeholder);
     cursor: not-allowed;
 
     &:hover,
@@ -184,15 +184,15 @@
 
     input {
       background-color: $--input-disabled-fill;
-      color: $--input-disabled-color;
+      color: var(--text-placeholder);
       cursor: not-allowed;
       &::placeholder {
-        color: $--input-disabled-placeholder-color;
+        color: var(--text-placeholder);
       }
     }
 
     .el-range-separator {
-      color: $--input-disabled-color;
+      color: var(--text-placeholder);
     }
   }
 }

@@ -86,9 +86,9 @@
     padding-top: 15px;
 
     & input.invalid {
-      border-color: $--color-danger;
+      border-color: var(--color-danger);
       &:focus {
-        border-color: $--color-danger;
+        border-color: var(--color-danger);
       }
     }
   }
@@ -136,7 +136,7 @@
   }
 
   @include e(errormsg) {
-    color: $--color-danger;
+    color: var(--color-danger);
     font-size: $--messagebox-error-font-size;
     min-height: 18px;
     margin-top: 2px;

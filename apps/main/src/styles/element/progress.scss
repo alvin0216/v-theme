@@ -80,11 +80,11 @@
 
   @include when(exception) {
     .el-progress-bar__inner {
-      background-color: $--color-danger;
+      background-color: var(--color-danger);
     }
 
     .el-progress__text {
-      color: $--color-danger;
+      color: var(--color-danger);
     }
   }
 }

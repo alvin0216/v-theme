@@ -50,22 +50,22 @@
     .el-textarea__inner {
       background-color: var(--fill-color-light);
       border-color: var(--border-color-light);
-      color: $--input-disabled-color;
+      color: var(--text-placeholder);
       cursor: not-allowed;
 
       &::placeholder {
-        color: $--input-disabled-placeholder-color;
+        color: var(--text-placeholder);
       }
     }
   }
 
   @include when(exceed) {
     .el-textarea__inner {
-      border-color: $--color-danger;
+      border-color: var(--color-danger);
     }
 
     .el-input__count {
-      color: $--color-danger;
+      color: var(--color-danger);
     }
   }
 }
@@ -78,13 +78,13 @@
   @include scroll-bar;
 
   & .el-input__clear {
-    color: $--input-icon-color;
+    color: var(--text-placeholder);
     font-size: $--input-font-size;
     cursor: pointer;
     transition: $--color-transition-base;
 
     &:hover {
-      color: $--input-clear-hover-color;
+      color: var(--text-secondary);
     }
   }
 
@@ -144,7 +144,7 @@
     right: 5px;
     top: 0;
     text-align: center;
-    color: $--input-icon-color;
+    color: var(--text-placeholder);
     transition: all 0.3s;
     pointer-events: none;
   }
@@ -159,7 +159,7 @@
     left: 5px;
     top: 0;
     text-align: center;
-    color: $--input-icon-color;
+    color: var(--text-placeholder);
     transition: all 0.3s;
   }
 
@@ -194,11 +194,11 @@
     .el-input__inner {
       background-color: var(--fill-color-light);
       border-color: var(--border-color-light);
-      color: $--input-disabled-color;
+      color: var(--text-placeholder);
       cursor: not-allowed;
 
       &::placeholder {
-        color: $--input-disabled-placeholder-color;
+        color: var(--text-placeholder);
       }
     }
 
@@ -209,12 +209,12 @@
 
   @include when(exceed) {
     .el-input__inner {
-      border-color: $--color-danger;
+      border-color: var(--color-danger);
     }
 
     .el-input__suffix {
       .el-input__count {
-        color: $--color-danger;
+        color: var(--color-danger);
       }
     }
   }

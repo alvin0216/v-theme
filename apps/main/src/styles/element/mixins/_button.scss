@@ -1,6 +1,7 @@
 @import '../common/var';
 
-@mixin button-variant($type, $color) {
+@mixin button-variant($type) {
+  $color: var(--color-#{$type});
   $hover-color: var(--button-#{$type}-hover-color);
   $active-color: var(--button-#{$type}-active-color-2);
   $disabled-bg: var(--button-#{$type}-disabled-bg);
@@ -39,7 +40,7 @@
     &:hover,
     &:focus,
     &:active {
-      color: $--color-white;
+      color: var(--button-text-disabled-color);
       background-color: $disabled-bg;
       border-color: $disabled-bg;
     }

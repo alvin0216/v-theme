@@ -128,19 +128,19 @@
     padding: $--button-padding-vertical;
   }
   @include m(primary) {
-    @include button-variant(primary, var(--color-primary));
+    @include button-variant(primary);
   }
   @include m(success) {
-    @include button-variant(success, $--color-success);
+    @include button-variant(success);
   }
   @include m(warning) {
-    @include button-variant(warning, $--color-warning);
+    @include button-variant(warning);
   }
   @include m(danger) {
-    @include button-variant(danger, $--color-danger);
+    @include button-variant(danger);
   }
   @include m(info) {
-    @include button-variant(info, $--color-info);
+    @include button-variant(info);
   }
   @include m(medium) {
     @include button-size(

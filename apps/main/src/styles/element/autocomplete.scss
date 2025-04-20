@@ -14,7 +14,7 @@
   margin: 5px 0;
   box-shadow: var(--box-shadow-light);
   border-radius: $--border-radius-base;
-  border: 1px solid $--border-color-light;
+  border: 1px solid var(--border-color-light);
   box-sizing: border-box;
   background-color: $--color-white;
 
@@ -42,11 +42,11 @@
     text-overflow: ellipsis;
 
     &:hover {
-      background-color: $--select-option-hover-background;
+      background-color: var(--fill-input);
     }
 
     &.highlighted {
-      background-color: $--select-option-hover-background;
+      background-color: var(--fill-input);
     }
 
     &.divider {

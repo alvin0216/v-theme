@@ -8,7 +8,7 @@
 
   @include e(text) {
     font-size: 14px;
-    color: $--color-text-regular;
+    color: var(--box-text-regular);
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;

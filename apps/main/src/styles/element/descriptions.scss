@@ -20,7 +20,7 @@
   }
 
   @include e(body) {
-    color: $--color-text-regular;
+    color: var(--box-text-regular);
     background-color: $--color-white;
 
     .el-descriptions__table {

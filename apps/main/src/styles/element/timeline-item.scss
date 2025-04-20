@@ -19,7 +19,7 @@
   }
 
   @include e(icon) {
-    color: $--color-white;
+    color: #fff;
     font-size: $--font-size-small;
   }
 
@@ -46,7 +46,7 @@
       background-color: var(--color-primary);
     }
     @include m(success) {
-      background-color: $--color-success;
+      background-color: var(--color-success);
     }
     @include m(warning) {
       background-color: $--color-warning;

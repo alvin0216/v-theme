@@ -10,7 +10,7 @@
   @include e(content) {
     background-color: $--badge-background-color;
     border-radius: $--badge-radius;
-    color: $--color-white;
+    color: #fff;
     display: inline-block;
     font-size: $--badge-font-size;
     height: $--badge-size;
@@ -44,7 +44,7 @@
         @if $type == primary {
           background-color: var(--color-primary);
         } @else if $type == success {
-          background-color: $--color-success;
+          background-color: var(--color-success);
         } @else if $type == warning {
           background-color: $--color-warning;
         } @else if $type == info {

@@ -1,5 +1,5 @@
-@import "mixins/mixins";
-@import "common/var";
+@import 'mixins/mixins';
+@import 'common/var';
 
 @mixin genTheme($backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight) {
   background-color: mix($--tag-primary-color, $--color-white, $backgroundColorWeight);
@@ -13,7 +13,7 @@
   .el-tag__close {
     color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
     &:hover {
-      color: $--color-white;
+      color: #fff;
       background-color: mix($--tag-primary-color, $--color-white, $hoverColorWeight);
     }
   }
@@ -30,7 +30,7 @@
     .el-tag__close {
       color: mix($--tag-info-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $--color-white;
+        color: #fff;
         background-color: mix($--tag-info-color, $--color-white, $hoverColorWeight);
       }
     }
@@ -48,7 +48,7 @@
     .el-tag__close {
       color: mix($--tag-success-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $--color-white;
+        color: #fff;
         background-color: mix($--tag-success-color, $--color-white, $hoverColorWeight);
       }
     }
@@ -66,7 +66,7 @@
     .el-tag__close {
       color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $--color-white;
+        color: #fff;
         background-color: mix($--tag-warning-color, $--color-white, $hoverColorWeight);
       }
     }
@@ -84,7 +84,7 @@
     .el-tag__close {
       color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
       &:hover {
-        color: $--color-white;
+        color: #fff;
         background-color: mix($--tag-danger-color, $--color-white, $hoverColorWeight);
       }
     }
@@ -136,7 +136,7 @@
     line-height: 26px;
 
     .el-icon-close {
-      transform: scale(.8);
+      transform: scale(0.8);
     }
   }
 
@@ -146,7 +146,7 @@
     line-height: 22px;
 
     .el-icon-close {
-      transform: scale(.8);
+      transform: scale(0.8);
     }
   }
 
@@ -157,7 +157,7 @@
 
     .el-icon-close {
       margin-left: -3px;
-      transform: scale(.7);
+      transform: scale(0.7);
     }
   }
 }

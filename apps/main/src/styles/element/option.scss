@@ -9,7 +9,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: $--select-option-color;
+    color: var(--text-regular);
     height: $--select-option-height;
     line-height: $--select-option-height;
     box-sizing: border-box;
@@ -20,7 +20,7 @@
       cursor: not-allowed;
 
       &:hover {
-        background-color: $--color-white;
+        background-color: #fff;
       }
     }
 

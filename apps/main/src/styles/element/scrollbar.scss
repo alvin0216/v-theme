@@ -38,7 +38,7 @@
     transition: 0.3s background-color;
 
     &:hover {
-      background-color: $--scrollbar-hover-background-color;
+      background-color: rgba(var(--text-secondary), 0.5);
     }
   }
 

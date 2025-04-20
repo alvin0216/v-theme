@@ -11,7 +11,7 @@
   flex: 1;
   width: 100%;
   max-width: 100%;
-  background-color: $--color-white;
+  background-color: #fff;
   font-size: 14px;
   color: $--table-font-color;
 
@@ -63,7 +63,7 @@
   }
 
   @include e(expanded-cell) {
-    background-color: $--color-white;
+    background-color: #fff;
 
     // 纯属为了增加权重
     &[class*='cell'] {
@@ -169,7 +169,7 @@
   }
 
   tr {
-    background-color: $--color-white;
+    background-color: #fff;
 
     input[type='checkbox'] {
       margin: 0;
@@ -327,7 +327,7 @@
     position: absolute;
     top: -1px;
     right: 0;
-    background-color: $--color-white;
+    background-color: #fff;
     border-bottom: $--table-border;
   }
 

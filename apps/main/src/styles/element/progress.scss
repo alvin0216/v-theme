@@ -60,11 +60,11 @@
 
   @include when(success) {
     .el-progress-bar__inner {
-      background-color: $--color-success;
+      background-color: var(--color-success);
     }
 
     .el-progress__text {
-      color: $--color-success;
+      color: var(--color-success);
     }
   }
 
@@ -123,7 +123,7 @@
   @include e(innerText) {
     display: inline-block;
     vertical-align: middle;
-    color: $--color-white;
+    color: #fff;
     font-size: 12px;
     margin: 0 5px;
   }

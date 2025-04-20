@@ -55,13 +55,13 @@
     &:focus {
       background: $color;
       border-color: $color;
-      color: $--color-white;
+      color: #fff;
     }
 
     &:active {
       background: $active-color;
       border-color: $active-color;
-      color: $--color-white;
+      color: #fff;
       outline: none;
     }
 

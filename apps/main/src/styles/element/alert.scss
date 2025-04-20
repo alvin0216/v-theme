@@ -8,7 +8,7 @@
   box-sizing: border-box;
   border-radius: $--alert-border-radius;
   position: relative;
-  background-color: $--color-white;
+  background-color: #fff;
   overflow: hidden;
   opacity: 1;
   display: flex;
@@ -23,10 +23,10 @@
 
   @include when(dark) {
     .el-alert__closebtn {
-      color: $--color-white;
+      color: #fff;
     }
     .el-alert__description {
-      color: $--color-white;
+      color: #fff;
     }
   }
 
@@ -37,16 +37,16 @@
   @include m(success) {
     &.is-light {
       background-color: $--alert-success-color;
-      color: $--color-success;
+      color: var(--color-success);
 
       .el-alert__description {
-        color: $--color-success;
+        color: var(--color-success);
       }
     }
 
     &.is-dark {
-      background-color: $--color-success;
-      color: $--color-white;
+      background-color: var(--color-success);
+      color: #fff;
     }
   }
 
@@ -58,7 +58,7 @@
 
     &.is-dark {
       background-color: var(--color-info);
-      color: $--color-white;
+      color: #fff;
     }
 
     .el-alert__description {
@@ -78,7 +78,7 @@
 
     &.is-dark {
       background-color: $--color-warning;
-      color: $--color-white;
+      color: #fff;
     }
   }
 
@@ -94,7 +94,7 @@
 
     &.is-dark {
       background-color: var(--color-danger);
-      color: $--color-white;
+      color: #fff;
     }
   }
 

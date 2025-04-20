@@ -22,7 +22,7 @@
     padding: 10px;
     border-radius: 50%;
     color: $--color-white;
-    background-color: $--color-primary;
+    background-color: var(--color-primary);
     font-size: 0;
 
     @include when(with-texts) {
@@ -30,12 +30,12 @@
     }
 
     @include when(disabled) {
-      border: $--border-base;
+      border: var(--border-base);
       background-color: var(--background-color-base);
       color: $--color-text-placeholder;
 
       &:hover {
-        border: $--border-base;
+        border: var(--border-base);
         background-color: var(--background-color-base);
         color: $--color-text-placeholder;
       }
@@ -109,7 +109,7 @@
     }
 
     &:hover {
-      color: $--color-primary;
+      color: var(--color-primary);
     }
 
     &.el-checkbox .el-checkbox__label {

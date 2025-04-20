@@ -287,7 +287,7 @@
     vertical-align: middle;
     display: table-cell;
     position: relative;
-    border: $--border-base;
+    border: var(--border-base);
     border-radius: $--input-border-radius;
     padding: 0 20px;
     width: 1px;

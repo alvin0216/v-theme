@@ -12,7 +12,7 @@
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: $--color-primary;
+    background-color: var(--color-primary);
     z-index: 1;
     transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     list-style: none;
@@ -36,7 +36,7 @@
     }
 
     &:hover {
-      color: $--color-primary;
+      color: var(--color-primary);
     }
   }
   @include e(nav-wrap) {
@@ -131,11 +131,11 @@
     }
 
     @include when(active) {
-      color: $--color-primary;
+      color: var(--color-primary);
     }
 
     &:hover {
-      color: $--color-primary;
+      color: var(--color-primary);
       cursor: pointer;
     }
 
@@ -238,13 +238,13 @@
       }
 
       &.is-active {
-        color: $--color-primary;
+        color: var(--color-primary);
         background-color: $--color-white;
         border-right-color: $--border-color-base;
         border-left-color: $--border-color-base;
       }
       &:not(.is-disabled):hover {
-        color: $--color-primary;
+        color: var(--color-primary);
       }
       &.is-disabled {
         color: $--disabled-color-base;

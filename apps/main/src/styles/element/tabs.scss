@@ -140,7 +140,7 @@
     }
 
     @include when(disabled) {
-      color: $--disabled-color-base;
+      color: var(--text-placeholder);
       cursor: default;
     }
   }
@@ -247,7 +247,7 @@
         color: var(--color-primary);
       }
       &.is-disabled {
-        color: $--disabled-color-base;
+        color: var(--text-placeholder);
       }
     }
 

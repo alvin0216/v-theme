@@ -1,0 +1,17 @@
+@import '../mixins.scss';
+@import './base.scss';
+
+$checkbox: (
+  light: (
+    disabled-input-fill: #edf2fc,
+    box-shadow: -1px 0 0 0 mix($--color-white, $color-primary, 40%),
+  ),
+  dark: (
+    disabled-input-fill: #262627,
+    box-shadow: -1px 0 0 0 mix($--color-dark, $dark-color-primary, 70%),
+  ),
+);
+
+.el-checkbox {
+  @include inject-component('checkbox', $checkbox);
+}

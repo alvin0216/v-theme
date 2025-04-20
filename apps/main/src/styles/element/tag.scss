@@ -7,7 +7,7 @@
   color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
 
   @include when(hit) {
-    border-color: $--tag-primary-color;
+    border-color: var(--color-primary);
   }
 
   .el-tag__close {
@@ -98,7 +98,7 @@
   padding: $--tag-padding;
   line-height: 30px;
   font-size: $--tag-font-size;
-  color: $--tag-primary-color;
+  color: var(--color-primary);
   border-width: 1px;
   border-style: solid;
   border-radius: $--tag-border-radius;

@@ -36,7 +36,7 @@
       color: var(--color-primary);
 
       &:not(.is-disabled) ~ .el-input .el-input__inner:not(.is-disabled) {
-        border-color: $--input-focus-border;
+        border-color: var(--color-primary);
       }
     }
 
@@ -60,11 +60,11 @@
 
   @include when(disabled) {
     @include e((increase, decrease)) {
-      border-color: $--disabled-border-base;
-      color: $--disabled-border-base;
+      border-color: var(--border-color-light);
+      color: var(--text-disabled);
 
       &:hover {
-        color: $--disabled-border-base;
+        color: var(--text-disabled);
         cursor: not-allowed;
       }
     }

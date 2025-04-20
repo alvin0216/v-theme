@@ -16,7 +16,7 @@
     cursor: pointer;
 
     @include when(disabled) {
-      color: $--select-option-disabled-color;
+      color: var(--text-placeholder);
       cursor: not-allowed;
 
       &:hover {

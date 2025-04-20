@@ -30,7 +30,7 @@
   @include e(title) {
     font-weight: bold;
     font-size: $--notification-title-font-size;
-    color: $--notification-title-color;
+    color: var(--text-primary);
     margin: 0;
   }
 
@@ -38,7 +38,7 @@
     font-size: $--notification-content-font-size;
     line-height: 21px;
     margin: 6px 0 0 0;
-    color: $--notification-content-color;
+    color: var(--text-regular);
     text-align: justify;
 
     p {
@@ -57,28 +57,28 @@
     top: 18px;
     right: 15px;
     cursor: pointer;
-    color: $--notification-close-color;
+    color: var(--text-secondary);
     font-size: $--notification-close-font-size;
 
     &:hover {
-      color: $--notification-close-hover-color;
+      color: var(--text-regular);
     }
   }
 
   .el-icon-success {
-    color: $--notification-success-icon-color;
+    color: var(--color-success);
   }
 
   .el-icon-error {
-    color: $--notification-danger-icon-color;
+    color: var(--color-danger);
   }
 
   .el-icon-info {
-    color: $--notification-info-icon-color;
+    color: var(--color-info);
   }
 
   .el-icon-warning {
-    color: $--notification-warning-icon-color;
+    color: var(--color-warning);
   }
 }
 

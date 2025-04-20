@@ -25,7 +25,7 @@
       text-overflow: ellipsis;
 
       &:focus {
-        border-color: $--input-focus-border;
+        border-color: var(--color-primary);
       }
     }
 
@@ -44,7 +44,7 @@
 
     @include when(focus) {
       .el-input__inner {
-        border-color: $--input-focus-border;
+        border-color: var(--color-primary);
       }
     }
   }
@@ -151,7 +151,7 @@
     }
 
     &.is-checked {
-      color: $--cascader-menu-selected-font-color;
+      color: var(--color-primary);
       font-weight: bold;
     }
 
@@ -162,7 +162,7 @@
 
   @include e(empty-text) {
     margin: 10px 0;
-    color: $--cascader-color-empty;
+    color: var(--text-placeholder);
   }
 
   @include e(search-input) {

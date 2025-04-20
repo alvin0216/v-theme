@@ -13,7 +13,7 @@
   max-width: 100%;
   background-color: #fff;
   font-size: 14px;
-  color: $--table-font-color;
+  color: var(--color-regular);
 
   // 数据为空
   @include e(empty-block) {
@@ -107,7 +107,7 @@
   }
 
   thead {
-    color: $--table-header-font-color;
+    color: var(--text-secondary);
     font-weight: 500;
 
     &.is-group {
@@ -360,7 +360,7 @@
     & tbody td.el-table__cell {
       border-top: $--table-border;
       background-color: $--table-row-hover-background-color;
-      color: $--table-font-color;
+      color: var(--color-regular);
     }
   }
 
@@ -393,7 +393,7 @@
 
     & tbody td.el-table__cell {
       background-color: $--table-row-hover-background-color;
-      color: $--table-font-color;
+      color: var(--color-regular);
     }
   }
 

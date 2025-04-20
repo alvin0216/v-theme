@@ -12,7 +12,7 @@
           background-color: $--datepicker-inrange-background-color;
         }
         td.available:hover {
-          color: $--datepicker-font-color;
+          color: var(--text-regular);
         }
         td:first-child div {
           margin-left: 5px;
@@ -61,7 +61,7 @@
 
     &.next-month,
     &.prev-month {
-      color: $--datepicker-off-font-color;
+      color: var(--text-placeholder);
     }
 
     &.today {
@@ -77,7 +77,7 @@
     }
 
     &.available:hover {
-      color: $--datepicker-hover-font-color;
+      color: var(--color-primary);
     }
 
     &.in-range div {
@@ -138,13 +138,13 @@
 
     &.week {
       font-size: 80%;
-      color: $--datepicker-header-font-color;
+      color: var(---text-regular);
     }
   }
 
   th {
     padding: 5px;
-    color: $--datepicker-header-font-color;
+    color: var(---text-regular);
     font-weight: 400;
     border-bottom: solid 1px var(--border-color-lighter);
   }

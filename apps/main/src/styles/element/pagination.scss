@@ -6,7 +6,7 @@
 @include b(pagination) {
   white-space: nowrap;
   padding: 2px 5px;
-  color: $--pagination-font-color;
+  color: var(--text-primary);
   font-weight: bold;
   @include utils-clearfix;
 
@@ -53,11 +53,11 @@
     }
 
     &:hover {
-      color: $--pagination-hover-color;
+      color: var(--color-primary);
     }
 
     &:disabled {
-      color: $--pagination-button-disabled-color;
+      color: var(--text-placeholder);
       background-color: $--pagination-button-disabled-background-color;
       cursor: not-allowed;
     }
@@ -70,7 +70,7 @@
     background-color: $--pagination-background-color;
     cursor: pointer;
     margin: 0;
-    color: $--pagination-button-color;
+    color: var(--text-primary);
 
     .el-icon {
       display: block;
@@ -139,7 +139,7 @@
       padding-left: 8px;
 
       &:hover {
-        border-color: $--pagination-hover-color;
+        border-color: var(--color-primary);
       }
     }
   }
@@ -215,7 +215,7 @@
 
     .el-pager li:not(.disabled) {
       &:hover {
-        color: $--pagination-hover-color;
+        color: var(--color-primary);
       }
 
       &.active {
@@ -265,7 +265,7 @@
     &.btn-quicknext,
     &.btn-quickprev {
       line-height: 28px;
-      color: $--pagination-button-color;
+      color: var(--text-primary);
 
       &.disabled {
         color: var(--text-placeholder);
@@ -285,11 +285,11 @@
     }
 
     &:hover {
-      color: $--pagination-hover-color;
+      color: var(--color-primary);
     }
 
     &.active {
-      color: $--pagination-hover-color;
+      color: var(--color-primary);
       cursor: default;
     }
   }

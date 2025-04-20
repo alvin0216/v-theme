@@ -18,8 +18,8 @@
     align-items: center;
     height: $--collapse-header-height;
     line-height: $--collapse-header-height;
-    background-color: $--collapse-header-background-color;
-    color: $--collapse-header-font-color;
+    background-color: var(--fill-blank);
+    color: var(--color-primary);
     cursor: pointer;
     border-bottom: 1px solid $--collapse-border-color;
     font-size: $--collapse-header-font-size;
@@ -44,7 +44,7 @@
 
   @include e(wrap) {
     will-change: height;
-    background-color: $--collapse-content-background-color;
+    background-color: var(--fill-blank);
     overflow: hidden;
     box-sizing: border-box;
     border-bottom: 1px solid $--collapse-border-color;
@@ -53,7 +53,7 @@
   @include e(content) {
     padding-bottom: 25px;
     font-size: $--collapse-content-font-size;
-    color: $--collapse-content-font-color;
+    color: var(--text-primary);
     line-height: 1.769230769230769;
   }
 

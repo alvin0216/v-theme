@@ -231,7 +231,7 @@
         &:active {
           .el-input-number__decrease,
           .el-input-number__increase {
-            border-color: $--input-focus-border;
+            border-color: var(--color-primary);
           }
         }
       }

@@ -22,7 +22,7 @@
   }
 
   @include e(title) {
-    color: $--popover-title-font-color;
+    color: var(--text-primary);
     font-size: $--popover-title-font-size;
     line-height: 1;
     margin-bottom: 12px;

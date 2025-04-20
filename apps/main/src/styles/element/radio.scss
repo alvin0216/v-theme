@@ -4,7 +4,7 @@
 @import 'common/var';
 
 @include b(radio) {
-  color: $--radio-font-color;
+  color: var(--text-regular);
   font-weight: $--radio-font-weight;
   line-height: 1;
   position: relative;
@@ -135,7 +135,7 @@
       }
 
       & + .el-radio__label {
-        color: $--radio-checked-font-color;
+        color: var(--color-primary);
       }
     }
 

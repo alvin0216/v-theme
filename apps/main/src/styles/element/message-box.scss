@@ -46,7 +46,7 @@
     margin-bottom: 0;
     font-size: $--messagebox-font-size;
     line-height: 1;
-    color: $--messagebox-title-color;
+    color: var(--text-primary);
   }
 
   @include e(headerbtn) {
@@ -74,7 +74,7 @@
 
   @include e(content) {
     padding: 10px $--msgbox-padding-primary;
-    color: $--messagebox-content-color;
+    color: var(---text-regular);
     font-size: $--messagebox-content-font-size;
   }
 
@@ -110,19 +110,19 @@
     }
 
     &.el-icon-success {
-      color: $--messagebox-success-color;
+      color: var(--color-success);
     }
 
     &.el-icon-info {
-      color: $--messagebox-info-color;
+      color: var(--color-info);
     }
 
     &.el-icon-warning {
-      color: $--messagebox-warning-color;
+      color: var(--color-warning);
     }
 
     &.el-icon-error {
-      color: $--messagebox-danger-color;
+      color: var(--color-danger);
     }
   }
 

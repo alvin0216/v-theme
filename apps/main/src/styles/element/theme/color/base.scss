@@ -1,30 +1,36 @@
-$--color-white: #ffffff;
-$--color-black: #000000;
-$--color-dark: #141414;
-
 // $color-primary: #294e95;
 $color-primary: #409eff;
 $dark-color-primary: #409eff;
 
-$variants: (
-  success: #67c23a,
-  warning: #e6a23c,
-  danger: #f56c6c,
-  info: #909399,
-);
+$--color-success: #67c23a;
+$--color-warning: #e6a23c;
+$--color-danger: #f56c6c;
+$--color-info: #909399;
+
+$--color-white: #ffffff;
+$--color-black: #000000;
+$--color-dark: #141414;
 
 $colors: (
   light: (
     color-primary: $color-primary,
+    color-success: $--color-success,
+    color-warning: $--color-warning,
+    color-danger: $--color-danger,
+    color-info: $--color-info,
+
     color-primary-light-7: mix($--color-white, $color-primary, 70%),
     color-primary-light-9: mix($--color-white, $color-primary, 90%),
-    color-info: #909399,
   ),
   dark: (
     color-primary: $dark-color-primary,
+    color-success: $--color-success,
+    color-warning: $--color-warning,
+    color-danger: $--color-danger,
+    color-info: $--color-info,
+
     color-primary-light-7: mix($--color-dark, $dark-color-primary, 70%),
     color-primary-light-9: mix($--color-dark, $dark-color-primary, 90%),
-    color-info: #909399,
   ),
 );
 

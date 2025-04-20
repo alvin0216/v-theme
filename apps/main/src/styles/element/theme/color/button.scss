@@ -12,14 +12,6 @@ $buttons: (
     loading-icon-bg: rgba(255, 255, 255, 0.35),
     text-hover-color: mix($--color-white, $color-primary, 20%),
     text-active-color: $black-primary-10,
-
-    primary-hover-color: mix($--color-white, $color-primary, 20%),
-    primary-active-color-2: $black-primary-10,
-    primary-disabled-bg: mix($color-primary, $--color-white),
-    primary-plain-bg: mix($--color-white, $color-primary, 90%),
-    primary-plain-border: mix($--color-white, $color-primary, 60%),
-    primary-plain-disabled-color: mix($--color-white, $color-primary, 40%),
-    primary-plain-disabled-border: mix($--color-white, $color-primary, 80%),
   ),
   dark: (
     primary-active-color: $dark-color-primary,
@@ -29,42 +21,48 @@ $buttons: (
     loading-icon-bg: rgba(255, 255, 255, 0.3),
     text-hover-color: mix($--color-dark, $dark-color-primary, 50%),
     text-active-color: mix($--color-white, $dark-color-primary, 20%),
-    primary-hover-color: mix($--color-dark, $dark-color-primary, 30%),
-    primary-active-color-2: mix($--color-white, $dark-color-primary, 20%),
-    primary-disabled-bg: mix($--color-dark, $dark-color-primary, 50%),
-    primary-plain-bg: mix($--color-dark, $dark-color-primary, 90%),
-    primary-plain-border: mix($--color-dark, $dark-color-primary, 60%),
-    primary-plain-disabled-color: mix($--color-dark, $dark-color-primary, 40%),
-    primary-plain-disabled-border: mix($--color-dark, $dark-color-primary, 80%),
   ),
 );
+
+$variants: (
+  success: #67c23a,
+  warning: #e6a23c,
+  danger: #f56c6c,
+  info: #909399,
+);
+
+@mixin inject-variant($type, $color) {
+  @include inject-component(
+    'button',
+    (
+      light: (
+        #{$type}-hover-color: #{mix($--color-white, $color, 20%)},
+        #{$type}-active-color-2: $black-primary-10,
+        #{$type}-disabled-bg: #{mix($color, $--color-white)},
+        #{$type}-plain-bg: #{mix($--color-white, $color, 90%)},
+        #{$type}-plain-border: #{mix($--color-white, $color, 60%)},
+        #{$type}-plain-disabled-color: #{mix($--color-white, $color, 40%)},
+        #{$type}-plain-disabled-border: #{mix($--color-white, $color, 80%)},
+      ),
+      dark: (
+        #{$type}-hover-color: #{mix($--color-dark, $color, 30%)},
+        #{$type}-active-color-2: #{mix($--color-white, $color, 20%)},
+        #{$type}-disabled-bg: #{mix($--color-dark, $color, 50%)},
+        #{$type}-plain-bg: #{mix($--color-dark, $color, 90%)},
+        #{$type}-plain-border: #{mix($--color-dark, $color, 60%)},
+        #{$type}-plain-disabled-color: #{mix($--color-dark, $color, 40%)},
+        #{$type}-plain-disabled-border: #{mix($--color-dark, $color, 80%)},
+      ),
+    )
+  );
+}
 
 .el-button {
   @include inject-component('button', $buttons);
 
-  @each $type, $color in $variants {
-    @include inject-component(
-      'button',
-      (
-        light: (
-          #{$type}-hover-color: #{mix($--color-white, $color, 20%)},
-          #{$type}-active-color-2: $black-primary-10,
-          #{$type}-disabled-bg: #{mix($color-primary, $--color-white)},
-          #{$type}-plain-bg: #{mix($--color-white, $color, 90%)},
-          #{$type}-plain-border: #{mix($--color-white, $color, 60%)},
-          #{$type}-plain-disabled-color: #{mix($--color-white, $color, 40%)},
-          #{$type}-plain-disabled-border: #{mix($--color-white, $color, 80%)},
-        ),
-        dark: (
-          #{$type}-hover-color: #{mix($--color-dark, $color, 30%)},
-          #{$type}-active-color-2: #{mix($--color-white, $color, 20%)},
-          #{$type}-disabled-bg: #{mix($--color-dark, $color, 50%)},
-          #{$type}-plain-bg: #{mix($--color-dark, $color, 90%)},
-          #{$type}-plain-border: #{mix($--color-dark, $color, 60%)},
-          #{$type}-plain-disabled-color: #{mix($--color-dark, $color, 40%)},
-          #{$type}-plain-disabled-border: #{mix($--color-dark, $color, 80%)},
-        ),
-      )
-    );
-  }
+  @include inject-variant('primary', $color-primary);
+  @include inject-variant('success', $--color-success);
+  @include inject-variant('warning', $--color-warning);
+  @include inject-variant('danger', $--color-danger);
+  @include inject-variant('info', $--color-info);
 }

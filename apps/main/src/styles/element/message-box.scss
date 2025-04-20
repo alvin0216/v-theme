@@ -61,7 +61,7 @@
     cursor: pointer;
 
     .el-message-box__close {
-      color: $--color-info;
+      color: var(--color-info);
     }
 
     &:focus,

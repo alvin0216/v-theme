@@ -13,7 +13,7 @@
 export default {
   name: 'App',
   components: {
-    Example: () => import('./examples/Dropdown.vue'),
+    Example: () => import('./examples/Dialog.vue'),
   },
   methods: {
     toggle() {

@@ -55,7 +55,7 @@
       background-color: var(--color-danger);
     }
     @include m(info) {
-      background-color: $--color-info;
+      background-color: var(--color-info);
     }
   }
 

@@ -82,12 +82,14 @@ $background: (
     fill-color-blank: #ffffff,
     fill-color-light: #f5f7fa,
     fill-overlay: #ffffff,
+    fill-overlay-dark: #ffffff,
   ),
   dark: (
     fill-base: #ffffff,
     fill-color-blank: transparent,
     fill-color-light: #262627,
     fill-overlay: #1d1e1f,
+    fill-overlay-dark: $--color-dark,
   ),
 );
 

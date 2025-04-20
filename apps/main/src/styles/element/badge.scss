@@ -48,7 +48,7 @@
         } @else if $type == warning {
           background-color: $--color-warning;
         } @else if $type == info {
-          background-color: $--color-info;
+          background-color: var(--color-info);
         } @else {
           background-color: var(--color-danger);
         }

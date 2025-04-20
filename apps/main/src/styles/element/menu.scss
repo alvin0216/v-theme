@@ -27,7 +27,7 @@
   &:hover,
   &:focus {
     outline: none;
-    background-color: $--menu-item-hover-fill;
+    background-color: var(--color-primary-light-9);
   }
 
   @include when(disabled) {
@@ -38,15 +38,15 @@
 }
 
 @include b(menu) {
-  border-right: solid 1px #e6e6e6;
+  border-right: ar(--border-color-menu);
   list-style: none;
   position: relative;
   margin: 0;
   padding-left: 0;
-  background-color: $--menu-background-color;
+  background-color: var(--fill-blank);
   @include utils-clearfix;
   &.el-menu--horizontal {
-    border-bottom: solid 1px #e6e6e6;
+    border-bottom: ar(--border-color-menu);
   }
 
   @include m(horizontal) {
@@ -224,7 +224,7 @@
     @include menu-item;
 
     &:hover {
-      background-color: $--menu-item-hover-fill;
+      background-color: var(--color-primary-light-9);
     }
   }
   & .el-menu {

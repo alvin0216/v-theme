@@ -52,7 +52,7 @@
   .is-bordered {
     table-layout: auto;
     .el-descriptions-item__cell {
-      border: $--descriptions-table-border;
+      border: 1px solid var(--border-color-lighter);
       padding: 12px 10px;
     }
   }

@@ -146,7 +146,7 @@
     }
   }
   @include e(inner) {
-    border: $--radio-input-border;
+    border: var(--border-base);
     border-radius: $--radio-input-border-radius;
     width: $--radio-input-width;
     height: $--radio-input-height;

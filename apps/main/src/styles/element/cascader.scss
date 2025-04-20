@@ -75,7 +75,7 @@
     margin: 5px 0;
     font-size: $--cascader-menu-font-size;
     background: $--cascader-menu-fill;
-    border: $--cascader-menu-border;
+    border: var(--border-light);
     border-radius: $--cascader-menu-radius;
     box-shadow: $--cascader-menu-shadow;
   }

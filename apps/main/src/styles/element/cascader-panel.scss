@@ -10,7 +10,7 @@
   font-size: $--cascader-menu-font-size;
 
   @include when(bordered) {
-    border: $--cascader-menu-border;
+    border: var(--border-light);
     border-radius: $--cascader-menu-radius;
   }
 }
@@ -19,7 +19,7 @@
   min-width: 180px;
   box-sizing: border-box;
   color: var(--text-regular);
-  border-right: $--cascader-menu-border;
+  border-right: var(--border-light);
 
   &:last-child {
     border-right: none;

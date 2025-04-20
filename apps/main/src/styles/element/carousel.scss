@@ -28,7 +28,7 @@
     cursor: pointer;
     transition: 0.3s;
     border-radius: 50%;
-    background-color: $--carousel-arrow-background;
+    background-color: rgba(31, 45, 61, 0.11);
     color: #fff;
     position: absolute;
     top: 50%;
@@ -46,7 +46,7 @@
     }
 
     &:hover {
-      background-color: $--carousel-arrow-hover-background;
+      background-color: rgba(31, 45, 61, 0.23);
     }
 
     & i {
@@ -82,7 +82,7 @@
         opacity: 0.64;
       }
       button {
-        background-color: $--carousel-indicator-out-color;
+        background-color: var(--border-color-hover);
         opacity: 0.24;
       }
     }

@@ -100,6 +100,8 @@ $background: (
     fill-input: #f5f7fa,
     fill-overlay: #ffffff,
     fill-overlay-dark: #ffffff,
+
+    calendar-selected-bg: #f2f8fe,
   ),
   dark: (
     fill-blank: transparent,
@@ -108,6 +110,8 @@ $background: (
     fill-overlay: #1d1e1f,
     // 暗色覆盖： dialog 背景色， drawer, body 基础色等
     fill-overlay-dark: $--color-dark,
+
+    calendar-selected-bg: var(--color-primary-light-9),
   ),
 );
 

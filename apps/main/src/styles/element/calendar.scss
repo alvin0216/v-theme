@@ -2,6 +2,7 @@
 @import 'common/var';
 @import 'button';
 @import 'button-group';
+@import './theme/mixins.scss';
 
 @include b(calendar) {
   background-color: #fff;
@@ -47,7 +48,7 @@
     transition: background-color 0.2s ease;
 
     @include when(selected) {
-      background-color: $--calendar-selected-background-color;
+      background-color: var(--calendar-selected-bg);
     }
 
     @include when(today) {
@@ -73,7 +74,7 @@
     height: $--calendar-cell-width;
     &:hover {
       cursor: pointer;
-      background-color: $--calendar-selected-background-color;
+      background-color: var(--calendar-selected-bg);
     }
   }
 }

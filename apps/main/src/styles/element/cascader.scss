@@ -14,7 +14,7 @@
   &:not(.is-disabled):hover {
     .el-input__inner {
       cursor: pointer;
-      border-color: $--input-hover-border;
+      border-color: var(--border-color-hover);
     }
   }
 
@@ -131,7 +131,7 @@
     margin: 0;
     padding: 6px 0;
     font-size: $--font-size-base;
-    color: $--cascader-menu-font-color;
+    color: var(--text-regular);
     text-align: center;
   }
 
@@ -171,7 +171,7 @@
     min-width: 60px;
     margin: 2px 0 2px 15px;
     padding: 0;
-    color: $--cascader-menu-font-color;
+    color: var(--text-regular);
     border: none;
     outline: none;
     box-sizing: border-box;

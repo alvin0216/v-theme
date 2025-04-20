@@ -1,8 +1,8 @@
-@import "mixins/mixins";
-@import "common/var";
-@import "./checkbox";
-@import "./radio";
-@import "./scrollbar";
+@import 'mixins/mixins';
+@import 'common/var';
+@import './checkbox';
+@import './radio';
+@import './scrollbar';
 
 @include b(cascader-panel) {
   display: flex;
@@ -18,7 +18,7 @@
 @include b(cascader-menu) {
   min-width: 180px;
   box-sizing: border-box;
-  color: $--cascader-menu-font-color;
+  color: var(--text-regular);
   border-right: $--cascader-menu-border;
 
   &:last-child {
@@ -56,7 +56,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: $--cascader-color-empty;
+    color: var(--text-placeholder);
   }
 }
 
@@ -70,25 +70,26 @@
   outline: none;
 
   &.is-selectable.in-active-path {
-    color: $--cascader-menu-font-color;
+    color: var(--text-regular);
   }
 
   &.in-active-path,
   &.is-selectable.in-checked-path,
   &.is-active {
-    color: $--cascader-menu-selected-font-color;
+    color: var(--color-primary);
     font-weight: bold;
   }
 
   &:not(.is-disabled) {
     cursor: pointer;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: $--cascader-node-background-hover;
     }
   }
 
   @include when(disabled) {
-    color: $--cascader-node-color-disabled;
+    color: var(--text-placeholder);
     cursor: not-allowed;
   }
 

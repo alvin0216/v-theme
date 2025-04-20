@@ -81,8 +81,8 @@
 
   @include when(checked) {
     .el-switch__core {
-      border-color: $--switch-on-color;
-      background-color: $--switch-on-color;
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
       &::after {
         left: 100%;
         margin-left: -$--switch-button-size - 1px;

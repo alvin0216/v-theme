@@ -96,7 +96,7 @@
     @include when(disabled) {
       .el-radio__inner {
         background-color: $--radio-disabled-input-fill;
-        border-color: $--radio-disabled-input-border-color;
+        border-color: var(--border-color-light);
         cursor: not-allowed;
 
         &::after {
@@ -111,7 +111,7 @@
       &.is-checked {
         .el-radio__inner {
           background-color: $--radio-disabled-checked-input-fill;
-          border-color: $--radio-disabled-checked-input-border-color;
+          border-color: var(--border-color-light);
 
           &::after {
             background-color: $--radio-disabled-checked-icon-color;
@@ -126,7 +126,7 @@
 
     @include when(checked) {
       .el-radio__inner {
-        border-color: $--radio-checked-input-border-color;
+        border-color: var(--color-primary);
         background: $--radio-checked-icon-color;
 
         &::after {
@@ -141,7 +141,7 @@
 
     @include when(focus) {
       .el-radio__inner {
-        border-color: $--radio-input-border-color-hover;
+        border-color: var(--color-primary);
       }
     }
   }
@@ -157,7 +157,7 @@
     box-sizing: border-box;
 
     &:hover {
-      border-color: $--radio-input-border-color-hover;
+      border-color: var(--color-primary);
     }
 
     &::after {
@@ -189,7 +189,7 @@
   &:focus:not(.is-focus):not(:active):not(.is-disabled) {
     /*获得焦点时 样式提醒*/
     .el-radio__inner {
-      box-shadow: 0 0 2px 2px $--radio-input-border-color-hover;
+      box-shadow: 0 0 2px 2px var(--color-primary);
     }
   }
 

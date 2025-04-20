@@ -62,7 +62,7 @@
     &.start-date .cell,
     &.end-date .cell {
       color: #fff;
-      background-color: $--datepicker-active-color;
+      background-color: var(--color-primary);
     }
 
     &.start-date div {
@@ -76,7 +76,7 @@
     }
 
     &.current:not(.disabled) .cell {
-      color: $--datepicker-active-color;
+      color: var(--color-primary);
     }
   }
 }

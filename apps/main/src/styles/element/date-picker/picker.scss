@@ -173,13 +173,13 @@
 
   @include when(disabled) {
     background-color: $--input-disabled-fill;
-    border-color: $--input-disabled-border;
+    border-color: var(--border-color-light);
     color: var(--text-placeholder);
     cursor: not-allowed;
 
     &:hover,
     &:focus {
-      border-color: $--input-disabled-border;
+      border-color: var(--border-color-light);
     }
 
     input {

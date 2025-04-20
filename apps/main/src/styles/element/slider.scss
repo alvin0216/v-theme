@@ -26,11 +26,11 @@
       cursor: default;
 
       .el-slider__bar {
-        background-color: $--slider-disable-color;
+        background-color: var(--text-placeholder);
       }
 
       .el-slider__button {
-        border-color: $--slider-disable-color;
+        border-color: var(--text-placeholder);
       }
 
       .el-slider__button-wrapper {

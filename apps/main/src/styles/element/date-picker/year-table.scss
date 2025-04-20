@@ -6,7 +6,7 @@
   border-collapse: collapse;
 
   .el-icon {
-    color: $--datepicker-icon-color;
+    color: var(--text-primary);
   }
 
   td {
@@ -45,7 +45,7 @@
     }
 
     &.current:not(.disabled) .cell {
-      color: $--datepicker-active-color;
+      color: var(--color-primary);
     }
   }
 }

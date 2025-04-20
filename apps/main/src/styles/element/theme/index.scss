@@ -12,5 +12,10 @@ html {
   color: var(--text-regular);
   &.dark {
     background-color: var(--fill-overlay-dark);
+
+    .el-picker-panel__footer {
+      border-top: 1px solid var(--border-color-light);
+      background: var(--fill-overlay);
+    }
   }
 }

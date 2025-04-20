@@ -13,7 +13,7 @@
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
-  background-color: var(--message-color-info-lighter);
+  background-color: var(--color-info-lighter);
   transition: opacity 0.3s, transform 0.4s, top 0.4s;
   overflow: hidden;
   padding: $--message-padding;
@@ -41,8 +41,8 @@
   }
 
   @include m(success) {
-    background-color: var(--message-color-success-lighter);
-    border-color: var(--message-color-success-light);
+    background-color: var(--color-success-lighter);
+    border-color: var(--color-success-light);
 
     .el-message__content {
       color: var(--color-success);
@@ -50,8 +50,8 @@
   }
 
   @include m(warning) {
-    background-color: var(--message-color-warning-lighter);
-    border-color: var(--message-color-warning-light);
+    background-color: var(--color-warning-lighter);
+    border-color: var(--color-warning-light);
 
     .el-message__content {
       color: var(--color-warning);
@@ -59,8 +59,8 @@
   }
 
   @include m(error) {
-    background-color: var(--message-color-danger-lighter);
-    border-color: var(--message-color-danger-light);
+    background-color: var(--color-danger-lighter);
+    border-color: var(--color-danger-light);
 
     .el-message__content {
       color: var(--color-danger);

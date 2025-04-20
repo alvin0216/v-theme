@@ -9,7 +9,7 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: var(--fill-color-blank);
+  background: var(--fill-blank);
   border: var(--border-base);
   border-color: var(--border-color-base);
   color: var(--text-regular);
@@ -59,13 +59,13 @@
   @include when(plain) {
     &:hover,
     &:focus {
-      background: var(--fill-color-blank);
+      background: var(--fill-blank);
       border-color: var(--color-primary);
       color: var(--color-primary);
     }
 
     &:active {
-      background: var(--fill-color-blank);
+      background: var(--fill-blank);
       border-color: var(--button-primary-active-color);
       color: var(--button-plain-active-color);
       outline: none;
@@ -84,7 +84,7 @@
       color: var(--button-disabled-font-color);
       cursor: not-allowed;
       background-image: none;
-      background-color: var(--fill-color-blank);
+      background-color: var(--fill-blank);
       border-color: var(--button-disabled-border-color);
     }
 
@@ -96,7 +96,7 @@
       &,
       &:hover,
       &:focus {
-        background-color: var(--fill-color-blank);
+        background-color: var(--fill-blank);
         border-color: var(--button-disabled-border-color);
         color: var(--button-disabled-font-color);
       }

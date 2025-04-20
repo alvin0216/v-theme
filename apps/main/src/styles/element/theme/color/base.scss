@@ -78,17 +78,18 @@ $borders: (
 
 $background: (
   light: (
-    fill-base: #ffffff,
-    fill-color-blank: #ffffff,
-    fill-color-light: #f5f7fa,
+    // 基础空白填充， 暗色空白
+    fill-blank: #ffffff,
+    fill-input: #f5f7fa,
     fill-overlay: #ffffff,
     fill-overlay-dark: #ffffff,
   ),
   dark: (
-    fill-base: #ffffff,
-    fill-color-blank: transparent,
-    fill-color-light: #262627,
+    fill-blank: transparent,
+    fill-input: #262627,
+    // 基础暗色覆盖 比如 card, dialog, dropdown, poper
     fill-overlay: #1d1e1f,
+    // 暗色覆盖： dialog 背景色， drawer, body 基础色等
     fill-overlay-dark: $--color-dark,
   ),
 );

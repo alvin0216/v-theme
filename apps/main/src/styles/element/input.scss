@@ -17,7 +17,7 @@
     width: 100%;
     font-size: inherit;
     color: var(--text-regular);
-    background-color: var(--fill-color-blank);
+    background-color: var(--fill-blank);
     background-image: none;
     border: var(--border-base);
     border-radius: $--input-border-radius;
@@ -39,7 +39,7 @@
 
   & .el-input__count {
     color: var(--color-info);
-    background: var(--fill-color-blank);
+    background: var(--fill-blank);
     position: absolute;
     font-size: 12px;
     bottom: 5px;
@@ -48,7 +48,7 @@
 
   @include when(disabled) {
     .el-textarea__inner {
-      background-color: var(--fill-color-light);
+      background-color: var(--fill-input);
       border-color: var(--border-color-light);
       color: var(--text-placeholder);
       cursor: not-allowed;
@@ -96,7 +96,7 @@
     font-size: 12px;
 
     .el-input__count-inner {
-      background: var(--fill-color-blank);
+      background: var(--fill-blank);
       line-height: initial;
       display: inline-block;
       padding: 0 5px;
@@ -105,7 +105,7 @@
 
   @include e(inner) {
     -webkit-appearance: none;
-    background-color: var(--fill-color-blank);
+    background-color: var(--fill-blank);
     background-image: none;
     border-radius: $--input-border-radius;
     border: var(--border-base);
@@ -192,7 +192,7 @@
 
   @include when(disabled) {
     .el-input__inner {
-      background-color: var(--fill-color-light);
+      background-color: var(--fill-input);
       border-color: var(--border-color-light);
       color: var(--text-placeholder);
       cursor: not-allowed;

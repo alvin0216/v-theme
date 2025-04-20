@@ -12,7 +12,7 @@
     line-height: 1;
     white-space: nowrap;
     vertical-align: middle;
-    background: var(--fill-color-blank);
+    background: var(--fill-blank);
     border: var(--border-base);
     font-weight: $--button-font-weight;
     border-left: 0;
@@ -69,7 +69,7 @@
         color: var(--text-placeholder);
         cursor: not-allowed;
         background-image: none;
-        background-color: var(--fill-color-blank);
+        background-color: var(--fill-blank);
         border-color: var(--border-color-lighter-dark-light);
         box-shadow: none;
       }

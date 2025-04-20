@@ -29,7 +29,7 @@
       }
 
       .el-time-spinner__item:hover:not(.disabled):not(.active) {
-        background: var(--fill-color-blank);
+        background: var(--fill-blank);
         cursor: default;
       }
     }

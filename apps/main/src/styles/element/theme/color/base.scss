@@ -18,36 +18,54 @@ $colors: (
     color-primary: $color-primary,
     color-primary-light-7: mix($--color-white, $color-primary, 70%),
     color-primary-light-9: mix($--color-white, $color-primary, 90%),
-    fill-color-blank: #ffffff,
+    color-info: #909399,
   ),
   dark: (
     color-primary: $dark-color-primary,
     color-primary-light-7: mix($--color-dark, $dark-color-primary, 70%),
     color-primary-light-9: mix($--color-dark, $dark-color-primary, 90%),
-    fill-color-blank: transparent,
+    color-info: #909399,
   ),
 );
 
 $texts: (
   light: (
-    color-text-primary: #303133,
-    color-text-regular: #606266,
-    color-text-secondary: #909399,
+    text-primary: #303133,
+    text-regular: #606266,
+    text-secondary: #909399,
+    text-placeholder: #c0c4cc,
   ),
   dark: (
-    color-text-primary: #e5eaf3,
-    color-text-regular: #cfd3dc,
-    color-text-secondary: #a3a6ad,
+    text-primary: #e5eaf3,
+    text-regular: #cfd3dc,
+    text-secondary: #a3a6ad,
+    text-placeholder: #8d9095,
   ),
 );
 
 $borders: (
   light: (
     border-color-base: #dcdfe6,
+    border-color-hover: #c0c4cc,
+    // use for input now
     border-base: 1px solid #dcdfe6,
+    border-color-light: #e4e7ed,
   ),
   dark: (
     border-color-base: #4c4d4f,
+    border-color-hover: #6c6e72,
     border-base: 1px solid #4c4d4f,
+    border-color-light: #414243,
+  ),
+);
+
+$background: (
+  light: (
+    fill-color-blank: #ffffff,
+    fill-color-light: #f5f7fa,
+  ),
+  dark: (
+    fill-color-blank: transparent,
+    fill-color-light: #262627,
   ),
 );

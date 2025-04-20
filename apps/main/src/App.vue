@@ -37,7 +37,7 @@ header {
 }
 
 h2 {
-  color: var(--color-text-regular);
+  color: var(--text-regular);
 }
 
 .container {

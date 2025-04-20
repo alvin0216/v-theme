@@ -2,4 +2,5 @@
 @import './color/base.scss';
 @import './color/button.scss';
 
-@include inject-themes($colors, $texts, $borders);
+// inject to root
+@include inject-themes($colors, $texts, $borders, $background);

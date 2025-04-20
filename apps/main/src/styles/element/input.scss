@@ -16,30 +16,30 @@
     box-sizing: border-box;
     width: 100%;
     font-size: inherit;
-    color: $--input-font-color;
-    background-color: $--input-background-color;
+    color: var(--text-regular);
+    background-color: var(--fill-color-blank);
     background-image: none;
-    border: $--input-border;
+    border: var(--border-base);
     border-radius: $--input-border-radius;
     transition: $--border-transition-base;
 
     &::placeholder {
-      color: $--input-placeholder-color;
+      color: var(--text-placeholder);
     }
 
     &:hover {
-      border-color: $--input-hover-border;
+      border-color: var(--border-color);
     }
 
     &:focus {
       outline: none;
-      border-color: $--input-focus-border;
+      border-color: var(--color-primary);
     }
   }
 
   & .el-input__count {
-    color: $--color-info;
-    background: $--color-white;
+    color: var(--color-info);
+    background: var(--fill-color-blank);
     position: absolute;
     font-size: 12px;
     bottom: 5px;
@@ -48,8 +48,8 @@
 
   @include when(disabled) {
     .el-textarea__inner {
-      background-color: $--input-disabled-fill;
-      border-color: $--input-disabled-border;
+      background-color: var(--fill-color-light);
+      border-color: var(--border-color-light);
       color: $--input-disabled-color;
       cursor: not-allowed;
 
@@ -92,11 +92,11 @@
     height: 100%;
     display: inline-flex;
     align-items: center;
-    color: $--color-info;
+    color: var(--color-info);
     font-size: 12px;
 
     .el-input__count-inner {
-      background: $--color-white;
+      background: var(--fill-color-blank);
       line-height: initial;
       display: inline-block;
       padding: 0 5px;
@@ -105,12 +105,12 @@
 
   @include e(inner) {
     -webkit-appearance: none;
-    background-color: $--input-background-color;
+    background-color: var(--fill-color-blank);
     background-image: none;
     border-radius: $--input-border-radius;
-    border: $--input-border;
+    border: var(--border-base);
     box-sizing: border-box;
-    color: $--input-font-color;
+    color: var(--text-regular);
     display: inline-block;
     font-size: inherit;
     height: $--input-height;
@@ -125,16 +125,16 @@
     }
 
     &::placeholder {
-      color: $--input-placeholder-color;
+      color: var(--text-placeholder);
     }
 
     &:hover {
-      border-color: $--input-hover-border;
+      border-color: var(--border-color-hover);
     }
 
     &:focus {
       outline: none;
-      border-color: $--input-focus-border;
+      border-color: var(--color-primary);
     }
   }
 
@@ -186,14 +186,14 @@
   @include when(active) {
     .el-input__inner {
       outline: none;
-      border-color: $--input-focus-border;
+      border-color: var(--color-primary);
     }
   }
 
   @include when(disabled) {
     .el-input__inner {
-      background-color: $--input-disabled-fill;
-      border-color: $--input-disabled-border;
+      background-color: var(--fill-color-light);
+      border-color: var(--border-color-light);
       color: $--input-disabled-color;
       cursor: not-allowed;
 
@@ -283,7 +283,7 @@
 
   @include e((append, prepend)) {
     background-color: var(--background-color-base);
-    color: $--color-info;
+    color: var(--color-info);
     vertical-align: middle;
     display: table-cell;
     position: relative;

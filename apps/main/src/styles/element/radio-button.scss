@@ -70,7 +70,7 @@
         cursor: not-allowed;
         background-image: none;
         background-color: var(--fill-color-blank);
-        border-color: var(--border-color-disabled);
+        border-color: var(--border-color-lighter-dark-light);
         box-shadow: none;
       }
       &:checked + .el-radio-button__inner {

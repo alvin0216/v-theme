@@ -64,7 +64,7 @@
   border: 1px solid $--transfer-border-color;
   border-radius: $--transfer-border-radius;
   overflow: hidden;
-  background: $--color-white;
+  background: var(--fill-color-blank);
   display: inline-block;
   vertical-align: middle;
   width: $--transfer-panel-width;
@@ -186,7 +186,7 @@
 
   .el-transfer-panel__footer {
     height: $--transfer-panel-footer-height;
-    background: $--color-white;
+    background: var(--fill-color-blank);
     margin: 0;
     padding: 0;
     border-top: 1px solid $--transfer-border-color;

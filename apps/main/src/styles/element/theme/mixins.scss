@@ -57,10 +57,3 @@
     @include set-component-css-var($component, map-get($themes, 'dark'));
   }
 }
-
-// @mixin data
-@mixin dark() {
-  html.dark & {
-    @content;
-  }
-}

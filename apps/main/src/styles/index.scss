@@ -1,5 +1,7 @@
 @import './element/theme/index.scss';
+@import './element/base.scss';
 @import './element/button.scss';
+@import './element/input.scss';
 
 html.dark {
   background-color: #141414;

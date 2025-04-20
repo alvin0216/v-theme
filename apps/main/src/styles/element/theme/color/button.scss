@@ -1,5 +1,5 @@
-@import './mixins/var';
-@import './color.scss';
+@import '../mixins';
+@import './base.scss';
 
 $black-primary-10: mix($--color-black, $color-primary, 10%);
 

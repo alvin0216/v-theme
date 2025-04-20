@@ -3,6 +3,7 @@
 @import './color/button.scss';
 @import './color/checkbox.scss';
 @import './color/card.scss';
+@import './color/message.scss';
 
 // inject to root
 @include inject-themes($colors, $texts, $borders, $background, $box-shadow);

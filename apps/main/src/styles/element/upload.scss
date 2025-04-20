@@ -13,7 +13,7 @@
 
   @include e(tip) {
     font-size: 12px;
-    color: var(--box-text-regular);
+    color: var(--text-regular);
     margin-top: 7px;
   }
 
@@ -88,7 +88,7 @@
   }
 
   .el-upload__text {
-    color: var(--box-text-regular);
+    color: var(--text-regular);
     font-size: 14px;
     text-align: center;
 
@@ -116,7 +116,7 @@
   @include e(item) {
     transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
     font-size: 14px;
-    color: var(--box-text-regular);
+    color: var(--text-regular);
     line-height: 1.8;
     margin-top: 5px;
     position: relative;
@@ -156,7 +156,7 @@
       right: 5px;
       cursor: pointer;
       opacity: 0.75;
-      color: var(--box-text-regular);
+      color: var(--text-regular);
       //transform: scale(.7);
 
       &:hover {
@@ -230,7 +230,7 @@
   }
 
   @include e(item-name) {
-    color: var(--box-text-regular);
+    color: var(--text-regular);
     display: block;
     margin-right: 40px;
     overflow: hidden;
@@ -260,7 +260,7 @@
     right: 10px;
     top: 0;
     font-size: 12px;
-    color: var(--box-text-regular);
+    color: var(--text-regular);
     display: none;
 
     &:hover {

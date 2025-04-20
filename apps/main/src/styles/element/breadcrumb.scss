@@ -22,7 +22,7 @@
     float: left;
 
     @include e(inner) {
-      color: var(--box-text-regular);
+      color: var(--text-regular);
 
       &.is-link,
       & a {
@@ -44,7 +44,7 @@
         &,
         &:hover {
           font-weight: normal;
-          color: var(--box-text-regular);
+          color: var(--text-regular);
           cursor: text;
         }
       }

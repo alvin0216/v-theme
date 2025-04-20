@@ -2,11 +2,12 @@
 @import 'common/var';
 @import 'button';
 @import './popper';
+@import './theme/mixins.scss';
 
 @include b(dropdown) {
   display: inline-block;
   position: relative;
-  color: var(--box-text-regular);
+  color: var(--text-regular);
   font-size: $--font-size-base;
 
   .el-button-group {
@@ -33,12 +34,17 @@
       bottom: $gap;
       left: 0;
       background: mix(white, transparent, 50%);
-      // opacity: 0.5;
-      // background: $--border-color-base;
+      @include dark() {
+        opacity: 0.5;
+        background: var(--border-color-base) !important;
+      }
     }
 
     &.el-button--default::before {
-      background: mix($--button-default-border-color, transparent, 50%);
+      background: mix(#dcdfe6, transparent, 50%);
+      @include dark() {
+        background: var(--border-color-base) !important;
+      }
     }
 
     &:hover {
@@ -67,7 +73,7 @@
 
   [disabled] {
     cursor: not-allowed;
-    color: $--font-color-disabled-base;
+    color: var(--text-disabled);
   }
 }
 
@@ -78,10 +84,14 @@
   z-index: 10;
   padding: 10px 0;
   margin: 5px 0;
-  background-color: $--color-white;
-  border: 1px solid $--border-color-lighter;
+  background-color: var(--fill-overlay);
+  border: 1px solid var(--border-color-lighter);
   border-radius: $--border-radius-base;
-  box-shadow: $--dropdown-menu-box-shadow;
+  box-shadow: var(--box-shadow-light);
+
+  @include dark() {
+    border: 1px solid var(--border-color-light);
+  }
 
   @include e(item) {
     list-style: none;
@@ -89,13 +99,17 @@
     padding: 0 20px;
     margin: 0;
     font-size: $--font-size-base;
-    color: var(--box-text-regular);
+    color: var(--text-regular);
     cursor: pointer;
     outline: none;
     &:not(.is-disabled):hover,
     &:focus {
-      background-color: $--dropdown-menuItem-hover-fill;
-      color: $--dropdown-menuItem-hover-color;
+      background-color: var(--color-primary-light-9);
+      color: var(--color-primary-light-2);
+
+      @include dark() {
+        color: var(--color-primary);
+      }
     }
 
     i {
@@ -114,13 +128,13 @@
         height: $divided-offset;
         display: block;
         margin: 0 -20px;
-        background-color: $--color-white;
+        background-color: var(--fill-overlay);
       }
     }
 
     @include when(disabled) {
       cursor: default;
-      color: $--font-color-disabled-base;
+      color: var(--text-disabled);
       pointer-events: none;
     }
   }

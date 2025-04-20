@@ -58,7 +58,7 @@
 
     &:disabled {
       color: var(--text-placeholder);
-      background-color: $--pagination-button-disabled-background-color;
+      background-color: var(--fill-blank);
       cursor: not-allowed;
     }
   }
@@ -67,7 +67,7 @@
   .btn-next {
     background: center center no-repeat;
     background-size: 16px;
-    background-color: $--pagination-background-color;
+    background-color: var(--fill-blank);
     cursor: pointer;
     margin: 0;
     color: var(--text-primary);
@@ -250,7 +250,7 @@
 
   li {
     padding: 0 4px;
-    background: $--pagination-background-color;
+    background: var(--fill-blank);
     vertical-align: top;
     display: inline-block;
     font-size: $--pagination-font-size;

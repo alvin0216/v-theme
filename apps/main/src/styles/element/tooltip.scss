@@ -47,7 +47,7 @@
       &::after {
         bottom: 1px;
         margin-left: -5px;
-        border-top-color: $--tooltip-fill;
+        border-top-color: var(--text-primary);
         border-bottom-width: 0;
       }
     }
@@ -65,7 +65,7 @@
         top: 1px;
         margin-left: -5px;
         border-top-width: 0;
-        border-bottom-color: $--tooltip-fill;
+        border-bottom-color: var(--text-primary);
       }
     }
 
@@ -81,7 +81,7 @@
       &::after {
         bottom: -5px;
         left: 1px;
-        border-right-color: $--tooltip-fill;
+        border-right-color: var(--text-primary);
         border-left-width: 0;
       }
     }
@@ -100,39 +100,39 @@
         bottom: -5px;
         margin-left: -5px;
         border-right-width: 0;
-        border-left-color: $--tooltip-fill;
+        border-left-color: var(--text-primary);
       }
     }
 
     @include when(dark) {
-      background: $--tooltip-fill;
+      background: var(--text-primary);
       color: var(--text-tooltip);
     }
 
     @include when(light) {
       background: $--tooltip-color;
-      border: 1px solid $--tooltip-fill;
+      border: 1px solid var(--text-primary);
 
       &[x-placement^='top'] .popper__arrow {
-        border-top-color: $--tooltip-fill;
+        border-top-color: var(--text-primary);
         &::after {
           border-top-color: $--tooltip-color;
         }
       }
       &[x-placement^='bottom'] .popper__arrow {
-        border-bottom-color: $--tooltip-fill;
+        border-bottom-color: var(--text-primary);
         &::after {
           border-bottom-color: $--tooltip-color;
         }
       }
       &[x-placement^='left'] .popper__arrow {
-        border-left-color: $--tooltip-fill;
+        border-left-color: var(--text-primary);
         &::after {
           border-left-color: $--tooltip-color;
         }
       }
       &[x-placement^='right'] .popper__arrow {
-        border-right-color: $--tooltip-fill;
+        border-right-color: var(--text-primary);
         &::after {
           border-right-color: $--tooltip-color;
         }

@@ -94,7 +94,7 @@
         color: var(--text-secondary);
 
         &:hover {
-          background-color: #fff;
+          background-color: var(--fill-overlay);
         }
       }
       & .el-submenu__icon-arrow {
@@ -187,6 +187,7 @@
     padding: 5px 0;
     border-radius: $--border-radius-small;
     box-shadow: var(--box-shadow-light);
+    background-color: var(--fill-overlay);
 
     &-bottom-start {
       margin-top: 5px;

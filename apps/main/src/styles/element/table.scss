@@ -318,7 +318,7 @@
       bottom: 0;
       width: 100%;
       height: 1px;
-      background-color: $--border-color-lighter;
+      background-color: var(--border-color-lighter);
       z-index: 4;
     }
   }

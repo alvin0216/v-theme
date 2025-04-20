@@ -365,7 +365,7 @@
     padding: 6px;
     box-sizing: content-box;
     background-color: $--color-white;
-    border: 1px solid $--border-color-lighter;
+    border: 1px solid var(--border-color-lighter);
     border-radius: $--border-radius-base;
     box-shadow: var(--box-shadow-light);
   }

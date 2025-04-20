@@ -4,10 +4,10 @@
 
 @include b(popover) {
   position: absolute;
-  background: $--popover-background-color;
+  background: var(--fill-overlay);
   min-width: 150px;
   border-radius: 4px;
-  border: 1px solid $--popover-border-color;
+  border: 1px solid var(--border-color-lighter-dark-light);
   padding: $--popover-padding;
   z-index: $--index-popper;
   color: var(--text-regular);

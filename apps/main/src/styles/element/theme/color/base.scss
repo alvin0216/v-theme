@@ -57,6 +57,8 @@ $borders: (
   light: (
     border-color-base: #dcdfe6,
     border-color-hover: #c0c4cc,
+
+    // -> light lighter --- match light
     border-color-disabled: #ebeef5,
 
     // use for input now
@@ -65,7 +67,7 @@ $borders: (
     border-color-lighter: #ebeef5,
     border-color-extra-light: #f2f6fc,
 
-    //
+    border-color-lighter-dark-light: var(--border-color-lighter),
   ),
   dark: (
     border-color-base: #4c4d4f,
@@ -75,6 +77,8 @@ $borders: (
     border-color-light: #414243,
     border-color-lighter: #363637,
     border-color-extra-light: #2b2b2c,
+
+    border-color-lighter-dark-light: var(--border-color-light),
   ),
 );
 

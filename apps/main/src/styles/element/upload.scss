@@ -104,7 +104,7 @@
 
   @include when(dragover) {
     background-color: rgba(32, 159, 255, 0.06);
-    border: 2px dashed $--color-primary;
+    border: 2px dashed var(--color-primary);
   }
 }
 

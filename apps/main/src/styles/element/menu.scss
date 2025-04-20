@@ -82,7 +82,7 @@
 
       &.is-active {
         .el-submenu__title {
-          border-bottom: 2px solid $--color-primary;
+          border-bottom: 2px solid var(--color-primary);
           color: var(--text-primary);
         }
       }
@@ -125,7 +125,7 @@
       color: var(--text-primary);
     }
     & > .el-menu-item.is-active {
-      border-bottom: 2px solid $--color-primary;
+      border-bottom: 2px solid var(--color-primary);
       color: var(--text-primary);
     }
   }

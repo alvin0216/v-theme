@@ -70,11 +70,11 @@
 
   @include when(warning) {
     .el-progress-bar__inner {
-      background-color: $--color-warning;
+      background-color: var(--color-warning);
     }
 
     .el-progress__text {
-      color: $--color-warning;
+      color: var(--color-warning);
     }
   }
 

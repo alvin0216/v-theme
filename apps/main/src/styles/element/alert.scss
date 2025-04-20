@@ -36,7 +36,7 @@
 
   @include m(success) {
     &.is-light {
-      background-color: $--alert-success-color;
+      background-color: var(--color-success-lighter);
       color: var(--color-success);
 
       .el-alert__description {
@@ -52,7 +52,7 @@
 
   @include m(info) {
     &.is-light {
-      background-color: $--alert-info-color;
+      background-color: var(--color-info-lighter);
       color: var(--color-info);
     }
 
@@ -68,23 +68,23 @@
 
   @include m(warning) {
     &.is-light {
-      background-color: $--alert-warning-color;
-      color: $--color-warning;
+      background-color: var(--color-warning-lighter);
+      color: var(--color-warning);
 
       .el-alert__description {
-        color: $--color-warning;
+        color: var(--color-warning);
       }
     }
 
     &.is-dark {
-      background-color: $--color-warning;
+      background-color: var(--color-warning);
       color: #fff;
     }
   }
 
   @include m(error) {
     &.is-light {
-      background-color: $--alert-danger-color;
+      background-color: var(--color-danger-lighter);
       color: var(--color-danger);
 
       .el-alert__description {

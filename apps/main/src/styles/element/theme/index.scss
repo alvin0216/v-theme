@@ -7,3 +7,10 @@
 
 // inject to root
 @include inject-themes($colors, $texts, $borders, $background, $box-shadow);
+
+html {
+  color: var(--text-regular);
+  &.dark {
+    background-color: var(--fill-overlay-dark);
+  }
+}

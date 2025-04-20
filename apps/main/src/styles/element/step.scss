@@ -27,8 +27,8 @@
     width: 100%;
 
     @include when(process) {
-      color: $--color-text-primary;
-      border-color: $--color-text-primary;
+      color: var(--text-primary);
+      border-color: var(--text-primary);
     }
 
     @include when(wait) {
@@ -123,7 +123,7 @@
 
     @include when(process) {
       font-weight: bold;
-      color: $--color-text-primary;
+      color: var(--text-primary);
     }
 
     @include when(wait) {
@@ -151,7 +151,7 @@
     font-weight: normal;
 
     @include when(process) {
-      color: $--color-text-primary;
+      color: var(--text-primary);
     }
 
     @include when(wait) {

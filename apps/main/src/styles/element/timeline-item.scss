@@ -67,7 +67,7 @@
   }
 
   @include e(content) {
-    color: $--color-text-primary;
+    color: var(--text-primary);
   }
 
   @include e(timestamp) {

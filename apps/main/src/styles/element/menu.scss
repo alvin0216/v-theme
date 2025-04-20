@@ -76,14 +76,14 @@
       &:hover {
         outline: none;
         .el-submenu__title {
-          color: $--color-text-primary;
+          color: var(--text-primary);
         }
       }
 
       &.is-active {
         .el-submenu__title {
           border-bottom: 2px solid $--color-primary;
-          color: $--color-text-primary;
+          color: var(--text-primary);
         }
       }
 
@@ -116,17 +116,17 @@
       }
       & .el-menu-item.is-active,
       & .el-submenu.is-active > .el-submenu__title {
-        color: $--color-text-primary;
+        color: var(--text-primary);
       }
     }
     & .el-menu-item:not(.is-disabled):hover,
     & .el-menu-item:not(.is-disabled):focus {
       outline: none;
-      color: $--color-text-primary;
+      color: var(--text-primary);
     }
     & > .el-menu-item.is-active {
       border-bottom: 2px solid $--color-primary;
-      color: $--color-text-primary;
+      color: var(--text-primary);
     }
   }
   @include m(collapse) {
@@ -170,7 +170,7 @@
         z-index: 10;
         border: 1px solid $--border-color-light;
         border-radius: $--border-radius-small;
-        box-shadow: $--box-shadow-light;
+        box-shadow: var(--box-shadow-light);
       }
 
       &.is-opened {
@@ -186,7 +186,7 @@
     border: none;
     padding: 5px 0;
     border-radius: $--border-radius-small;
-    box-shadow: $--box-shadow-light;
+    box-shadow: var(--box-shadow-light);
 
     &-bottom-start {
       margin-top: 5px;

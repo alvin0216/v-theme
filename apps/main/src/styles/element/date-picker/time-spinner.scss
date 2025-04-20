@@ -98,7 +98,7 @@
     }
 
     &.active:not(.disabled) {
-      color: $--color-text-primary;
+      color: var(--text-primary);
       font-weight: bold;
     }
 

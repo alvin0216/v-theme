@@ -597,7 +597,7 @@
     margin: 0;
     line-height: 36px;
     font-size: 14px;
-    color: $--color-text-primary;
+    color: var(--text-primary);
   }
 
   + .el-upload__inner {

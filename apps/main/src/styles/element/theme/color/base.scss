@@ -65,7 +65,7 @@ $borders: (
   ),
   dark: (
     border-color-base: #4c4d4f,
-    border-color-hover: #6c6e72,
+    border-color-hover: #405276,
     border-color-disabled: #414243,
     border-base: 1px solid #4c4d4f,
     border-color-light: #414243,
@@ -79,10 +79,30 @@ $background: (
     fill-base: #ffffff,
     fill-color-blank: #ffffff,
     fill-color-light: #f5f7fa,
+    fill-overlay: #ffffff,
   ),
   dark: (
     fill-base: #ffffff,
     fill-color-blank: transparent,
     fill-color-light: #262627,
+    fill-overlay: #1d1e1f,
+  ),
+);
+
+$box-shadow: (
+  light: (
+    box-shadow-base: #{0 2px 4px rgba(0, 0, 0, 0.12),
+    0 0 6px rgba(0, 0, 0, 0.04)},
+    box-shadow-dark: #{0 2px 4px rgba(0, 0, 0, 0.12),
+    0 0 6px rgba(0, 0, 0, 0.12)},
+    box-shadow-light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)},
+  ),
+  dark: (
+    box-shadow-base: #{0px 12px 32px 4px rgba(0, 0, 0, 0.36),
+    0px 8px 20px rgba(0, 0, 0, 0.72)},
+    box-shadow-dark: #{0px 16px 48px 16px rgba(0, 0, 0, 0.72),
+    0px 12px 32px #000000,
+    0px 8px 16px -8px #000000},
+    box-shadow-light: #{0px 0px 12px rgba(0, 0, 0, 0.72)},
   ),
 );

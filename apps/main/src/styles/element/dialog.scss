@@ -61,7 +61,7 @@
   @include e(title) {
     line-height: $--dialog-font-line-height;
     font-size: $--dialog-title-font-size;
-    color: $--color-text-primary;
+    color: var(--text-primary);
   }
 
   @include e(body) {

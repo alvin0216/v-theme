@@ -1,6 +1,6 @@
-@import "mixins/mixins";
-@import "common/var";
-@import "./popper";
+@import 'mixins/mixins';
+@import 'common/var';
+@import './popper';
 
 @include b(popover) {
   position: absolute;
@@ -14,7 +14,7 @@
   line-height: 1.4;
   text-align: justify;
   font-size: $--popover-font-size;
-  box-shadow: $--box-shadow-light;
+  box-shadow: var(--box-shadow-light);
   word-break: break-all;
 
   @include m(plain) {
@@ -29,12 +29,14 @@
   }
 
   @include e(reference) {
-    &:focus:not(.focusing), &:focus:hover {
+    &:focus:not(.focusing),
+    &:focus:hover {
       outline-width: 0;
     }
   }
 
-  &:focus:active, &:focus {
+  &:focus:active,
+  &:focus {
     outline-width: 0;
   }
 }

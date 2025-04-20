@@ -1,6 +1,8 @@
 @import './mixins.scss';
 @import './color/base.scss';
 @import './color/button.scss';
+@import './color/checkbox.scss';
+@import './color/card.scss';
 
 // inject to root
-@include inject-themes($colors, $texts, $borders, $background);
+@include inject-themes($colors, $texts, $borders, $background, $box-shadow);

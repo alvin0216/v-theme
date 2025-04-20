@@ -101,7 +101,7 @@
     list-style: none;
     font-size: 14px;
     font-weight: 500;
-    color: $--color-text-primary;
+    color: var(--text-primary);
     position: relative;
 
     &:focus,

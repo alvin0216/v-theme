@@ -29,7 +29,7 @@
         font-weight: bold;
         text-decoration: none;
         transition: $--color-transition-base;
-        color: $--color-text-primary;
+        color: var(--text-primary);
 
         &:hover {
           color: var(--color-primary);

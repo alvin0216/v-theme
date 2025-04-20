@@ -3,7 +3,7 @@
 @include b(picker-panel) {
   color: $--color-text-regular;
   border: 1px solid $--datepicker-border-color;
-  box-shadow: $--box-shadow-light;
+  box-shadow: var(--box-shadow-light);
   background: var(--fill-color-blank);
   border-radius: $--border-radius-base;
   line-height: 30px;

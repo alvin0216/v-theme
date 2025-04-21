@@ -84,7 +84,7 @@
     cursor: pointer;
     &:hover,
     &:focus {
-      background: $--cascader-node-background-hover;
+      background: var(--fill-input);
     }
   }
 

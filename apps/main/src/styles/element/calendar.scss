@@ -17,6 +17,9 @@
   @include e(title) {
     color: #000000;
     align-self: center;
+    html.dark & {
+      color: var(--text-primary);
+    }
   }
 
   @include e(body) {

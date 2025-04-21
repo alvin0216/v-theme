@@ -42,6 +42,9 @@
     /* focus */
     > .el-tree-node__content {
       background-color: $--tree-node-hover-background-color;
+      html.dark & {
+        background-color: #262627;
+      }
     }
   }
 
@@ -66,6 +69,9 @@
     }
     &:hover {
       background-color: $--tree-node-hover-background-color;
+      html.dark & {
+        background-color: #262627;
+      }
     }
 
     .el-tree.is-dragging & {

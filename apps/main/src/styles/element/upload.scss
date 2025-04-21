@@ -37,6 +37,10 @@
     cursor: pointer;
     line-height: 146px;
     vertical-align: top;
+    html.dark & {
+      background-color: #1d1d1d;
+      border: 1px dashed #636466;
+    }
 
     i {
       font-size: 28px;
@@ -397,6 +401,10 @@
       margin-top: 10px;
       padding: 10px 10px 10px 90px;
       height: 92px;
+
+      html.dark & {
+        border: 1px solid #4c4d4f;
+      }
 
       .el-icon-check,
       .el-icon-circle-check {

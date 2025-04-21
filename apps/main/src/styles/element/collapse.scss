@@ -3,8 +3,8 @@
 @import 'common/transition';
 
 @include b(collapse) {
-  border-top: 1px solid $--collapse-border-color;
-  border-bottom: 1px solid $--collapse-border-color;
+  border-top: 1px solid var(--border-color-lighter);
+  border-bottom: 1px solid var(--border-color-lighter);
 }
 @include b(collapse-item) {
   @include when(disabled) {
@@ -19,9 +19,9 @@
     height: $--collapse-header-height;
     line-height: $--collapse-header-height;
     background-color: var(--fill-blank);
-    color: var(--color-primary);
+    color: var(--text-primary);
     cursor: pointer;
-    border-bottom: 1px solid $--collapse-border-color;
+    border-bottom: 1px solid var(--border-color-lighter);
     font-size: $--collapse-header-font-size;
     font-weight: 500;
     transition: border-bottom-color 0.3s;
@@ -35,7 +35,7 @@
       }
     }
     &.focusing:focus:not(:hover) {
-      color: var(--color-primary);
+      color: var(--text-primary);
     }
     @include when(active) {
       border-bottom-color: transparent;
@@ -47,7 +47,7 @@
     background-color: var(--fill-blank);
     overflow: hidden;
     box-sizing: border-box;
-    border-bottom: 1px solid $--collapse-border-color;
+    border-bottom: 1px solid var(--border-color-lighter);
   }
 
   @include e(content) {

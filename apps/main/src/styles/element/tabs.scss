@@ -194,7 +194,7 @@
         }
       }
       &.is-active {
-        border-bottom-color: #fff;
+        border-bottom-color: var(--fill-overlay-dark);
 
         &.is-closable {
           padding-left: 20px;

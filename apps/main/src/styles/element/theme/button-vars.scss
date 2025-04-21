@@ -1,11 +1,10 @@
-@import '../mixins';
-@import './base.scss';
+@import './mixins.scss';
 
 $black-primary-10: mix($--color-black, $color-primary, 10%);
 
 $buttons: (
   light: (
-    primary-active-color: $black-primary-10,
+    active-color: $black-primary-10,
     plain-active-color: $black-primary-10,
     disabled-font-color: #c0c4cc,
     disabled-border-color: #ebeef5,
@@ -15,7 +14,7 @@ $buttons: (
     text-disabled-color: #ffffff,
   ),
   dark: (
-    primary-active-color: $dark-color-primary,
+    active-color: $dark-color-primary,
     plain-active-color: var(--color-primary-light-9),
     disabled-font-color: rgba(255, 255, 255, 0.5),
     disabled-border-color: #414243,

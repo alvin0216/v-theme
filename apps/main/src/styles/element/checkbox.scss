@@ -17,7 +17,7 @@
   @include when(bordered) {
     padding: $--checkbox-bordered-padding;
     border-radius: $--border-radius-base;
-    border: var(--border-base);
+    border: $--border-base;
     box-sizing: border-box;
     line-height: normal;
     height: $--checkbox-bordered-height;
@@ -193,7 +193,7 @@
   @include e(inner) {
     display: inline-block;
     position: relative;
-    border: var(--border-base);
+    border: $--border-base;
     border-radius: $--checkbox-border-radius;
     box-sizing: border-box;
     width: $--checkbox-input-width;
@@ -258,7 +258,7 @@
     vertical-align: middle;
     cursor: pointer;
     background: var(--fill-blank);
-    border: var(--border-base);
+    border: $--border-base;
     border-left: 0;
     color: var(--text-regular);
     -webkit-appearance: none;
@@ -321,7 +321,7 @@
 
   &:first-child {
     .el-checkbox-button__inner {
-      border-left: var(--border-base);
+      border-left: $--border-base;
       border-radius: $--border-radius-base 0 0 $--border-radius-base;
       box-shadow: none !important;
     }

@@ -10,7 +10,7 @@
   white-space: nowrap;
   cursor: pointer;
   background: var(--fill-blank);
-  border: var(--border-base);
+  border: $--border-base;
   border-color: var(--border-color-base);
   color: var(--text-regular);
   -webkit-appearance: none;
@@ -41,8 +41,8 @@
   }
 
   &:active {
-    color: var(--button-primary-active-color);
-    border-color: var(--button-primary-active-color);
+    color: var(--button-active-color);
+    border-color: var(--button-active-color);
     outline: none;
   }
 
@@ -66,15 +66,15 @@
 
     &:active {
       background: var(--fill-blank);
-      border-color: var(--button-primary-active-color);
+      border-color: var(--button-active-color);
       color: var(--button-plain-active-color);
       outline: none;
     }
   }
 
   @include when(active) {
-    color: var(--button-primary-active-color);
-    border-color: var(--button-primary-active-color);
+    color: var(--button-active-color);
+    border-color: var(--button-active-color);
   }
 
   @include when(disabled) {

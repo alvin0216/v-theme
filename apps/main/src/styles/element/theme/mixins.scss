@@ -1,5 +1,7 @@
-@mixin inject-themes($theme-maps...) {
-  // 按主题聚合变量
+@import './vars.scss';
+
+// 将主题变量注入到 :root 和 html.#{$theme} 中
+@mixin inject-root-vars($theme-maps...) {
   $merged-themes: ();
 
   @each $map in $theme-maps {
@@ -21,9 +23,8 @@
     }
   }
 
-  // 注入聚合后的变量
   @each $theme, $variables in $merged-themes {
-    $selector: if($theme == light, ':root', 'html.dark');
+    $selector: if($theme == light, ':root', 'html.#{$theme}');
     #{$selector} {
       @each $name, $value in $variables {
         --#{$name}: #{$value};
@@ -32,13 +33,56 @@
   }
 }
 
-// 用法示例：
-// .btn {
-//   @include set-component-css-var('button', (color: red, padding: 8px));
-//  结果：
-//   --button-color: red;
-//   --button-padding: 8px;
-// }
+/**
+用于根据主题（light 或 dark）动态生成样式
+使用方式：
+.el-button {
+  @include apply-themes() using ($theme) {
+    $primary: map-get($colors, $theme, color-primary);
+
+    color: $primary;
+    background-color: if($theme == light, red, blue);
+  }
+}
+
+生成的结果：
+.el-button {
+  color: #294e95;
+  background-color: red;
+}
+html.dark .el-button {
+  color: #409eff;
+  background-color: blue;
+}
+  
+*/
+@mixin apply-themes() {
+  @each $theme in light, dark {
+    $selector: if($theme == light, '&', 'html.#{$theme} &');
+    #{$selector} {
+      @content ($theme);
+    }
+  }
+}
+
+/**
+.el-button {
+  $colors: (
+    light: (
+      primary: red,
+    ),
+    dark: (
+      primary: blue,
+    ),
+  );
+
+  color: get-theme-var(light, $colors, primary); // red
+}
+*/
+@function get-theme-var($theme, $vars, $key) {
+  @return map-get(map-get($vars, $theme), $key);
+}
+
 @mixin set-component-css-var($name, $variables) {
   @each $attribute, $value in $variables {
     --#{$name}-#{$attribute}: #{$value};
@@ -55,22 +99,5 @@
 
   html.dark & {
     @include set-component-css-var($component, map-get($themes, 'dark'));
-  }
-}
-
-// 只在 dark 下生效
-@mixin when-dark() {
-  html.dark & {
-    @content;
-  }
-}
-
-// 快速对主题做配置
-@mixin theme-vars($name, $light-value, $dark-value) {
-  & {
-    --#{$name}: #{$light-value};
-  }
-  @include when-dark {
-    --#{$name}: #{$dark-value};
   }
 }

@@ -30,12 +30,12 @@
     }
 
     @include when(disabled) {
-      border: var(--border-base);
+      border: $--border-base;
       background-color: var(--background-color-base);
       color: var(--text-placeholder);
 
       &:hover {
-        border: var(--border-base);
+        border: $--border-base;
         background-color: var(--background-color-base);
         color: var(--text-placeholder);
       }

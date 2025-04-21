@@ -204,7 +204,7 @@
         .el-input-number__increase {
           top: $--input-small-height;
           margin-top: -1px;
-          border: var(--border-base);
+          border: $--border-base;
           line-height: 20px;
           box-sizing: border-box;
           transition: $--border-transition-base;

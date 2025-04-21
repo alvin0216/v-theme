@@ -19,7 +19,7 @@
     color: var(--text-regular);
     background-color: var(--fill-blank);
     background-image: none;
-    border: var(--border-base);
+    border: $--border-base;
     border-radius: $--input-border-radius;
     transition: $--border-transition-base;
 
@@ -108,7 +108,7 @@
     background-color: var(--fill-blank);
     background-image: none;
     border-radius: $--input-border-radius;
-    border: var(--border-base);
+    border: $--border-base;
     box-sizing: border-box;
     color: var(--text-regular);
     display: inline-block;
@@ -287,7 +287,7 @@
     vertical-align: middle;
     display: table-cell;
     position: relative;
-    border: var(--border-base);
+    border: $--border-base;
     border-radius: $--input-border-radius;
     padding: 0 20px;
     width: 1px;

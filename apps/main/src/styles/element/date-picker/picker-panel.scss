@@ -3,7 +3,7 @@
 
 @include b(picker-panel) {
   color: var(--text-regular);
-  border: var(--border-base);
+  border: $--border-base;
   box-shadow: var(--box-shadow-light);
   background: var(--fill-overlay);
   border-radius: $--border-radius-base;

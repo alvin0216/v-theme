@@ -82,7 +82,8 @@
     outline: none;
     padding: 0;
     margin-left: 15px;
-    color: var(--select-multiple-input-color);
+    // color: var(--select-multiple-input-color);
+    color: var(--text-regular);
     font-size: $--select-font-size;
     appearance: none;
     height: 28px;
@@ -134,7 +135,7 @@
     align-items: center;
 
     &__close.el-icon-close {
-      background-color: var(--select-tag-close-icon-bg);
+      background-color: var(--text-placeholder);
       top: 0;
       color: #fff;
       flex-shrink: 0;

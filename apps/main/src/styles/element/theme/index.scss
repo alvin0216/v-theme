@@ -1,21 +1,5 @@
 @import './mixins.scss';
-@import './color/base.scss';
-@import './color/button.scss';
-@import './color/checkbox.scss';
-@import './color/card.scss';
-@import './color/select.scss';
+@import './button-vars.scss';
+@import './checkbox-vars.scss';
 
-// inject to root
-@include inject-themes($colors, $texts, $borders, $background, $box-shadow);
-
-html {
-  color: var(--text-regular);
-  &.dark {
-    background-color: var(--fill-overlay-dark);
-
-    .el-picker-panel__footer {
-      border-top: 1px solid var(--border-color-light);
-      background: var(--fill-overlay);
-    }
-  }
-}
+@include inject-root-vars($colors, $texts, $borders, $background, $box-shadow);

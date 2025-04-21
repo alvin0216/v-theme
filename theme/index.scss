@@ -1,0 +1,12 @@
+@import './mixin.scss';
+
+@include inject-root-vars($colors, $texts, $borders, $background, $box-shadow);
+
+.ui {
+  @include apply-themes() using ($theme) {
+    $primary: map-get($colors, $theme, color-primary);
+
+    color: $primary;
+    background-color: if($theme == light, red, blue);
+  }
+}

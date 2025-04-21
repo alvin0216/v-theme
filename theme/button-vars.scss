@@ -1,0 +1,23 @@
+@import './mixin.scss';
+
+$percent: (
+  light: (
+    hover-percent: 20%,
+    active-percent: 10%,
+  ),
+  dark: (
+    hover-percent: 30%,
+    active-percent: 20%,
+  ),
+);
+
+.el-button {
+  @include apply-themes() using ($theme) {
+    $primary: map-get($colors, $theme, color-primary);
+    $hover-percent: get-theme-var($theme, $percent, hover-percent);
+    $active-percent: get-theme-var($theme, $percent, active-percent);
+    $black-primary-10: mix($--color-black, $color-primary, $hover-percent);
+
+    --button-active-color: #{if($theme == light, $black-primary-10, $primary)};
+  }
+}

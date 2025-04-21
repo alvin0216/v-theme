@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cd apps/main && pnpm dev"
+    "dev": "cd apps/main && npm run dev"
   },
   "keywords": [],
   "author": "",

@@ -24,51 +24,15 @@ $--color-primary: #294e95 !default;
 $--color-white: #ffffff !default;
 /// color|1|Background Color|4
 $--color-black: #000000 !default;
-$--color-primary-light-1: mix(
-  $--color-white,
-  $--color-primary,
-  10%
-) !default; /* 53a8ff */
-$--color-primary-light-2: mix(
-  $--color-white,
-  $--color-primary,
-  20%
-) !default; /* 66b1ff */
-$--color-primary-light-3: mix(
-  $--color-white,
-  $--color-primary,
-  30%
-) !default; /* 79bbff */
-$--color-primary-light-4: mix(
-  $--color-white,
-  $--color-primary,
-  40%
-) !default; /* 8cc5ff */
-$--color-primary-light-5: mix(
-  $--color-white,
-  $--color-primary,
-  50%
-) !default; /* a0cfff */
-$--color-primary-light-6: mix(
-  $--color-white,
-  $--color-primary,
-  60%
-) !default; /* b3d8ff */
-$--color-primary-light-7: mix(
-  $--color-white,
-  $--color-primary,
-  70%
-) !default; /* c6e2ff */
-$--color-primary-light-8: mix(
-  $--color-white,
-  $--color-primary,
-  80%
-) !default; /* d9ecff */
-$--color-primary-light-9: mix(
-  $--color-white,
-  $--color-primary,
-  90%
-) !default; /* ecf5ff */
+$--color-primary-light-1: #3a5da4 !default;
+$--color-primary-light-2: #4b6cb3 !default;
+$--color-primary-light-3: #5c7bc2 !default;
+$--color-primary-light-4: #6d8ad1 !default;
+$--color-primary-light-5: #7e99e0 !default;
+$--color-primary-light-6: #8fa8ef !default;
+$--color-primary-light-7: #a0b7fe !default;
+$--color-primary-light-8: #b1c6ff !default;
+$--color-primary-light-9: #c2d5ff !default;
 /// color|1|Functional Color|1
 $--color-success: #67c23a !default;
 /// color|1|Functional Color|1
@@ -78,15 +42,15 @@ $--color-danger: #f56c6c !default;
 /// color|1|Functional Color|1
 $--color-info: #909399 !default;
 
-$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
-$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
-$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
-$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+$--color-success-light: #e1f3d8 !default;
+$--color-warning-light: #faecd8 !default;
+$--color-danger-light: #fde2e2 !default;
+$--color-info-light: #e9e9eb !default;
 
-$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
-$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
-$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
-$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+$--color-success-lighter: #f0f9eb !default;
+$--color-warning-lighter: #fdf6ec !default;
+$--color-danger-lighter: #fef0f0 !default;
+$--color-info-lighter: #f4f4f5 !default;
 /// color|1|Font Color|2
 $--color-text-primary: #303133 !default;
 /// color|1|Font Color|2
@@ -110,15 +74,15 @@ $--background-color-base: #f5f7fa !default;
 
 /* Link
 -------------------------- */
-$--link-color: $--color-primary-light-2 !default;
-$--link-hover-color: $--color-primary !default;
+$--link-color: #4b6cb3 !default;
+$--link-hover-color: #294e95 !default;
 
 /* Border
 -------------------------- */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
-$--border-color-hover: $--color-text-placeholder !default;
-$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-color-hover: #c0c4cc !default;
+$--border-base: 1px solid #dcdfe6 !default;
 /// borderRadius|1|Radius|0
 $--border-radius-base: 4px !default;
 /// borderRadius|1|Radius|0
@@ -138,7 +102,7 @@ $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 
 /* Fill
 -------------------------- */
-$--fill-base: $--color-white !default;
+$--fill-base: #ffffff !default;
 
 /* Typography
 -------------------------- */
@@ -177,14 +141,14 @@ $--index-popper: 2000 !default;
 
 /* Disable base
 -------------------------- */
-$--disabled-fill-base: $--background-color-base !default;
-$--disabled-color-base: $--color-text-placeholder !default;
-$--disabled-border-base: $--border-color-light !default;
+$--disabled-fill-base: #f5f7fa !default;
+$--disabled-color-base: #c0c4cc !default;
+$--disabled-border-base: #e4e7ed !default;
 
 /* Icon
 -------------------------- */
 $--icon-color: #666 !default;
-$--icon-color-base: $--color-info !default;
+$--icon-color-base: #909399 !default;
 
 /* Checkbox
 -------------------------- */
@@ -193,32 +157,32 @@ $--checkbox-font-size: 14px !default;
 /// fontWeight||Font|1
 $--checkbox-font-weight: $--font-weight-primary !default;
 /// color||Color|0
-$--checkbox-font-color: $--color-text-regular !default;
+$--checkbox-font-color: #606266 !default;
 $--checkbox-input-height: 14px !default;
 $--checkbox-input-width: 14px !default;
 /// borderRadius||Border|2
 $--checkbox-border-radius: $--border-radius-small !default;
 /// color||Color|0
-$--checkbox-background-color: $--color-white !default;
-$--checkbox-input-border: $--border-base !default;
+$--checkbox-background-color: #ffffff !default;
+$--checkbox-input-border: 1px solid #dcdfe6 !default;
 
 /// color||Color|0
-$--checkbox-disabled-border-color: $--border-color-base !default;
+$--checkbox-disabled-border-color: #dcdfe6 !default;
 $--checkbox-disabled-input-fill: #edf2fc !default;
-$--checkbox-disabled-icon-color: $--color-text-placeholder !default;
+$--checkbox-disabled-icon-color: #c0c4cc !default;
 
-$--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
-$--checkbox-disabled-checked-input-border-color: $--border-color-base !default;
-$--checkbox-disabled-checked-icon-color: $--color-text-placeholder !default;
+$--checkbox-disabled-checked-input-fill: #f2f6fc !default;
+$--checkbox-disabled-checked-input-border-color: #dcdfe6 !default;
+$--checkbox-disabled-checked-icon-color: #c0c4cc !default;
 
 /// color||Color|0
-$--checkbox-checked-font-color: $--color-primary !default;
-$--checkbox-checked-input-border-color: $--color-primary !default;
+$--checkbox-checked-font-color: #294e95 !default;
+$--checkbox-checked-input-border-color: #294e95 !default;
 /// color||Color|0
-$--checkbox-checked-background-color: $--color-primary !default;
-$--checkbox-checked-icon-color: $--fill-base !default;
+$--checkbox-checked-background-color: #294e95 !default;
+$--checkbox-checked-icon-color: #ffffff !default;
 
-$--checkbox-input-border-color-hover: $--color-primary !default;
+$--checkbox-input-border-color-hover: #294e95 !default;
 /// height||Other|4
 $--checkbox-bordered-height: 40px !default;
 /// padding||Spacing|3
@@ -243,11 +207,11 @@ $--checkbox-bordered-mini-input-width: 12px !default;
 $--checkbox-bordered-mini-height: 28px !default;
 
 /// color||Color|0
-$--checkbox-button-checked-background-color: $--color-primary !default;
+$--checkbox-button-checked-background-color: #294e95 !default;
 /// color||Color|0
-$--checkbox-button-checked-font-color: $--color-white !default;
+$--checkbox-button-checked-font-color: #ffffff !default;
 /// color||Color|0
-$--checkbox-button-checked-border-color: $--color-primary !default;
+$--checkbox-button-checked-border-color: #294e95 !default;
 
 /* Radio
 -------------------------- */
@@ -256,37 +220,37 @@ $--radio-font-size: $--font-size-base !default;
 /// fontWeight||Font|1
 $--radio-font-weight: $--font-weight-primary !default;
 /// color||Color|0
-$--radio-font-color: $--color-text-regular !default;
+$--radio-font-color: #606266 !default;
 $--radio-input-height: 14px !default;
 $--radio-input-width: 14px !default;
 /// borderRadius||Border|2
 $--radio-input-border-radius: $--border-radius-circle !default;
 /// color||Color|0
-$--radio-input-background-color: $--color-white !default;
-$--radio-input-border: $--border-base !default;
+$--radio-input-background-color: #ffffff !default;
+$--radio-input-border: 1px solid #dcdfe6 !default;
 /// color||Color|0
-$--radio-input-border-color: $--border-color-base !default;
+$--radio-input-border-color: #dcdfe6 !default;
 /// color||Color|0
-$--radio-icon-color: $--color-white !default;
+$--radio-icon-color: #ffffff !default;
 
-$--radio-disabled-input-border-color: $--disabled-border-base !default;
-$--radio-disabled-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-icon-color: $--disabled-fill-base !default;
+$--radio-disabled-input-border-color: #e4e7ed !default;
+$--radio-disabled-input-fill: #f5f7fa !default;
+$--radio-disabled-icon-color: #f5f7fa !default;
 
-$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
-$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-checked-icon-color: $--color-text-placeholder !default;
+$--radio-disabled-checked-input-border-color: #e4e7ed !default;
+$--radio-disabled-checked-input-fill: #f5f7fa !default;
+$--radio-disabled-checked-icon-color: #c0c4cc !default;
 
 /// color||Color|0
-$--radio-checked-font-color: $--color-primary !default;
+$--radio-checked-font-color: #294e95 !default;
 /// color||Color|0
-$--radio-checked-input-border-color: $--color-primary !default;
+$--radio-checked-input-border-color: #294e95 !default;
 /// color||Color|0
-$--radio-checked-input-background-color: $--color-white !default;
+$--radio-checked-input-background-color: #ffffff !default;
 /// color||Color|0
-$--radio-checked-icon-color: $--color-primary !default;
+$--radio-checked-icon-color: #294e95 !default;
 
-$--radio-input-border-color-hover: $--color-primary !default;
+$--radio-input-border-color-hover: #294e95 !default;
 
 $--radio-bordered-height: 40px !default;
 $--radio-bordered-padding: 12px 20px 0 10px !default;
@@ -306,50 +270,50 @@ $--radio-bordered-mini-height: 28px !default;
 /// fontSize||Font|1
 $--radio-button-font-size: $--font-size-base !default;
 /// color||Color|0
-$--radio-button-checked-background-color: $--color-primary !default;
+$--radio-button-checked-background-color: #294e95 !default;
 /// color||Color|0
-$--radio-button-checked-font-color: $--color-white !default;
+$--radio-button-checked-font-color: #ffffff !default;
 /// color||Color|0
-$--radio-button-checked-border-color: $--color-primary !default;
-$--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
+$--radio-button-checked-border-color: #294e95 !default;
+$--radio-button-disabled-checked-fill: #f2f6fc !default;
 
 /* Select
 -------------------------- */
-$--select-border-color-hover: $--border-color-hover !default;
-$--select-disabled-border: $--disabled-border-base !default;
+$--select-border-color-hover: #c0c4cc !default;
+$--select-disabled-border: #e4e7ed !default;
 /// fontSize||Font|1
 $--select-font-size: $--font-size-base !default;
-$--select-close-hover-color: $--color-text-secondary !default;
+$--select-close-hover-color: #909399 !default;
 
-$--select-input-color: $--color-text-placeholder !default;
+$--select-input-color: #c0c4cc !default;
 $--select-multiple-input-color: #666 !default;
 /// color||Color|0
-$--select-input-focus-border-color: $--color-primary !default;
+$--select-input-focus-border-color: #294e95 !default;
 /// fontSize||Font|1
 $--select-input-font-size: 14px !default;
 
-$--select-option-color: $--color-text-regular !default;
-$--select-option-disabled-color: $--color-text-placeholder !default;
-$--select-option-disabled-background: $--color-white !default;
+$--select-option-color: #606266 !default;
+$--select-option-disabled-color: #c0c4cc !default;
+$--select-option-disabled-background: #ffffff !default;
 /// height||Other|4
 $--select-option-height: 34px !default;
-$--select-option-hover-background: $--background-color-base !default;
+$--select-option-hover-background: #f5f7fa !default;
 /// color||Color|0
-$--select-option-selected-font-color: $--color-primary !default;
-$--select-option-selected-hover: $--background-color-base !default;
+$--select-option-selected-font-color: #294e95 !default;
+$--select-option-selected-hover: #f5f7fa !default;
 
-$--select-group-color: $--color-info !default;
+$--select-group-color: #909399 !default;
 $--select-group-height: 30px !default;
 $--select-group-font-size: 12px !default;
 
-$--select-dropdown-background: $--color-white !default;
-$--select-dropdown-shadow: $--box-shadow-light !default;
+$--select-dropdown-background: #ffffff !default;
+$--select-dropdown-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 $--select-dropdown-empty-color: #999 !default;
 /// height||Other|4
 $--select-dropdown-max-height: 274px !default;
 $--select-dropdown-padding: 6px 0 !default;
 $--select-dropdown-empty-padding: 10px 0 !default;
-$--select-dropdown-border: solid 1px $--border-color-light !default;
+$--select-dropdown-border: solid 1px #e4e7ed !default;
 
 /* Alert
 -------------------------- */
@@ -365,10 +329,10 @@ $--alert-close-font-size: 12px !default;
 /// fontSize||Font|1
 $--alert-close-customed-font-size: 13px !default;
 
-$--alert-success-color: $--color-success-lighter !default;
-$--alert-info-color: $--color-info-lighter !default;
-$--alert-warning-color: $--color-warning-lighter !default;
-$--alert-danger-color: $--color-danger-lighter !default;
+$--alert-success-color: #f0f9eb !default;
+$--alert-info-color: #f4f4f5 !default;
+$--alert-warning-color: #fdf6ec !default;
+$--alert-danger-color: #fef0f0 !default;
 
 /// height||Other|4
 $--alert-icon-size: 16px !default;
@@ -378,7 +342,7 @@ $--alert-icon-large-size: 28px !default;
 /* MessageBox
 -------------------------- */
 /// color||Color|0
-$--messagebox-title-color: $--color-text-primary !default;
+$--messagebox-title-color: #303133 !default;
 $--msgbox-width: 420px !default;
 $--msgbox-border-radius: 4px !default;
 /// fontSize||Font|1
@@ -386,40 +350,40 @@ $--messagebox-font-size: $--font-size-large !default;
 /// fontSize||Font|1
 $--messagebox-content-font-size: $--font-size-base !default;
 /// color||Color|0
-$--messagebox-content-color: $--color-text-regular !default;
+$--messagebox-content-color: #606266 !default;
 /// fontSize||Font|1
 $--messagebox-error-font-size: 12px !default;
 $--msgbox-padding-primary: 15px !default;
 /// color||Color|0
-$--messagebox-success-color: $--color-success !default;
+$--messagebox-success-color: #67c23a !default;
 /// color||Color|0
-$--messagebox-info-color: $--color-info !default;
+$--messagebox-info-color: #909399 !default;
 /// color||Color|0
-$--messagebox-warning-color: $--color-warning !default;
+$--messagebox-warning-color: #e6a23c !default;
 /// color||Color|0
-$--messagebox-danger-color: $--color-danger !default;
+$--messagebox-danger-color: #f56c6c !default;
 
 /* Message
 -------------------------- */
-$--message-shadow: $--box-shadow-base !default;
+$--message-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04) !default;
 $--message-min-width: 380px !default;
 $--message-background-color: #edf2fc !default;
 $--message-padding: 15px 15px 15px 20px !default;
 /// color||Color|0
-$--message-close-icon-color: $--color-text-placeholder !default;
+$--message-close-icon-color: #c0c4cc !default;
 /// height||Other|4
 $--message-close-size: 16px !default;
 /// color||Color|0
-$--message-close-hover-color: $--color-text-secondary !default;
+$--message-close-hover-color: #909399 !default;
 
 /// color||Color|0
-$--message-success-font-color: $--color-success !default;
+$--message-success-font-color: #67c23a !default;
 /// color||Color|0
-$--message-info-font-color: $--color-info !default;
+$--message-info-font-color: #909399 !default;
 /// color||Color|0
-$--message-warning-font-color: $--color-warning !default;
+$--message-warning-font-color: #e6a23c !default;
 /// color||Color|0
-$--message-danger-font-color: $--color-danger !default;
+$--message-danger-font-color: #f56c6c !default;
 
 /* Notification
 -------------------------- */
@@ -427,9 +391,9 @@ $--notification-width: 330px !default;
 /// padding||Spacing|3
 $--notification-padding: 14px 26px 14px 13px !default;
 $--notification-radius: 8px !default;
-$--notification-shadow: $--box-shadow-light !default;
+$--notification-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 /// color||Color|0
-$--notification-border-color: $--border-color-lighter !default;
+$--notification-border-color: #ebeef5 !default;
 $--notification-icon-size: 24px !default;
 $--notification-close-font-size: $--message-close-size !default;
 $--notification-group-margin-left: 13px !default;
@@ -437,60 +401,60 @@ $--notification-group-margin-right: 8px !default;
 /// fontSize||Font|1
 $--notification-content-font-size: $--font-size-base !default;
 /// color||Color|0
-$--notification-content-color: $--color-text-regular !default;
+$--notification-content-color: #606266 !default;
 /// fontSize||Font|1
 $--notification-title-font-size: 16px !default;
 /// color||Color|0
-$--notification-title-color: $--color-text-primary !default;
+$--notification-title-color: #303133 !default;
 
 /// color||Color|0
-$--notification-close-color: $--color-text-secondary !default;
+$--notification-close-color: #909399 !default;
 /// color||Color|0
-$--notification-close-hover-color: $--color-text-regular !default;
+$--notification-close-hover-color: #606266 !default;
 
 /// color||Color|0
-$--notification-success-icon-color: $--color-success !default;
+$--notification-success-icon-color: #67c23a !default;
 /// color||Color|0
-$--notification-info-icon-color: $--color-info !default;
+$--notification-info-icon-color: #909399 !default;
 /// color||Color|0
-$--notification-warning-icon-color: $--color-warning !default;
+$--notification-warning-icon-color: #e6a23c !default;
 /// color||Color|0
-$--notification-danger-icon-color: $--color-danger !default;
+$--notification-danger-icon-color: #f56c6c !default;
 
 /* Input
 -------------------------- */
 $--input-font-size: $--font-size-base !default;
 /// color||Color|0
-$--input-font-color: $--color-text-regular !default;
+$--input-font-color: #606266 !default;
 /// height||Other|4
 $--input-width: 140px !default;
 /// height||Other|4
 $--input-height: 40px !default;
-$--input-border: $--border-base !default;
-$--input-border-color: $--border-color-base !default;
+$--input-border: 1px solid #dcdfe6 !default;
+$--input-border-color: #dcdfe6 !default;
 /// borderRadius||Border|2
 $--input-border-radius: $--border-radius-base !default;
-$--input-border-color-hover: $--border-color-hover !default;
+$--input-border-color-hover: #c0c4cc !default;
 /// color||Color|0
-$--input-background-color: $--color-white !default;
-$--input-fill-disabled: $--disabled-fill-base !default;
-$--input-color-disabled: $--font-color-disabled-base !default;
+$--input-background-color: #ffffff !default;
+$--input-fill-disabled: #f5f7fa !default;
+$--input-color-disabled: #bbb !default;
 /// color||Color|0
-$--input-icon-color: $--color-text-placeholder !default;
+$--input-icon-color: #c0c4cc !default;
 /// color||Color|0
-$--input-placeholder-color: $--color-text-placeholder !default;
+$--input-placeholder-color: #c0c4cc !default;
 $--input-max-width: 314px !default;
 
-$--input-hover-border: $--border-color-hover !default;
-$--input-clear-hover-color: $--color-text-secondary !default;
+$--input-hover-border: #c0c4cc !default;
+$--input-clear-hover-color: #909399 !default;
 
-$--input-focus-border: $--color-primary !default;
-$--input-focus-fill: $--color-white !default;
+$--input-focus-border: #294e95 !default;
+$--input-focus-fill: #ffffff !default;
 
-$--input-disabled-fill: $--disabled-fill-base !default;
-$--input-disabled-border: $--disabled-border-base !default;
-$--input-disabled-color: $--disabled-color-base !default;
-$--input-disabled-placeholder-color: $--color-text-placeholder !default;
+$--input-disabled-fill: #f5f7fa !default;
+$--input-disabled-border: #e4e7ed !default;
+$--input-disabled-color: #c0c4cc !default;
+$--input-disabled-placeholder-color: #c0c4cc !default;
 
 /// fontSize||Font|1
 $--input-medium-font-size: 14px !default;
@@ -508,25 +472,25 @@ $--input-mini-height: 28px !default;
 /* Cascader
 -------------------------- */
 /// color||Color|0
-$--cascader-menu-font-color: $--color-text-regular !default;
+$--cascader-menu-font-color: #606266 !default;
 /// color||Color|0
-$--cascader-menu-selected-font-color: $--color-primary !default;
-$--cascader-menu-fill: $--fill-base !default;
+$--cascader-menu-selected-font-color: #294e95 !default;
+$--cascader-menu-fill: #ffffff !default;
 $--cascader-menu-font-size: $--font-size-base !default;
 $--cascader-menu-radius: $--border-radius-base !default;
-$--cascader-menu-border: solid 1px $--border-color-light !default;
-$--cascader-menu-shadow: $--box-shadow-light !default;
-$--cascader-node-background-hover: $--background-color-base !default;
-$--cascader-node-color-disabled: $--color-text-placeholder !default;
-$--cascader-color-empty: $--color-text-placeholder !default;
-$--cascader-tag-background: #f0f2f5;
+$--cascader-menu-border: solid 1px #e4e7ed !default;
+$--cascader-menu-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+$--cascader-node-background-hover: #f5f7fa !default;
+$--cascader-node-color-disabled: #c0c4cc !default;
+$--cascader-color-empty: #c0c4cc !default;
+$--cascader-tag-background: #f0f2f5 !default;
 
 /* Group
 -------------------------- */
 $--group-option-flex: 0 0 math.div(1, 5) * 100% !default;
 $--group-option-offset-bottom: 12px !default;
-$--group-option-fill-hover: rgba($--color-black, 0.06) !default;
-$--group-title-color: $--color-black !default;
+$--group-option-fill-hover: rgba(0, 0, 0, 0.06) !default;
+$--group-title-color: #000000 !default;
 $--group-title-font-size: $--font-size-base !default;
 $--group-title-width: 66px !default;
 
@@ -534,14 +498,14 @@ $--group-title-width: 66px !default;
 -------------------------- */
 $--tab-font-size: $--font-size-base !default;
 $--tab-border-line: 1px solid #e4e4e4 !default;
-$--tab-header-color-active: $--color-text-secondary !default;
-$--tab-header-color-hover: $--color-text-regular !default;
-$--tab-header-color: $--color-text-regular !default;
-$--tab-header-fill-active: rgba($--color-black, 0.06) !default;
-$--tab-header-fill-hover: rgba($--color-black, 0.06) !default;
+$--tab-header-color-active: #909399 !default;
+$--tab-header-color-hover: #606266 !default;
+$--tab-header-color: #606266 !default;
+$--tab-header-fill-active: rgba(0, 0, 0, 0.06) !default;
+$--tab-header-fill-hover: rgba(0, 0, 0, 0.06) !default;
 $--tab-vertical-header-width: 90px !default;
-$--tab-vertical-header-count-color: $--color-white !default;
-$--tab-vertical-header-count-fill: $--color-text-secondary !default;
+$--tab-vertical-header-count-color: #ffffff !default;
+$--tab-vertical-header-count-fill: #909399 !default;
 
 /* Button
 -------------------------- */
@@ -581,49 +545,49 @@ $--button-mini-padding-vertical: 7px !default;
 $--button-mini-padding-horizontal: 15px !default;
 
 /// color||Color|0
-$--button-default-font-color: $--color-text-regular !default;
+$--button-default-font-color: #606266 !default;
 /// color||Color|0
-$--button-default-background-color: $--color-white !default;
+$--button-default-background-color: #ffffff !default;
 /// color||Color|0
-$--button-default-border-color: $--border-color-base !default;
+$--button-default-border-color: #dcdfe6 !default;
 
 /// color||Color|0
-$--button-disabled-font-color: $--color-text-placeholder !default;
+$--button-disabled-font-color: #c0c4cc !default;
 /// color||Color|0
-$--button-disabled-background-color: $--color-white !default;
+$--button-disabled-background-color: #ffffff !default;
 /// color||Color|0
-$--button-disabled-border-color: $--border-color-lighter !default;
+$--button-disabled-border-color: #ebeef5 !default;
 
 /// color||Color|0
-$--button-primary-border-color: $--color-primary !default;
+$--button-primary-border-color: #294e95 !default;
 /// color||Color|0
-$--button-primary-font-color: $--color-white !default;
+$--button-primary-font-color: #ffffff !default;
 /// color||Color|0
-$--button-primary-background-color: $--color-primary !default;
+$--button-primary-background-color: #294e95 !default;
 /// color||Color|0
-$--button-success-border-color: $--color-success !default;
+$--button-success-border-color: #67c23a !default;
 /// color||Color|0
-$--button-success-font-color: $--color-white !default;
+$--button-success-font-color: #ffffff !default;
 /// color||Color|0
-$--button-success-background-color: $--color-success !default;
+$--button-success-background-color: #67c23a !default;
 /// color||Color|0
-$--button-warning-border-color: $--color-warning !default;
+$--button-warning-border-color: #e6a23c !default;
 /// color||Color|0
-$--button-warning-font-color: $--color-white !default;
+$--button-warning-font-color: #ffffff !default;
 /// color||Color|0
-$--button-warning-background-color: $--color-warning !default;
+$--button-warning-background-color: #e6a23c !default;
 /// color||Color|0
-$--button-danger-border-color: $--color-danger !default;
+$--button-danger-border-color: #f56c6c !default;
 /// color||Color|0
-$--button-danger-font-color: $--color-white !default;
+$--button-danger-font-color: #ffffff !default;
 /// color||Color|0
-$--button-danger-background-color: $--color-danger !default;
+$--button-danger-background-color: #f56c6c !default;
 /// color||Color|0
-$--button-info-border-color: $--color-info !default;
+$--button-info-border-color: #909399 !default;
 /// color||Color|0
-$--button-info-font-color: $--color-white !default;
+$--button-info-font-color: #ffffff !default;
 /// color||Color|0
-$--button-info-background-color: $--color-info !default;
+$--button-info-background-color: #909399 !default;
 
 $--button-hover-tint-percent: 20% !default;
 $--button-active-shade-percent: 10% !default;
@@ -635,9 +599,9 @@ $--cascader-height: 200px !default;
 /* Switch
 -------------------------- */
 /// color||Color|0
-$--switch-on-color: $--color-primary !default;
+$--switch-on-color: #294e95 !default;
 /// color||Color|0
-$--switch-off-color: $--border-color-base !default;
+$--switch-off-color: #dcdfe6 !default;
 /// fontSize||Font|1
 $--switch-font-size: $--font-size-base !default;
 $--switch-core-border-radius: 10px !default;
@@ -650,7 +614,7 @@ $--switch-button-size: 16px !default;
 
 /* Dialog
 -------------------------- */
-$--dialog-background-color: $--color-white !default;
+$--dialog-background-color: #ffffff !default;
 $--dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
 /// fontSize||Font|1
 $--dialog-title-font-size: $--font-size-large !default;
@@ -664,17 +628,17 @@ $--dialog-padding-primary: 20px !default;
 /* Table
 -------------------------- */
 /// color||Color|0
-$--table-border-color: $--border-color-lighter !default;
-$--table-border: 1px solid $--table-border-color !default;
+$--table-border-color: #ebeef5 !default;
+$--table-border: 1px solid #ebeef5 !default;
 /// color||Color|0
-$--table-font-color: $--color-text-regular !default;
+$--table-font-color: #606266 !default;
 /// color||Color|0
-$--table-header-font-color: $--color-text-secondary !default;
+$--table-header-font-color: #909399 !default;
 /// color||Color|0
-$--table-row-hover-background-color: $--background-color-base !default;
-$--table-current-row-background-color: $--color-primary-light-9 !default;
+$--table-row-hover-background-color: #f5f7fa !default;
+$--table-current-row-background-color: #c2d5ff !default;
 /// color||Color|0
-$--table-header-background-color: $--color-white !default;
+$--table-header-background-color: #ffffff !default;
 $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12) !default;
 
 /* Pagination
@@ -682,38 +646,38 @@ $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12) !default;
 /// fontSize||Font|1
 $--pagination-font-size: 13px !default;
 /// color||Color|0
-$--pagination-background-color: $--color-white !default;
+$--pagination-background-color: #ffffff !default;
 /// color||Color|0
-$--pagination-font-color: $--color-text-primary !default;
+$--pagination-font-color: #303133 !default;
 $--pagination-border-radius: 3px !default;
 /// color||Color|0
-$--pagination-button-color: $--color-text-primary !default;
+$--pagination-button-color: #303133 !default;
 /// height||Other|4
 $--pagination-button-width: 35.5px !default;
 /// height||Other|4
 $--pagination-button-height: 28px !default;
 /// color||Color|0
-$--pagination-button-disabled-color: $--color-text-placeholder !default;
+$--pagination-button-disabled-color: #c0c4cc !default;
 /// color||Color|0
-$--pagination-button-disabled-background-color: $--color-white !default;
+$--pagination-button-disabled-background-color: #ffffff !default;
 /// color||Color|0
-$--pagination-hover-color: $--color-primary !default;
+$--pagination-hover-color: #294e95 !default;
 
 /* Popup
 -------------------------- */
 /// color||Color|0
-$--popup-modal-background-color: $--color-black !default;
+$--popup-modal-background-color: #000000 !default;
 /// opacity||Other|1
 $--popup-modal-opacity: 0.5 !default;
 
 /* Popover
 -------------------------- */
 /// color||Color|0
-$--popover-background-color: $--color-white !default;
+$--popover-background-color: #ffffff !default;
 /// fontSize||Font|1
 $--popover-font-size: $--font-size-base !default;
 /// color||Color|0
-$--popover-border-color: $--border-color-lighter !default;
+$--popover-border-color: #ebeef5 !default;
 $--popover-arrow-size: 6px !default;
 /// padding||Spacing|3
 $--popover-padding: 12px !default;
@@ -721,18 +685,18 @@ $--popover-padding-large: 18px 20px !default;
 /// fontSize||Font|1
 $--popover-title-font-size: 16px !default;
 /// color||Color|0
-$--popover-title-font-color: $--color-text-primary !default;
+$--popover-title-font-color: #303133 !default;
 
 /* Tooltip
 -------------------------- */
 /// color|1|Color|0
-$--tooltip-fill: $--color-text-primary !default;
+$--tooltip-fill: #303133 !default;
 /// color|1|Color|0
-$--tooltip-color: $--color-white !default;
+$--tooltip-color: #ffffff !default;
 /// fontSize||Font|1
 $--tooltip-font-size: 12px !default;
 /// color||Color|0
-$--tooltip-border-color: $--color-text-primary !default;
+$--tooltip-border-color: #303133 !default;
 $--tooltip-arrow-size: 6px !default;
 /// padding||Spacing|3
 $--tooltip-padding: 10px !default;
@@ -740,15 +704,15 @@ $--tooltip-padding: 10px !default;
 /* Tag
 -------------------------- */
 /// color||Color|0
-$--tag-info-color: $--color-info !default;
+$--tag-info-color: #909399 !default;
 /// color||Color|0
-$--tag-primary-color: $--color-primary !default;
+$--tag-primary-color: #294e95 !default;
 /// color||Color|0
-$--tag-success-color: $--color-success !default;
+$--tag-success-color: #67c23a !default;
 /// color||Color|0
-$--tag-warning-color: $--color-warning !default;
+$--tag-warning-color: #e6a23c !default;
 /// color||Color|0
-$--tag-danger-color: $--color-danger !default;
+$--tag-danger-color: #f56c6c !default;
 /// fontSize||Font|1
 $--tag-font-size: 12px !default;
 $--tag-border-radius: 4px !default;
@@ -757,22 +721,22 @@ $--tag-padding: 0 10px !default;
 /* Tree
 -------------------------- */
 /// color||Color|0
-$--tree-node-hover-background-color: $--background-color-base !default;
+$--tree-node-hover-background-color: #f5f7fa !default;
 /// color||Color|0
-$--tree-font-color: $--color-text-regular !default;
+$--tree-font-color: #606266 !default;
 /// color||Color|0
-$--tree-expand-icon-color: $--color-text-placeholder !default;
+$--tree-expand-icon-color: #c0c4cc !default;
 
 /* Dropdown
 -------------------------- */
-$--dropdown-menu-box-shadow: $--box-shadow-light !default;
-$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
-$--dropdown-menuItem-hover-color: $--link-color !default;
+$--dropdown-menu-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+$--dropdown-menuItem-hover-fill: #c2d5ff !default;
+$--dropdown-menuItem-hover-color: #4b6cb3 !default;
 
 /* Badge
 -------------------------- */
 /// color||Color|0
-$--badge-background-color: $--color-danger !default;
+$--badge-background-color: #f56c6c !default;
 $--badge-radius: 10px !default;
 /// fontSize||Font|1
 $--badge-font-size: 12px !default;
@@ -784,7 +748,7 @@ $--badge-size: 18px !default;
 /* Card
 --------------------------*/
 /// color||Color|0
-$--card-border-color: $--border-color-lighter !default;
+$--card-border-color: #ebeef5 !default;
 $--card-border-radius: 4px !default;
 /// padding||Spacing|3
 $--card-padding: 20px !default;
@@ -792,12 +756,12 @@ $--card-padding: 20px !default;
 /* Slider
 --------------------------*/
 /// color||Color|0
-$--slider-main-background-color: $--color-primary !default;
+$--slider-main-background-color: #294e95 !default;
 /// color||Color|0
-$--slider-runway-background-color: $--border-color-light !default;
-$--slider-button-hover-color: mix($--color-primary, black, 97%) !default;
-$--slider-stop-background-color: $--color-white !default;
-$--slider-disable-color: $--color-text-placeholder !default;
+$--slider-runway-background-color: #e4e7ed !default;
+$--slider-button-hover-color: #4b6cb3 !default;
+$--slider-stop-background-color: #ffffff !default;
+$--slider-disable-color: #c0c4cc !default;
 $--slider-margin: 16px 0 !default;
 $--slider-border-radius: 3px !default;
 /// height|1|Other|4
@@ -809,7 +773,7 @@ $--slider-button-wrapper-offset: -15px !default;
 
 /* Steps
 --------------------------*/
-$--steps-border-color: $--disabled-border-base !default;
+$--steps-border-color: #e4e7ed !default;
 $--steps-border-radius: 4px !default;
 $--steps-padding: 20px !default;
 
@@ -818,10 +782,10 @@ $--steps-padding: 20px !default;
 /// fontSize||Font|1
 $--menu-item-font-size: $--font-size-base !default;
 /// color||Color|0
-$--menu-item-font-color: $--color-text-primary !default;
+$--menu-item-font-color: #303133 !default;
 /// color||Color|0
-$--menu-background-color: $--color-white !default;
-$--menu-item-hover-fill: $--color-primary-light-9 !default;
+$--menu-background-color: #ffffff !default;
+$--menu-item-hover-fill: #c2d5ff !default;
 
 /* Rate
 --------------------------*/
@@ -832,26 +796,26 @@ $--rate-font-size: $--font-size-base !default;
 $--rate-icon-size: 18px !default;
 /// margin||Spacing|2
 $--rate-icon-margin: 6px !default;
-$--rate-icon-color: $--color-text-placeholder !default;
+$--rate-icon-color: #c0c4cc !default;
 
 /* DatePicker
 --------------------------*/
-$--datepicker-font-color: $--color-text-regular !default;
+$--datepicker-font-color: #606266 !default;
 /// color|1|Color|0
-$--datepicker-off-font-color: $--color-text-placeholder !default;
+$--datepicker-off-font-color: #c0c4cc !default;
 /// color||Color|0
-$--datepicker-header-font-color: $--color-text-regular !default;
-$--datepicker-icon-color: $--color-text-primary !default;
-$--datepicker-border-color: $--disabled-border-base !default;
+$--datepicker-header-font-color: #606266 !default;
+$--datepicker-icon-color: #303133 !default;
+$--datepicker-border-color: #e4e7ed !default;
 $--datepicker-inner-border-color: #e4e4e4 !default;
 /// color||Color|0
-$--datepicker-inrange-background-color: $--border-color-extra-light !default;
+$--datepicker-inrange-background-color: #f2f6fc !default;
 /// color||Color|0
-$--datepicker-inrange-hover-background-color: $--border-color-extra-light !default;
+$--datepicker-inrange-hover-background-color: #f2f6fc !default;
 /// color||Color|0
-$--datepicker-active-color: $--color-primary !default;
+$--datepicker-active-color: #294e95 !default;
 /// color||Color|0
-$--datepicker-hover-font-color: $--color-primary !default;
+$--datepicker-hover-font-color: #294e95 !default;
 $--datepicker-cell-hover-color: #fff !default;
 
 /* Loading
@@ -863,11 +827,8 @@ $--loading-fullscreen-spinner-size: 50px !default;
 
 /* Scrollbar
 --------------------------*/
-$--scrollbar-background-color: rgba($--color-text-secondary, 0.3) !default;
-$--scrollbar-hover-background-color: rgba(
-  $--color-text-secondary,
-  0.5
-) !default;
+$--scrollbar-background-color: rgba(144, 147, 153, 0.3) !default;
+$--scrollbar-hover-background-color: rgba(144, 147, 153, 0.5) !default;
 
 /* Carousel
 --------------------------*/
@@ -882,30 +843,30 @@ $--carousel-indicator-width: 30px !default;
 $--carousel-indicator-height: 2px !default;
 $--carousel-indicator-padding-horizontal: 4px !default;
 $--carousel-indicator-padding-vertical: 12px !default;
-$--carousel-indicator-out-color: $--border-color-hover !default;
+$--carousel-indicator-out-color: #c0c4cc !default;
 
 /* Collapse
 --------------------------*/
 /// color||Color|0
-$--collapse-border-color: $--border-color-lighter !default;
+$--collapse-border-color: #ebeef5 !default;
 /// height||Other|4
 $--collapse-header-height: 48px !default;
 /// color||Color|0
-$--collapse-header-background-color: $--color-white !default;
+$--collapse-header-background-color: #ffffff !default;
 /// color||Color|0
-$--collapse-header-font-color: $--color-text-primary !default;
+$--collapse-header-font-color: #303133 !default;
 /// fontSize||Font|1
 $--collapse-header-font-size: 13px !default;
 /// color||Color|0
-$--collapse-content-background-color: $--color-white !default;
+$--collapse-content-background-color: #ffffff !default;
 /// fontSize||Font|1
 $--collapse-content-font-size: 13px !default;
 /// color||Color|0
-$--collapse-content-font-color: $--color-text-primary !default;
+$--collapse-content-font-color: #303133 !default;
 
 /* Transfer
 --------------------------*/
-$--transfer-border-color: $--border-color-lighter !default;
+$--transfer-border-color: #ebeef5 !default;
 $--transfer-border-radius: $--border-radius-base !default;
 /// height||Other|4
 $--transfer-panel-width: 200px !default;
@@ -938,16 +899,16 @@ $--main-padding: 20px !default;
 --------------------------*/
 $--timeline-node-size-normal: 12px !default;
 $--timeline-node-size-large: 14px !default;
-$--timeline-node-color: $--border-color-light !default;
+$--timeline-node-color: #e4e7ed !default;
 
 /* Backtop
 --------------------------*/
 /// color||Color|0
-$--backtop-background-color: $--color-white !default;
+$--backtop-background-color: #ffffff !default;
 /// color||Color|0
-$--backtop-font-color: $--color-primary !default;
+$--backtop-font-color: #294e95 !default;
 /// color||Color|0
-$--backtop-hover-background-color: $--border-color-extra-light !default;
+$--backtop-hover-background-color: #f2f6fc !default;
 
 /* Link
 --------------------------*/
@@ -956,25 +917,25 @@ $--link-font-size: $--font-size-base !default;
 /// fontWeight||Font|1
 $--link-font-weight: $--font-weight-primary !default;
 /// color||Color|0
-$--link-default-font-color: $--color-text-regular !default;
+$--link-default-font-color: #606266 !default;
 /// color||Color|0
-$--link-default-active-color: $--color-primary !default;
+$--link-default-active-color: #294e95 !default;
 /// color||Color|0
-$--link-disabled-font-color: $--color-text-placeholder !default;
+$--link-disabled-font-color: #c0c4cc !default;
 /// color||Color|0
-$--link-primary-font-color: $--color-primary !default;
+$--link-primary-font-color: #294e95 !default;
 /// color||Color|0
-$--link-success-font-color: $--color-success !default;
+$--link-success-font-color: #67c23a !default;
 /// color||Color|0
-$--link-warning-font-color: $--color-warning !default;
+$--link-warning-font-color: #e6a23c !default;
 /// color||Color|0
-$--link-danger-font-color: $--color-danger !default;
+$--link-danger-font-color: #f56c6c !default;
 /// color||Color|0
-$--link-info-font-color: $--color-info !default;
+$--link-info-font-color: #909399 !default;
 /* Calendar
 --------------------------*/
 /// border||Other|4
-$--calendar-border: $--table-border !default;
+$--calendar-border: 1px solid #ebeef5 !default;
 /// color||Other|4
 $--calendar-selected-background-color: #f2f8fe !default;
 $--calendar-cell-width: 85px !default;
@@ -1034,10 +995,10 @@ $--result-title-font-size: 20px !default;
 $--result-title-margin-top: 20px !default;
 $--result-subtitle-margin-top: 10px !default;
 $--result-extra-margin-top: 30px !default;
-$--result-info-color: $--color-info !default;
-$--result-success-color: $--color-success !default;
-$--result-warning-color: $--color-warning !default;
-$--result-danger-color: $--color-danger !default;
+$--result-info-color: #909399 !default;
+$--result-success-color: #67c23a !default;
+$--result-warning-color: #e6a23c !default;
+$--result-danger-color: #f56c6c !default;
 
 /* Break-point
 --------------------------*/

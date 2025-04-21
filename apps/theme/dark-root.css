@@ -1,17 +1,19 @@
 :root {
   /* Base Colors */
-  --color-primary: #294e95;
+  --color-primary: #409eff;
   --color-white: #ffffff;
+  --color-dark: #141414;
   --color-black: #000000;
-  --color-primary-light-1: #3a5da4;
-  --color-primary-light-2: #4b6cb3;
-  --color-primary-light-3: #5c7bc2;
-  --color-primary-light-4: #6d8ad1;
-  --color-primary-light-5: #7e99e0;
-  --color-primary-light-6: #8fa8ef;
-  --color-primary-light-7: #a0b7fe;
-  --color-primary-light-8: #b1c6ff;
-  --color-primary-light-9: #c2d5ff;
+  --color-primary-light-1: #3c90e8;
+  --color-primary-light-2: #3782d0;
+  --color-primary-light-3: #3375b9;
+  --color-primary-light-4: #2e67a1;
+  --color-primary-light-5: #2a598a;
+  --color-primary-light-6: #264b72;
+  --color-primary-light-7: #213d5b;
+  --color-primary-light-8: #1d3043;
+  --color-primary-light-9: #18222c;
+  --color-primary-dark-2: #66b1ff;
   --color-success: #67c23a;
   --color-warning: #e6a23c;
   --color-danger: #f56c6c;
@@ -26,41 +28,58 @@
   --color-info-lighter: #f4f4f5;
 
   /* Text Colors */
-  --color-text-primary: #303133;
-  --color-text-regular: #606266;
-  --color-text-secondary: #909399;
-  --color-text-placeholder: #c0c4cc;
+  --color-text-primary: #e5eaf3;
+  --color-text-regular: #cfd3dc;
+  --color-text-secondary: #a3a6ad;
+  --color-text-placeholder: #8d9095;
+  --color-text-disabled: #6c6e72;
 
   /* Border Colors */
-  --border-color-base: #dcdfe6;
-  --border-color-light: #e4e7ed;
-  --border-color-lighter: #ebeef5;
-  --border-color-extra-light: #f2f6fc;
-  --border-color-hover: #c0c4cc;
+  --border-color-base: #4c4d4f;
+  --border-color-light: #414243;
+  --border-color-lighter: #363637;
+  --border-color-darker: #636466;
+  --border-color-extra-light: #2b2b2c;
+  --border-color-hover: var(--color-text-disabled);
 
   /* Background Colors */
-  --background-color-base: #f5f7fa;
+  --background-color: var(--color-dark);
+  --background-color-base: #262627;
+  --background-color-overlay: #1d1e1f;
+
+  /* Overlay */
+  --overlay-color-lighter: rgba(0, 0, 0, 0.5);
 
   /* Link Colors */
-  --link-color: #4b6cb3;
-  --link-hover-color: #294e95;
+  --link-color: var(--color-primary-light-2);
+  --link-hover-color: var(--color-primary);
 
   /* Border */
   --border-width-base: 1px;
   --border-style-base: solid;
-  --border-base: 1px solid var(--border-color-base);
+  --border-base: var(--border-width-base) var(--border-style-base)
+    var(--border-color-base);
   --border-radius-base: 4px;
   --border-radius-small: 2px;
   --border-radius-circle: 100%;
   --border-radius-zero: 0;
 
   /* Box Shadow */
-  --box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
-  --box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
-  --box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-base: 0px 12px 32px 4px rgba(0, 0, 0, 0.36),
+    0px 8px 20px rgba(0, 0, 0, 0.72);
+  --box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.72),
+    0px 12px 32px #000000, 0px 8px 16px -8px #000000;
+  --box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.72);
+  --box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.72);
 
   /* Fill */
   --fill-base: var(--color-white);
+  --fill-color: #303030;
+  --fill-color-lighter: #1d1d1d;
+  --fill-color-darker: #424243;
+
+  /* Mask */
+  --mask-color: rgba(0, 0, 0, 0.8);
 
   /* Typography */
   --font-path: "fonts";
@@ -75,7 +94,7 @@
   --font-weight-secondary: 100;
   --font-line-height-primary: 24px;
   --font-line-height-secondary: 16px;
-  --font-color-disabled-base: #bbb;
+  --font-color-disabled-base: var(--color-text-disabled);
 
   /* Size */
   --size-base: 14px;
@@ -98,11 +117,11 @@
 /* Component Specific Variables */
 .el-button {
   --button-default-font-color: var(--color-text-regular);
-  --button-default-background-color: var(--color-white);
+  --button-default-background-color: transparent;
   --button-default-border-color: var(--border-color-base);
-  --button-disabled-font-color: var(--color-text-placeholder);
-  --button-disabled-background-color: var(--color-white);
-  --button-disabled-border-color: var(--border-color-lighter);
+  --button-disabled-font-color: rgba(255, 255, 255, 0.5);
+  --button-disabled-background-color: transparent;
+  --button-disabled-border-color: var(--border-color-light);
   --button-primary-border-color: var(--color-primary);
   --button-primary-font-color: var(--color-white);
   --button-primary-background-color: var(--color-primary);
@@ -125,7 +144,7 @@
   --input-border: var(--border-base);
   --input-border-color: var(--border-color-base);
   --input-border-color-hover: var(--border-color-hover);
-  --input-background-color: var(--color-white);
+  --input-background-color: transparent;
   --input-fill-disabled: var(--disabled-fill-base);
   --input-color-disabled: var(--font-color-disabled-base);
   --input-icon-color: var(--color-text-placeholder);
@@ -147,17 +166,17 @@
   --table-header-font-color: var(--color-text-secondary);
   --table-row-hover-background-color: var(--background-color-base);
   --table-current-row-background-color: var(--color-primary-light-9);
-  --table-header-background-color: var(--color-white);
+  --table-header-background-color: var(--background-color);
 }
 
 .el-dialog {
-  --dialog-background-color: var(--color-white);
-  --dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --dialog-background-color: var(--background-color);
+  --dialog-box-shadow: var(--box-shadow-base);
 }
 
 .el-message {
-  --message-shadow: var(--box-shadow-base);
-  --message-background-color: #edf2fc;
+  --message-shadow: var(--box-shadow-light);
+  --message-background-color: var(--color-info-lighter);
   --message-close-icon-color: var(--color-text-placeholder);
   --message-close-hover-color: var(--color-text-secondary);
   --message-success-font-color: var(--color-success);
@@ -192,14 +211,14 @@
   --select-option-selected-font-color: var(--color-primary);
   --select-option-selected-hover: var(--background-color-base);
   --select-group-color: var(--color-info);
-  --select-dropdown-background: var(--color-white);
+  --select-dropdown-background: var(--background-color-overlay);
   --select-dropdown-shadow: var(--box-shadow-light);
   --select-dropdown-border: solid 1px var(--border-color-light);
 }
 
 .el-checkbox {
   --checkbox-font-color: var(--color-text-regular);
-  --checkbox-background-color: var(--color-white);
+  --checkbox-background-color: transparent;
   --checkbox-input-border: var(--border-base);
   --checkbox-disabled-border-color: var(--border-color-base);
   --checkbox-disabled-icon-color: var(--color-text-placeholder);
@@ -218,7 +237,7 @@
 
 .el-radio {
   --radio-font-color: var(--color-text-regular);
-  --radio-input-background-color: var(--color-white);
+  --radio-input-background-color: transparent;
   --radio-input-border: var(--border-base);
   --radio-input-border-color: var(--border-color-base);
   --radio-icon-color: var(--color-white);
@@ -253,23 +272,23 @@
 }
 
 .el-pagination {
-  --pagination-background-color: var(--color-white);
+  --pagination-background-color: transparent;
   --pagination-font-color: var(--color-text-primary);
   --pagination-button-color: var(--color-text-primary);
   --pagination-button-disabled-color: var(--color-text-placeholder);
-  --pagination-button-disabled-background-color: var(--color-white);
+  --pagination-button-disabled-background-color: transparent;
   --pagination-hover-color: var(--color-primary);
 }
 
 .el-popover {
-  --popover-background-color: var(--color-white);
-  --popover-border-color: var(--border-color-lighter);
+  --popover-background-color: var(--background-color-overlay);
+  --popover-border-color: var(--border-color-light);
   --popover-title-font-color: var(--color-text-primary);
 }
 
 .el-tooltip {
   --tooltip-fill: var(--color-text-primary);
-  --tooltip-color: var(--color-white);
+  --tooltip-color: var(--background-color);
   --tooltip-border-color: var(--color-text-primary);
 }
 
@@ -282,7 +301,7 @@
 .el-dropdown {
   --dropdown-menu-box-shadow: var(--box-shadow-light);
   --dropdown-menuItem-hover-fill: var(--color-primary-light-9);
-  --dropdown-menuItem-hover-color: var(--link-color);
+  --dropdown-menuItem-hover-color: var(--color-primary);
 }
 
 .el-badge {
@@ -290,7 +309,7 @@
 }
 
 .el-card {
-  --card-border-color: var(--border-color-lighter);
+  --card-border-color: var(--border-color-light);
 }
 
 .el-slider {
@@ -307,12 +326,12 @@
 
 .el-menu {
   --menu-item-font-color: var(--color-text-primary);
-  --menu-background-color: var(--color-white);
+  --menu-background-color: transparent;
   --menu-item-hover-fill: var(--color-primary-light-9);
 }
 
 .el-rate {
-  --rate-icon-color: var(--color-text-placeholder);
+  --rate-icon-color: var(--border-color-darker);
 }
 
 .el-date-picker {
@@ -338,9 +357,9 @@
 
 .el-collapse {
   --collapse-border-color: var(--border-color-lighter);
-  --collapse-header-background-color: var(--color-white);
+  --collapse-header-background-color: transparent;
   --collapse-header-font-color: var(--color-text-primary);
-  --collapse-content-background-color: var(--color-white);
+  --collapse-content-background-color: transparent;
   --collapse-content-font-color: var(--color-text-primary);
 }
 
@@ -353,7 +372,7 @@
 }
 
 .el-backtop {
-  --backtop-background-color: var(--color-white);
+  --backtop-background-color: var(--background-color-overlay);
   --backtop-font-color: var(--color-primary);
   --backtop-hover-background-color: var(--border-color-extra-light);
 }
@@ -371,7 +390,7 @@
 
 .el-calendar {
   --calendar-border: var(--table-border);
-  --calendar-selected-background-color: #f2f8fe;
+  --calendar-selected-background-color: var(--color-primary-light-9);
 }
 
 .el-result {

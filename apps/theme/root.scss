@@ -120,8 +120,8 @@ $box-shadow: (
   @include inject(box-shadow, $box-shadow);
 }
 
-@each $com, $attrs in $components {
-  .el-#{$com} {
+body {
+  @each $com, $attrs in $components {
     @include inject($com, $attrs);
   }
 }

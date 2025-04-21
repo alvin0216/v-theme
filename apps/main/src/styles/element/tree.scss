@@ -7,7 +7,7 @@
   position: relative;
   cursor: default;
   background: var(--fill-blank);
-  color: var(---text-regular);
+  color: var(--text-regular);
 
   @include e(empty-block) {
     position: relative;

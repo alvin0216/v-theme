@@ -1,5 +1,6 @@
 @import 'mixins/mixins';
 @import 'common/var';
+@import './theme/mixins.scss';
 
 $typeMap: (
   primary: $--link-primary-font-color,
@@ -46,7 +47,7 @@ $typeMap: (
   }
 
   &.el-link--default {
-    color: var(---text-regular);
+    color: var(--text-regular);
     &:hover {
       color: var(--color-primary);
     }
@@ -57,22 +58,28 @@ $typeMap: (
       color: var(--text-placeholder);
     }
   }
+}
 
-  @each $type, $primaryColor in $typeMap {
-    &.el-link--#{$type} {
-      color: $primaryColor;
-      &:hover {
-        color: mix($primaryColor, $--color-white, 80%);
-      }
-      &:after {
-        border-color: $primaryColor;
-      }
-      @include when(disabled) {
-        color: mix($primaryColor, $--color-white, 50%);
-      }
-      @include when(underline) {
-        &:hover:after {
-          border-color: $primaryColor;
+.el-link {
+  @each $v in primary success warning danger info {
+    &.el-link--#{$v} {
+      @include apply-themes() using ($theme) {
+        $color: get-theme-var($theme, $colors, color-#{$v});
+        $mix-color: if($theme == light, $--color-white, $--color-dark);
+        color: $color;
+        &:hover {
+          color: mix($color, $mix-color, 80%);
+        }
+        &:after {
+          border-color: $color;
+        }
+        @include when(disabled) {
+          color: mix($color, $mix-color, 50%);
+        }
+        @include when(underline) {
+          &:hover:after {
+            border-color: $color;
+          }
         }
       }
     }

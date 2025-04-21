@@ -74,7 +74,7 @@
 
   @include e(content) {
     padding: 10px $--msgbox-padding-primary;
-    color: var(---text-regular);
+    color: var(--text-regular);
     font-size: $--messagebox-content-font-size;
   }
 

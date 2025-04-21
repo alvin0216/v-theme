@@ -1,0 +1,127 @@
+$color-primary: #294e95;
+$mix-color: #ffffff;
+$color: (
+  success: #67c23a,
+  warning: #e6a23c,
+  danger: #f56c6c,
+  info: #f4f8ff,
+);
+
+$text: (
+  primary: #303133,
+  regular: #606266,
+  secondary: #909399,
+  placeholder: #c0c4cc,
+);
+
+$border: (
+  base: #dcdfe6,
+  light: #e4e7ed,
+  lighter: #ebeef5,
+  extra-light: #f2f6fc,
+  hover: #c0c4cc,
+);
+
+$background: (
+  base: #f5f7fa,
+);
+
+$components: (
+  button: (
+    disabled-color: #c0c4cc,
+    disabled-background: #ffffff,
+    disabled-border: #ebeef5,
+  ),
+  input: (
+    background: #ffffff,
+    focus-fill: #ffffff,
+  ),
+  select: (
+    dropdown-background: #ffffff,
+  ),
+  dialog: (
+    background: #ffffff,
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3),
+  ),
+  table: (
+    header-background: #ffffff,
+  ),
+  pagination: (
+    background: #ffffff,
+    disabled-background: #ffffff,
+  ),
+  popover: (
+    background: #ffffff,
+  ),
+  tooltip: (
+    color: #ffffff,
+  ),
+  menu: (
+    background: #ffffff,
+  ),
+  collapse: (
+    header-background: #ffffff,
+    content-background: #ffffff,
+  ),
+  backtop: (
+    background: #ffffff,
+  ),
+  avatar: (
+    background: #c0c4cc,
+  ),
+  skeleton: (
+    color: #f2f2f2,
+    to-color: #e6e6e6,
+  ),
+  svg: (
+    monochrome-grey: #dcdde0,
+  ),
+  rate: (
+    icon-color: #c0c4cc,
+  ),
+  descriptions: (
+    label-background: #fafafa,
+  ),
+);
+
+$box-shadow: (
+  base: #{0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.04)},
+  dark: #{0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.12)},
+  light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)},
+);
+
+@mixin inject($prefix, $vars) {
+  @each $name, $value in $vars {
+    --#{$prefix}-#{$name}: #{$value};
+  }
+}
+
+:root {
+  --color-primary: #{$color-primary};
+
+  @include inject(color, $color);
+
+  --color-primary-light-2: #{mix($mix-color, $color-primary, 20%)};
+  --color-primary-light-7: #{mix($mix-color, $color-primary, 70%)};
+  --color-primary-light-9: #{mix($mix-color, $color-primary, 90%)};
+
+  @each $type, $attr in $color {
+    --color-#{$type}-light: #{mix($mix-color, $attr, 80%)};
+  }
+  @each $type, $attr in $color {
+    --color-#{$type}-lighter: #{mix($mix-color, $attr, 90%)};
+  }
+
+  @include inject(text, $text);
+  @include inject(border, $border);
+  @include inject(background, $background);
+  @include inject(box-shadow, $box-shadow);
+}
+
+@each $com, $attrs in $components {
+  .el-#{$com} {
+    @include inject($com, $attrs);
+  }
+}

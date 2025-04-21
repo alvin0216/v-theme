@@ -49,9 +49,9 @@
     }
 
     &.in-range div {
-      background-color: $--datepicker-inrange-background-color;
+      background-color: var(--border-color-extra-light);
       &:hover {
-        background-color: $--datepicker-inrange-hover-background-color;
+        background-color: var(--border-color-extra-light);
       }
     }
     &.start-date div,

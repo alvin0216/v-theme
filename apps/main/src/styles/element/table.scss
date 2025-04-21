@@ -309,7 +309,10 @@
     left: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    box-shadow: $--table-fixed-box-shadow;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    html.dark & {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
 
     &::before {
       content: '';

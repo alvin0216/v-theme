@@ -6,6 +6,7 @@
 
 @import './element/index.scss';
 
-html.dark {
+html {
+  color: var(--text-regular);
   background-color: var(--fill-overlay-dark);
 }

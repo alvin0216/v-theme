@@ -26,6 +26,9 @@
       width: 100%;
       height: 100%;
       vertical-align: top;
+      html.dark & {
+        fill: var(--border-color-base);
+      }
     }
   }
 

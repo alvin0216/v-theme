@@ -1,4 +1,5 @@
 @import 'common/var';
+@import './theme/mixins.scss';
 
 body {
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
@@ -12,13 +13,23 @@ a {
   color: var(--color-primary);
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
-  }
+  @include apply-themes() using ($theme) {
+    $color-primary: get-theme-var($theme, $colors, color-primary);
+    $tint: get-theme-var($theme, $mix, hover-tint-percent);
+    $shade: get-theme-var($theme, $mix, active-shade-percent);
+    $base: get-theme-var($theme, $mix, base);
 
-  &:active {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    $hover-color: mix($base, $color-primary, $tint);
+    $active-color: mix($--color-black, $color-primary, $shade);
+
+    &:hover,
+    &:focus {
+      color: $hover-color;
+    }
+
+    &:active {
+      color: $active-color;
+    }
   }
 }
 

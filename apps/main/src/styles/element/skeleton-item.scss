@@ -9,11 +9,14 @@
 
 @include b(skeleton) {
   @include e(item) {
-    background: $--skeleton-color;
+    background: #f2f2f2;
     display: inline-block;
     height: 16px;
     border-radius: $--border-radius-base;
     width: 100%;
+    html.dark {
+      background: #303030;
+    }
   }
 
   @include e(circle) {
@@ -78,7 +81,9 @@
       fill: $--svg-monochrome-grey;
       width: 22%;
       height: 22%;
+      html.dark & {
+        fill: var(--border-color-base);
+      }
     }
   }
-
 }

@@ -74,7 +74,7 @@
   @include e(dropdown) {
     margin: 5px 0;
     font-size: $--cascader-menu-font-size;
-    background: $--cascader-menu-fill;
+    background: var(--fill-overlay);
     border: var(--border-light);
     border-radius: $--cascader-menu-radius;
     box-shadow: $--cascader-menu-shadow;
@@ -98,7 +98,11 @@
       max-width: 100%;
       margin: 2px 0 2px 6px;
       text-overflow: ellipsis;
-      background: $--cascader-tag-background;
+      background: #f0f2f5;
+
+      html.dark & {
+        background: #303030;
+      }
 
       &:not(.is-hit) {
         border-color: transparent;

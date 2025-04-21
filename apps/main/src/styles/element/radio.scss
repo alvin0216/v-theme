@@ -95,7 +95,7 @@
 
     @include when(disabled) {
       .el-radio__inner {
-        background-color: $--radio-disabled-input-fill;
+        background-color: var(--fill-input);
         border-color: var(--border-color-light);
         cursor: not-allowed;
 
@@ -150,7 +150,7 @@
     border-radius: $--radio-input-border-radius;
     width: $--radio-input-width;
     height: $--radio-input-height;
-    background-color: $--radio-input-background-color;
+    background-color: var(--fill-blank);
     position: relative;
     cursor: pointer;
     display: inline-block;

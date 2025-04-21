@@ -27,9 +27,12 @@
     border-top: 1px solid #e4e4e4;
     padding: 4px;
     text-align: right;
-    background-color: #fff;
+    background-color: var(--fill-overlay);
     position: relative;
     font-size: 0;
+    html.dark & {
+      border-top: 1px solid var(--border-color-light);
+    }
   }
 
   @include e(shortcut) {
@@ -70,6 +73,14 @@
       color: #cccccc;
       cursor: not-allowed;
     }
+
+    html.dark & {
+      color: red;
+      border: 1px solid #424243;
+      &[disabled] {
+        color: var(--text-disabled);
+      }
+    }
   }
 
   @include e(icon-btn) {
@@ -105,11 +116,14 @@
   top: 0;
   bottom: 0;
   width: 110px;
-  border-right: 1px solid $--datepicker-inner-border-color;
+  border-right: 1px solid #e4e4e4;
   box-sizing: border-box;
   padding-top: 6px;
-  background-color: #fff;
+  background-color: var(--fill-overlay);
   overflow: auto;
+  html.dark & {
+    border-right: 1px solid var(----border-color-light);
+  }
 }
 
 .el-picker-panel *[slot='sidebar'] + .el-picker-panel__body,

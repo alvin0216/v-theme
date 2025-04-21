@@ -28,7 +28,10 @@
     &.is-bordered-label {
       font-weight: bold;
       color: var(--text-secondary);
-      background: $--descriptions-item-bordered-label-background;
+      background: #fafafa;
+      html.dark & {
+        background: #262627;
+      }
     }
     &:not(.is-bordered-label) {
       margin-right: 10px;

@@ -1,5 +1,5 @@
 // $color-primary: #294e95;
-$color-primary: #294e95;
+$color-primary: #409eff;
 $dark-color-primary: #409eff;
 
 $--color-success: #67c23a;
@@ -129,5 +129,18 @@ $box-shadow: (
     0px 12px 32px #000000,
     0px 8px 16px -8px #000000},
     box-shadow-light: #{0px 0px 12px rgba(0, 0, 0, 0.72)},
+  ),
+);
+
+$mix: (
+  light: (
+    base: $--color-white,
+    hover-tint-percent: 20%,
+    active-shade-percent: 10%,
+  ),
+  dark: (
+    base: $--color-dark,
+    hover-tint-percent: 30%,
+    active-shade-percent: 20%,
   ),
 );

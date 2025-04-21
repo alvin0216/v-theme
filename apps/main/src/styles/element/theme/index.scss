@@ -3,3 +3,7 @@
 @import './checkbox-vars.scss';
 
 @include inject-root-vars($colors, $texts, $borders, $background, $box-shadow);
+
+html.dark {
+  scrollbar-color: var(--border-color-base) var(--fill-overlay-dark);
+}

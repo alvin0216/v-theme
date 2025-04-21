@@ -34,7 +34,8 @@
     height: 0;
     cursor: pointer;
     border-radius: inherit;
-    background-color: rgba(var(--text-secondary), 0.3);
+    // background-color: rgba(var(--text-secondary), 0.3);
+    background-color: red;
     transition: 0.3s background-color;
 
     &:hover {

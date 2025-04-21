@@ -21,7 +21,7 @@
 
   @include e(body) {
     color: var(--text-regular);
-    background-color: #fff;
+    background-color: var(--fill-blank);
 
     .el-descriptions__table {
       border-collapse: collapse;

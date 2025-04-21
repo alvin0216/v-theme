@@ -67,6 +67,9 @@
       &:not(.is-disabled):hover,
       &:not(.is-disabled):focus {
         background-color: #fff;
+        html.dark & {
+          background-color: var(--color-primary-light-9);
+        }
       }
     }
     & > .el-submenu {
@@ -107,7 +110,7 @@
     & .el-menu {
       & .el-menu-item,
       & .el-submenu__title {
-        background-color: #fff;
+        background-color: var(--fill-blank);
         float: none;
         height: 36px;
         line-height: 36px;

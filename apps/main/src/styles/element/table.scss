@@ -11,7 +11,7 @@
   flex: 1;
   width: 100%;
   max-width: 100%;
-  background-color: #fff;
+  background-color: var(--fill-blank);
   font-size: 14px;
   color: var(--color-regular);
 
@@ -63,7 +63,7 @@
   }
 
   @include e(expanded-cell) {
-    background-color: #fff;
+    background-color: var(--fill-blank);
 
     // 纯属为了增加权重
     &[class*='cell'] {
@@ -169,7 +169,7 @@
   }
 
   tr {
-    background-color: #fff;
+    background-color: var(--fill-blank);
 
     input[type='checkbox'] {
       margin: 0;

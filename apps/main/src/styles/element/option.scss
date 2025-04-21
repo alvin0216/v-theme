@@ -21,6 +21,9 @@
 
       &:hover {
         background-color: #fff;
+        html.dark & {
+          background-color: unset;
+        }
       }
     }
 

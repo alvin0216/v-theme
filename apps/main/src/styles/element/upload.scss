@@ -59,7 +59,7 @@
 }
 
 @include b(upload-dragger) {
-  background-color: #fff;
+  background-color: var(--fill-blank);
   border: 1px dashed #d9d9d9;
   border-radius: 6px;
   box-sizing: border-box;
@@ -275,7 +275,7 @@
 
     .el-upload-list__item {
       overflow: hidden;
-      background-color: #fff;
+      background-color: var(--fill-blank);
       border: 1px solid #c0ccda;
       border-radius: 6px;
       box-sizing: border-box;
@@ -390,7 +390,7 @@
     .el-upload-list__item {
       overflow: hidden;
       z-index: 0;
-      background-color: #fff;
+      background-color: var(--fill-blank);
       border: 1px solid #c0ccda;
       border-radius: 6px;
       box-sizing: border-box;

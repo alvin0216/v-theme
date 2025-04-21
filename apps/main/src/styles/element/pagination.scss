@@ -202,6 +202,10 @@
       &.disabled {
         color: var(--text-placeholder);
       }
+
+      html.dark & {
+        background-color: #303030;
+      }
     }
 
     .btn-prev,

@@ -9,7 +9,7 @@
   width: $--msgbox-width;
   padding-bottom: 10px;
   vertical-align: middle;
-  background-color: #fff;
+  background-color: var(--fill-overlay-dark);
   border-radius: $--msgbox-border-radius;
   border: 1px solid var(--border-color-lighter);
   font-size: $--messagebox-font-size;

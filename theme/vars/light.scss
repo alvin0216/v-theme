@@ -1,0 +1,68 @@
+$light: (
+  color: (
+    primary: #294e95,
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399,
+  ),
+  text: (
+    primary: #303133,
+    regular: #606266,
+    secondary: #909399,
+    placeholder: #c0c4cc,
+  ),
+  border: (
+    base: #dcdfe6,
+    hover: #c0c4cc,
+    light: #e4e7ed,
+    lighter: #ebeef5,
+    extra-light: #f2f6fc,
+  ),
+  box-shadow: (
+    base: #{0 2px 4px rgba(0, 0, 0, 0.12),
+    0 0 6px rgba(0, 0, 0, 0.04)},
+    dark: #{0 2px 4px rgba(0, 0, 0, 0.12),
+    0 0 6px rgba(0, 0, 0, 0.12)},
+    light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)},
+  ),
+);
+
+$--color-black: #000;
+$--color-white: #fff;
+
+:root {
+  $color: map-get($light, 'color');
+  $primary: map-get($color, 'primary');
+  // success warning danger info
+  $color-except-primary: map-remove($color, 'primary');
+
+  @each $name, $item in $light {
+    @each $key, $value in $item {
+      --#{$name}-#{$key}: #{$value};
+    }
+  }
+
+  @for $i from 1 through 9 {
+    --color-primary-light-#{$i}: #{mix($--color-white, $primary, $i * 10%)};
+  }
+
+  @each $type, $value in $color-except-primary {
+    --color-#{$type}-light: #{mix($--color-white, $value, 80%)};
+    --color-#{$type}-lighter: #{mix($--color-white, $value, 90%)};
+  }
+
+  --slider-button-hover-color: #{mix($primary, black, 97%)};
+}
+
+.el-button {
+  $color: map-get($light, 'color');
+  $primary: map-get($color, 'primary');
+  $--button-hover-tint-percent: 20%;
+  $--button-active-shade-percent: 10%;
+  --active-color: mix($--color-black, $primary, $--button-active-shade-percent);
+  --hover-color: mix($--color-white, $primary, $--button-hover-tint-percent);
+
+  @each $type, $color in $vars {
+  }
+}

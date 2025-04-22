@@ -1,0 +1,60 @@
+.el-button.el-button--primary {
+  --primary-hover-background: #79bbff;
+  --primary-hover-border: #79bbff;
+  --primary-active-background: #337ecc;
+  --primary-active-border: #337ecc;
+  --primary-disabled-background: #a0cfff;
+  --primary-disabled-border: #a0cfff;
+  --primary-plain-background: #ecf5ff;
+  --primary-plain-border: #b3d8ff;
+  --primary-plain-disabled-color: #8cc5ff;
+  --primary-plain-disabled-border: #d9ecff;
+}
+.el-button.el-button--info {
+  --info-hover-background: #b1b3b8;
+  --info-hover-border: #b1b3b8;
+  --info-active-background: #73767a;
+  --info-active-border: #73767a;
+  --info-disabled-background: #c8c9cc;
+  --info-disabled-border: #c8c9cc;
+  --info-plain-background: #f4f4f5;
+  --info-plain-border: #d3d4d6;
+  --info-plain-disabled-color: #bcbec2;
+  --info-plain-disabled-border: #e9e9eb;
+}
+.el-button.el-button--success {
+  --success-hover-background: #95d475;
+  --success-hover-border: #95d475;
+  --success-active-background: #529b2e;
+  --success-active-border: #529b2e;
+  --success-disabled-background: #b3e19d;
+  --success-disabled-border: #b3e19d;
+  --success-plain-background: #f0f9eb;
+  --success-plain-border: #c2e7b0;
+  --success-plain-disabled-color: #a4da89;
+  --success-plain-disabled-border: #e1f3d8;
+}
+.el-button.el-button--warning {
+  --warning-hover-background: #eebe77;
+  --warning-hover-border: #eebe77;
+  --warning-active-background: #b88230;
+  --warning-active-border: #b88230;
+  --warning-disabled-background: #f3d19e;
+  --warning-disabled-border: #f3d19e;
+  --warning-plain-background: #fdf6ec;
+  --warning-plain-border: #f5dab1;
+  --warning-plain-disabled-color: #f0c78a;
+  --warning-plain-disabled-border: #faecd8;
+}
+.el-button.el-button--danger {
+  --danger-hover-background: #f89898;
+  --danger-hover-border: #f89898;
+  --danger-active-background: #c45656;
+  --danger-active-border: #c45656;
+  --danger-disabled-background: #fab6b6;
+  --danger-disabled-border: #fab6b6;
+  --danger-plain-background: #fef0f0;
+  --danger-plain-border: #fbc4c4;
+  --danger-plain-disabled-color: #f9a7a7;
+  --danger-plain-disabled-border: #fde2e2;
+}

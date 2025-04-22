@@ -54,12 +54,18 @@ $buttons: (
   );
 }
 
+& {
+  @include set-component-css-var($component, map-get($themes, 'light'));
+}
+
+html.dark & {
+  @include set-component-css-var($component, map-get($themes, 'dark'));
+}
+
 .el-button {
   @include inject-component('button', $buttons);
 
   @each $v in primary success warning danger info {
-    &.el-button--#{$v} {
-      @include inject-variant($v);
-    }
+    @include inject-variant($v);
   }
 }

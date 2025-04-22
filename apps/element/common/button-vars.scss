@@ -1,0 +1,153 @@
+@import './var.scss';
+
+/* Button
+-------------------------- */
+/// fontSize||Font|1
+$--button-font-size: $--font-size-base !default;
+/// fontWeight||Font|1
+$--button-font-weight: $--font-weight-primary !default;
+/// borderRadius||Border|2
+$--button-border-radius: $--border-radius-base !default;
+/// padding||Spacing|3
+$--button-padding-vertical: 12px !default;
+/// padding||Spacing|3
+$--button-padding-horizontal: 20px !default;
+
+/// fontSize||Font|1
+$--button-medium-font-size: $--font-size-base !default;
+/// borderRadius||Border|2
+$--button-medium-border-radius: $--border-radius-base !default;
+/// padding||Spacing|3
+$--button-medium-padding-vertical: 10px !default;
+/// padding||Spacing|3
+$--button-medium-padding-horizontal: 20px !default;
+
+/// fontSize||Font|1
+$--button-small-font-size: 12px !default;
+$--button-small-border-radius: #{$--border-radius-base - 1} !default;
+/// padding||Spacing|3
+$--button-small-padding-vertical: 9px !default;
+/// padding||Spacing|3
+$--button-small-padding-horizontal: 15px !default;
+/// fontSize||Font|1
+$--button-mini-font-size: 12px !default;
+$--button-mini-border-radius: #{$--border-radius-base - 1} !default;
+/// padding||Spacing|3
+$--button-mini-padding-vertical: 7px !default;
+/// padding||Spacing|3
+$--button-mini-padding-horizontal: 15px !default;
+
+/// color||Color|0
+$--button-default-font-color: $--color-text-regular !default;
+/// color||Color|0
+$--button-default-background-color: transparent !default;
+/// color||Color|0
+$--button-default-border-color: $--border-color-base !default;
+
+/// color||Color|0
+$--button-disabled-font-color: rgba(255, 255, 255, 0.5) !default;
+/// color||Color|0
+$--button-disabled-background-color: transparent !default;
+/// color||Color|0
+$--button-disabled-border-color: $--border-color-light !default;
+
+/// color||Color|0
+$--button-primary-border-color: $--color-primary !default;
+/// color||Color|0
+$--button-primary-font-color: $--color-white !default;
+/// color||Color|0
+$--button-primary-background-color: $--color-primary !default;
+/// color||Color|0
+$--button-success-border-color: $--color-success !default;
+/// color||Color|0
+$--button-success-font-color: $--color-white !default;
+/// color||Color|0
+$--button-success-background-color: $--color-success !default;
+/// color||Color|0
+$--button-warning-border-color: $--color-warning !default;
+/// color||Color|0
+$--button-warning-font-color: $--color-white !default;
+/// color||Color|0
+$--button-warning-background-color: $--color-warning !default;
+/// color||Color|0
+$--button-danger-border-color: $--color-danger !default;
+/// color||Color|0
+$--button-danger-font-color: $--color-white !default;
+/// color||Color|0
+$--button-danger-background-color: $--color-danger !default;
+/// color||Color|0
+$--button-info-border-color: $--color-info !default;
+/// color||Color|0
+$--button-info-font-color: $--color-white !default;
+/// color||Color|0
+$--button-info-background-color: $--color-info !default;
+
+$--button-hover-tint-percent: 30% !default;
+$--button-active-shade-percent: 20% !default;
+
+$button-vars: (
+  active-color: mix($--color-black, $--color-primary, $--button-active-shade-percent),
+  hover-color: mix($--color-white, $--color-primary, $--button-hover-tint-percent),
+);
+
+@mixin button-variant($type, $color, $background-color, $border-color) {
+  --#{$type}-hover-background: #{mix($--color-white, $background-color, $--button-hover-tint-percent)};
+  --#{$type}-hover-border: #{mix($--color-white, $border-color, $--button-hover-tint-percent)};
+  --#{$type}-active-background: #{mix($--color-black, $background-color, $--button-active-shade-percent)};
+  --#{$type}-active-border: #{mix($--color-black, $border-color, $--button-active-shade-percent)};
+  --#{$type}-disabled-background: #{mix($background-color, $--color-white)};
+  --#{$type}-disabled-border: #{mix($border-color, $--color-white)};
+  --#{$type}-plain-background: #{mix($--color-white, $background-color, 90%)};
+  --#{$type}-plain-border: #{mix($--color-white, $background-color, 60%)};
+  --#{$type}-plain-disabled-color: #{mix($--color-white, $background-color, 40%)};
+  --#{$type}-plain-disabled-border: #{mix($--color-white, $background-color, 80%)};
+}
+
+.el-button {
+  //   @each $name, $value in $button-vars {
+  //     --button-#{$name}: #{$value};
+  //   }
+
+  &.el-button--primary {
+    @include button-variant(
+      primary,
+      $--button-primary-font-color,
+      $--button-primary-background-color,
+      $--button-primary-border-color
+    );
+  }
+
+  &.el-button--info {
+    @include button-variant(
+      info,
+      $--button-info-font-color,
+      $--button-info-background-color,
+      $--button-info-border-color
+    );
+  }
+
+  &.el-button--success {
+    @include button-variant(
+      success,
+      $--button-success-font-color,
+      $--button-success-background-color,
+      $--button-success-border-color
+    );
+  }
+  &.el-button--warning {
+    @include button-variant(
+      warning,
+      $--button-warning-font-color,
+      $--button-warning-background-color,
+      $--button-warning-border-color
+    );
+  }
+  &.el-button--danger {
+    @include button-variant(
+      danger,
+      $--button-danger-font-color,
+      $--button-danger-background-color,
+      $--button-danger-border-color
+    );
+  }
+}

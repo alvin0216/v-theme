@@ -1,0 +1,10 @@
+@import './theme-vars.scss';
+
+@mixin apply-themes() {
+  @each $theme in light, dark {
+    $selector: if($theme == light, '&', 'html.#{$theme} &');
+    #{$selector} {
+      @content (map-get(map-get($mix,$theme)));
+    }
+  }
+}

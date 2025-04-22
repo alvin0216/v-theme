@@ -1,0 +1,115 @@
+@import './chalk-var.scss';
+
+$--color-primary: #294e95;
+
+:root {
+  // Brand Colors
+  --color-primary: #{$--color-primary};
+  --color-primary-light-1: #{$--color-primary-light-1};
+  --color-primary-light-2: #{$--color-primary-light-2};
+  --color-primary-light-3: #{$--color-primary-light-3};
+  --color-primary-light-4: #{$--color-primary-light-4};
+  --color-primary-light-5: #{$--color-primary-light-5};
+  --color-primary-light-6: #{$--color-primary-light-6};
+  --color-primary-light-7: #{$--color-primary-light-7};
+  --color-primary-light-8: #{$--color-primary-light-8};
+  --color-primary-light-9: #{$--color-primary-light-9};
+
+  // Status Colors
+  --color-success: #{$--color-success};
+  --color-warning: #{$--color-warning};
+  --color-danger: #{$--color-danger};
+  --color-info: #{$--color-info};
+
+  // Light Variants
+  --color-success-light: #{$--color-success-light};
+  --color-warning-light: #{$--color-warning-light};
+  --color-danger-light: #{$--color-danger-light};
+  --color-info-light: #{$--color-info-light};
+
+  // Lighter Variants
+  --color-success-lighter: #{$--color-success-lighter};
+  --color-warning-lighter: #{$--color-warning-lighter};
+  --color-danger-lighter: #{$--color-danger-lighter};
+  --color-info-lighter: #{$--color-info-lighter};
+
+  // Text Colors
+  --color-text-primary: #{$--color-text-primary};
+  --color-text-regular: #{$--color-text-regular};
+  --color-text-secondary: #{$--color-text-secondary};
+  --color-text-placeholder: #{$--color-text-placeholder};
+
+  // border
+  --border-color-base: #{$--border-color-base};
+  --border-color-light: #{$--border-color-light};
+  --border-color-lighter: #{$--border-color-lighter};
+  --border-color-extra-light: #{$--border-color-extra-light};
+
+  // Background Colors
+  --background-color-base: #{$--background-color-base};
+
+  --box-shadow-base: #{$--box-shadow-base};
+  --box-shadow-light: #{$--box-shadow-light};
+  --box-shadow-dark: #{$--box-shadow-dark};
+
+  --font-color-disabled-base: #{$--font-color-disabled-base};
+
+  // $--radio-input-background-color: transparent !default;
+  --checkbox-background-color: #{$--checkbox-background-color};
+  --select-option-disabled-background: #{$--select-option-disabled-background};
+  --select-option-disabled-color: #{$--select-option-disabled-color};
+
+  --collapse-header-background-color: #{$--collapse-header-background-color};
+  --collapse-content-background-color: #{$--collapse-content-background-color};
+  --cascader-menu-fill: #{$--cascader-menu-fill};
+
+  --avatar-background-color: #{$--avatar-background-color};
+  --skeleton-color: #{$--skeleton-color};
+  --transfer-border-color: #{$--transfer-border-color};
+
+  --slider-button-hover-color: #{mix($--color-primary, black, 97%)};
+
+  //   fill
+
+  --fill-blank: #fff;
+}
+
+$button: (
+  active-color: mix($--color-black, $--color-primary, $--button-active-shade-percent),
+  hover-color: mix($--color-white, $--color-primary, $--button-hover-tint-percent),
+  loading-background-color: rgba(255, 255, 255, 0.35),
+);
+
+@mixin inject($prefix, $vars) {
+  .el-#{$prefix} {
+    @each $name, $value in $vars {
+      --#{$prefix}-#{$name}: #{$value};
+    }
+  }
+}
+
+@include inject('button', $button);
+
+$vars: (
+  primary: $--color-primary,
+  success: $--color-success,
+  warning: $--color-warning,
+  danger: $--color-danger,
+  info: $--color-info,
+);
+
+@each $type, $color in $vars {
+  .el-button--#{$type} {
+    --button-#{$type}-hover-color: #{mix($--color-white, $color, $--button-hover-tint-percent)};
+    --button-#{$type}-hover-border-color: #{mix($--color-white, $color, $--button-hover-tint-percent)};
+    --button-#{$type}-active-background: #{mix($--color-black, $color, $--button-active-shade-percent)};
+    --button-#{$type}-active-border-color: #{mix($--color-black, $color, $--button-active-shade-percent)};
+    --button-#{$type}-disabled-background: #{mix($color, $--color-white)};
+    --button-#{$type}-disabled-border-color: #{mix($color, $--color-white)};
+    --button-#{$type}-plain-background: #{mix($--color-white, $color, 90%)};
+    --button-#{$type}-plain-border-color: #{mix($--color-white, $color, 60%)};
+    --button-#{$type}-plain-disabled-color: #{mix($--color-white, $color, 40%)};
+    --button-#{$type}-plain-disabled-background-color: #{mix($--color-white, $color, 90%)};
+    --button-#{$type}-plain-disabled-border-color: #{mix($--color-white, $color, 80%)};
+  }
+}

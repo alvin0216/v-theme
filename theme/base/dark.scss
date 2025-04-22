@@ -66,6 +66,7 @@ html.dark {
   --transfer-border-color: #{$--transfer-border-color};
 
   --fill-blank: transparent;
+  --fill-dark: #{$--color-dark};
 }
 
 $button: (

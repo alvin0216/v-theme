@@ -13,7 +13,7 @@
 export default {
   name: 'App',
   components: {
-    Example: () => import('./examples/Button.vue'),
+    Example: () => import('./examples/Input.vue'),
   },
   methods: {
     toggle() {
@@ -34,10 +34,6 @@ header {
   .el-button {
     width: 100%;
   }
-}
-
-h2 {
-  color: var(--color-text-regular);
 }
 
 .container {

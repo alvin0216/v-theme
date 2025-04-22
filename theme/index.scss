@@ -1,1 +1,8 @@
-// @import './base/dark.css';
+@import '../element/base.scss';
+@import '../element/button.scss';
+@import '../element/input.scss';
+
+html.dark {
+  color: var(--color-text-regular);
+  background-color: var(--fill-dark);
+}

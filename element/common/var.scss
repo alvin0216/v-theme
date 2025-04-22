@@ -60,9 +60,9 @@ $--box-shadow-light: var(--box-shadow-light);
 
 /* Fill
 -------------------------- */
-$--fill-base: $--color-white !default;
+$--fill-base: var(--fill-blank) !default;
 
-$--font-color-disabled-base: #bbb !default;
+$--font-color-disabled-base: var(--font-color-disabled-base) !default;
 
 /* Disable base
 -------------------------- */
@@ -252,7 +252,7 @@ $--input-border: $--border-base !default;
 $--input-border-color: $--border-color-base !default;
 $--input-border-radius: $--border-radius-base !default;
 $--input-border-color-hover: $--border-color-hover !default;
-$--input-background-color: $--color-white !default;
+$--input-background-color: var(--fill-blank) !default;
 $--input-fill-disabled: $--disabled-fill-base !default;
 $--input-color-disabled: $--font-color-disabled-base !default;
 $--input-icon-color: $--color-text-placeholder !default;

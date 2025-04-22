@@ -58,7 +58,7 @@
   @include when(plain) {
     &:hover,
     &:focus {
-      background: $--color-white;
+      background-color: var(--fill-blank);
       border-color: $--color-primary;
       color: $--color-primary;
     }
@@ -83,7 +83,7 @@
       color: $--button-disabled-font-color;
       cursor: not-allowed;
       background-image: none;
-      background-color: $--button-disabled-background-color;
+      background-color: var(--fill-blank);
       border-color: $--button-disabled-border-color;
     }
 

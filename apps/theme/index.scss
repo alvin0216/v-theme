@@ -1,0 +1,7 @@
+@import './generator/root.scss';
+
+html {
+  color: var(--text-regular);
+  scrollbar-color: var(--border-color-base) var(--fill-overlay-dark);
+  background-color: var(--fill-overlay-dark);
+}

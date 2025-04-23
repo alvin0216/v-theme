@@ -1,91 +1,84 @@
-@import './mixins.scss';
-
-$black: #000;
 $white: #fff;
+$black: #000;
+$dark: #141414;
 
-@mixin inject-light-theme() {
-  $theme: (
-    color: (
-      primary: #294e95,
-      success: #67c23a,
-      warning: #e6a23c,
-      danger: #f56c6c,
-      info: #909399,
-    ),
-    text: (
-      primary: #303133,
-      regular: #606266,
-      secondary: #909399,
-      placeholder: #c0c4cc,
-    ),
-    border: (
-      color-base: #dcdfe6,
-      color-hover: #c0c4cc,
-      color-light: #e4e7ed,
-      color-lighter: #ebeef5,
-      color-extra-light: #f2f6fc,
-    ),
-    // 填充色 (背景色)
-    fill:
-      (
-        blank: transparent,
-      ),
-    box-shadow: (
-      base: #{0 2px 4px rgba(0, 0, 0, 0.12),
-      0 0 6px rgba(0, 0, 0, 0.04)},
-      dark: #{0 2px 4px rgba(0, 0, 0, 0.12),
-      0 0 6px rgba(0, 0, 0, 0.12)},
-      light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)},
-    ),
-  );
+@mixin gen-dark-vars() {
+  $primary: #409eff;
+  $success: #67c23a;
+  $warning: #e6a23c;
+  $danger: #f56c6c;
+  $info: #909399;
 
-  :root {
-    @each $k, $v in $theme {
-      @include define-vars($k, $v);
-    }
-    @include define-vars(text, gen-mix-color($mix-color: $white, $color: map-get($theme, color)));
-  }
+  html.dark {
+    --color-primary: #{$primary};
+    --color-success: #{$success};
+    --color-warning: #{$warning};
+    --color-danger: #{$danger};
+    --color-info: #{$info};
 
-  // components
-  $hover-percent: 20%;
-  $active-percent: 10%;
-  $color: map-get($theme, color);
-  $primary: map-get($color, primary);
+    --text-primary: #e5eaf3;
+    --text-regular: #cfd3dc;
+    --text-secondary: #a3a6ad;
+    --text-placeholder: #8d9095;
 
-  $components: (
-    button: (
-      active-color: #{mix($black, $primary, $active-percent)},
-      hover-color: #{mix($white, $primary, $hover-percent)},
-      // 按钮
-    ),
-  );
+    --border-color-base: #dcdfe6;
+    --border-color-hover: #c0c4cc;
+    --border-color-light: #e4e7ed;
+    --border-color-lighter: #ebeef5;
+    --border-color-extra-light: #f2f6fc;
 
-  .el-button {
-    $button: (
-      active-color: #{mix($black, $primary, $active-percent)},
-      hover-color: #{mix($white, $primary, $hover-percent)},
-      disabled-color: #fff,
+    // background
+    --fill-blank: transparent;
+    --fill-dark: #{$dark};
+
+    // box shadow
+    --box-shadow-base: #{0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72)};
+    --box-shadow-dark: #{0px 16px 48px 16px rgba(0, 0, 0, 0.72), 0px 12px 32px #000000, 0px 8px 16px -8px #000000};
+    --box-shadow-light: #{0px 0px 12px rgba(0, 0, 0, 0.72)};
+
+    --primary-light-2: mix($dark, $primary, 20%);
+    --primary-light-7: mix($dark, $primary, 70%);
+    --primary-light-9: mix($dark, $primary, 90%);
+    --success-light: mix($dark, $success, 80%);
+    --warning-light: mix($dark, $warning, 80%);
+    --danger-light: mix($dark, $danger, 80%);
+    --info-light: mix($dark, $info, 80%);
+    --success-lighter: mix($dark, $success, 90%);
+    --warning-lighter: mix($dark, $warning, 90%);
+    --danger-lighter: mix($dark, $danger, 90%);
+    --info-lighter: mix($dark, $info, 90%);
+
+    // components
+    $colors: (
+      primary: $primary,
+      success: $success,
+      warning: $warning,
+      danger: $danger,
+      info: $info,
     );
 
-    @include define-vars(button, $button);
+    $hover-percent: 30%;
+    $active-percent: 20%;
 
-    @each $type, $value in $color {
-      &.el-button--#{$type} {
-        @include define-vars(
-          button,
-          (
-            #{$type}-hover: #{mix($white, $value, $hover-percent)},
-            #{$type}-active: #{mix($black, $value, $active-percent)},
-            #{$type}-disabled: #{mix($value, $white)},
-            #{$type}-plain-background: #{mix($white, $value, 90%)},
-            #{$type}-plain-border-color: #{mix($white, $value, 60%)},
-            #{$type}-plain-disabled-color: #{mix($white, $value, 40%)},
-            #{$type}-plain-disabled-background-color: #{mix($white, $value, 90%)}
-          )
-        );
+    .el-button {
+      --button-active-color: #254686;
+      --button-hover-color: #5471aa;
+      --button-disabled-color: #fff;
+      --button-loading-fill: rgba(255, 255, 255, 0.35);
+
+      @each $type, $color in $colors {
+        &.el-button--#{$type} {
+          --button-#{$type}-hover: #{mix($dark, $color, $hover-percent)};
+          --button-#{$type}-active: #{mix($white, $color, $active-percent)};
+          --button-#{$type}-disabled: #{mix($color, $dark)};
+          --button-#{$type}-plain-background: #{mix($dark, $color, 90%)};
+          --button-#{$type}-plain-border-color: #{mix($dark, $color, 60%)};
+          --button-#{$type}-plain-disabled-color: #{mix($dark, $color, 40%)};
+          --button-#{$type}-plain-disabled-background-color: #{mix($dark, $color, 90%)};
+        }
       }
     }
   }
 }
 
-@include inject-light-theme();
+@include gen-dark-vars();

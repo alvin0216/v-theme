@@ -1,10 +1,11 @@
 @import './vars/light.scss';
+@import './vars/dark.scss';
 @import '../element/base.scss';
 @import '../element/button.scss';
 @import '../element/input.scss';
 @import './element/card.scss';
 
 html.dark {
-  color: var(--color-text-regular);
+  color: var(-text-regular);
   background-color: var(--fill-dark);
 }

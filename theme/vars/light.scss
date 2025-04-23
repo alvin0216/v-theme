@@ -1,92 +1,83 @@
-@import './mixins.scss';
-
-$black: #000;
 $white: #fff;
+$black: #000;
 
-@mixin inject-light-theme() {
-  $theme: (
-    color: (
-      primary: #294e95,
-      success: #67c23a,
-      warning: #e6a23c,
-      danger: #f56c6c,
-      info: #909399,
-    ),
-    text: (
-      primary: #303133,
-      regular: #606266,
-      secondary: #909399,
-      placeholder: #c0c4cc,
-    ),
-    border: (
-      color-base: #dcdfe6,
-      color-hover: #c0c4cc,
-      color-light: #e4e7ed,
-      color-lighter: #ebeef5,
-      color-extra-light: #f2f6fc,
-    ),
-    // 填充色 (背景色)
-    fill:
-      (
-        // dark transparent
-        blank: #fff,
-      ),
-    box-shadow: (
-      base: #{0 2px 4px rgba(0, 0, 0, 0.12),
-      0 0 6px rgba(0, 0, 0, 0.04)},
-      dark: #{0 2px 4px rgba(0, 0, 0, 0.12),
-      0 0 6px rgba(0, 0, 0, 0.12)},
-      light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)},
-    ),
-  );
+@mixin gen-root-vars() {
+  $primary: #294e95;
+  $success: #67c23a;
+  $warning: #e6a23c;
+  $danger: #f56c6c;
+  $info: #909399;
 
   :root {
-    @each $k, $v in $theme {
-      @include define-vars($k, $v);
-    }
-    @include define-vars(text, gen-mix-color($mix-color: $white, $color: map-get($theme, color)));
+    --color-primary: #{$primary};
+    --color-success: #{$success};
+    --color-warning: #{$warning};
+    --color-danger: #{$danger};
+    --color-info: #{$info};
+
+    --text-primary: #303133;
+    --text-regular: #606266;
+    --text-secondary: #909399;
+    --text-placeholder: #c0c4cc;
+
+    --border-color-base: #dcdfe6;
+    --border-color-hover: #c0c4cc;
+    --border-color-light: #e4e7ed;
+    --border-color-lighter: #ebeef5;
+    --border-color-extra-light: #f2f6fc;
+
+    // background
+    --fill-blank: #fff;
+    --fill-dark: #fff;
+
+    // box shadow
+    --box-shadow-base: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04)};
+    --box-shadow-dark: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12)};
+    --box-shadow-light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)};
+
+    --primary-light-2: mix($white, $primary, 20%);
+    --primary-light-7: mix($white, $primary, 70%);
+    --primary-light-9: mix($white, $primary, 90%);
+    --success-light: mix($white, $success, 80%);
+    --warning-light: mix($white, $warning, 80%);
+    --danger-light: mix($white, $danger, 80%);
+    --info-light: mix($white, $info, 80%);
+    --success-lighter: mix($white, $success, 90%);
+    --warning-lighter: mix($white, $warning, 90%);
+    --danger-lighter: mix($white, $danger, 90%);
+    --info-lighter: mix($white, $info, 90%);
   }
 
   // components
-  $hover-percent: 20%;
-  $active-percent: 10%;
-  $color: map-get($theme, color);
-  $primary: map-get($color, primary);
-
-  $components: (
-    button: (
-      active-color: #{mix($black, $primary, $active-percent)},
-      hover-color: #{mix($white, $primary, $hover-percent)},
-      // 按钮
-    ),
+  $colors: (
+    primary: $primary,
+    success: $success,
+    warning: $warning,
+    danger: $danger,
+    info: $info,
   );
 
+  $hover-percent: 20%;
+  $active-percent: 10%;
+
   .el-button {
-    $button: (
-      active-color: #{mix($black, $primary, $active-percent)},
-      hover-color: #{mix($white, $primary, $hover-percent)},
-      disabled-color: #fff,
-    );
+    --button-active-color: #254686;
+    --button-hover-color: #5471aa;
+    --button-disabled-color: #fff;
+    --button-loading-fill: rgba(255, 255, 255, 0.35);
 
-    @include define-vars(button, $button);
-
-    @each $type, $value in $color {
+    @each $type, $color in $colors {
       &.el-button--#{$type} {
-        @include define-vars(
-          button,
-          (
-            #{$type}-hover: #{mix($white, $value, $hover-percent)},
-            #{$type}-active: #{mix($black, $value, $active-percent)},
-            #{$type}-disabled: #{mix($value, $white)},
-            #{$type}-plain-background: #{mix($white, $value, 90%)},
-            #{$type}-plain-border-color: #{mix($white, $value, 60%)},
-            #{$type}-plain-disabled-color: #{mix($white, $value, 40%)},
-            #{$type}-plain-disabled-background-color: #{mix($white, $value, 90%)}
-          )
-        );
+        --button-#{$type}-hover: #{mix($white, $color, $hover-percent)};
+        --button-#{$type}-active: #{mix($black, $color, $active-percent)};
+        --button-#{$type}-disabled: #{mix($color, $white)};
+        --button-#{$type}-plain-background: #{mix($white, $color, 90%)};
+        --button-#{$type}-plain-border-color: #{mix($white, $color, 60%)};
+        --button-#{$type}-plain-disabled-color: #{mix($white, $color, 40%)};
+        --button-#{$type}-plain-disabled-background-color: #{mix($white, $color, 90%)};
       }
     }
   }
 }
 
-@include inject-light-theme();
+@include gen-root-vars();

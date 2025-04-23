@@ -2,6 +2,7 @@
 @import 'common/var';
 @import 'button';
 @import './popper';
+@import '../theme/mixin.scss';
 
 @include b(dropdown) {
   display: inline-block;
@@ -36,7 +37,9 @@
     }
 
     &.el-button--default::before {
-      // background: mix($--button-default-border-color, transparent, 50%); Todo
+      @include apply-themes() using ($color, $theme) {
+        // background: mix($--button-default-border-color, transparent, 50%);
+      }
     }
 
     &:hover {

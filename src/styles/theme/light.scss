@@ -38,17 +38,17 @@ $black: #000;
     --box-shadow-dark: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12)};
     --box-shadow-light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)};
 
-    --color-primary-light-2: mix($white, $primary, 20%);
-    --color-primary-light-7: mix($white, $primary, 70%);
-    --color-primary-light-9: mix($white, $primary, 90%);
-    --color-success-light: mix($white, $success, 80%);
-    --color-warning-light: mix($white, $warning, 80%);
-    --color-danger-light: mix($white, $danger, 80%);
-    --color-info-light: mix($white, $info, 80%);
-    --color-success-lighter: mix($white, $success, 90%);
-    --color-warning-lighter: mix($white, $warning, 90%);
-    --color-danger-lighter: mix($white, $danger, 90%);
-    --color-info-lighter: mix($white, $info, 90%);
+    --color-primary-light-2: #{mix($white, $primary, 20%)};
+    --color-primary-light-7: #{mix($white, $primary, 70%)};
+    --color-primary-light-9: #{mix($white, $primary, 90%)};
+    --color-success-light: #{mix($white, $success, 80%)};
+    --color-warning-light: #{mix($white, $warning, 80%)};
+    --color-danger-light: #{mix($white, $danger, 80%)};
+    --color-info-light: #{mix($white, $info, 80%)};
+    --color-success-lighter: #{mix($white, $success, 90%)};
+    --color-warning-lighter: #{mix($white, $warning, 90%)};
+    --color-danger-lighter: #{mix($white, $danger, 90%)};
+    --color-info-lighter: #{mix($white, $info, 90%)};
 
     --disabled-input-fill: #f5f7fa;
     --select-multiple-input-color: #666;

@@ -2,6 +2,12 @@
 @import 'common/var';
 
 @mixin genTheme($backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight) {
+  $--tag-primary-color: #294e95;
+
+  html.dark & {
+    $--tag-primary-color: #409eff;
+  }
+
   background-color: mix($--tag-primary-color, $--color-white, $backgroundColorWeight);
   border-color: mix($--tag-primary-color, $--color-white, $borderColorWeight);
   color: mix($--tag-primary-color, $--color-white, $fontColorWeight);

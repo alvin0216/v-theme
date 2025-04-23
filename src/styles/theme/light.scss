@@ -19,6 +19,7 @@ $black: #000;
     --text-regular: #606266;
     --text-secondary: #909399;
     --text-placeholder: #c0c4cc;
+    --text-disabled: #bbb;
 
     --border-color-base: #dcdfe6;
     --border-color-hover: #c0c4cc;
@@ -29,23 +30,45 @@ $black: #000;
     // background
     --fill-blank: #fff;
     --fill-dark: #fff;
+    --fill-bg-base: #f5f7fa;
+    --fill-overlay: #fff;
 
     // box shadow
     --box-shadow-base: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04)};
     --box-shadow-dark: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12)};
     --box-shadow-light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)};
 
-    --primary-light-2: mix($white, $primary, 20%);
-    --primary-light-7: mix($white, $primary, 70%);
-    --primary-light-9: mix($white, $primary, 90%);
-    --success-light: mix($white, $success, 80%);
-    --warning-light: mix($white, $warning, 80%);
-    --danger-light: mix($white, $danger, 80%);
-    --info-light: mix($white, $info, 80%);
-    --success-lighter: mix($white, $success, 90%);
-    --warning-lighter: mix($white, $warning, 90%);
-    --danger-lighter: mix($white, $danger, 90%);
-    --info-lighter: mix($white, $info, 90%);
+    --color-primary-light-2: mix($white, $primary, 20%);
+    --color-primary-light-7: mix($white, $primary, 70%);
+    --color-primary-light-9: mix($white, $primary, 90%);
+    --color-success-light: mix($white, $success, 80%);
+    --color-warning-light: mix($white, $warning, 80%);
+    --color-danger-light: mix($white, $danger, 80%);
+    --color-info-light: mix($white, $info, 80%);
+    --color-success-lighter: mix($white, $success, 90%);
+    --color-warning-lighter: mix($white, $warning, 90%);
+    --color-danger-lighter: mix($white, $danger, 90%);
+    --color-info-lighter: mix($white, $info, 90%);
+
+    --disabled-input-fill: #f5f7fa;
+    --select-multiple-input-color: #666;
+    --message-shadow: var(--box-shadow-base);
+    --cascader-tag-background: #f0f2f5;
+    --dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    --popover-border-color: var(--border-color-lighter);
+    --dropdown-menuItem-hover-color: var(--color-primary-light-2);
+    --card-border-color: var(--border-color-lighter);
+    --slider-button-hover-color: #{mix($primary, black, 97%)};
+    --rate-icon-color: var(--text-placeholder);
+    --datepicker-inner-border-color: #e4e4e4;
+    --calendar-selected-background-color: #f2f8fe;
+    --avatar-background-color: #c0c4cc;
+    --descriptions-item-bordered-label-background: #fafafa;
+
+    --skeleton-color: #f2f2f2;
+    --skeleton-to-color: #e6e6e6;
+    --svg-monochrome-grey: #dcdde0;
   }
 
   // components
@@ -65,6 +88,8 @@ $black: #000;
     --button-hover-color: #5471aa;
     --button-disabled-color: #fff;
     --button-loading-fill: rgba(255, 255, 255, 0.35);
+    --button-disabled-font-color: var(--text-placeholder);
+    --button-disabled-border-color: var(--border-color-lighter);
 
     @each $type, $color in $colors {
       &.el-button--#{$type} {

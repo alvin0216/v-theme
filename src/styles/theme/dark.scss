@@ -1,3 +1,8 @@
+// $--fill-color: #303030 !default;
+// $--fill-color-lighter: #1d1d1d !default;
+// $--fill-color-darker: #424243 !default;
+// $--mask-color: rgba(0, 0, 0, 0.8) !default;
+
 $white: #fff;
 $black: #000;
 $dark: #141414;
@@ -20,16 +25,19 @@ $dark: #141414;
     --text-regular: #cfd3dc;
     --text-secondary: #a3a6ad;
     --text-placeholder: #8d9095;
+    --text-disabled: #6c6e72;
 
-    --border-color-base: #dcdfe6;
-    --border-color-hover: #c0c4cc;
-    --border-color-light: #e4e7ed;
-    --border-color-lighter: #ebeef5;
-    --border-color-extra-light: #f2f6fc;
+    --border-color-base: #4c4d4f;
+    --border-color-hover: #6c6e72;
+    --border-color-light: #414243;
+    --border-color-lighter: #363637;
+    --border-color-extra-light: #2b2b2c;
 
     // background
     --fill-blank: transparent;
     --fill-dark: #{$dark};
+    --fill-bg-base: #{$dark};
+    --fill-overlay: #1d1e1f;
 
     // box shadow
     --box-shadow-base: #{0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72)};
@@ -48,6 +56,27 @@ $dark: #141414;
     --danger-lighter: mix($dark, $danger, 90%);
     --info-lighter: mix($dark, $info, 90%);
 
+    --disabled-input-fill: #dcdfe6;
+    --select-multiple-input-color: #606266;
+    --message-shadow: var(--box-shadow-light);
+    --cascader-tag-background: #303030;
+    --dialog-box-shadow: var(--box-shadow-base);
+    --table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    --popover-border-color: var(--border-color-light);
+    --dropdown-menuItem-hover-color: var(--color-primary);
+    --card-border-color: var(--border-color-light);
+    --slider-button-hover-color: #{mix($primary, black, 97%)};
+    --rate-icon-color: #636466;
+    --datepicker-inner-border-color: var(--border-color-light);
+    --calendar-selected-background-color: var(--color-primary-light-9);
+    --avatar-background-color: var(--text-disabled);
+    --descriptions-item-bordered-label-background: #f5f7fa;
+    --skeleton-color: #f2f2f2;
+    --skeleton-to-color: #e6e6e6;
+    --skeleton-color: #303030;
+    --skeleton-to-color: var(--border-color-light);
+    --svg-monochrome-grey: var(--border-color-base);
+
     // components
     $colors: (
       primary: $primary,
@@ -65,6 +94,8 @@ $dark: #141414;
       --button-hover-color: #5471aa;
       --button-disabled-color: #fff;
       --button-loading-fill: rgba(255, 255, 255, 0.35);
+      --button-disabled-font-color: rgba(255, 255, 255, 0.5);
+      --button-disabled-border-color: var(--border-color-light);
 
       @each $type, $color in $colors {
         &.el-button--#{$type} {

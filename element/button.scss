@@ -128,28 +128,35 @@
   }
 
   @each $type in (primary, success, warning, danger, info) {
+    $color: var(--color-#{$type});
+    $hover: var(--button-#{$type}-hover);
+    $active: var(--button-#{$type}-active);
+    $disabled: var(--button-#{$type}-disabled);
+    $plain-background: var(--button-#{$type}-plain-background);
+    $plain-border: var(--button-#{$type}-plain-border);
+
     &.el-button--#{$type} {
       color: #ffffff;
-      background-color: var(--color-#{$type});
-      border-color: var(--color-#{$type});
+      background-color: $color;
+      border-color: $color;
 
       &:hover,
       &:focus {
-        background: var(--button-#{$type}-hover-color);
-        border-color: var(--button-#{$type}-hover-border-color);
+        background: $hover;
+        border-color: $hover;
         color: #ffffff;
       }
 
       &:active {
-        background: var(--button-#{$type}-active-background);
-        border-color: var(--button-#{$type}-active-border-color);
+        background: $active;
+        border-color: $active;
         color: #ffffff;
         outline: none;
       }
 
       &.is-active {
-        background: var(--button-#{$type}-active-background);
-        border-color: var(--button-#{$type}-active-border-color);
+        background: $active;
+        border-color: $active;
         color: #ffffff;
       }
 
@@ -158,27 +165,27 @@
         &:hover,
         &:focus,
         &:active {
-          color: #ffffff;
-          background-color: var(--button-#{$type}-disabled-background);
-          border-color: var(--button-#{$type}-disabled-border-color);
+          color: var(--button-disabled-color);
+          background-color: $disabled;
+          border-color: $disabled;
         }
       }
 
       &.is-plain {
-        color: var(--color-#{$type});
-        background: var(--button-#{$type}-plain-background);
-        border-color: var(--button-#{$type}-plain-border-color);
+        color: $color;
+        background: $plain-background;
+        border-color: $plain-border;
 
         &:hover,
         &:focus {
-          background-color: var(--color-#{$type});
-          border-color: var(--color-#{$type});
+          background-color: $color;
+          border-color: $color;
           color: $--color-white;
         }
 
         &:active {
-          background: var(--button-#{$type}-active-background);
-          border-color: var(--button-#{$type}-active-border-color);
+          background: $active;
+          border-color: $active;
           color: $--color-white;
           outline: none;
         }

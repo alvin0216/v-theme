@@ -1,0 +1,45 @@
+/**
+ * @mixin define-vars
+ * @description 遍历传入的变量映射，并将其转换为 CSS 属性。
+ * @param {Map} $vars - 包含变量名和对应值的 Sass 映射。
+ */
+@mixin define-vars($name, $vars) {
+  @each $key, $value in $vars {
+    --#{$name}-#{$key}: #{$value};
+  }
+}
+
+@function gen-mix-color($mix-color, $color) {
+  @return (
+    // light
+    primary-light-2: mix($mix-color, map-get($color, primary), 20%),
+    primary-light-7: mix($mix-color, map-get($color, primary), 70%),
+    primary-light-9: mix($mix-color, map-get($color, primary), 90%),
+    // light
+    success-light: mix($mix-color, map-get($color, success), 80%),
+    warning-light: mix($mix-color, map-get($color, warning), 80%),
+    danger-light: mix($mix-color, map-get($color, danger), 80%),
+    info-light: mix($mix-color, map-get($color, info), 80%),
+    // lighter
+    success-lighter: mix($mix-color, map-get($color, success), 90%),
+    warning-lighter: mix($mix-color, map-get($color, warning), 90%),
+    danger-lighter: mix($mix-color, map-get($color, danger), 90%),
+    info-lighter: mix($mix-color, map-get($color, info), 90%)
+  );
+}
+
+@function get-mix-button-color() {
+  @return (
+    #{$type}-hover-color: #{mix($white, $value, $hover-percent)},
+    #{$type}-hover-border-color: #{mix($white, $value, $hover-percent)},
+    #{$type}-active-background: #{mix($black, $value, $active-percent)},
+    #{$type}-active-border-color: #{mix($black, $value, $active-percent)},
+    #{$type}-disabled-background: #{mix($value, $white)},
+    #{$type}-disabled-border-color: #{mix($value, $white)},
+    #{$type}-plain-background: #{mix($white, $value, 90%)},
+    #{$type}-plain-border-color: #{mix($white, $value, 60%)},
+    #{$type}-plain-disabled-color: #{mix($white, $value, 40%)},
+    #{$type}-plain-disabled-background-color: #{mix($white, $value, 90%)},
+    #{$type}-plain-disabled-border-color: #{mix($white, $value, 80%)}
+  );
+}

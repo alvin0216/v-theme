@@ -59,8 +59,8 @@ $typeMap: (
     }
   }
 
-  @include apply-themes() using ($color, $theme) {
-    @each $type, $primaryColor in $color {
+  @include apply-themes() using ($attrs, $theme) {
+    @each $type, $primaryColor in map-get($attrs, color) {
       &.el-link--#{$type} {
         color: $primaryColor;
         &:hover {

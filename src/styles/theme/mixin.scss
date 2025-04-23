@@ -1,27 +1,17 @@
-$theme-primary: (
-  light: (
-    primary: red,
-    success: #67c23a,
-    warning: #e6a23c,
-    danger: #f56c6c,
-    info: #909399,
-  ),
-  dark: (
-    primary: #409eff,
-    success: #67c23a,
-    warning: #e6a23c,
-    danger: #f56c6c,
-    info: #909399,
-  ),
+@import './vars/light.scss';
+@import './vars/dark.scss';
+
+$themes: (
+  light: $light,
+  dark: $dark,
 );
 
 // used for calc mix color
 @mixin apply-themes() {
-  @each $theme, $color in $theme-primary {
+  @each $theme, $attrs in $themes {
     $selector: if($theme == light, '&', 'html.#{$theme} &');
-
     #{$selector} {
-      @content ($color, $theme);
+      @content ($attrs, $theme);
     }
   }
 }

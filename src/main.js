@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import ElementUI from 'element-ui';
 
-import '../root.scss';
+import './styles/theme/index.scss';
 
 Vue.use(ElementUI);
 

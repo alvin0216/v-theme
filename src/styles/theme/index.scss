@@ -1,0 +1,8 @@
+@import './light.scss';
+@import './dark.scss';
+@import '../element/index.scss';
+
+html {
+  color: var(-text-regular);
+  background-color: var(--fill-dark);
+}

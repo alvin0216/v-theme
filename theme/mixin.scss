@@ -8,10 +8,16 @@ $themes: (
 
 // used for calc mix color
 @mixin apply-themes() {
-  @each $theme, $vars in $themes {
+  @each $theme, $attrs in $themes {
     $selector: if($theme == light, '&', 'html.#{$theme} &');
     #{$selector} {
-      @content ($vars, $theme);
+      @content ($attrs, $theme);
     }
+  }
+}
+
+@mixin define-vars($name, $vars) {
+  @each $type, $value in $vars {
+    --#{$name}-#{$type}: #{$value};
   }
 }

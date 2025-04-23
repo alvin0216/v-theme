@@ -1,0 +1,38 @@
+@import '../mixin.scss';
+
+$white: #fff;
+$dark: #141414;
+$black: #000;
+
+$mix: (
+  light: (
+    base-color: #fff,
+    hover-percent: 20%,
+    active-percent: 10%,
+  ),
+  dark: (
+    base-color: #141414,
+    hover-percent: 30%,
+    active-percent: 20%,
+  ),
+);
+
+body {
+  @include apply-themes() using ($vars, $theme) {
+    $primary: map-get($vars, color, primary);
+    $hover-percent: map-get($mix, $theme, hover-percent);
+    $active-percent: map-get($mix, $theme, active-percent);
+
+    $button: (
+      light: (
+        active-color: mix($black, $primary, $active-percent),
+        active-border-color: mix($black, $primary, $active-percent),
+      ),
+      dark: (
+        active-color: $primary,
+      ),
+    );
+
+    --button-active-color: #{map-get($button, $theme, active-color)};
+  }
+}

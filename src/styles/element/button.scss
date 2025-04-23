@@ -3,13 +3,14 @@
 @import 'mixins/button';
 @import 'mixins/mixins';
 @import 'mixins/utils';
+@import '../theme/mixin.scss';
 
 @include b(button) {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: var(--fill-blank);
+  background: $--button-default-background-color;
   border: $--border-base;
   border-color: $--button-default-border-color;
   color: $--button-default-font-color;
@@ -40,8 +41,15 @@
   }
 
   &:active {
-    color: var(--button-active-color);
-    border-color: var(--button-active-color);
+    @include apply-themes() using ($vars, $theme) {
+      $primary: map-get($vars, color, primary);
+      $hover-percent: if($theme == light, 20%, 30%);
+      $active-percent: if($theme == light, 10%, 20%);
+      // light active color
+      color: mix($--color-black, $primary, 20%);
+      border-color: mix($--color-black, $primary, 30%);
+    }
+
     outline: none;
   }
 
@@ -58,22 +66,22 @@
   @include when(plain) {
     &:hover,
     &:focus {
-      background-color: var(--fill-blank);
+      background: $--color-white;
       border-color: $--color-primary;
       color: $--color-primary;
     }
 
     &:active {
       background: $--color-white;
-      border-color: var(--button-active-color);
-      color: var(--button-active-color);
+      border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
       outline: none;
     }
   }
 
   @include when(active) {
-    color: var(--button-active-color);
-    border-color: var(--button-active-color);
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
   }
 
   @include when(disabled) {
@@ -83,7 +91,7 @@
       color: $--button-disabled-font-color;
       cursor: not-allowed;
       background-image: none;
-      background-color: var(--fill-blank);
+      background-color: $--button-disabled-background-color;
       border-color: $--button-disabled-border-color;
     }
 
@@ -95,7 +103,7 @@
       &,
       &:hover,
       &:focus {
-        background-color: var(--fill-blank);
+        background-color: $--color-white;
         border-color: $--button-disabled-border-color;
         color: $--button-disabled-font-color;
       }
@@ -115,7 +123,7 @@
       right: -1px;
       bottom: -1px;
       border-radius: inherit;
-      background-color: var(--button-loading-background-color);
+      background-color: rgba(255, 255, 255, 0.35);
     }
   }
   @include when(round) {
@@ -126,84 +134,37 @@
     border-radius: 50%;
     padding: $--button-padding-vertical;
   }
-
-  @each $type in (primary, success, warning, danger, info) {
-    $color: var(--color-#{$type});
-    $hover: var(--button-#{$type}-hover);
-    $active: var(--button-#{$type}-active);
-    $disabled: var(--button-#{$type}-disabled);
-    $plain-background: var(--button-#{$type}-plain-background);
-    $plain-border: var(--button-#{$type}-plain-border);
-
-    &.el-button--#{$type} {
-      color: #ffffff;
-      background-color: $color;
-      border-color: $color;
-
-      &:hover,
-      &:focus {
-        background: $hover;
-        border-color: $hover;
-        color: #ffffff;
-      }
-
-      &:active {
-        background: $active;
-        border-color: $active;
-        color: #ffffff;
-        outline: none;
-      }
-
-      &.is-active {
-        background: $active;
-        border-color: $active;
-        color: #ffffff;
-      }
-
-      &.is-disabled {
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--button-disabled-color);
-          background-color: $disabled;
-          border-color: $disabled;
-        }
-      }
-
-      &.is-plain {
-        color: $color;
-        background: $plain-background;
-        border-color: $plain-border;
-
-        &:hover,
-        &:focus {
-          background-color: $color;
-          border-color: $color;
-          color: $--color-white;
-        }
-
-        &:active {
-          background: $active;
-          border-color: $active;
-          color: $--color-white;
-          outline: none;
-        }
-
-        &.is-disabled {
-          &,
-          &:hover,
-          &:focus,
-          &:active {
-            color: var(--button-#{$type}-plain-disabled-color);
-            background-color: var(--button-#{$type}-plain-disabled-background-color);
-            border-color: var(--button-#{$type}-plain-disabled-border-color);
-          }
-        }
-      }
-    }
+  @include m(primary) {
+    @include button-variant(
+      $--button-primary-font-color,
+      $--button-primary-background-color,
+      $--button-primary-border-color
+    );
   }
-
+  @include m(success) {
+    @include button-variant(
+      $--button-success-font-color,
+      $--button-success-background-color,
+      $--button-success-border-color
+    );
+  }
+  @include m(warning) {
+    @include button-variant(
+      $--button-warning-font-color,
+      $--button-warning-background-color,
+      $--button-warning-border-color
+    );
+  }
+  @include m(danger) {
+    @include button-variant(
+      $--button-danger-font-color,
+      $--button-danger-background-color,
+      $--button-danger-border-color
+    );
+  }
+  @include m(info) {
+    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+  }
   @include m(medium) {
     @include button-size(
       $--button-medium-padding-vertical,
@@ -246,12 +207,12 @@
 
     &:hover,
     &:focus {
-      color: var(--button-hover-color);
+      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
       border-color: transparent;
       background-color: transparent;
     }
     &:active {
-      color: var(--button-active-color);
+      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
       border-color: transparent;
       background-color: transparent;
     }

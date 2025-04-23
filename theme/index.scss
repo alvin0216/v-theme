@@ -1,0 +1,13 @@
+@import './mixin.scss';
+
+:root {
+  @each $name, $vars in $light {
+    @include define-vars($name, $vars);
+  }
+}
+
+html.dark {
+  @each $name, $vars in $dark {
+    @include define-vars($name, $vars);
+  }
+}

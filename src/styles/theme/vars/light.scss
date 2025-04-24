@@ -3,6 +3,7 @@
     --#{$name}-#{$type}: #{$value};
   }
 }
+
 $white: #fff;
 $dark: #141414;
 $black: #000;
@@ -21,7 +22,6 @@ $black: #000;
     regular: #606266,
     secondary: #909399,
     placeholder: #c0c4cc,
-    disabled: #bbb,
   );
 
   $border: (
@@ -34,7 +34,7 @@ $black: #000;
 
   $fill: (
     blank: #fff,
-    input: #f5f7fa,
+    base: #f5f7fa,
     overlay: #fff,
     dark: #fff,
   );
@@ -96,5 +96,10 @@ $black: #000;
     );
   }
 
+  $slider: (
+    button-hover-color: mix($primary, black, 97%),
+  );
+
   @include define-vars(button, $button);
+  @include define-vars(slider, $slider);
 }

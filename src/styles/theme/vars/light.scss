@@ -32,6 +32,8 @@ $black: #000;
     disabled-border-color: var(--border-color-lighter)
   );
 
+  $link: ();
+
   @each $type, $value in $color {
     $button: map-merge(
       $button,
@@ -45,6 +47,11 @@ $black: #000;
         #{$type}-plain-disabled-background: mix($white, $value, 90%),
         #{$type}-plain-disabled-border-color: mix($white, $value, 80%)
       )
+    );
+
+    $link: map-merge(
+      $link,
+      (#{$type}-hover-color: mix($value, $white, 80%), #{$type}-disabled-color: mix($value, $white, 50%))
     );
   }
 
@@ -82,6 +89,8 @@ $black: #000;
     }
 
     @include define-vars(button, $button);
+    @include define-vars(link, $link);
+
     --slider-button-hover-color: #{mix($primary, black, 97%)};
     --checkbox-disabled-input-fill: #edf2fc;
     --checkbox-button-box-shadow: -1px 0 0 0 var(--color-primary-light-4);

@@ -104,5 +104,7 @@ html.dark {
     );
   }
 
-  @include define-vars(button, $button);
+  .el-button {
+    @include define-vars(button, $button);
+  }
 }

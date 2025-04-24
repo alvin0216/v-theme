@@ -40,4 +40,8 @@ header {
   width: 1200px;
   margin: 0 auto;
 }
+
+.el-row {
+  margin-bottom: 24px;
+}
 </style>

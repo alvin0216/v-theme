@@ -3,11 +3,12 @@
     --#{$name}-#{$type}: #{$value};
   }
 }
+
 $white: #fff;
 $dark: #141414;
 $black: #000;
 
-html.dark {
+@mixin inject-dark-vars() {
   $color: (
     primary: #409eff,
     success: #67c23a,
@@ -16,63 +17,11 @@ html.dark {
     info: #909399,
   );
 
-  $text: (
-    primary: #e5eaf3,
-    regular: #cfd3dc,
-    secondary: #a3a6ad,
-    placeholder: #8d9095,
-    disabled: #6c6e72,
-  );
-
-  $border: (
-    color-base: #4c4d4f,
-    color-hover: #6c6e72,
-    color-light: #414243,
-    color-lighter: #363637,
-    color-extra-light: #2b2b2c,
-  );
-
-  $fill: (
-    blank: transparent,
-    // background-color-base
-    base: #262627,
-    overlay: #1d1e1f,
-    dark: #{$dark},
-  );
-
-  $box-shadow: (
-    base: #{0 2px 4px rgba(0, 0, 0, 0.12),
-    0 0 6px rgba(0, 0, 0, 0.04)},
-    dark: #{0 2px 4px rgba(0, 0, 0, 0.12),
-    0 0 6px rgba(0, 0, 0, 0.12)},
-    light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)},
-  );
-
   $primary: map-get($color, primary);
-
-  @include define-vars(color, $color);
-  @include define-vars(text, $text);
-  @include define-vars(border, $border);
-  @include define-vars(fill, $fill);
-  @include define-vars(box-shadow, $box-shadow);
-  $primary: map-get($color, primary);
-  @for $i from 1 through 9 {
-    --color-primary-light-#{$i}: #{mix($dark, $primary, $i * 10%)};
-  }
-  @each $type, $value in map-remove($color, primary) {
-    --color-#{$type}-light: #{mix($dark, $value, 80%)};
-    --color-#{$type}-lighter: #{mix($dark, $value, 90%)};
-  }
-
   $hover-percent: 30%;
   $active-percent: 20%;
-  $success: map-get($color, success);
-  $warning: map-get($color, warning);
-  $danger: map-get($color, danger);
-  $info: map-get($color, info);
 
   $button: (
-    // use for active border color & color
     active-color: $primary,
     active-background: var(--color-primary-light-9),
     loading-background: rgba(0, 0, 0, 0.3),
@@ -80,7 +29,7 @@ html.dark {
     text-active-color: mix($white, $primary, 20%),
     disabled-color: var(--text-placeholder),
     disabled-font-color: rgba(255, 255, 255, 0.5),
-    disabled-border-color: var(--border-color-light)
+    disabled-border-color: var(--border-color-light),
   );
 
   @each $type, $value in $color {
@@ -99,63 +48,66 @@ html.dark {
     );
   }
 
-  $components: (
-    button: $button,
-    slider: (
-      button-hover-color: mix($primary, black, 97%),
-    ),
-    checkbox: (
-      disabled-input-fill: #262627,
-    ),
-    select: (
-      multiple-input-color: var(--text-regular),
-    ),
-    message: (
-      shadow: var(--box-shadow-light),
-      background-color: var(--color-info-lighter),
-    ),
-    cascader: (
-      tag-background: #303030,
-    ),
-    dialog: (
-      box-shadow: var(--box-shadow-base),
-    ),
-    table: (
-      fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15),
-    ),
-    popover: (
-      border-color: var(--border-color-light),
-    ),
-    dropdown: (
-      menuItem-hover-color: var(--color-primary),
-    ),
-    card: (
-      border-color: var(--border-color-light),
-    ),
-    rate: (
-      icon-color: #636466,
-    ),
-    datepicker: (
-      inner-border-color: var(--border-color-light),
-    ),
-    calendar: (
-      selected-background-color: var(--color-primary-light-9),
-    ),
-    avatar: (
-      background-color: var(--text-disabled),
-    ),
-    skeleton: (
-      color: #303030,
-      to-color: var(--border-color-light),
-    ),
-    svg: (
-      monochrome-grey: var(--border-color-base),
-    ),
-  );
+  html.dark {
+    @include define-vars(color, $color);
 
-  @each $com, $attrs in $components {
-    .el-#{$com} {
-      @include define-vars($com, $attrs);
+    --text-primary: #e5eaf3;
+    --text-regular: #cfd3dc;
+    --text-secondary: #a3a6ad;
+    --text-placeholder: #8d9095;
+    --text-disabled: #6c6e72;
+
+    --border-color-base: #4c4d4f;
+    --border-color-hover: #6c6e72;
+    --border-color-light: #414243;
+    --border-color-lighter: #363637;
+    --border-color-extra-light: #2b2b2c;
+
+    --fill-blank: transparent;
+    --fill-base: #262627;
+    --fill-overlay: #1d1e1f;
+    --fill-dark: #{$dark};
+
+    --box-shadow-base: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04)};
+    --box-shadow-dark: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12)};
+    --box-shadow-light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)};
+
+    --box-shadow-base: 0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72);
+    --box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.72), 0px 12px 32px #000000, 0px 8px 16px -8px #000000;
+    --box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.72);
+    --box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.72);
+
+    @for $i from 1 through 9 {
+      --color-primary-light-#{$i}: #{mix($dark, $primary, $i * 10%)};
     }
+    @each $type, $value in map-remove($color, primary) {
+      --color-#{$type}-light: #{mix($dark, $value, 80%)};
+      --color-#{$type}-lighter: #{mix($dark, $value, 90%)};
+    }
+
+    .el-button {
+      @include define-vars(button, $button);
+    }
+    // others
+    --slider-button-hover-color: #{mix($primary, black, 97%)};
+    --checkbox-disabled-input-fill: #262627;
+    --select-multiple-input-color: var(--text-regular);
+    --message-shadow: var(--box-shadow-light);
+    --message-background-color: var(--color-info-lighter);
+    --cascader-tag-background: #303030;
+    --dialog-box-shadow: var(--box-shadow-base);
+    --table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    --popover-border-color: var(--border-color-light);
+    --dropdown-menuItem-hover-color: var(--color-primary);
+    --card-border-color: var(--border-color-light);
+    --rate-icon-color: #636466;
+    --datepicker-inner-border-color: var(--border-color-light);
+    --calendar-selected-background-color: var(--color-primary-light-9);
+    --avatar-background-color: var(--text-disabled);
+    --skeleton-color: #303030;
+    --skeleton-to-color: var(--border-color-light);
+    --svg-monochrome-grey: var(--border-color-base);
   }
 }
+
+@include inject-dark-vars();

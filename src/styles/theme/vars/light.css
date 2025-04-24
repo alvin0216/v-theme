@@ -4,6 +4,7 @@
   --color-warning: #e6a23c;
   --color-danger: #f56c6c;
   --color-info: #909399;
+  --color-white: #fff;
   --text-primary: #303133;
   --text-regular: #606266;
   --text-secondary: #909399;
@@ -18,9 +19,44 @@
   --fill-base: #f5f7fa;
   --fill-overlay: #fff;
   --fill-dark: #fff;
-  --box-shadow-box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
-  --box-shadow-box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
-  --box-shadow-box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  --box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
+  --box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --color-primary-light-1: #3e60a0;
+  --color-primary-light-2: #5471aa;
+  --color-primary-light-3: #6983b5;
+  --color-primary-light-4: #7f95bf;
+  --color-primary-light-5: #94a7ca;
+  --color-primary-light-6: #a9b8d5;
+  --color-primary-light-7: #bfcadf;
+  --color-primary-light-8: #d4dcea;
+  --color-primary-light-9: #eaedf4;
+  --color-success-light: #e1f3d8;
+  --color-success-lighter: #f0f9eb;
+  --color-warning-light: #faecd8;
+  --color-warning-lighter: #fdf6ec;
+  --color-danger-light: #fde2e2;
+  --color-danger-lighter: #fef0f0;
+  --color-info-light: #e9e9eb;
+  --color-info-lighter: #f4f4f5;
+  --slider-button-hover-color: #284c91;
+  --checkbox-disabled-input-fill: #edf2fc;
+  --select-multiple-input-color: #666;
+  --message-shadow: var(--box-shadow-base);
+  --message-background-color: #edf2fc;
+  --cascader-tag-background: #f0f2f5;
+  --dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  --popover-border-color: var(--border-color-lighter);
+  --dropdown-menuItem-hover-color: var(--color-primary-light-2);
+  --card-border-color: var(--border-color-lighter);
+  --rate-icon-color: var(---text-placeholder);
+  --datepicker-inner-border-color: #e4e4e4;
+  --calendar-selected-background-color: #f2f8fe;
+  --avatar-background-color: #c0c4cc;
+  --skeleton-color: #f2f2f2;
+  --skeleton-to-color: #e6e6e6;
+  --svg-monochrome-grey: #dcdde0;
 }
 :root .el-button {
   --button-active-color: #294e95;
@@ -28,6 +64,8 @@
   --button-text-hover-color: #5471aa;
   --button-text-active-color: #254686;
   --button-disabled-color: #fff;
+  --button-disabled-font-color: var(--text-placeholder);
+  --button-disabled-border-color: var(--border-color-lighter);
   --button-primary-hover: #5471aa;
   --button-primary-active: #254686;
   --button-primary-disabled: #94a7ca;
@@ -68,17 +106,4 @@
   --button-info-plain-disabled-color: #bcbec2;
   --button-info-plain-disabled-background: #f4f4f5;
   --button-info-plain-disabled-border-color: #e9e9eb;
-}
-:root .el-slider {
-  --slider-button-hover-color: #284c91;
-}
-:root .el-checkbox {
-  --checkbox-disabled-input-fill: #edf2fc;
-}
-:root .el-select {
-  --select-multiple-input-color: #666;
-}
-:root .el-message {
-  --message-shadow: var(--box-shadow-base);
-  --message-background-color: #edf2fc;
 }

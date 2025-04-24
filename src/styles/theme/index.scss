@@ -4,6 +4,6 @@
 @import '../element/button.scss';
 
 html {
-  color: var(-text-regular);
+  color: var(--text-regular);
   background-color: var(--fill-dark);
 }

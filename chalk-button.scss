@@ -128,82 +128,37 @@
     border-radius: 50%;
     padding: $--button-padding-vertical;
   }
-
-  @each $type in primary, success, warning, danger, info {
-    $color: var(--color-#{$type});
-    $hover: var(--button-#{$type}-hover);
-    $active: var(--button-#{$type}-active);
-    $disabled: var(--button-#{$type}-disabled);
-    $plain-background: var(--button-#{$type}-plain-background);
-    $plain-border-color: var(--button-#{$type}-plain-border-color);
-    $plain-disabled-color: var(--button-#{$type}-plain-disabled-color);
-    $plain-disabled-background: var(--button-#{$type}-plain-disabled-background);
-    $plain-disabled-border-color: var(--button-#{$type}-plain-disabled-border-color);
-
-    @include m($type) {
-      color: #fff;
-      background-color: #{$color};
-      border-color: #{$color};
-
-      &:hover,
-      &:focus {
-        background: #{$hover};
-        border-color: #{$hover};
-        color: #fff;
-      }
-
-      &:active {
-        outline: none;
-      }
-
-      &:active,
-      &.is-active {
-        background: #{$active};
-        border-color: #{$active};
-        color: #fff;
-      }
-
-      &.is-disabled {
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--button-disabled-color);
-          background-color: #{$disabled};
-          border-color: #{$disabled};
-        }
-      }
-      &.is-plain {
-        color: #{$color};
-        background: #{$plain-background};
-        border-color: #{$plain-border-color};
-        &:hover,
-        &:focus {
-          background: $color;
-          border-color: $color;
-          color: $--color-white;
-        }
-
-        &:active {
-          background: #{$active};
-          border-color: #{$active};
-          color: $--color-white;
-          outline: none;
-        }
-        &.is-disabled {
-          &,
-          &:hover,
-          &:focus,
-          &:active {
-            color: #{$plain-disabled-color};
-            background-color: #{$plain-disabled-background};
-            border-color: #{$plain-disabled-border-color};
-          }
-        }
-      }
-    }
+  @include m(primary) {
+    @include button-variant(
+      $--button-primary-font-color,
+      $--button-primary-background-color,
+      $--button-primary-border-color
+    );
   }
-
+  @include m(success) {
+    @include button-variant(
+      $--button-success-font-color,
+      $--button-success-background-color,
+      $--button-success-border-color
+    );
+  }
+  @include m(warning) {
+    @include button-variant(
+      $--button-warning-font-color,
+      $--button-warning-background-color,
+      $--button-warning-border-color
+    );
+  }
+  @include m(danger) {
+    @include button-variant(
+      $--button-danger-font-color,
+      $--button-danger-background-color,
+      $--button-danger-border-color
+    );
+  }
+  @include m(info) {
+    @include button-variant($--button-info-font-color, $--button-info-background-color, $--button-info-border-color);
+  }
   @include m(medium) {
     @include button-size(
       $--button-medium-padding-vertical,

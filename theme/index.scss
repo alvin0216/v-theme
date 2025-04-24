@@ -1,13 +1,9 @@
-@import './mixin.scss';
+@import './vars/light.scss';
+@import './vars/dark.scss';
+// @import './mixin.scss';
 
-:root {
-  @each $name, $vars in $light {
-    @include define-vars($name, $vars);
-  }
-}
+// $white: #fff;
+// $dark: #141414;
+// $black: #000;
 
-html.dark {
-  @each $name, $vars in $dark {
-    @include define-vars($name, $vars);
-  }
-}
+// @include inject-theme-vars();

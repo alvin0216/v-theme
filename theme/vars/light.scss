@@ -1,40 +1,91 @@
-$light: (
-  color: (
+@mixin define-vars($name, $vars) {
+  @each $type, $value in $vars {
+    --#{$name}-#{$type}: #{$value};
+  }
+}
+$white: #fff;
+$dark: #141414;
+$black: #000;
+
+:root {
+  $color: (
     primary: #294e95,
     success: #67c23a,
     warning: #e6a23c,
     danger: #f56c6c,
     info: #909399,
-  ),
+  );
 
-  text: (
+  $text: (
     primary: #303133,
     regular: #606266,
     secondary: #909399,
     placeholder: #c0c4cc,
     disabled: #bbb,
-  ),
+  );
 
-  border: (
+  $border: (
     color-base: #dcdfe6,
     color-hover: #c0c4cc,
     color-light: #e4e7ed,
     color-lighter: #ebeef5,
     color-extra-light: #f2f6fc,
-  ),
+  );
 
-  fill: (
+  $fill: (
     blank: #fff,
     input: #f5f7fa,
     overlay: #fff,
     overlay-dark: #fff,
-  ),
+  );
 
-  box-shadow: (
+  $box-shadow: (
     box-shadow-base: #{0 2px 4px rgba(0, 0, 0, 0.12),
     0 0 6px rgba(0, 0, 0, 0.04)},
     box-shadow-dark: #{0 2px 4px rgba(0, 0, 0, 0.12),
     0 0 6px rgba(0, 0, 0, 0.12)},
     box-shadow-light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)},
-  ),
-);
+  );
+
+  $primary: map-get($color, primary);
+
+  @include define-vars(color, $color);
+  @include define-vars(text, $text);
+  @include define-vars(border, $border);
+  @include define-vars(fill, $fill);
+  @include define-vars(box-shadow, $box-shadow);
+
+  $primary: map-get($color, primary);
+  @for $i from 1 through 9 {
+    --color-primary-light-#{$i}: #{mix($white, $primary, $i * 10%)};
+  }
+  @each $type, $value in map-remove($color, primary) {
+    --color-#{$type}-light: #{mix($white, $value, 80%)};
+    --color-#{$type}-lighter: #{mix($white, $value, 90%)};
+  }
+
+  $hover-percent: 20%;
+  $active-percent: 10%;
+  $success: map-get($color, success);
+  $warning: map-get($color, warning);
+  $danger: map-get($color, danger);
+  $info: map-get($color, info);
+
+  $button: (
+    // use for active border color & color
+    active-color: $primary,
+    loading-background: rgba(255, 255, 255, 0.35),
+    text-hover-color: mix($white, $primary, $hover-percent),
+    text-active-color: mix($black, $primary, $active-percent),
+    disabled-color: #fff,
+    primary-hover: mix($white, $primary, $hover-percent),
+    primary-active: mix($black, $primary, $active-percent),
+    primary-disabled: mix($primary, $white),
+    primary-plain-background: mix($white, $primary, 90%),
+    primary-plain-border-color: mix($white, $primary, 60%),
+    primary-plain-disabled-color: mix($white, $primary, 40%),
+    primary-plain-disabled-background: mix($white, $primary, 90%),
+    primary-plain-disabled-border-color: mix($white, $primary, 80%)
+  );
+  @include define-vars(button, $button);
+}

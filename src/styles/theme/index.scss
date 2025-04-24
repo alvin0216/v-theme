@@ -1,6 +1,7 @@
-@import './light.scss';
-@import './dark.scss';
-@import '../element/index.scss';
+@import './vars/light.scss';
+@import './vars/dark.scss';
+
+@import '../element/button.scss';
 
 html {
   color: var(-text-regular);

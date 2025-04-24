@@ -1,23 +1,38 @@
-@import './vars/light.scss';
-@import './vars/dark.scss';
+// @import './vars/light.scss';
+// @import './vars/dark.scss';
 
-$themes: (
-  light: $light,
-  dark: $dark,
-);
+// $themes: (
+//   light: $light-vars,
+//   dark: $dark-vars,
+// );
 
-// used for calc mix color
-@mixin apply-themes() {
-  @each $theme, $attrs in $themes {
-    $selector: if($theme == light, '&', 'html.#{$theme} &');
-    #{$selector} {
-      @content ($attrs, $theme);
-    }
-  }
-}
+// // used for calc mix color
+// @mixin apply-themes() {
+//   @each $theme, $attrs in $themes {
+//     $selector: if($theme == light, '&', 'html.#{$theme} &');
+//     #{$selector} {
+//       @content ($attrs, $theme);
+//     }
+//   }
+// }
 
-@mixin define-vars($name, $vars) {
-  @each $type, $value in $vars {
-    --#{$name}-#{$type}: #{$value};
-  }
-}
+// @mixin define-vars($name, $vars) {
+//   @each $type, $value in $vars {
+//     --#{$name}-#{$type}: #{$value};
+//   }
+// }
+
+// @mixin inject-theme-vars() {
+//   $themes: (
+//     light: $light-vars,
+//     dark: $dark-vars,
+//   );
+//   @each $theme, $vars in $themes {
+//     $selector: if($theme == light, '&', 'html.#{$theme} &');
+//     #{$selector} {
+//       @each $name, $attrs in $vars {
+//         @include define-vars($name, $attrs);
+//       }
+//     }
+//   }
+// }

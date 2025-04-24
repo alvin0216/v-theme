@@ -2,7 +2,6 @@
 @import 'common/var';
 @import 'button';
 @import './popper';
-@import '../theme/mixin.scss';
 
 @include b(dropdown) {
   display: inline-block;
@@ -34,11 +33,17 @@
       bottom: $gap;
       left: 0;
       background: mix(white, transparent, 50%);
+      //
+      html.dark & {
+        opacity: 0.5;
+        background: var(--border-color-base);
+      }
     }
 
     &.el-button--default::before {
-      @include apply-themes() using ($color, $theme) {
-        // background: mix($--button-default-border-color, transparent, 50%);
+      background: mix(#dcdfe6, transparent, 50%);
+      html.dark & {
+        background: var(--border-color-base);
       }
     }
 
@@ -79,7 +84,7 @@
   z-index: 10;
   padding: 10px 0;
   margin: 5px 0;
-  background-color: $--color-white;
+  background-color: var(--fill-overlay);
   border: 1px solid $--border-color-lighter;
   border-radius: $--border-radius-base;
   box-shadow: $--dropdown-menu-box-shadow;
@@ -115,7 +120,7 @@
         height: $divided-offset;
         display: block;
         margin: 0 -20px;
-        background-color: $--color-white;
+        background-color: var(--fill-overlay);
       }
     }
 

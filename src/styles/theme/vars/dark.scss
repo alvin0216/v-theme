@@ -68,10 +68,6 @@ $black: #000;
     --fill-overlay: #1d1e1f;
     --fill-dark: #{$dark};
 
-    --box-shadow-base: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04)};
-    --box-shadow-dark: #{0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12)};
-    --box-shadow-light: #{0 2px 12px 0 rgba(0, 0, 0, 0.1)};
-
     --box-shadow-base: 0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72);
     --box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.72), 0px 12px 32px #000000, 0px 8px 16px -8px #000000;
     --box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.72);
@@ -91,6 +87,8 @@ $black: #000;
     // others
     --slider-button-hover-color: #{mix($primary, black, 97%)};
     --checkbox-disabled-input-fill: #262627;
+    --checkbox-button-box-shadow: -1px 0 0 0 var(--color-primary-light-7);
+
     --select-multiple-input-color: var(--text-regular);
     --message-shadow: var(--box-shadow-light);
     --message-background-color: var(--color-info-lighter);

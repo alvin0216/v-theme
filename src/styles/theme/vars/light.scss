@@ -81,12 +81,11 @@ $black: #000;
       --color-#{$type}-lighter: #{mix($white, $value, 90%)};
     }
 
-    .el-button {
-      @include define-vars(button, $button);
-    }
-
+    @include define-vars(button, $button);
     --slider-button-hover-color: #{mix($primary, black, 97%)};
     --checkbox-disabled-input-fill: #edf2fc;
+    --checkbox-button-box-shadow: -1px 0 0 0 var(--color-primary-light-4);
+
     --select-multiple-input-color: #666;
     --message-shadow: var(--box-shadow-base);
     --message-background-color: #edf2fc;

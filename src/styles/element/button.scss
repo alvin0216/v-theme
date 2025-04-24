@@ -60,13 +60,13 @@
   @include when(plain) {
     &:hover,
     &:focus {
-      background: $--color-white;
+      background: var(--fill-blank);
       border-color: $--color-primary;
       color: $--color-primary;
     }
 
     &:active {
-      background: $--color-white;
+      background: var(--fill-blank);
       border-color: var(--button-active-color);
       color: var(--button-active-color);
       outline: none;

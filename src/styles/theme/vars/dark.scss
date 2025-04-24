@@ -57,11 +57,11 @@ html.dark {
   @include define-vars(box-shadow, $box-shadow);
   $primary: map-get($color, primary);
   @for $i from 1 through 9 {
-    --color-primary-light-#{$i}: #{mix($white, $primary, $i * 10%)};
+    --color-primary-light-#{$i}: #{mix($dark, $primary, $i * 10%)};
   }
   @each $type, $value in map-remove($color, primary) {
-    --color-#{$type}-light: #{mix($white, $value, 80%)};
-    --color-#{$type}-lighter: #{mix($white, $value, 90%)};
+    --color-#{$type}-light: #{mix($dark, $value, 80%)};
+    --color-#{$type}-lighter: #{mix($dark, $value, 90%)};
   }
 
   $hover-percent: 30%;
@@ -79,14 +79,83 @@ html.dark {
     text-hover-color: var(--color-primary-light-5),
     text-active-color: mix($white, $primary, 20%),
     disabled-color: var(--text-placeholder),
-    primary-hover: mix($dark, $primary, $hover-percent),
-    primary-active: mix($white, $primary, $active-percent),
-    primary-disabled: mix($dark, $white, 50%),
-    primary-plain-background: mix($dark, $primary, 90%),
-    primary-plain-border-color: mix($dark, $primary, 60%),
-    primary-plain-disabled-color: mix($dark, $primary, 50%),
-    primary-plain-disabled-background: mix($dark, $primary, 90%),
-    primary-plain-disabled-border-color: mix($dark, $primary, 80%)
+    disabled-font-color: rgba(255, 255, 255, 0.5),
+    disabled-border-color: var(--border-color-light)
   );
-  @include define-vars(button, $button);
+
+  @each $type, $value in $color {
+    $button: map-merge(
+      $button,
+      (
+        #{$type}-hover: mix($dark, $value, $hover-percent),
+        #{$type}-active: mix($white, $value, $active-percent),
+        #{$type}-disabled: mix($value, $dark, 50%),
+        #{$type}-plain-background: mix($dark, $value, 90%),
+        #{$type}-plain-border-color: mix($dark, $value, 60%),
+        #{$type}-plain-disabled-color: mix($dark, $value, 50%),
+        #{$type}-plain-disabled-background: mix($dark, $value, 90%),
+        #{$type}-plain-disabled-border-color: mix($dark, $value, 80%)
+      )
+    );
+  }
+
+  $components: (
+    button: $button,
+    slider: (
+      button-hover-color: mix($primary, black, 97%),
+    ),
+    checkbox: (
+      disabled-input-fill: #262627,
+    ),
+    select: (
+      multiple-input-color: var(--text-regular),
+    ),
+    message: (
+      shadow: var(--box-shadow-light),
+      background-color: var(--color-info-lighter),
+    ),
+    cascader: (
+      tag-background: #303030,
+    ),
+    dialog: (
+      box-shadow: var(--box-shadow-base),
+    ),
+    table: (
+      fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15),
+    ),
+    popover: (
+      border-color: var(--border-color-light),
+    ),
+    dropdown: (
+      menuItem-hover-color: var(--color-primary),
+    ),
+    card: (
+      border-color: var(--border-color-light),
+    ),
+    rate: (
+      icon-color: #636466,
+    ),
+    datepicker: (
+      inner-border-color: var(--border-color-light),
+    ),
+    calendar: (
+      selected-background-color: var(--color-primary-light-9),
+    ),
+    avatar: (
+      background-color: var(--text-disabled),
+    ),
+    skeleton: (
+      color: #303030,
+      to-color: var(--border-color-light),
+    ),
+    svg: (
+      monochrome-grey: var(--border-color-base),
+    ),
+  );
+
+  @each $com, $attrs in $components {
+    .el-#{$com} {
+      @include define-vars($com, $attrs);
+    }
+  }
 }

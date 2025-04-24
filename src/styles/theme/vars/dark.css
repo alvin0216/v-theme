@@ -1,0 +1,141 @@
+html.dark {
+  --color-primary: #409eff;
+  --color-success: #67c23a;
+  --color-warning: #e6a23c;
+  --color-danger: #f56c6c;
+  --color-info: #909399;
+  --text-primary: #e5eaf3;
+  --text-regular: #cfd3dc;
+  --text-secondary: #a3a6ad;
+  --text-placeholder: #8d9095;
+  --text-disabled: #6c6e72;
+  --border-color-base: #4c4d4f;
+  --border-color-hover: #6c6e72;
+  --border-color-light: #414243;
+  --border-color-lighter: #363637;
+  --border-color-extra-light: #2b2b2c;
+  --fill-blank: transparent;
+  --fill-base: #262627;
+  --fill-overlay: #1d1e1f;
+  --fill-dark: #141414;
+  --box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  --box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
+  --box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --color-primary-light-1: #53a8ff;
+  --color-primary-light-2: #66b1ff;
+  --color-primary-light-3: #79bbff;
+  --color-primary-light-4: #8cc5ff;
+  --color-primary-light-5: #a0cfff;
+  --color-primary-light-6: #b3d8ff;
+  --color-primary-light-7: #c6e2ff;
+  --color-primary-light-8: #d9ecff;
+  --color-primary-light-9: #ecf5ff;
+  --color-success-light: #e1f3d8;
+  --color-success-lighter: #f0f9eb;
+  --color-warning-light: #faecd8;
+  --color-warning-lighter: #fdf6ec;
+  --color-danger-light: #fde2e2;
+  --color-danger-lighter: #fef0f0;
+  --color-info-light: #e9e9eb;
+  --color-info-lighter: #f4f4f5;
+}
+html.dark .el-button {
+  --button-active-color: #409eff;
+  --button-active-background: var(--color-primary-light-9);
+  --button-loading-background: rgba(0, 0, 0, 0.3);
+  --button-text-hover-color: var(--color-primary-light-5);
+  --button-text-active-color: #66b1ff;
+  --button-disabled-color: var(--text-placeholder);
+  --button-disabled-font-color: rgba(255, 255, 255, 0.5);
+  --button-disabled-border-color: var(--border-color-light);
+  --button-primary-hover: #3375b9;
+  --button-primary-active: #66b1ff;
+  --button-primary-disabled: #8a8a8a;
+  --button-primary-plain-background: #18222c;
+  --button-primary-plain-border-color: #264b72;
+  --button-primary-plain-disabled-color: #2a598a;
+  --button-primary-plain-disabled-background: #18222c;
+  --button-primary-plain-disabled-border-color: #1d3043;
+  --button-success-hover: #3375b9;
+  --button-success-active: #66b1ff;
+  --button-success-disabled: #8a8a8a;
+  --button-success-plain-background: #18222c;
+  --button-success-plain-border-color: #264b72;
+  --button-success-plain-disabled-color: #2a598a;
+  --button-success-plain-disabled-background: #18222c;
+  --button-success-plain-disabled-border-color: #1d3043;
+  --button-warning-hover: #3375b9;
+  --button-warning-active: #66b1ff;
+  --button-warning-disabled: #8a8a8a;
+  --button-warning-plain-background: #18222c;
+  --button-warning-plain-border-color: #264b72;
+  --button-warning-plain-disabled-color: #2a598a;
+  --button-warning-plain-disabled-background: #18222c;
+  --button-warning-plain-disabled-border-color: #1d3043;
+  --button-danger-hover: #3375b9;
+  --button-danger-active: #66b1ff;
+  --button-danger-disabled: #8a8a8a;
+  --button-danger-plain-background: #18222c;
+  --button-danger-plain-border-color: #264b72;
+  --button-danger-plain-disabled-color: #2a598a;
+  --button-danger-plain-disabled-background: #18222c;
+  --button-danger-plain-disabled-border-color: #1d3043;
+  --button-info-hover: #3375b9;
+  --button-info-active: #66b1ff;
+  --button-info-disabled: #8a8a8a;
+  --button-info-plain-background: #18222c;
+  --button-info-plain-border-color: #264b72;
+  --button-info-plain-disabled-color: #2a598a;
+  --button-info-plain-disabled-background: #18222c;
+  --button-info-plain-disabled-border-color: #1d3043;
+}
+html.dark .el-slider {
+  --slider-button-hover-color: #3e99f7;
+}
+html.dark .el-checkbox {
+  --checkbox-disabled-input-fill: #262627;
+}
+html.dark .el-select {
+  --select-multiple-input-color: var(--text-regular);
+}
+html.dark .el-message {
+  --message-shadow: var(--box-shadow-light);
+  --message-background-color: var(--color-info-lighter);
+}
+html.dark .el-cascader {
+  --cascader-tag-background: #303030;
+}
+html.dark .el-dialog {
+  --dialog-box-shadow: var(--box-shadow-base);
+}
+html.dark .el-table {
+  --table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+html.dark .el-popover {
+  --popover-border-color: var(--border-color-light);
+}
+html.dark .el-dropdown {
+  --dropdown-menuItem-hover-color: var(--color-primary);
+}
+html.dark .el-card {
+  --card-border-color: var(--border-color-light);
+}
+html.dark .el-rate {
+  --rate-icon-color: #636466;
+}
+html.dark .el-datepicker {
+  --datepicker-inner-border-color: var(--border-color-light);
+}
+html.dark .el-calendar {
+  --calendar-selected-background-color: var(--color-primary-light-9);
+}
+html.dark .el-avatar {
+  --avatar-background-color: var(--text-disabled);
+}
+html.dark .el-skeleton {
+  --skeleton-color: #303030;
+  --skeleton-to-color: var(--border-color-light);
+}
+html.dark .el-svg {
+  --svg-monochrome-grey: var(--border-color-base);
+}

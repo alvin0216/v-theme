@@ -50,7 +50,7 @@ $--border-color-lighter: var(--border-color-lighter);
 $--border-color-extra-light: var(--border-color-extra-light);
 
 // Background
-$--background-color-base: #f5f7fa !default;
+$--background-color-base: var(--fill-base);
 
 /* Link
 -------------------------- */

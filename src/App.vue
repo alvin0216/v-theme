@@ -13,7 +13,7 @@
 export default {
   name: 'App',
   components: {
-    Example: () => import('./examples/Checkbox.vue'),
+    Example: () => import('./examples/Input.vue'),
   },
   methods: {
     toggle() {

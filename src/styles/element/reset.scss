@@ -1,10 +1,11 @@
 @import 'common/var';
 
 body {
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
+    sans-serif;
   font-weight: 400;
   font-size: $--font-size-base;
-  color: $--color-black;
+  color: var($--text-regular);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -22,7 +23,12 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $--color-text-regular;
   font-weight: inherit;
 
@@ -47,7 +53,10 @@ h3 {
   font-size: #{$--font-size-base + 2px};
 }
 
-h4, h5, h6, p {
+h4,
+h5,
+h6,
+p {
   font-size: inherit;
 }
 
@@ -63,7 +72,8 @@ p {
   }
 }
 
-sup, sub {
+sup,
+sub {
   font-size: #{$--font-size-base - 1px};
 }
 
@@ -75,5 +85,8 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+
+  html.dark & {
+    border-top: 1px solid $--border-color-lighter;
+  }
 }

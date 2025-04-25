@@ -1,9 +1,9 @@
-@import "mixins/mixins";
-@import "common/var";
-@import "./input";
-@import "./popper";
-@import "./tag";
-@import "./cascader-panel";
+@import 'mixins/mixins';
+@import 'common/var';
+@import './input';
+@import './popper';
+@import './tag';
+@import './cascader-panel';
 
 @include b(cascader) {
   display: inline-block;
@@ -30,7 +30,7 @@
     }
 
     .el-icon-arrow-down {
-      transition: transform .3s;
+      transition: transform 0.3s;
       font-size: 14px;
 
       @include when(reverse) {
@@ -118,6 +118,14 @@
         &:hover {
           background-color: $--color-text-secondary;
         }
+
+        html.dark & {
+          background-color: unset;
+          color: var(--color-info);
+          &:hover {
+            background-color: var(--color-info);
+          }
+        }
       }
     }
   }
@@ -145,7 +153,8 @@
     outline: none;
     cursor: pointer;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: $--cascader-node-background-hover;
     }
 
@@ -174,6 +183,10 @@
     border: none;
     outline: none;
     box-sizing: border-box;
+
+    html.dark & {
+      background: var(--fill-dark);
+    }
 
     &::placeholder {
       color: $--color-text-placeholder;

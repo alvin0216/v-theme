@@ -1,4 +1,4 @@
-@import "../common/var";
+@import '../common/var';
 
 @include b(time-spinner) {
   &.has-seconds {
@@ -31,6 +31,9 @@
       .el-time-spinner__item:hover:not(.disabled):not(.active) {
         background: $--color-white;
         cursor: default;
+        html.dark & {
+          background: $--background-color-base;
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
-@import "mixins/mixins";
-@import "checkbox";
-@import "tag";
-@import "common/var";
+@import 'mixins/mixins';
+@import 'checkbox';
+@import 'tag';
+@import 'common/var';
 
 @include b(table-column) {
   @include m(selection) {
@@ -19,6 +19,11 @@
   box-shadow: $--dropdown-menu-box-shadow;
   box-sizing: border-box;
   margin: 2px 0;
+
+  html.dark & {
+    border: solid 1px $--border-color-light;
+    background-color: var(--fill-overlay);
+  }
 
   /** used for dropdown mode */
   @include e(list) {

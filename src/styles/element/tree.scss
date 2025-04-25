@@ -2,6 +2,7 @@
 @import 'common/var';
 @import 'common/transition';
 @import 'checkbox';
+@import './theme/mixin.scss';
 
 @include b(tree) {
   position: relative;
@@ -120,6 +121,14 @@
 }
 
 .el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content {
-  $--color-primary: red;
-  background-color: mix($--color-white, $--color-primary, 92%);
+  @include apply-theme() using ($mix) {
+    $primary: map-get($mix, color, primary);
+    $mix-color: map-get($mix, mix-color);
+
+    @if map-get($mix, theme) == light {
+      background-color: mix($mix-color, $primary, 92%);
+    } @else {
+      background-color: mix($mix-color, $primary, 90%);
+    }
+  }
 }

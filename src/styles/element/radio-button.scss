@@ -1,6 +1,6 @@
-@import "mixins/mixins";
-@import "mixins/_button";
-@import "common/var";
+@import 'mixins/mixins';
+@import 'mixins/_button';
+@import 'common/var';
 
 @include b(radio-button) {
   position: relative;
@@ -32,7 +32,7 @@
       color: $--color-primary;
     }
 
-    & [class*="el-icon-"] {
+    & [class*='el-icon-'] {
       line-height: 0.9;
 
       & + span {
@@ -72,6 +72,9 @@
         background-color: $--button-disabled-background-color;
         border-color: $--button-disabled-border-color;
         box-shadow: none;
+        html.dark & {
+          color: var(--text-placeholder);
+        }
       }
       &:checked + .el-radio-button__inner {
         background-color: $--radio-button-disabled-checked-fill;
@@ -93,21 +96,37 @@
 
   @include m(medium) {
     & .el-radio-button__inner {
-      @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, 0);
+      @include button-size(
+        $--button-medium-padding-vertical,
+        $--button-medium-padding-horizontal,
+        $--button-medium-font-size,
+        0
+      );
     }
   }
   @include m(small) {
     & .el-radio-button__inner {
-      @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, 0);
+      @include button-size(
+        $--button-small-padding-vertical,
+        $--button-small-padding-horizontal,
+        $--button-small-font-size,
+        0
+      );
     }
   }
   @include m(mini) {
     & .el-radio-button__inner {
-      @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-mini-font-size, 0);
+      @include button-size(
+        $--button-mini-padding-vertical,
+        $--button-mini-padding-horizontal,
+        $--button-mini-font-size,
+        0
+      );
     }
   }
 
-  &:focus:not(.is-focus):not(:active):not(.is-disabled){ /*获得焦点时 样式提醒*/
+  &:focus:not(.is-focus):not(:active):not(.is-disabled) {
+    /*获得焦点时 样式提醒*/
     box-shadow: 0 0 2px 2px $--radio-button-checked-border-color;
   }
 }

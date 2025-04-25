@@ -1,9 +1,9 @@
-@import "../common/var";
+@import '../common/var';
 
 @include b(time-panel) {
   margin: 5px 0;
   border: solid 1px $--datepicker-border-color;
-  background-color: $--color-white;
+  background-color: var(--fill-overlay);
   box-shadow: $--box-shadow-light;
   border-radius: 2px;
   position: absolute;
@@ -18,8 +18,9 @@
     position: relative;
     overflow: hidden;
 
-    &::after, &::before {
-      content: "";
+    &::after,
+    &::before {
+      content: '';
       top: 50%;
       position: absolute;
       margin-top: -15px;

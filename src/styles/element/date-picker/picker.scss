@@ -1,6 +1,6 @@
-@import "../mixins/mixins";
-@import "../common/var";
-@import "../common/transition";
+@import '../mixins/mixins';
+@import '../common/var';
+@import '../common/transition';
 
 @include b(date-editor) {
   position: relative;
@@ -64,7 +64,9 @@
     text-align: center;
     font-size: $--font-size-base;
     color: $--color-text-regular;
-
+    html.dark & {
+      background: transparent;
+    }
     &::placeholder {
       color: $--color-text-placeholder;
     }
@@ -177,7 +179,8 @@
     color: $--input-disabled-color;
     cursor: not-allowed;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: $--input-disabled-border;
     }
 

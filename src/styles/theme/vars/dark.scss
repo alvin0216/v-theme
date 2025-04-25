@@ -93,7 +93,8 @@ $black: #000;
 
     @include define-vars(link, $link);
 
-    // others
+    // components
+    --loading-background: rgba(0, 0, 0, 0.8);
     --slider-button-hover-color: #{mix($primary, black, 97%)};
     --checkbox-disabled-input-fill: #262627;
     --checkbox-button-box-shadow: -1px 0 0 0 var(--color-primary-light-7);

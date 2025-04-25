@@ -1,7 +1,7 @@
-@import './vars/light.scss';
-@import './vars/dark.scss';
-
+@import './theme-vars.scss';
 @import './element/index.scss';
+
+@include gen-theme-vars();
 
 html {
   background-color: var(--fill-dark);

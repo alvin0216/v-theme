@@ -166,6 +166,7 @@ $themes: (
           skeleton-to-color: #e6e6e6,
           svg-monochrome-grey: #dcdde0,
           color-picker-hover-color: tint($primary, $hover-percent),
+          descriptions-item-bordered-label-background: #fafafa,
         );
       } @else {
         $button: (
@@ -220,10 +221,11 @@ $themes: (
           skeleton-to-color: var(--border-color-light),
           svg-monochrome-grey: var(--border-color-base),
           color-picker-hover-color: tint($primary, $hover-percent),
+          descriptions-item-bordered-label-background: var(--fill-base),
         );
       }
 
-      @each $name, $v in map-get($components, $theme) {
+      @each $name, $v in $components {
         --#{$name}: #{$v};
       }
 
@@ -236,3 +238,5 @@ $themes: (
     }
   }
 }
+
+@include gen-theme-vars();

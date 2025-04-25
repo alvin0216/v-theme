@@ -41,13 +41,13 @@
       }
 
       html.dark & {
-        border: 1px solid $--color-primary-light-5;
-        background-color: $--color-primary-light-5;
+        border: 1px solid var(--color-primary-light-5);
+        background-color: var(--color-primary-light-5);
         color: $--button-disabled-font-color;
 
         &:hover {
-          border: 1px solid $--color-primary-light-5;
-          background-color: $--color-primary-light-5;
+          border: 1px solid var(--color-primary-light-5);
+          background-color: var(--color-primary-light-5);
           color: $--button-disabled-font-color;
         }
       }

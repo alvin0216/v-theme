@@ -116,7 +116,7 @@
     background-color: rgba(32, 159, 255, 0.06);
     border: 2px dashed var(--color-primary);
     html.dark & {
-      background-color: $--color-primary-light-9;
+      background-color: var(--color-primary-light-9);
     }
   }
 }
@@ -159,7 +159,7 @@
     }
 
     & .el-icon-upload-success {
-      color: $--color-success;
+      color: var(--color-success);
     }
 
     .el-icon-close {
@@ -484,7 +484,7 @@
       transform: rotate(45deg);
       box-shadow: 0 1px 1px #ccc;
       html.dark & {
-        background: $--color-success;
+        background: var(--color-success);
       }
       i {
         font-size: 12px;

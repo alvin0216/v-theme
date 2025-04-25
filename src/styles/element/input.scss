@@ -38,7 +38,7 @@
   }
 
   & .el-input__count {
-    color: $--color-info;
+    color: var(--color-info);
     background: var(--fill-blank);
     position: absolute;
     font-size: 12px;
@@ -61,11 +61,11 @@
 
   @include when(exceed) {
     .el-textarea__inner {
-      border-color: $--color-danger;
+      border-color: var(--color-danger);
     }
 
     .el-input__count {
-      color: $--color-danger;
+      color: var(--color-danger);
     }
   }
 }
@@ -92,7 +92,7 @@
     height: 100%;
     display: inline-flex;
     align-items: center;
-    color: $--color-info;
+    color: var(--color-info);
     font-size: 12px;
 
     .el-input__count-inner {
@@ -209,12 +209,12 @@
 
   @include when(exceed) {
     .el-input__inner {
-      border-color: $--color-danger;
+      border-color: var(--color-danger);
     }
 
     .el-input__suffix {
       .el-input__count {
-        color: $--color-danger;
+        color: var(--color-danger);
       }
     }
   }
@@ -283,7 +283,7 @@
 
   @include e((append, prepend)) {
     background-color: $--background-color-base;
-    color: $--color-info;
+    color: var(--color-info);
     vertical-align: middle;
     display: table-cell;
     position: relative;

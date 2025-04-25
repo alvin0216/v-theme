@@ -1,9 +1,4 @@
 @import './element/index.scss';
 
 // theme vars
-@import './element/theme/vars/light.scss';
-@import './element/theme/vars/dark.scss';
-
-html {
-  background-color: var(--fill-dark);
-}
+@import './element/theme/index.scss';

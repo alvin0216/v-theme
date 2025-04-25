@@ -37,13 +37,13 @@
     }
 
     @include when(success) {
-      color: $--color-success;
-      border-color: $--color-success;
+      color: var(--color-success);
+      border-color: var(--color-success);
     }
 
     @include when(error) {
-      color: $--color-danger;
-      border-color: $--color-danger;
+      color: var(--color-danger);
+      border-color: var(--color-danger);
     }
 
     @include when(finish) {
@@ -131,11 +131,11 @@
     }
 
     @include when(success) {
-      color: $--color-success;
+      color: var(--color-success);
     }
 
     @include when(error) {
-      color: $--color-danger;
+      color: var(--color-danger);
     }
 
     @include when(finish) {
@@ -159,11 +159,11 @@
     }
 
     @include when(success) {
-      color: $--color-success;
+      color: var(--color-success);
     }
 
     @include when(error) {
-      color: $--color-danger;
+      color: var(--color-danger);
     }
 
     @include when(finish) {

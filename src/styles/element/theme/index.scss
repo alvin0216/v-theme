@@ -1,8 +1,8 @@
 @import './theme-vars.scss';
-@import './element/index.scss';
 
 @include gen-theme-vars();
 
 html {
+  color: var(--text-regular);
   background-color: var(--fill-dark);
 }

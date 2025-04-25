@@ -1,5 +1,5 @@
-@import "mixins/mixins";
-@import "common/var";
+@import 'mixins/mixins';
+@import 'common/var';
 
 @include b(timeline-item) {
   position: relative;
@@ -43,7 +43,7 @@
     }
 
     @include m(primary) {
-      background-color: $--color-primary;
+      background-color: var(--color-primary);
     }
     @include m(success) {
       background-color: $--color-success;

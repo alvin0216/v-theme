@@ -204,7 +204,7 @@
       width: 100%;
 
       &.highlight {
-        color: $--color-primary;
+        color: var(--color-primary);
       }
     }
 
@@ -474,11 +474,11 @@
   }
 
   .ascending .sort-caret.ascending {
-    border-bottom-color: $--color-primary;
+    border-bottom-color: var(--color-primary);
   }
 
   .descending .sort-caret.descending {
-    border-top-color: $--color-primary;
+    border-top-color: var(--color-primary);
   }
 
   .hidden-columns {

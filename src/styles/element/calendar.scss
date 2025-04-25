@@ -54,7 +54,7 @@
     }
 
     @include when(today) {
-      color: $--color-primary;
+      color: var(--color-primary);
     }
   }
 

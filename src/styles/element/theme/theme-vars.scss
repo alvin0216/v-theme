@@ -74,53 +74,6 @@ $themes: (
   ),
 );
 
-$components: (
-  light: (
-    loading-background: rgba(255, 255, 255, 0.9),
-    slider-button-hover-color: mix(map-get($themes, light, color, primary), black, 97%),
-    checkbox-disabled-input-fill: #edf2fc,
-    checkbox-button-box-shadow: -1px 0 0 0 var(--color-primary-light-4),
-    select-multiple-input-color: #666,
-    message-shadow: var(--box-shadow-base),
-    message-background-color: #edf2fc,
-    cascader-tag-background: #f0f2f5,
-    dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3),
-    table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12),
-    popover-border-color: var(--border-color-lighter),
-    dropdown-menuItem-hover-color: var(--color-primary-light-2),
-    card-border-color: var(--border-color-lighter),
-    rate-icon-color: var(---text-placeholder),
-    datepicker-inner-border-color: #e4e4e4,
-    calendar-selected-background-color: #f2f8fe,
-    avatar-background-color: #c0c4cc,
-    skeleton-color: #f2f2f2,
-    skeleton-to-color: #e6e6e6,
-    svg-monochrome-grey: #dcdde0,
-  ),
-  dark: (
-    loading-background: rgba(0, 0, 0, 0.8),
-    slider-button-hover-color: mix(map-get($themes, dark, color, primary), black, 97%),
-    checkbox-disabled-input-fill: #262627,
-    checkbox-button-box-shadow: -1px 0 0 0 var(--color-primary-light-7),
-    select-multiple-input-color: var(--text-regular),
-    message-shadow: var(--box-shadow-light),
-    message-background-color: var(--color-info-lighter),
-    cascader-tag-background: #303030,
-    dialog-box-shadow: var(--box-shadow-base),
-    table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15),
-    popover-border-color: var(--border-color-light),
-    dropdown-menuItem-hover-color: var(--color-primary),
-    card-border-color: var(--border-color-light),
-    rate-icon-color: #636466,
-    datepicker-inner-border-color: var(--border-color-light),
-    calendar-selected-background-color: var(--color-primary-light-9),
-    avatar-background-color: var(--text-disabled),
-    skeleton-color: #303030,
-    skeleton-to-color: var(--border-color-light),
-    svg-monochrome-grey: var(--border-color-base),
-  ),
-);
-
 @mixin define-vars($name, $vars) {
   @each $type, $value in $vars {
     --#{$name}-#{$type}: #{$value};
@@ -152,15 +105,13 @@ $components: (
       }
 
       //   ======== component vars ======
-      @each $name, $v in map-get($components, $theme) {
-        --#{$name}: #{$v};
-      }
 
       $hover-percent: if($theme == light, 20%, 30%);
       $active-percent: if($theme == light, 10%, 20%);
       $active-mix-color: if($theme == light, $black, $white);
       $button: ();
       $link: ();
+      $components: ();
 
       @if ($theme == light) {
         $button: (
@@ -192,6 +143,30 @@ $components: (
             (#{$type}-hover-color: mix($value, $white, 80%), #{$type}-disabled-color: mix($value, $white, 50%))
           );
         }
+
+        $components: (
+          loading-background: rgba(255, 255, 255, 0.9),
+          slider-button-hover-color: mix($primary, black, 97%),
+          checkbox-disabled-input-fill: #edf2fc,
+          checkbox-button-box-shadow: -1px 0 0 0 var(--color-primary-light-4),
+          select-multiple-input-color: #666,
+          message-shadow: var(--box-shadow-base),
+          message-background-color: #edf2fc,
+          cascader-tag-background: #f0f2f5,
+          dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3),
+          table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12),
+          popover-border-color: var(--border-color-lighter),
+          dropdown-menuItem-hover-color: var(--color-primary-light-2),
+          card-border-color: var(--border-color-lighter),
+          rate-icon-color: var(---text-placeholder),
+          datepicker-inner-border-color: #e4e4e4,
+          calendar-selected-background-color: #f2f8fe,
+          avatar-background-color: #c0c4cc,
+          skeleton-color: #f2f2f2,
+          skeleton-to-color: #e6e6e6,
+          svg-monochrome-grey: #dcdde0,
+          color-picker-hover-color: tint($primary, $hover-percent),
+        );
       } @else {
         $button: (
           active-color: $primary,
@@ -223,6 +198,33 @@ $components: (
             (#{$type}-hover-color: mix($value, $dark, 70%), #{$type}-disabled-color: mix($value, $dark, 50%))
           );
         }
+        $components: (
+          loading-background: rgba(0, 0, 0, 0.8),
+          slider-button-hover-color: mix($primary, black, 97%),
+          checkbox-disabled-input-fill: #262627,
+          checkbox-button-box-shadow: -1px 0 0 0 var(--color-primary-light-7),
+          select-multiple-input-color: var(--text-regular),
+          message-shadow: var(--box-shadow-light),
+          message-background-color: var(--color-info-lighter),
+          cascader-tag-background: #303030,
+          dialog-box-shadow: var(--box-shadow-base),
+          table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15),
+          popover-border-color: var(--border-color-light),
+          dropdown-menuItem-hover-color: var(--color-primary),
+          card-border-color: var(--border-color-light),
+          rate-icon-color: #636466,
+          datepicker-inner-border-color: var(--border-color-light),
+          calendar-selected-background-color: var(--color-primary-light-9),
+          avatar-background-color: var(--text-disabled),
+          skeleton-color: #303030,
+          skeleton-to-color: var(--border-color-light),
+          svg-monochrome-grey: var(--border-color-base),
+          color-picker-hover-color: tint($primary, $hover-percent),
+        );
+      }
+
+      @each $name, $v in map-get($components, $theme) {
+        --#{$name}: #{$v};
       }
 
       .el-button {

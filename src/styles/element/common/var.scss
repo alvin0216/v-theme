@@ -16,10 +16,8 @@ $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !defau
 
 /* Color
 -------------------------- $--color-primary*/
-$--color-primary: var(--color-primary);
 $--color-white: #fff;
-$--color-black: var(--color-black);
-$--color-primary-light-1: var(--color-primary-light-1);
+$--color-black: #000;
 $--color-primary-light-2: var(--color-primary-light-2);
 $--color-primary-light-3: var(--color-primary-light-3);
 $--color-primary-light-4: var(--color-primary-light-4);
@@ -54,8 +52,8 @@ $--background-color-base: var(--fill-base);
 
 /* Link
 -------------------------- */
-$--link-color: $--color-primary-light-2 !default;
-$--link-hover-color: $--color-primary !default;
+$--link-color: var(--color-primary-light-2);
+$--link-hover-color: var(--color-primary);
 
 /* Border
 -------------------------- */
@@ -133,12 +131,12 @@ $--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
 $--checkbox-disabled-checked-input-border-color: $--border-color-base !default;
 $--checkbox-disabled-checked-icon-color: $--color-text-placeholder !default;
 
-$--checkbox-checked-font-color: $--color-primary !default;
-$--checkbox-checked-input-border-color: $--color-primary !default;
-$--checkbox-checked-background-color: $--color-primary !default;
+$--checkbox-checked-font-color: var(--color-primary);
+$--checkbox-checked-input-border-color: var(--color-primary);
+$--checkbox-checked-background-color: var(--color-primary);
 $--checkbox-checked-icon-color: $--fill-base !default;
 
-$--checkbox-input-border-color-hover: $--color-primary !default;
+$--checkbox-input-border-color-hover: var(--color-primary);
 $--checkbox-bordered-height: 40px !default;
 $--checkbox-bordered-padding: 9px 20px 9px 10px !default;
 $--checkbox-bordered-medium-padding: 7px 20px 7px 10px !default;
@@ -154,9 +152,9 @@ $--checkbox-bordered-mini-input-height: 12px !default;
 $--checkbox-bordered-mini-input-width: 12px !default;
 $--checkbox-bordered-mini-height: 28px !default;
 
-$--checkbox-button-checked-background-color: $--color-primary !default;
+$--checkbox-button-checked-background-color: var(--color-primary);
 $--checkbox-button-checked-font-color: $--color-white !default;
-$--checkbox-button-checked-border-color: $--color-primary !default;
+$--checkbox-button-checked-border-color: var(--color-primary);
 
 /* Radio
 -------------------------- */
@@ -179,12 +177,12 @@ $--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
 $--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
 $--radio-disabled-checked-icon-color: $--color-text-placeholder !default;
 
-$--radio-checked-font-color: $--color-primary !default;
-$--radio-checked-input-border-color: $--color-primary !default;
+$--radio-checked-font-color: var(--color-primary);
+$--radio-checked-input-border-color: var(--color-primary);
 $--radio-checked-input-background-color: $--color-white !default;
-$--radio-checked-icon-color: $--color-primary !default;
+$--radio-checked-icon-color: var(--color-primary);
 
-$--radio-input-border-color-hover: $--color-primary !default;
+$--radio-input-border-color-hover: var(--color-primary);
 
 $--radio-bordered-height: 40px !default;
 $--radio-bordered-padding: 12px 20px 0 10px !default;
@@ -202,9 +200,9 @@ $--radio-bordered-mini-input-width: 12px !default;
 $--radio-bordered-mini-height: 28px !default;
 
 $--radio-button-font-size: $--font-size-base !default;
-$--radio-button-checked-background-color: $--color-primary !default;
+$--radio-button-checked-background-color: var(--color-primary);
 $--radio-button-checked-font-color: $--color-white !default;
-$--radio-button-checked-border-color: $--color-primary !default;
+$--radio-button-checked-border-color: var(--color-primary);
 $--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
 
 /* Select
@@ -216,7 +214,7 @@ $--select-close-hover-color: $--color-text-secondary !default;
 
 $--select-input-color: $--color-text-placeholder !default;
 $--select-multiple-input-color: var(--select-multiple-input-color);
-$--select-input-focus-border-color: $--color-primary !default;
+$--select-input-focus-border-color: var(--color-primary);
 $--select-input-font-size: 14px !default;
 
 $--select-option-color: $--color-text-regular !default;
@@ -224,7 +222,7 @@ $--select-option-disabled-color: $--color-text-placeholder !default;
 $--select-option-disabled-background: $--color-white !default;
 $--select-option-height: 34px !default;
 $--select-option-hover-background: $--background-color-base !default;
-$--select-option-selected-font-color: $--color-primary !default;
+$--select-option-selected-font-color: var(--color-primary);
 $--select-option-selected-hover: $--background-color-base !default;
 
 $--select-group-color: $--color-info !default;
@@ -330,7 +328,7 @@ $--input-max-width: 314px !default;
 $--input-hover-border: $--border-color-hover !default;
 $--input-clear-hover-color: $--color-text-secondary !default;
 
-$--input-focus-border: $--color-primary !default;
+$--input-focus-border: var(--color-primary);
 $--input-focus-fill: $--color-white !default;
 
 $--input-disabled-fill: $--disabled-fill-base !default;
@@ -348,7 +346,7 @@ $--input-mini-height: 28px !default;
 /* Cascader
 -------------------------- */
 $--cascader-menu-font-color: $--color-text-regular !default;
-$--cascader-menu-selected-font-color: $--color-primary !default;
+$--cascader-menu-selected-font-color: var(--color-primary);
 $--cascader-menu-fill: var(--fill-overlay);
 $--cascader-menu-font-size: $--font-size-base !default;
 $--cascader-menu-radius: $--border-radius-base !default;
@@ -411,9 +409,9 @@ $--button-disabled-font-color: var(--button-disabled-font-color);
 $--button-disabled-background-color: var(--fill-blank);
 $--button-disabled-border-color: var(--button-disabled-border-color);
 
-$--button-primary-border-color: $--color-primary !default;
+$--button-primary-border-color: var(--color-primary);
 $--button-primary-font-color: $--color-white !default;
-$--button-primary-background-color: $--color-primary !default;
+$--button-primary-background-color: var(--color-primary);
 $--button-success-border-color: $--color-success !default;
 $--button-success-font-color: $--color-white !default;
 $--button-success-background-color: $--color-success !default;
@@ -436,7 +434,7 @@ $--cascader-height: 200px !default;
 
 /* Switch
 -------------------------- */
-$--switch-on-color: $--color-primary !default;
+$--switch-on-color: var(--color-primary);
 $--switch-off-color: $--border-color-base !default;
 $--switch-font-size: $--font-size-base !default;
 $--switch-core-border-radius: 10px !default;
@@ -478,7 +476,7 @@ $--pagination-button-width: 35.5px !default;
 $--pagination-button-height: 28px !default;
 $--pagination-button-disabled-color: $--color-text-placeholder !default;
 $--pagination-button-disabled-background-color: var(--fill-blank);
-$--pagination-hover-color: $--color-primary !default;
+$--pagination-hover-color: var(--color-primary);
 
 /* Popup
 -------------------------- */
@@ -508,7 +506,7 @@ $--tooltip-padding: 10px !default;
 /* Tag
 -------------------------- */
 $--tag-info-color: $--color-info !default;
-$--tag-primary-color: $--color-primary !default;
+$--tag-primary-color: var(--color-primary);
 $--tag-success-color: $--color-success !default;
 $--tag-warning-color: $--color-warning !default;
 $--tag-danger-color: $--color-danger !default;
@@ -544,7 +542,7 @@ $--card-padding: 20px !default;
 
 /* Slider
 --------------------------*/
-$--slider-main-background-color: $--color-primary !default;
+$--slider-main-background-color: var(--color-primary);
 $--slider-runway-background-color: $--border-color-light !default;
 $--slider-button-hover-color: var(--slider-button-hover-color);
 $--slider-stop-background-color: $--color-white !default;
@@ -587,8 +585,8 @@ $--datepicker-border-color: $--disabled-border-base !default;
 $--datepicker-inner-border-color: var(--datepicker-inner-border-color);
 $--datepicker-inrange-background-color: $--border-color-extra-light !default;
 $--datepicker-inrange-hover-background-color: $--border-color-extra-light !default;
-$--datepicker-active-color: $--color-primary !default;
-$--datepicker-hover-font-color: $--color-primary !default;
+$--datepicker-active-color: var(--color-primary);
+$--datepicker-hover-font-color: var(--color-primary);
 $--datepicker-cell-hover-color: #fff !default;
 
 /* Loading
@@ -657,7 +655,7 @@ $--timeline-node-color: $--border-color-light !default;
 /* Backtop
 --------------------------*/
 $--backtop-background-color: var(--fill-overlay);
-$--backtop-font-color: $--color-primary !default;
+$--backtop-font-color: var(--color-primary);
 $--backtop-hover-background-color: $--border-color-extra-light !default;
 
 /* Link
@@ -665,9 +663,9 @@ $--backtop-hover-background-color: $--border-color-extra-light !default;
 $--link-font-size: $--font-size-base !default;
 $--link-font-weight: $--font-weight-primary !default;
 $--link-default-font-color: $--color-text-regular !default;
-$--link-default-active-color: $--color-primary !default;
+$--link-default-active-color: var(--color-primary);
 $--link-disabled-font-color: $--color-text-placeholder !default;
-$--link-primary-font-color: $--color-primary !default;
+$--link-primary-font-color: var(--color-primary);
 $--link-success-font-color: $--color-success !default;
 $--link-warning-font-color: $--color-warning !default;
 $--link-danger-font-color: $--color-danger !default;

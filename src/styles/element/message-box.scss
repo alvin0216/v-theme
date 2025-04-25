@@ -67,7 +67,7 @@
     &:focus,
     &:hover {
       .el-message-box__close {
-        color: $--color-primary;
+        color: var(--color-primary);
       }
     }
   }

@@ -87,17 +87,17 @@
         .el-submenu__title {
           color: $--color-text-primary;
           html.dark & {
-            color: $--color-primary;
+            color: var(--color-primary);
           }
         }
       }
 
       &.is-active {
         .el-submenu__title {
-          border-bottom: 2px solid $--color-primary;
+          border-bottom: 2px solid var(--color-primary);
           color: $--color-text-primary;
           html.dark & {
-            color: $--color-primary;
+            color: var(--color-primary);
           }
         }
       }
@@ -113,7 +113,7 @@
         }
 
         html.dark & {
-          color: $--color-primary;
+          color: var(--color-primary);
         }
       }
       & .el-submenu__icon-arrow {
@@ -148,16 +148,16 @@
       color: $--color-text-primary;
       html.dark & {
         outline: none;
-        color: $--color-primary;
+        color: var(--color-primary);
         background-color: $--menu-item-hover-fill;
       }
     }
     & > .el-menu-item.is-active {
-      border-bottom: 2px solid $--color-primary;
+      border-bottom: 2px solid var(--color-primary);
       color: $--color-text-primary;
 
       html.dark & {
-        color: $--color-primary;
+        color: var(--color-primary);
       }
     }
   }
@@ -248,7 +248,7 @@
     vertical-align: middle;
   }
   @include when(active) {
-    color: $--color-primary;
+    color: var(--color-primary);
     i {
       color: inherit;
     }
@@ -286,7 +286,7 @@
   }
   @include when(active) {
     .el-submenu__title {
-      border-bottom-color: $--color-primary;
+      border-bottom-color: var(--color-primary);
     }
   }
   @include when(opened) {

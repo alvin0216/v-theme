@@ -1,0 +1,30 @@
+// @include apply-theme() using ($mix) {}
+@mixin apply-theme() {
+  & {
+    @content ((
+      theme: light,
+      mix-color: #fff,
+      color: (
+        primary: #294e95,
+        success: #67c23a,
+        warning: #e6a23c,
+        danger: #f56c6c,
+        info: #909399,
+      ),
+    ));
+  }
+
+  html.dark & {
+    @content ((
+      theme: light,
+      mix-color: #141414,
+      color: (
+        primary: #409eff,
+        success: #67c23a,
+        warning: #e6a23c,
+        danger: #f56c6c,
+        info: #909399,
+      ),
+    ));
+  }
+}

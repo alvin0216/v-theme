@@ -1,110 +1,115 @@
 @import 'mixins/mixins';
 @import 'common/var';
+@import './theme/mixin.scss';
 
-@mixin genTheme($backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight) {
-  $--tag-primary-color: #294e95;
+@mixin genTheme($backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight, $mix) {
+  $mix-color: map-get($mix, mix-color);
+  $primary: map-get($mix, color, primary);
+  $info: map-get($mix, color, info);
+  $success: map-get($mix, color, success);
+  $warning: map-get($mix, color, warning);
+  $danger: map-get($mix, color, danger);
 
-  html.dark & {
-    $--tag-primary-color: #409eff;
-  }
-
-  background-color: mix($--tag-primary-color, $--color-white, $backgroundColorWeight);
-  border-color: mix($--tag-primary-color, $--color-white, $borderColorWeight);
-  color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
+  background-color: mix($primary, $mix-color, $backgroundColorWeight);
+  border-color: mix($primary, $mix-color, $borderColorWeight);
+  color: mix($primary, #fff, $fontColorWeight);
 
   @include when(hit) {
-    border-color: $--tag-primary-color;
+    border-color: $primary;
   }
 
   .el-tag__close {
-    color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
+    color: mix($primary, #fff, $fontColorWeight);
     &:hover {
       color: $--color-white;
-      background-color: mix($--tag-primary-color, $--color-white, $hoverColorWeight);
+      background-color: mix($primary, $mix-color, $hoverColorWeight);
     }
   }
 
   &.el-tag--info {
-    background-color: mix($--tag-info-color, $--color-white, $backgroundColorWeight);
-    border-color: mix($--tag-info-color, $--color-white, $borderColorWeight);
-    color: mix($--tag-info-color, $--color-white, $fontColorWeight);
+    background-color: mix($info, $mix-color, $backgroundColorWeight);
+    border-color: mix($info, $mix-color, $borderColorWeight);
+    color: mix($info, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $--tag-info-color;
+      border-color: $info;
     }
 
     .el-tag__close {
-      color: mix($--tag-info-color, $--color-white, $fontColorWeight);
+      color: mix($info, #fff, $fontColorWeight);
       &:hover {
         color: $--color-white;
-        background-color: mix($--tag-info-color, $--color-white, $hoverColorWeight);
+        background-color: mix($info, $--color-white, $hoverColorWeight);
       }
     }
   }
 
   &.el-tag--success {
-    background-color: mix($--tag-success-color, $--color-white, $backgroundColorWeight);
-    border-color: mix($--tag-success-color, $--color-white, $borderColorWeight);
-    color: mix($--tag-success-color, $--color-white, $fontColorWeight);
+    background-color: mix($success, $mix-color, $backgroundColorWeight);
+    border-color: mix($success, $mix-color, $borderColorWeight);
+    color: mix($success, #fff, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $--tag-success-color;
+      border-color: $success;
     }
 
     .el-tag__close {
-      color: mix($--tag-success-color, $--color-white, $fontColorWeight);
+      color: mix($success, #fff, $fontColorWeight);
       &:hover {
         color: $--color-white;
-        background-color: mix($--tag-success-color, $--color-white, $hoverColorWeight);
+        background-color: mix($success, $mix-color, $hoverColorWeight);
       }
     }
   }
 
   &.el-tag--warning {
-    background-color: mix($--tag-warning-color, $--color-white, $backgroundColorWeight);
-    border-color: mix($--tag-warning-color, $--color-white, $borderColorWeight);
-    color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
+    background-color: mix($warning, $mix-color, $backgroundColorWeight);
+    border-color: mix($warning, $mix-color, $borderColorWeight);
+    color: mix($warning, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $--tag-warning-color;
+      border-color: $warning;
     }
 
     .el-tag__close {
-      color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
+      color: mix($warning, $--color-white, $fontColorWeight);
       &:hover {
         color: $--color-white;
-        background-color: mix($--tag-warning-color, $--color-white, $hoverColorWeight);
+        background-color: mix($warning, $mix-color, $hoverColorWeight);
       }
     }
   }
 
   &.el-tag--danger {
-    background-color: mix($--tag-danger-color, $--color-white, $backgroundColorWeight);
-    border-color: mix($--tag-danger-color, $--color-white, $borderColorWeight);
-    color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
+    background-color: mix($danger, $mix-color, $backgroundColorWeight);
+    border-color: mix($danger, $mix-color, $borderColorWeight);
+    color: mix($danger, $--color-white, $fontColorWeight);
 
     @include when(hit) {
-      border-color: $--tag-danger-color;
+      border-color: $danger;
     }
 
     .el-tag__close {
-      color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
+      color: mix($danger, $--color-white, $fontColorWeight);
       &:hover {
         color: $--color-white;
-        background-color: mix($--tag-danger-color, $--color-white, $hoverColorWeight);
+        background-color: mix($danger, $mix-color, $hoverColorWeight);
       }
     }
   }
 }
 
 @include b(tag) {
-  @include genTheme(10%, 20%, 100%, 100%);
+  @include apply-theme() using ($mix) {
+    @include genTheme(10%, 20%, 100%, 100%, $mix);
+  }
+
   display: inline-block;
   height: 32px;
   padding: $--tag-padding;
   line-height: 30px;
   font-size: $--tag-font-size;
-  color: $--tag-primary-color;
+  color: var(--color-primary);
   border-width: 1px;
   border-style: solid;
   border-radius: $--tag-border-radius;
@@ -129,12 +134,32 @@
     }
   }
 
-  @include m(dark) {
-    @include genTheme(100%, 100%, 0%, 80%);
-  }
+  @include apply-theme() using ($mix) {
+    @if map-get($mix, theme) == light {
+      @include m(dark) {
+        @include genTheme(100%, 100%, 0%, 80%, $mix);
+      }
 
-  @include m(plain) {
-    @include genTheme(0%, 40%, 100%, 100%);
+      @include m(plain) {
+        @include genTheme(0%, 40%, 100%, 100%, $mix);
+      }
+    } @else {
+      @include m(dark) {
+        @include genTheme(100%, 100%, 0%, 70%, $mix);
+      }
+
+      @include m(plain) {
+        @include genTheme(0%, 50%, 100%, 100%, $mix);
+
+        &,
+        &.el-tag--info,
+        &.el-tag--success,
+        &.el-tag--warning,
+        &.el-tag--danger {
+          background-color: transparent;
+        }
+      }
+    }
   }
 
   @include m(medium) {

@@ -1,13 +1,15 @@
 @import './vars/light.scss';
 @import './vars/dark.scss';
 
-@import '../element/button.scss';
-@import '../element/checkbox.scss';
-@import '../element/Input.scss';
-@import '../element/link.scss';
-@import '../element/dropdown.scss';
-@import '../element/message.scss';
-@import '../element/loading.scss';
+// @import '../element/button.scss';
+// @import '../element/checkbox.scss';
+// @import '../element/Input.scss';
+// @import '../element/link.scss';
+// @import '../element/dropdown.scss';
+// @import '../element/message.scss';
+// @import '../element/loading.scss';
+
+@import '../element/index.scss';
 
 html {
   color: var(--text-regular);

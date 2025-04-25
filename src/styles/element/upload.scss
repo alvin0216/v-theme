@@ -44,7 +44,7 @@
     }
     html.dark & {
       background-color: #1d1d1d;
-      border: 1px dashed #636466;
+      border: 1px dashed var(--color-primary);
       i {
         color: $--color-text-secondary;
       }

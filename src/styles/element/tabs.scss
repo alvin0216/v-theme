@@ -199,7 +199,7 @@
         }
       }
       &.is-active {
-        border-bottom-color: $--color-white;
+        border-bottom-color: var(--fill-dark);
 
         &.is-closable {
           padding-left: 20px;
@@ -244,7 +244,7 @@
 
       &.is-active {
         color: var(--color-primary);
-        background-color: $--color-white;
+        background-color: var(--fill-overlay);
         border-right-color: $--border-color-base;
         border-left-color: $--border-color-base;
       }

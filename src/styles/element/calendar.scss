@@ -4,7 +4,7 @@
 @import 'button-group';
 
 @include b(calendar) {
-  background-color: #fff;
+  background-color: var(--fill-blank);
 
   @include e(header) {
     display: flex;

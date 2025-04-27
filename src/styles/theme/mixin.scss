@@ -1,0 +1,46 @@
+$white: #fff;
+$dark: #141414;
+$black: #000;
+
+@mixin define-vars($name, $vars) {
+  @each $type, $value in $vars {
+    --#{$name}-#{$type}: #{$value};
+  }
+}
+
+@mixin generate-color-vars($colors, $base) {
+  $primary: map-get($colors, primary);
+
+  @for $i from 1 through 9 {
+    --color-primary-light-#{$i}: #{mix($base, $primary, $i * 10%)};
+  }
+  @each $type, $value in map-remove($colors, primary) {
+    --color-#{$type}-light: #{mix($base, $value, 80%)};
+    --color-#{$type}-lighter: #{mix($base, $value, 90%)};
+  }
+}
+
+@mixin generate-button-vars($colors, $base, $base-active, $hover-percent: 20%, $active-percent: 10%) {
+  @each $type, $value in $colors {
+    $button: (
+      (
+        #{$type}-hover: mix($base, $value, $hover-percent),
+        #{$type}-active: mix($base-active, $value, $active-percent),
+        #{$type}-disabled: mix($value, $base),
+        #{$type}-plain-background: mix($base, $value, 90%),
+        #{$type}-plain-border-color: mix($base, $value, 60%),
+        #{$type}-plain-disabled-color: mix($base, $value, 40%),
+        #{$type}-plain-disabled-background: mix($base, $value, 90%),
+        #{$type}-plain-disabled-border-color: mix($base, $value, 80%)
+      )
+    );
+    @include define-vars(button, $button);
+  }
+}
+
+@mixin generate-link-vars($colors, $base) {
+  @each $type, $value in $colors {
+    --link-#{$type}-hover-color: #{mix($value, $base, 80%)};
+    --link-#{$type}-disabled-color: #{mix($value, $base, 50%)};
+  }
+}

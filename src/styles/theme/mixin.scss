@@ -44,3 +44,34 @@ $black: #000;
     --link-#{$type}-disabled-color: #{mix($value, $base, 50%)};
   }
 }
+
+// @include apply-theme() using ($mix) {}
+@mixin apply-theme() {
+  & {
+    @content ((
+        theme: light,
+        mix-color: #fff,
+        color: (
+          primary: #294e95,
+          success: #67c23a,
+          warning: #e6a23c,
+          danger: #f56c6c,
+          info: #909399,
+        ),
+      ));
+  }
+
+  html.dark & {
+    @content ((
+        theme: light,
+        mix-color: #141414,
+        color: (
+          primary: #93C5FD,
+          success: #67c23a,
+          warning: #e6a23c,
+          danger: #f56c6c,
+          info: #909399,
+        ),
+      ));
+  }
+}

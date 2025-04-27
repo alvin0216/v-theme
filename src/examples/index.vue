@@ -1,6 +1,15 @@
 <template>
   <div class="app">
-    <div class="content">
+    <el-card>
+      <el-button>默认</el-button>
+      <el-button type="primary">主要</el-button>
+      <el-button type="primary" :loading="true">加载中</el-button>
+      <input-example></input-example>
+      <divider-example />
+      <dialog-example />
+      <checkbox-example />
+    </el-card>
+    <el-card class="content" v-if="false">
       <alert-example />
       <autocomplete-example />
       <avatar-example />
@@ -56,7 +65,7 @@
       <transfer-example />
       <tree-example />
       <upload-example />
-    </div>
+    </el-card>
   </div>
 </template>
 
@@ -190,6 +199,6 @@ export default {
 .content >>> h2 {
   margin: 0;
   padding: 70px 0 15px;
-  color: #606266;
+  color: var(--text-regular);
 }
 </style>

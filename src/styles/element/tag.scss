@@ -1,6 +1,6 @@
 @import 'mixins/mixins';
 @import 'common/var';
-@import './theme/mixin.scss';
+@import '../theme/mixin.scss';
 
 @mixin genTheme($backgroundColorWeight, $borderColorWeight, $fontColorWeight, $hoverColorWeight, $mix) {
   $mix-color: map-get($mix, mix-color);

@@ -28,6 +28,7 @@ $primary: map-get($colors, primary);
   --border-color-lighter: #ebeef5;
   --border-color-extra-light: #f2f6fc;
 
+  --fill-body: #fff;
   --fill-blank: #fff;
   --fill-base: #f5f7fa;
   --fill-overlay: #fff;
@@ -38,6 +39,7 @@ $primary: map-get($colors, primary);
   --box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
   .el-button {
+    --button-text-color: var(--text-regular);
     --button-active-color: #{$primary};
     --button-loading-background: rgba(255, 255, 255, 0.35);
     --button-text-hover-color: #{mix($white, $primary, $hover-percent)};

@@ -2,7 +2,7 @@
 @import 'common/var';
 @import 'common/transition';
 @import 'checkbox';
-@import './theme/mixin.scss';
+@import '../theme/mixin.scss';
 
 @include b(tree) {
   position: relative;

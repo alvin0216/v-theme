@@ -1,7 +1,7 @@
 @import './mixin.scss';
 
 $colors: (
-  primary: #409eff,
+  primary: #93c5fd,
   success: #67c23a,
   warning: #e6a23c,
   danger: #f56c6c,
@@ -28,9 +28,10 @@ html.dark {
   --border-color-lighter: #363637;
   --border-color-extra-light: #2b2b2c;
 
+  --fill-body: #000;
   --fill-blank: transparent;
   --fill-base: #262627;
-  --fill-overlay: #1d1e1f;
+  --fill-overlay: #18181b;
   --fill-dark: #141414;
 
   --box-shadow-base: 0px 12px 32px 4px rgba(0, 0, 0, 0.36), 0px 8px 20px rgba(0, 0, 0, 0.72);
@@ -38,6 +39,7 @@ html.dark {
   --box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.72);
 
   .el-button {
+    --button-text-color: var(--color-primary);
     --button-active-color: #{$primary};
     --button-loading-background: rgba(255, 255, 255, 0.35);
     --button-text-hover-color: #{mix($white, $primary, $hover-percent)};
@@ -45,7 +47,12 @@ html.dark {
     --button-disabled-color: #fff;
     --button-disabled-font-color: var(--text-placeholder);
     --button-disabled-border-color: var(--border-color-lighter);
+
     @include generate-button-vars($colors, $dark, $white, $hover-percent, $active-percent);
+
+    --button-primary-hover: #60a5fa;
+    --button-primary-active: #3b82f6;
+    --button-primary-text-color: #18181b;
   }
 
   .el-link {
@@ -74,4 +81,9 @@ html.dark {
   --svg-monochrome-grey: var(--border-color-base);
   --color-picker-hover-color: tint(#409eff, 30%);
   --descriptions-item-bordered-label-background: var(--fill-base);
+}
+
+html {
+  background-color: var(--fill-body);
+  color: var(--text-regular);
 }

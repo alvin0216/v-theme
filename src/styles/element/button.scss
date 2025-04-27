@@ -12,7 +12,7 @@
   background: $--button-default-background-color;
   border: $--border-base;
   border-color: $--button-default-border-color;
-  color: $--button-default-font-color;
+  color: var(--button-text-color);
   -webkit-appearance: none;
   text-align: center;
   box-sizing: border-box;
@@ -141,7 +141,7 @@
     $plain-disabled-border-color: var(--button-#{$type}-plain-disabled-border-color);
 
     @include m($type) {
-      color: #fff;
+      color: var(--button-primary-text-color, #fff);
       background-color: #{$color};
       border-color: #{$color};
 
@@ -149,7 +149,7 @@
       &:focus {
         background: #{$hover};
         border-color: #{$hover};
-        color: #fff;
+        color: var(--button-primary-text-color, #fff);
       }
 
       &:active {
@@ -160,7 +160,7 @@
       &.is-active {
         background: #{$active};
         border-color: #{$active};
-        color: #fff;
+        color: var(--button-primary-text-color, #fff);
       }
 
       &.is-disabled {

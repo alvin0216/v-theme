@@ -18,23 +18,8 @@ $--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !defau
 -------------------------- $--color-primary*/
 $--color-white: #fff;
 $--color-black: #000;
-$--color-danger-light: var(--color-danger-light);
-$--color-info-light: var(--color-info-light);
-$--color-success-lighter: var(--color-success-lighter);
-$--color-warning-lighter: var(--color-warning-lighter);
-$--color-danger-lighter: var(--color-danger-lighter);
-$--color-info-lighter: var(--color-info-lighter);
-$--color-text-primary: var(--text-primary);
-$--color-text-regular: var(--text-regular);
-$--color-text-secondary: var(--text-secondary);
-$--color-text-placeholder: var(--text-placeholder);
-$--border-color-base: var(--border-color-base);
-$--border-color-light: var(--border-color-light);
-$--border-color-lighter: var(--border-color-lighter);
-$--border-color-extra-light: var(--border-color-extra-light);
 
 // Background
-$--background-color-base: var(--fill-base);
 
 /* Link
 -------------------------- */
@@ -45,8 +30,8 @@ $--link-hover-color: var(--color-primary);
 -------------------------- */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
-$--border-color-hover: $--color-text-placeholder !default;
-$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-color-hover: var(--text-placeholder) !default;
+$--border-base: $--border-width-base $--border-style-base var(--border-color-base) !default;
 $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
@@ -87,9 +72,9 @@ $--index-popper: 2000 !default;
 
 /* Disable base
 -------------------------- */
-$--disabled-fill-base: $--background-color-base !default;
-$--disabled-color-base: $--color-text-placeholder !default;
-$--disabled-border-base: $--border-color-light !default;
+$--disabled-fill-base: var(--fill-base) !default;
+$--disabled-color-base: var(--text-placeholder) !default;
+$--disabled-border-base: var(--border-color-light) !default;
 
 /* Icon
 -------------------------- */
@@ -100,20 +85,20 @@ $--icon-color-base: var(--color-info) !default;
 -------------------------- */
 $--checkbox-font-size: 14px !default;
 $--checkbox-font-weight: $--font-weight-primary !default;
-$--checkbox-font-color: $--color-text-regular !default;
+$--checkbox-font-color: var(--text-regular) !default;
 $--checkbox-input-height: 14px !default;
 $--checkbox-input-width: 14px !default;
 $--checkbox-border-radius: $--border-radius-small !default;
 $--checkbox-background-color: var(--fill-blank);
 $--checkbox-input-border: $--border-base !default;
 
-$--checkbox-disabled-border-color: $--border-color-base !default;
+$--checkbox-disabled-border-color: var(--border-color-base) !default;
 $--checkbox-disabled-input-fill: var(--checkbox-disabled-input-fill);
-$--checkbox-disabled-icon-color: $--color-text-placeholder !default;
+$--checkbox-disabled-icon-color: var(--text-placeholder) !default;
 
-$--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
-$--checkbox-disabled-checked-input-border-color: $--border-color-base !default;
-$--checkbox-disabled-checked-icon-color: $--color-text-placeholder !default;
+$--checkbox-disabled-checked-input-fill: var(--border-color-extra-light) !default;
+$--checkbox-disabled-checked-input-border-color: var(--border-color-base) !default;
+$--checkbox-disabled-checked-icon-color: var(--text-placeholder) !default;
 
 $--checkbox-checked-font-color: var(--color-primary);
 $--checkbox-checked-input-border-color: var(--color-primary);
@@ -144,13 +129,13 @@ $--checkbox-button-checked-border-color: var(--color-primary);
 -------------------------- */
 $--radio-font-size: $--font-size-base !default;
 $--radio-font-weight: $--font-weight-primary !default;
-$--radio-font-color: $--color-text-regular !default;
+$--radio-font-color: var(--text-regular) !default;
 $--radio-input-height: 14px !default;
 $--radio-input-width: 14px !default;
 $--radio-input-border-radius: $--border-radius-circle !default;
 $--radio-input-background-color: var(--fill-blank);
 $--radio-input-border: $--border-base !default;
-$--radio-input-border-color: $--border-color-base !default;
+$--radio-input-border-color: var(--border-color-base) !default;
 $--radio-icon-color: $--color-white !default;
 
 $--radio-disabled-input-border-color: $--disabled-border-base !default;
@@ -159,7 +144,7 @@ $--radio-disabled-icon-color: $--disabled-fill-base !default;
 
 $--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
 $--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-checked-icon-color: $--color-text-placeholder !default;
+$--radio-disabled-checked-icon-color: var(--text-placeholder) !default;
 
 $--radio-checked-font-color: var(--color-primary);
 $--radio-checked-input-border-color: var(--color-primary);
@@ -187,27 +172,27 @@ $--radio-button-font-size: $--font-size-base !default;
 $--radio-button-checked-background-color: var(--color-primary);
 $--radio-button-checked-font-color: $--color-white !default;
 $--radio-button-checked-border-color: var(--color-primary);
-$--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
+$--radio-button-disabled-checked-fill: var(--border-color-extra-light) !default;
 
 /* Select
 -------------------------- */
 $--select-border-color-hover: $--border-color-hover !default;
 $--select-disabled-border: $--disabled-border-base !default;
 $--select-font-size: $--font-size-base !default;
-$--select-close-hover-color: $--color-text-secondary !default;
+$--select-close-hover-color: var(--text-secondary) !default;
 
-$--select-input-color: $--color-text-placeholder !default;
+$--select-input-color: var(--text-placeholder) !default;
 $--select-multiple-input-color: var(--select-multiple-input-color);
 $--select-input-focus-border-color: var(--color-primary);
 $--select-input-font-size: 14px !default;
 
-$--select-option-color: $--color-text-regular !default;
-$--select-option-disabled-color: $--color-text-placeholder !default;
+$--select-option-color: var(--text-regular) !default;
+$--select-option-disabled-color: var(--text-placeholder) !default;
 $--select-option-disabled-background: $--color-white !default;
 $--select-option-height: 34px !default;
-$--select-option-hover-background: $--background-color-base !default;
+$--select-option-hover-background: var(--fill-base) !default;
 $--select-option-selected-font-color: var(--color-primary);
-$--select-option-selected-hover: $--background-color-base !default;
+$--select-option-selected-hover: var(--fill-base) !default;
 
 $--select-group-color: var(--color-info) !default;
 $--select-group-height: 30px !default;
@@ -219,7 +204,7 @@ $--select-dropdown-empty-color: #999 !default;
 $--select-dropdown-max-height: 274px !default;
 $--select-dropdown-padding: 6px 0 !default;
 $--select-dropdown-empty-padding: 10px 0 !default;
-$--select-dropdown-border: solid 1px $--border-color-light !default;
+$--select-dropdown-border: solid 1px var(--border-color-light) !default;
 
 /* Alert
 -------------------------- */
@@ -230,22 +215,22 @@ $--alert-description-font-size: 12px !default;
 $--alert-close-font-size: 12px !default;
 $--alert-close-customed-font-size: 13px !default;
 
-$--alert-success-color: $--color-success-lighter !default;
-$--alert-info-color: $--color-info-lighter !default;
-$--alert-warning-color: $--color-warning-lighter !default;
-$--alert-danger-color: $--color-danger-lighter !default;
+$--alert-success-color: var(--color-success-lighter);
+$--alert-info-color: var(--color-info-lighter);
+$--alert-warning-color: var(--color-warning-lighter);
+$--alert-danger-color: var(--color-danger-lighter);
 
 $--alert-icon-size: 16px !default;
 $--alert-icon-large-size: 28px !default;
 
 /* MessageBox
 -------------------------- */
-$--messagebox-title-color: $--color-text-primary !default;
+$--messagebox-title-color: var(--text-primary) !default;
 $--msgbox-width: 420px !default;
 $--msgbox-border-radius: 4px !default;
 $--messagebox-font-size: $--font-size-large !default;
 $--messagebox-content-font-size: $--font-size-base !default;
-$--messagebox-content-color: $--color-text-regular !default;
+$--messagebox-content-color: var(--text-regular) !default;
 $--messagebox-error-font-size: 12px !default;
 $--msgbox-padding-primary: 15px !default;
 $--messagebox-success-color: var(--color-success) !default;
@@ -259,9 +244,9 @@ $--message-shadow: var(--message-shadow);
 $--message-min-width: 380px !default;
 $--message-background-color: var(--message-background-color);
 $--message-padding: 15px 15px 15px 20px !default;
-$--message-close-icon-color: $--color-text-placeholder !default;
+$--message-close-icon-color: var(--text-placeholder) !default;
 $--message-close-size: 16px !default;
-$--message-close-hover-color: $--color-text-secondary !default;
+$--message-close-hover-color: var(--text-secondary) !default;
 
 $--message-success-font-color: var(--color-success) !default;
 $--message-info-font-color: var(--color-info) !default;
@@ -274,18 +259,18 @@ $--notification-width: 330px !default;
 $--notification-padding: 14px 26px 14px 13px !default;
 $--notification-radius: 8px !default;
 $--notification-shadow: $--box-shadow-light !default;
-$--notification-border-color: $--border-color-lighter !default;
+$--notification-border-color: var(--border-color-lighter) !default;
 $--notification-icon-size: 24px !default;
 $--notification-close-font-size: $--message-close-size !default;
 $--notification-group-margin-left: 13px !default;
 $--notification-group-margin-right: 8px !default;
 $--notification-content-font-size: $--font-size-base !default;
-$--notification-content-color: $--color-text-regular !default;
+$--notification-content-color: var(--text-regular) !default;
 $--notification-title-font-size: 16px !default;
-$--notification-title-color: $--color-text-primary !default;
+$--notification-title-color: var(--text-primary) !default;
 
-$--notification-close-color: $--color-text-secondary !default;
-$--notification-close-hover-color: $--color-text-regular !default;
+$--notification-close-color: var(--text-secondary) !default;
+$--notification-close-hover-color: var(--text-regular) !default;
 
 $--notification-success-icon-color: var(--color-success) !default;
 $--notification-info-icon-color: var(--color-info) !default;
@@ -295,22 +280,22 @@ $--notification-danger-icon-color: var(--color-danger) !default;
 /* Input
 -------------------------- */
 $--input-font-size: $--font-size-base !default;
-$--input-font-color: $--color-text-regular !default;
+$--input-font-color: var(--text-regular) !default;
 $--input-width: 140px !default;
 $--input-height: 40px !default;
 $--input-border: $--border-base !default;
-$--input-border-color: $--border-color-base !default;
+$--input-border-color: var(--border-color-base) !default;
 $--input-border-radius: $--border-radius-base !default;
 $--input-border-color-hover: $--border-color-hover !default;
 $--input-background-color: var(--fill-bank);
 $--input-fill-disabled: $--disabled-fill-base !default;
 $--input-color-disabled: $--font-color-disabled-base !default;
-$--input-icon-color: $--color-text-placeholder !default;
-$--input-placeholder-color: $--color-text-placeholder !default;
+$--input-icon-color: var(--text-placeholder) !default;
+$--input-placeholder-color: var(--text-placeholder) !default;
 $--input-max-width: 314px !default;
 
 $--input-hover-border: $--border-color-hover !default;
-$--input-clear-hover-color: $--color-text-secondary !default;
+$--input-clear-hover-color: var(--text-secondary) !default;
 
 $--input-focus-border: var(--color-primary);
 $--input-focus-fill: $--color-white !default;
@@ -318,7 +303,7 @@ $--input-focus-fill: $--color-white !default;
 $--input-disabled-fill: $--disabled-fill-base !default;
 $--input-disabled-border: $--disabled-border-base !default;
 $--input-disabled-color: $--disabled-color-base !default;
-$--input-disabled-placeholder-color: $--color-text-placeholder !default;
+$--input-disabled-placeholder-color: var(--text-placeholder) !default;
 
 $--input-medium-font-size: 14px !default;
 $--input-medium-height: 36px !default;
@@ -329,16 +314,16 @@ $--input-mini-height: 28px !default;
 
 /* Cascader
 -------------------------- */
-$--cascader-menu-font-color: $--color-text-regular !default;
+$--cascader-menu-font-color: var(--text-regular) !default;
 $--cascader-menu-selected-font-color: var(--color-primary);
 $--cascader-menu-fill: var(--fill-overlay);
 $--cascader-menu-font-size: $--font-size-base !default;
 $--cascader-menu-radius: $--border-radius-base !default;
-$--cascader-menu-border: solid 1px $--border-color-light !default;
+$--cascader-menu-border: solid 1px var(--border-color-light) !default;
 $--cascader-menu-shadow: $--box-shadow-light !default;
-$--cascader-node-background-hover: $--background-color-base !default;
-$--cascader-node-color-disabled: $--color-text-placeholder !default;
-$--cascader-color-empty: $--color-text-placeholder !default;
+$--cascader-node-background-hover: var(--fill-base) !default;
+$--cascader-node-color-disabled: var(--text-placeholder) !default;
+$--cascader-color-empty: var(--text-placeholder) !default;
 $--cascader-tag-background: var(--cascader-tag-background);
 
 /* Group
@@ -354,14 +339,14 @@ $--group-title-width: 66px !default;
 -------------------------- */
 $--tab-font-size: $--font-size-base !default;
 $--tab-border-line: 1px solid #e4e4e4 !default;
-$--tab-header-color-active: $--color-text-secondary !default;
-$--tab-header-color-hover: $--color-text-regular !default;
-$--tab-header-color: $--color-text-regular !default;
+$--tab-header-color-active: var(--text-secondary) !default;
+$--tab-header-color-hover: var(--text-regular) !default;
+$--tab-header-color: var(--text-regular) !default;
 $--tab-header-fill-active: rgba($--color-black, 0.06) !default;
 $--tab-header-fill-hover: rgba($--color-black, 0.06) !default;
 $--tab-vertical-header-width: 90px !default;
 $--tab-vertical-header-count-color: $--color-white !default;
-$--tab-vertical-header-count-fill: $--color-text-secondary !default;
+$--tab-vertical-header-count-fill: var(--text-secondary) !default;
 
 /* Button
 -------------------------- */
@@ -385,9 +370,9 @@ $--button-mini-border-radius: #{$--border-radius-base - 1} !default;
 $--button-mini-padding-vertical: 7px !default;
 $--button-mini-padding-horizontal: 15px !default;
 
-$--button-default-font-color: $--color-text-regular !default;
+$--button-default-font-color: var(--text-regular) !default;
 $--button-default-background-color: var(--fill-blank);
-$--button-default-border-color: $--border-color-base !default;
+$--button-default-border-color: var(--border-color-base) !default;
 
 $--button-disabled-font-color: var(--button-disabled-font-color);
 $--button-disabled-background-color: var(--fill-blank);
@@ -419,7 +404,7 @@ $--cascader-height: 200px !default;
 /* Switch
 -------------------------- */
 $--switch-on-color: var(--color-primary);
-$--switch-off-color: $--border-color-base !default;
+$--switch-off-color: var(--border-color-base) !default;
 $--switch-font-size: $--font-size-base !default;
 $--switch-core-border-radius: 10px !default;
 // height||Other|4 TODO: width 代码写死的40px 所以下面这三个属性都没意义
@@ -440,11 +425,11 @@ $--dialog-padding-primary: 20px !default;
 
 /* Table
 -------------------------- */
-$--table-border-color: $--border-color-lighter !default;
+$--table-border-color: var(--border-color-lighter) !default;
 $--table-border: 1px solid $--table-border-color !default;
-$--table-font-color: $--color-text-regular !default;
-$--table-header-font-color: $--color-text-secondary !default;
-$--table-row-hover-background-color: $--background-color-base !default;
+$--table-font-color: var(--text-regular) !default;
+$--table-header-font-color: var(--text-secondary) !default;
+$--table-row-hover-background-color: var(--fill-base) !default;
 $--table-current-row-background-color: var(--color-primary-light-9) !default;
 $--table-header-background-color: var(--fill-dark);
 $--table-fixed-box-shadow: var(--table-fixed-box-shadow);
@@ -453,12 +438,12 @@ $--table-fixed-box-shadow: var(--table-fixed-box-shadow);
 -------------------------- */
 $--pagination-font-size: 13px !default;
 $--pagination-background-color: var(--fill-blank);
-$--pagination-font-color: $--color-text-primary !default;
+$--pagination-font-color: var(--text-primary) !default;
 $--pagination-border-radius: 3px !default;
-$--pagination-button-color: $--color-text-primary !default;
+$--pagination-button-color: var(--text-primary) !default;
 $--pagination-button-width: 35.5px !default;
 $--pagination-button-height: 28px !default;
-$--pagination-button-disabled-color: $--color-text-placeholder !default;
+$--pagination-button-disabled-color: var(--text-placeholder) !default;
 $--pagination-button-disabled-background-color: var(--fill-blank);
 $--pagination-hover-color: var(--color-primary);
 
@@ -476,14 +461,14 @@ $--popover-arrow-size: 6px !default;
 $--popover-padding: 12px !default;
 $--popover-padding-large: 18px 20px !default;
 $--popover-title-font-size: 16px !default;
-$--popover-title-font-color: $--color-text-primary !default;
+$--popover-title-font-color: var(--text-primary) !default;
 
 /* Tooltip
 -------------------------- */
-$--tooltip-fill: $--color-text-primary !default;
+$--tooltip-fill: var(--text-primary) !default;
 $--tooltip-color: var(--fill-dark);
 $--tooltip-font-size: 12px !default;
-$--tooltip-border-color: $--color-text-primary !default;
+$--tooltip-border-color: var(--text-primary) !default;
 $--tooltip-arrow-size: 6px !default;
 $--tooltip-padding: 10px !default;
 
@@ -500,9 +485,9 @@ $--tag-padding: 0 10px !default;
 
 /* Tree
 -------------------------- */
-$--tree-node-hover-background-color: $--background-color-base !default;
-$--tree-font-color: $--color-text-regular !default;
-$--tree-expand-icon-color: $--color-text-placeholder !default;
+$--tree-node-hover-background-color: var(--fill-base) !default;
+$--tree-font-color: var(--text-regular) !default;
+$--tree-expand-icon-color: var(--text-placeholder) !default;
 
 /* Dropdown
 -------------------------- */
@@ -527,10 +512,10 @@ $--card-padding: 20px !default;
 /* Slider
 --------------------------*/
 $--slider-main-background-color: var(--color-primary);
-$--slider-runway-background-color: $--border-color-light !default;
+$--slider-runway-background-color: var(--border-color-light) !default;
 $--slider-button-hover-color: var(--slider-button-hover-color);
 $--slider-stop-background-color: $--color-white !default;
-$--slider-disable-color: $--color-text-placeholder !default;
+$--slider-disable-color: var(--text-placeholder) !default;
 $--slider-margin: 16px 0 !default;
 $--slider-border-radius: 3px !default;
 $--slider-height: 6px !default;
@@ -547,7 +532,7 @@ $--steps-padding: 20px !default;
 /* Menu
 --------------------------*/
 $--menu-item-font-size: $--font-size-base !default;
-$--menu-item-font-color: $--color-text-primary !default;
+$--menu-item-font-color: var(--text-primary) !default;
 $--menu-background-color: var(--fill-blank);
 $--menu-item-hover-fill: var(--color-primary-light-9) !default;
 
@@ -561,14 +546,14 @@ $--rate-icon-color: var(--rate-icon-color);
 
 /* DatePicker
 --------------------------*/
-$--datepicker-font-color: $--color-text-regular !default;
-$--datepicker-off-font-color: $--color-text-placeholder !default;
-$--datepicker-header-font-color: $--color-text-regular !default;
-$--datepicker-icon-color: $--color-text-primary !default;
+$--datepicker-font-color: var(--text-regular) !default;
+$--datepicker-off-font-color: var(--text-placeholder) !default;
+$--datepicker-header-font-color: var(--text-regular) !default;
+$--datepicker-icon-color: var(--text-primary) !default;
 $--datepicker-border-color: $--disabled-border-base !default;
 $--datepicker-inner-border-color: var(--datepicker-inner-border-color);
-$--datepicker-inrange-background-color: $--border-color-extra-light !default;
-$--datepicker-inrange-hover-background-color: $--border-color-extra-light !default;
+$--datepicker-inrange-background-color: var(--border-color-extra-light) !default;
+$--datepicker-inrange-hover-background-color: var(--border-color-extra-light) !default;
 $--datepicker-active-color: var(--color-primary);
 $--datepicker-hover-font-color: var(--color-primary);
 $--datepicker-cell-hover-color: #fff !default;
@@ -580,8 +565,8 @@ $--loading-fullscreen-spinner-size: 50px !default;
 
 /* Scrollbar
 --------------------------*/
-$--scrollbar-background-color: rgba($--color-text-secondary, 0.3) !default;
-$--scrollbar-hover-background-color: rgba($--color-text-secondary, 0.5) !default;
+$--scrollbar-background-color: rgba(var(--text-secondary), 0.3) !default;
+$--scrollbar-hover-background-color: rgba(var(--text-secondary), 0.5) !default;
 
 /* Carousel
 --------------------------*/
@@ -597,22 +582,22 @@ $--carousel-indicator-out-color: $--border-color-hover !default;
 
 /* Collapse
 --------------------------*/
-$--collapse-border-color: $--border-color-lighter !default;
+$--collapse-border-color: var(--border-color-lighter) !default;
 $--collapse-header-height: 48px !default;
 $--collapse-header-background-color: var(--fill-blank);
-$--collapse-header-font-color: $--color-text-primary !default;
+$--collapse-header-font-color: var(--text-primary) !default;
 $--collapse-header-font-size: 13px !default;
 $--collapse-content-background-color: var(--fill-blank);
 $--collapse-content-font-size: 13px !default;
-$--collapse-content-font-color: $--color-text-primary !default;
+$--collapse-content-font-color: var(--text-primary) !default;
 
 /* Transfer
 --------------------------*/
-$--transfer-border-color: $--border-color-lighter !default;
+$--transfer-border-color: var(--border-color-lighter) !default;
 $--transfer-border-radius: $--border-radius-base !default;
 $--transfer-panel-width: 200px !default;
 $--transfer-panel-header-height: 40px !default;
-$--transfer-panel-header-background-color: $--background-color-base !default;
+$--transfer-panel-header-background-color: var(--fill-base) !default;
 $--transfer-panel-footer-height: 40px !default;
 $--transfer-panel-body-height: 246px !default;
 $--transfer-item-height: 30px !default;
@@ -634,21 +619,21 @@ $--main-padding: 20px !default;
 --------------------------*/
 $--timeline-node-size-normal: 12px !default;
 $--timeline-node-size-large: 14px !default;
-$--timeline-node-color: $--border-color-light !default;
+$--timeline-node-color: var(--border-color-light) !default;
 
 /* Backtop
 --------------------------*/
 $--backtop-background-color: var(--fill-overlay);
 $--backtop-font-color: var(--color-primary);
-$--backtop-hover-background-color: $--border-color-extra-light !default;
+$--backtop-hover-background-color: var(--border-color-extra-light) !default;
 
 /* Link
 --------------------------*/
 $--link-font-size: $--font-size-base !default;
 $--link-font-weight: $--font-weight-primary !default;
-$--link-default-font-color: $--color-text-regular !default;
+$--link-default-font-color: var(--text-regular) !default;
 $--link-default-active-color: var(--color-primary);
-$--link-disabled-font-color: $--color-text-placeholder !default;
+$--link-disabled-font-color: var(--text-placeholder) !default;
 $--link-primary-font-color: var(--color-primary);
 $--link-success-font-color: var(--color-success) !default;
 $--link-warning-font-color: var(--color-warning) !default;
@@ -686,7 +671,7 @@ $--empty-bottom-margin-top: 20px !default;
 -------------------------- */
 $--descriptions-header-margin-bottom: 20px !default;
 $--descriptions-title-font-size: 16px !default;
-$--descriptions-table-border: 1px solid $--border-color-lighter !default;
+$--descriptions-table-border: 1px solid var(--border-color-lighter) !default;
 $--descriptions-item-bordered-label-background: var(--descriptions-item-bordered-label-background);
 
 /* Skeleton 

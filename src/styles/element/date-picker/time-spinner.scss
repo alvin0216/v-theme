@@ -32,7 +32,7 @@
         background: $--color-white;
         cursor: default;
         html.dark & {
-          background: $--background-color-base;
+          background: var(--fill-base);
         }
       }
     }
@@ -40,7 +40,7 @@
 
   @include e(arrow) {
     font-size: 12px;
-    color: $--color-text-secondary;
+    color: var(--text-secondary);
     position: absolute;
     left: 0;
     width: 100%;
@@ -93,20 +93,20 @@
     height: 32px;
     line-height: 32px;
     font-size: 12px;
-    color: $--color-text-regular;
+    color: var(--text-regular);
 
     &:hover:not(.disabled):not(.active) {
-      background: $--background-color-base;
+      background: var(--fill-base);
       cursor: pointer;
     }
 
     &.active:not(.disabled) {
-      color: $--color-text-primary;
+      color: var(--text-primary);
       font-weight: bold;
     }
 
     &.disabled {
-      color: $--color-text-placeholder;
+      color: var(--text-placeholder);
       cursor: not-allowed;
     }
   }

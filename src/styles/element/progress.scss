@@ -8,7 +8,7 @@
 
   @include e(text) {
     font-size: 14px;
-    color: $--color-text-regular;
+    color: var(--text-regular);
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
@@ -100,7 +100,7 @@
   @include e(outer) {
     height: 6px;
     border-radius: 100px;
-    background-color: $--border-color-lighter;
+    background-color: var(--border-color-lighter);
     overflow: hidden;
     position: relative;
     vertical-align: middle;

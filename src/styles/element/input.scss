@@ -282,7 +282,7 @@
   }
 
   @include e((append, prepend)) {
-    background-color: $--background-color-base;
+    background-color: var(--fill-base);
     color: var(--color-info);
     vertical-align: middle;
     display: table-cell;

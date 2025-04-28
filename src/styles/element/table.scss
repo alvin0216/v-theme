@@ -30,7 +30,7 @@
     // set empty text line height up to contrainer min-height as workaround.
     line-height: 60px;
     width: 50%;
-    color: $--color-text-secondary;
+    color: var(--text-secondary);
   }
 
   // 展开行
@@ -50,7 +50,7 @@
     height: 20px;
 
     html.dark & {
-      color: $--color-text-regular;
+      color: var(--text-regular);
     }
 
     @include m(expanded) {
@@ -116,7 +116,7 @@
 
     &.is-group {
       th.el-table__cell {
-        background: $--background-color-base;
+        background: var(--fill-base);
       }
     }
   }
@@ -326,7 +326,7 @@
       bottom: 0;
       width: 100%;
       height: 1px;
-      background-color: $--border-color-lighter;
+      background-color: var(--border-color-lighter);
       z-index: 4;
     }
   }
@@ -463,12 +463,12 @@
     left: 7px;
 
     &.ascending {
-      border-bottom-color: $--color-text-placeholder;
+      border-bottom-color: var(--text-placeholder);
       top: 5px;
     }
 
     &.descending {
-      border-top-color: $--color-text-placeholder;
+      border-top-color: var(--text-placeholder);
       bottom: 7px;
     }
   }

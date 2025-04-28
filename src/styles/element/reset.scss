@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $--color-text-regular;
+  color: var(--text-regular);
   font-weight: inherit;
 
   &:first-child {
@@ -87,6 +87,6 @@ hr {
   border: 0;
 
   html.dark & {
-    border-top: 1px solid $--border-color-lighter;
+    border-top: 1px solid var(--border-color-lighter);
   }
 }

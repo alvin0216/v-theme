@@ -6,7 +6,7 @@
   border: 1px solid $--card-border-color;
   background-color: var(--fill-overlay);
   overflow: hidden;
-  color: $--color-text-primary;
+  color: var(--text-primary);
   transition: 0.3s;
 
   @include when(always-shadow) {

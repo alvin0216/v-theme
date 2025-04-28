@@ -27,10 +27,10 @@
     }
     &.is-bordered-label {
       font-weight: bold;
-      color: $--color-text-secondary;
+      color: var(--text-secondary);
       background: $--descriptions-item-bordered-label-background;
       html.dark & {
-        color: $--color-text-regular;
+        color: var(--text-regular);
       }
     }
     &:not(.is-bordered-label) {

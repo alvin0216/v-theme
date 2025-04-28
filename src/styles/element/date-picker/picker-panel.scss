@@ -1,7 +1,7 @@
 @import '../common/var';
 
 @include b(picker-panel) {
-  color: $--color-text-regular;
+  color: var(--text-regular);
   border: 1px solid $--datepicker-border-color;
   box-shadow: $--box-shadow-light;
   background: var(--fill-overlay);
@@ -73,7 +73,7 @@
 
     html.dark & {
       border: 1px solid #1d1d1d;
-      color: $--color-text-primary;
+      color: var(--text-primary);
       &[disabled] {
         color: var(--text-disabled);
       }

@@ -47,7 +47,7 @@
   .el-range__icon {
     font-size: 14px;
     margin-left: -5px;
-    color: $--color-text-placeholder;
+    color: var(--text-placeholder);
     float: left;
     line-height: 32px;
   }
@@ -63,12 +63,12 @@
     width: 39%;
     text-align: center;
     font-size: $--font-size-base;
-    color: $--color-text-regular;
+    color: var(--text-regular);
     html.dark & {
       background: transparent;
     }
     &::placeholder {
-      color: $--color-text-placeholder;
+      color: var(--text-placeholder);
     }
   }
 
@@ -81,12 +81,12 @@
     line-height: 32px;
     font-size: 14px;
     width: 5%;
-    color: $--color-text-primary;
+    color: var(--text-primary);
   }
 
   .el-range__close-icon {
     font-size: 14px;
-    color: $--color-text-placeholder;
+    color: var(--text-placeholder);
     width: 25px;
     display: inline-block;
     float: right;

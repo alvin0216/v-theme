@@ -88,7 +88,7 @@
   }
 
   .el-pager li.disabled {
-    color: $--color-text-placeholder;
+    color: var(--text-placeholder);
     cursor: not-allowed;
   }
 
@@ -132,7 +132,7 @@
   @include e(sizes) {
     margin: 0 10px 0 0;
     font-weight: normal;
-    color: $--color-text-regular;
+    color: var(--text-regular);
 
     .el-input .el-input__inner {
       font-size: $--pagination-font-size;
@@ -147,13 +147,13 @@
   @include e(total) {
     margin-right: 10px;
     font-weight: normal;
-    color: $--color-text-regular;
+    color: var(--text-regular);
   }
 
   @include e(jump) {
     margin-left: 24px;
     font-weight: normal;
-    color: $--color-text-regular;
+    color: var(--text-regular);
 
     .el-input__inner {
       padding: 0 3px;
@@ -194,18 +194,18 @@
     .btn-next,
     .el-pager li {
       margin: 0 5px;
-      background-color: $--color-info-lighter;
-      color: $--color-text-regular;
+      background-color: var(--color-info-lighter);
+      color: var(--text-regular);
       min-width: 30px;
       border-radius: 2px;
 
       html.dark & {
         background-color: #303030;
-        color: $--color-text-primary;
+        color: var(--text-primary);
       }
 
       &.disabled {
-        color: $--color-text-placeholder;
+        color: var(--text-placeholder);
       }
     }
 
@@ -214,7 +214,7 @@
       padding: 0;
 
       &:disabled {
-        color: $--color-text-placeholder;
+        color: var(--text-placeholder);
       }
     }
 
@@ -273,7 +273,7 @@
       color: $--pagination-button-color;
 
       &.disabled {
-        color: $--color-text-placeholder;
+        color: var(--text-placeholder);
       }
     }
 

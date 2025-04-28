@@ -32,14 +32,14 @@
 
   thead th {
     padding: 12px 0;
-    color: $--color-text-regular;
+    color: var(--text-regular);
     font-weight: normal;
   }
 
   &:not(.is-range) {
     td.prev,
     td.next {
-      color: $--color-text-placeholder;
+      color: var(--text-placeholder);
     }
   }
 

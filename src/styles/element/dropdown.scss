@@ -6,7 +6,7 @@
 @include b(dropdown) {
   display: inline-block;
   position: relative;
-  color: $--color-text-regular;
+  color: var(--text-regular);
   font-size: $--font-size-base;
 
   .el-button-group {
@@ -85,11 +85,11 @@
   padding: 10px 0;
   margin: 5px 0;
   background-color: var(--fill-overlay);
-  border: 1px solid $--border-color-lighter;
+  border: 1px solid var(--border-color-lighter);
   border-radius: $--border-radius-base;
   box-shadow: $--dropdown-menu-box-shadow;
   html.dark & {
-    border: 1px solid $--border-color-light;
+    border: 1px solid var(--border-color-light);
   }
 
   @include e(item) {
@@ -98,7 +98,7 @@
     padding: 0 20px;
     margin: 0;
     font-size: $--font-size-base;
-    color: $--color-text-regular;
+    color: var(--text-regular);
     cursor: pointer;
     outline: none;
     &:not(.is-disabled):hover,
@@ -116,7 +116,7 @@
 
       position: relative;
       margin-top: $divided-offset;
-      border-top: 1px solid $--border-color-lighter;
+      border-top: 1px solid var(--border-color-lighter);
 
       &:before {
         content: '';

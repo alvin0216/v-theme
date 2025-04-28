@@ -140,10 +140,10 @@
 
       html.dark & {
         background: var(--fill-overlay);
-        border: 1px solid $--border-color-light;
+        border: 1px solid var(--border-color-light);
 
         &[x-placement^='top'] .popper__arrow {
-          border-top-color: $--border-color-light;
+          border-top-color: var(--border-color-light);
 
           &::after {
             border-top-color: var(--fill-overlay);
@@ -151,7 +151,7 @@
         }
 
         &[x-placement^='bottom'] .popper__arrow {
-          border-bottom-color: $--border-color-light;
+          border-bottom-color: var(--border-color-light);
 
           &::after {
             border-bottom-color: var(--fill-overlay);
@@ -159,7 +159,7 @@
         }
 
         &[x-placement^='left'] .popper__arrow {
-          border-left-color: $--border-color-light;
+          border-left-color: var(--border-color-light);
 
           &::after {
             border-left-color: var(--fill-overlay);
@@ -167,7 +167,7 @@
         }
 
         &[x-placement^='right'] .popper__arrow {
-          border-right-color: $--border-color-light;
+          border-right-color: var(--border-color-light);
 
           &::after {
             border-right-color: var(--fill-overlay);

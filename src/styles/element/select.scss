@@ -133,7 +133,7 @@
     align-items: center;
 
     &__close.el-icon-close {
-      background-color: $--color-text-placeholder;
+      background-color: var(--text-placeholder);
       top: 0;
       color: $--color-white;
       flex-shrink: 0;
@@ -141,7 +141,7 @@
         background-color: unset;
       }
       &:hover {
-        background-color: $--color-text-secondary;
+        background-color: var(--text-secondary);
       }
 
       &::before {
